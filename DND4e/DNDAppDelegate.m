@@ -9,6 +9,8 @@
 #import "DNDAppDelegate.h"
 
 #import "DNDMasterViewController.h"
+#import "GDataXMLNode.h"
+#import "XMLReader.h"
 
 @implementation DNDAppDelegate
 
@@ -33,6 +35,21 @@
         DNDMasterViewController *controller = (DNDMasterViewController *)navigationController.topViewController;
         controller.managedObjectContext = self.managedObjectContext;
     }
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Hunter_1" ofType:@"xml"];
+    NSData *xmlData = [[NSMutableData alloc] initWithContentsOfFile:filePath];
+    NSError *error = nil;
+    GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:xmlData 
+                                                           options:0 error:&error];
+    //NSLog(@"%@", doc.rootElement);
+    NSLog(@"GDataXMLDoc: %@", [doc nodesForXPath:@"//CharacterSheet/Details"
+                              error:nil] );
+    
+    NSDictionary *data = [XMLReader dictionaryForXMLData:xmlData error:&error];
+    //NSLog(@"Data: %@", data );
+//    NSLog(@"Data: %@", [[data valueForKeyPath:@"D20Character.CharacterSheet.Details"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]);
+    NSLog(@"XMLReader: %@", [data valueForKeyPath:@"D20Character.CharacterSheet.Details"]);
+    
     return YES;
 }
 							
