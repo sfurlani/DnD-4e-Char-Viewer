@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC693BEF14EED86B00E68BF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BEE14EED86B00E68BF8 /* UIKit.framework */; };
+		DC693BF114EED86B00E68BF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF014EED86B00E68BF8 /* Foundation.framework */; };
+		DC693BF314EED86B00E68BF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF214EED86B00E68BF8 /* CoreGraphics.framework */; };
+		DC693BF514EED86B00E68BF8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF414EED86B00E68BF8 /* CoreData.framework */; };
+		DC693BFB14EED86B00E68BF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC693BF914EED86B00E68BF8 /* InfoPlist.strings */; };
+		DC693BFD14EED86B00E68BF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693BFC14EED86B00E68BF8 /* main.m */; };
+		DC693C0114EED86C00E68BF8 /* DNDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */; };
+		DC693C0414EED86C00E68BF8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC693C0214EED86C00E68BF8 /* MainStoryboard_iPhone.storyboard */; };
+		DC693C0714EED86C00E68BF8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC693C0514EED86C00E68BF8 /* MainStoryboard_iPad.storyboard */; };
+		DC693C0A14EED86C00E68BF8 /* DND4e.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC693C0814EED86C00E68BF8 /* DND4e.xcdatamodeld */; };
+		DC693C0D14EED86C00E68BF8 /* DNDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C0C14EED86C00E68BF8 /* DNDMasterViewController.m */; };
+		DC693C1014EED86C00E68BF8 /* DNDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C0F14EED86C00E68BF8 /* DNDDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DC693BEA14EED86B00E68BF8 /* DND4e.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DND4e.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC693BEE14EED86B00E68BF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DC693BF014EED86B00E68BF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DC693BF214EED86B00E68BF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DC693BF414EED86B00E68BF8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DC693BF814EED86B00E68BF8 /* DND4e-Info.plist */ = {isa = PBXFileReference; path = "DND4e-Info.plist"; sourceTree = "<group>"; };
+		DC693BFA14EED86B00E68BF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC693BFC14EED86B00E68BF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC693BFE14EED86B00E68BF8 /* DND4e-Prefix.pch */ = {isa = PBXFileReference; path = "DND4e-Prefix.pch"; sourceTree = "<group>"; };
+		DC693BFF14EED86C00E68BF8 /* DNDAppDelegate.h */ = {isa = PBXFileReference; path = DNDAppDelegate.h; sourceTree = "<group>"; };
+		DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNDAppDelegate.m; sourceTree = "<group>"; };
+		DC693C0314EED86C00E68BF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		DC693C0614EED86C00E68BF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		DC693C0914EED86C00E68BF8 /* DND4e.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DND4e.xcdatamodel; sourceTree = "<group>"; };
+		DC693C0B14EED86C00E68BF8 /* DNDMasterViewController.h */ = {isa = PBXFileReference; path = DNDMasterViewController.h; sourceTree = "<group>"; };
+		DC693C0C14EED86C00E68BF8 /* DNDMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNDMasterViewController.m; sourceTree = "<group>"; };
+		DC693C0E14EED86C00E68BF8 /* DNDDetailViewController.h */ = {isa = PBXFileReference; path = DNDDetailViewController.h; sourceTree = "<group>"; };
+		DC693C0F14EED86C00E68BF8 /* DNDDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNDDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC693BE714EED86B00E68BF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC693BEF14EED86B00E68BF8 /* UIKit.framework in Frameworks */,
+				DC693BF114EED86B00E68BF8 /* Foundation.framework in Frameworks */,
+				DC693BF314EED86B00E68BF8 /* CoreGraphics.framework in Frameworks */,
+				DC693BF514EED86B00E68BF8 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC693BDF14EED86B00E68BF8 = {
+			isa = PBXGroup;
+			children = (
+				DC693BF614EED86B00E68BF8 /* DND4e */,
+				DC693BED14EED86B00E68BF8 /* Frameworks */,
+				DC693BEB14EED86B00E68BF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC693BEB14EED86B00E68BF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC693BEA14EED86B00E68BF8 /* DND4e.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC693BED14EED86B00E68BF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC693BEE14EED86B00E68BF8 /* UIKit.framework */,
+				DC693BF014EED86B00E68BF8 /* Foundation.framework */,
+				DC693BF214EED86B00E68BF8 /* CoreGraphics.framework */,
+				DC693BF414EED86B00E68BF8 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC693BF614EED86B00E68BF8 /* DND4e */ = {
+			isa = PBXGroup;
+			children = (
+				DC693BFF14EED86C00E68BF8 /* DNDAppDelegate.h */,
+				DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */,
+				DC693C0214EED86C00E68BF8 /* MainStoryboard_iPhone.storyboard */,
+				DC693C0514EED86C00E68BF8 /* MainStoryboard_iPad.storyboard */,
+				DC693C0B14EED86C00E68BF8 /* DNDMasterViewController.h */,
+				DC693C0C14EED86C00E68BF8 /* DNDMasterViewController.m */,
+				DC693C0E14EED86C00E68BF8 /* DNDDetailViewController.h */,
+				DC693C0F14EED86C00E68BF8 /* DNDDetailViewController.m */,
+				DC693C0814EED86C00E68BF8 /* DND4e.xcdatamodeld */,
+				DC693BF714EED86B00E68BF8 /* Supporting Files */,
+			);
+			path = DND4e;
+			sourceTree = "<group>";
+		};
+		DC693BF714EED86B00E68BF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC693BF814EED86B00E68BF8 /* DND4e-Info.plist */,
+				DC693BF914EED86B00E68BF8 /* InfoPlist.strings */,
+				DC693BFC14EED86B00E68BF8 /* main.m */,
+				DC693BFE14EED86B00E68BF8 /* DND4e-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC693BE914EED86B00E68BF8 /* DND4e */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC693C1314EED86C00E68BF8 /* Build configuration list for PBXNativeTarget "DND4e" */;
+			buildPhases = (
+				DC693BE614EED86B00E68BF8 /* Sources */,
+				DC693BE714EED86B00E68BF8 /* Frameworks */,
+				DC693BE814EED86B00E68BF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DND4e;
+			productName = DND4e;
+			productReference = DC693BEA14EED86B00E68BF8 /* DND4e.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC693BE114EED86B00E68BF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Accella, LLC";
+			};
+			buildConfigurationList = DC693BE414EED86B00E68BF8 /* Build configuration list for PBXProject "DND4e" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DC693BDF14EED86B00E68BF8;
+			productRefGroup = DC693BEB14EED86B00E68BF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC693BE914EED86B00E68BF8 /* DND4e */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC693BE814EED86B00E68BF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC693BFB14EED86B00E68BF8 /* InfoPlist.strings in Resources */,
+				DC693C0414EED86C00E68BF8 /* MainStoryboard_iPhone.storyboard in Resources */,
+				DC693C0714EED86C00E68BF8 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC693BE614EED86B00E68BF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC693BFD14EED86B00E68BF8 /* main.m in Sources */,
+				DC693C0114EED86C00E68BF8 /* DNDAppDelegate.m in Sources */,
+				DC693C0A14EED86C00E68BF8 /* DND4e.xcdatamodeld in Sources */,
+				DC693C0D14EED86C00E68BF8 /* DNDMasterViewController.m in Sources */,
+				DC693C1014EED86C00E68BF8 /* DNDDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DC693BF914EED86B00E68BF8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC693BFA14EED86B00E68BF8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DC693C0214EED86C00E68BF8 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC693C0314EED86C00E68BF8 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		DC693C0514EED86C00E68BF8 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC693C0614EED86C00E68BF8 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC693C1114EED86C00E68BF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC693C1214EED86C00E68BF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC693C1414EED86C00E68BF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DND4e/DND4e-Prefix.pch";
+				INFOPLIST_FILE = "DND4e/DND4e-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DC693C1514EED86C00E68BF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DND4e/DND4e-Prefix.pch";
+				INFOPLIST_FILE = "DND4e/DND4e-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC693BE414EED86B00E68BF8 /* Build configuration list for PBXProject "DND4e" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC693C1114EED86C00E68BF8 /* Debug */,
+				DC693C1214EED86C00E68BF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC693C1314EED86C00E68BF8 /* Build configuration list for PBXNativeTarget "DND4e" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC693C1414EED86C00E68BF8 /* Debug */,
+				DC693C1514EED86C00E68BF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC693C0814EED86C00E68BF8 /* DND4e.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC693C0914EED86C00E68BF8 /* DND4e.xcdatamodel */,
+			);
+			currentVersion = DC693C0914EED86C00E68BF8 /* DND4e.xcdatamodel */;
+			path = DND4e.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DC693BE114EED86B00E68BF8 /* Project object */;
+}
