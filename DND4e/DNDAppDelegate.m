@@ -48,7 +48,7 @@
     NSDictionary *data = [XMLReader dictionaryForXMLData:xmlData error:&error];
     //NSLog(@"Data: %@", data );
 //    NSLog(@"Data: %@", [[data valueForKeyPath:@"D20Character.CharacterSheet.Details"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]);
-    NSLog(@"XMLReader: %@", [data valueForKeyPath:@"D20Character.CharacterSheet.Details"]);
+    NSLog(@"XMLReader: %@", [[[data valueForKeyPath:@"D20Character.CharacterSheet.PowerStats.Power"] objectAtIndex:1] valueForKeyPath:@"Weapon"]);// objectAtIndex:0] valueForKeyPath:@"RulesElement.url"]);
     
     return YES;
 }

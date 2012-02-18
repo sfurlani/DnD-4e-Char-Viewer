@@ -131,7 +131,8 @@ NSString *const kXMLReaderTextNodeKey = @"value";
     if ([textInProgress length] > 0)
     {
         // Get rid of leading + trailing whitespace
-        [dictInProgress setObject:textInProgress forKey:kXMLReaderTextNodeKey];
+        NSString *trimmed = [textInProgress stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        [dictInProgress setObject:trimmed forKey:kXMLReaderTextNodeKey];
         
         // Reset the text
         [textInProgress release];
@@ -145,7 +146,7 @@ NSString *const kXMLReaderTextNodeKey = @"value";
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
     // Build the text value
-    [textInProgress appendString:[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+    [textInProgress appendString:string];
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
