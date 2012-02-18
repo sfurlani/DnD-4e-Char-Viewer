@@ -14,15 +14,13 @@
 		DC693BFB14EED86B00E68BF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC693BF914EED86B00E68BF8 /* InfoPlist.strings */; };
 		DC693BFD14EED86B00E68BF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693BFC14EED86B00E68BF8 /* main.m */; };
 		DC693C0114EED86C00E68BF8 /* DNDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */; };
-		DC693C0414EED86C00E68BF8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC693C0214EED86C00E68BF8 /* MainStoryboard_iPhone.storyboard */; };
-		DC693C0714EED86C00E68BF8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC693C0514EED86C00E68BF8 /* MainStoryboard_iPad.storyboard */; };
 		DC693C0A14EED86C00E68BF8 /* DND4e.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC693C0814EED86C00E68BF8 /* DND4e.xcdatamodeld */; };
-		DC693C0D14EED86C00E68BF8 /* DNDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C0C14EED86C00E68BF8 /* DNDMasterViewController.m */; };
-		DC693C1014EED86C00E68BF8 /* DNDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C0F14EED86C00E68BF8 /* DNDDetailViewController.m */; };
 		DC693C1D14EED89300E68BF8 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C1C14EED89300E68BF8 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DC693C2014EED8C700E68BF8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693C1F14EED8C700E68BF8 /* libxml2.dylib */; };
 		DC693C2214EED9E700E68BF8 /* Hunter_1.xml in Resources */ = {isa = PBXBuildFile; fileRef = DC693C2114EED9E700E68BF8 /* Hunter_1.xml */; };
 		DC693C2514EEDCB500E68BF8 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C2414EEDCB500E68BF8 /* XMLReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DC693C3814F0069200E68BF8 /* DictionaryExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */; };
+		DC693C3914F0069200E68BF8 /* DictionaryExplorerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,19 +35,16 @@
 		DC693BFE14EED86B00E68BF8 /* DND4e-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DND4e-Prefix.pch"; sourceTree = "<group>"; };
 		DC693BFF14EED86C00E68BF8 /* DNDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNDAppDelegate.h; sourceTree = "<group>"; };
 		DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNDAppDelegate.m; sourceTree = "<group>"; };
-		DC693C0314EED86C00E68BF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		DC693C0614EED86C00E68BF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		DC693C0914EED86C00E68BF8 /* DND4e.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DND4e.xcdatamodel; sourceTree = "<group>"; };
-		DC693C0B14EED86C00E68BF8 /* DNDMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNDMasterViewController.h; sourceTree = "<group>"; };
-		DC693C0C14EED86C00E68BF8 /* DNDMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNDMasterViewController.m; sourceTree = "<group>"; };
-		DC693C0E14EED86C00E68BF8 /* DNDDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNDDetailViewController.h; sourceTree = "<group>"; };
-		DC693C0F14EED86C00E68BF8 /* DNDDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNDDetailViewController.m; sourceTree = "<group>"; };
 		DC693C1B14EED89300E68BF8 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		DC693C1C14EED89300E68BF8 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		DC693C1F14EED8C700E68BF8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		DC693C2114EED9E700E68BF8 /* Hunter_1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Hunter_1.xml; sourceTree = "<group>"; };
 		DC693C2314EEDCB500E68BF8 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
 		DC693C2414EEDCB500E68BF8 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		DC693C3514F0069200E68BF8 /* DictionaryExplorerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryExplorerViewController.h; sourceTree = "<group>"; };
+		DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryExplorerViewController.m; sourceTree = "<group>"; };
+		DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictionaryExplorerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,14 +99,11 @@
 				DC693C2114EED9E700E68BF8 /* Hunter_1.xml */,
 				DC693BFF14EED86C00E68BF8 /* DNDAppDelegate.h */,
 				DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */,
-				DC693C0214EED86C00E68BF8 /* MainStoryboard_iPhone.storyboard */,
-				DC693C0514EED86C00E68BF8 /* MainStoryboard_iPad.storyboard */,
-				DC693C0B14EED86C00E68BF8 /* DNDMasterViewController.h */,
-				DC693C0C14EED86C00E68BF8 /* DNDMasterViewController.m */,
-				DC693C0E14EED86C00E68BF8 /* DNDDetailViewController.h */,
-				DC693C0F14EED86C00E68BF8 /* DNDDetailViewController.m */,
 				DC693C0814EED86C00E68BF8 /* DND4e.xcdatamodeld */,
 				DC693BF714EED86B00E68BF8 /* Supporting Files */,
+				DC693C3514F0069200E68BF8 /* DictionaryExplorerViewController.h */,
+				DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */,
+				DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */,
 			);
 			path = DND4e;
 			sourceTree = "<group>";
@@ -190,9 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC693BFB14EED86B00E68BF8 /* InfoPlist.strings in Resources */,
-				DC693C0414EED86C00E68BF8 /* MainStoryboard_iPhone.storyboard in Resources */,
-				DC693C0714EED86C00E68BF8 /* MainStoryboard_iPad.storyboard in Resources */,
 				DC693C2214EED9E700E68BF8 /* Hunter_1.xml in Resources */,
+				DC693C3914F0069200E68BF8 /* DictionaryExplorerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,10 +197,9 @@
 				DC693BFD14EED86B00E68BF8 /* main.m in Sources */,
 				DC693C0114EED86C00E68BF8 /* DNDAppDelegate.m in Sources */,
 				DC693C0A14EED86C00E68BF8 /* DND4e.xcdatamodeld in Sources */,
-				DC693C0D14EED86C00E68BF8 /* DNDMasterViewController.m in Sources */,
-				DC693C1014EED86C00E68BF8 /* DNDDetailViewController.m in Sources */,
 				DC693C1D14EED89300E68BF8 /* GDataXMLNode.m in Sources */,
 				DC693C2514EEDCB500E68BF8 /* XMLReader.m in Sources */,
+				DC693C3814F0069200E68BF8 /* DictionaryExplorerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,22 +212,6 @@
 				DC693BFA14EED86B00E68BF8 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		DC693C0214EED86C00E68BF8 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC693C0314EED86C00E68BF8 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		DC693C0514EED86C00E68BF8 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC693C0614EED86C00E68BF8 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -8,7 +8,7 @@
 
 #import "DNDAppDelegate.h"
 
-#import "DNDMasterViewController.h"
+#import "DictionaryExplorerViewController.h"
 #import "GDataXMLNode.h"
 #import "XMLReader.h"
 
@@ -21,20 +21,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-        splitViewController.delegate = (id)navigationController.topViewController;
-        
-        UINavigationController *masterNavigationController = [splitViewController.viewControllers objectAtIndex:0];
-        DNDMasterViewController *controller = (DNDMasterViewController *)masterNavigationController.topViewController;
-        controller.managedObjectContext = self.managedObjectContext;
-    } else {
-        UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-        DNDMasterViewController *controller = (DNDMasterViewController *)navigationController.topViewController;
-        controller.managedObjectContext = self.managedObjectContext;
-    }
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Hunter_1" ofType:@"xml"];
     NSData *xmlData = [[NSMutableData alloc] initWithContentsOfFile:filePath];
@@ -49,6 +35,11 @@
     //NSLog(@"Data: %@", data );
 //    NSLog(@"Data: %@", [[data valueForKeyPath:@"D20Character.CharacterSheet.Details"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]);
     NSLog(@"XMLReader: %@", [[[data valueForKeyPath:@"D20Character.CharacterSheet.PowerStats.Power"] objectAtIndex:1] valueForKeyPath:@"Weapon"]);// objectAtIndex:0] valueForKeyPath:@"RulesElement.url"]);
+    
+    DictionaryExplorerViewController *devc = [[DictionaryExplorerViewController alloc] initWithData:data];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:devc];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
