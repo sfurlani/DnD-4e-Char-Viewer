@@ -207,6 +207,7 @@
 {
     // Navigation logic may go here. Create and push another view controller.
     id data = nil;
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     if (isArray(self.data)) {
         data = [self.data objectAtIndex:[indexPath row]];
@@ -215,8 +216,26 @@
     }
     if (isArray(data) || isDictionary(data)) {
         DictionaryExplorerViewController *devc = [[DictionaryExplorerViewController alloc] initWithData:data];
+        devc.title = cell.textLabel.text;
         [self.navigationController pushViewController:devc animated:YES];
     } else {
+        
+        if ([cell.textLabel.text isEqualToString:@"url"]) {
+            
+            // Open up URL
+            UIViewController *uivc = [[UIViewController alloc] init];
+            UIWebView *web = [[UIWebView alloc] initWithFrame:uivc.view.frame];
+            [uivc.view addSubview:web];
+            web.autoresizingMask = uivc.view.autoresizingMask;
+            web.scalesPageToFit = YES;
+            
+            NSURL *url = [NSURL URLWithString:data];
+            NSURLRequest *request = [NSURLRequest requestWithURL:url];
+            [web loadRequest:request];
+            [self.navigationController pushViewController:uivc animated:YES];
+//            [[UIApplication sharedApplication] openURL:url];
+            
+        }
         NSLog(@"Data: %@", data);
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

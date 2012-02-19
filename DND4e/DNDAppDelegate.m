@@ -36,6 +36,8 @@
 //    NSLog(@"Data: %@", [[data valueForKeyPath:@"D20Character.CharacterSheet.Details"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]);
     NSLog(@"XMLReader: %@", [[[data valueForKeyPath:@"D20Character.CharacterSheet.PowerStats.Power"] objectAtIndex:1] valueForKeyPath:@"Weapon"]);// objectAtIndex:0] valueForKeyPath:@"RulesElement.url"]);
     
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     DictionaryExplorerViewController *devc = [[DictionaryExplorerViewController alloc] initWithData:data];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:devc];
     self.window.rootViewController = nav;

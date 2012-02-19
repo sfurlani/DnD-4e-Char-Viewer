@@ -21,6 +21,8 @@
 		DC693C2514EEDCB500E68BF8 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C2414EEDCB500E68BF8 /* XMLReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DC693C3814F0069200E68BF8 /* DictionaryExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */; };
 		DC693C3914F0069200E68BF8 /* DictionaryExplorerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */; };
+		DCA8021914F0A2A500620379 /* Window_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA8021814F0A2A500620379 /* Window_iphone.xib */; };
+		DCA8021B14F0A2B700620379 /* Window_ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA8021A14F0A2B700620379 /* Window_ipad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		DC693C3514F0069200E68BF8 /* DictionaryExplorerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryExplorerViewController.h; sourceTree = "<group>"; };
 		DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryExplorerViewController.m; sourceTree = "<group>"; };
 		DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictionaryExplorerViewController.xib; sourceTree = "<group>"; };
+		DCA8021814F0A2A500620379 /* Window_iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Window_iphone.xib; path = ../Window_iphone.xib; sourceTree = "<group>"; };
+		DCA8021A14F0A2B700620379 /* Window_ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Window_ipad.xib; path = ../Window_ipad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 		DC693BF714EED86B00E68BF8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DCA8021A14F0A2B700620379 /* Window_ipad.xib */,
+				DCA8021814F0A2A500620379 /* Window_iphone.xib */,
 				DC693BF814EED86B00E68BF8 /* DND4e-Info.plist */,
 				DC693BF914EED86B00E68BF8 /* InfoPlist.strings */,
 				DC693BFC14EED86B00E68BF8 /* main.m */,
@@ -184,6 +190,8 @@
 				DC693BFB14EED86B00E68BF8 /* InfoPlist.strings in Resources */,
 				DC693C2214EED9E700E68BF8 /* Hunter_1.xml in Resources */,
 				DC693C3914F0069200E68BF8 /* DictionaryExplorerViewController.xib in Resources */,
+				DCA8021914F0A2A500620379 /* Window_iphone.xib in Resources */,
+				DCA8021B14F0A2B700620379 /* Window_ipad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,10 +275,16 @@
 		DC693C1414EED86C00E68BF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					i386,
+					armv6,
+					armv7,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DND4e/DND4e-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "DND4e/DND4e-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -280,12 +294,22 @@
 		DC693C1514EED86C00E68BF8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					i386,
+					armv6,
+					armv7,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Stephen Furlani";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DND4e/DND4e-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "DND4e/DND4e-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E1918D95-7690-4CB0-ACD2-0FED773A3075";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
