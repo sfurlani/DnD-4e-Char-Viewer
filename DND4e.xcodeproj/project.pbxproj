@@ -28,6 +28,12 @@
 		DCA8023F14F0A96E00620379 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8023314F0A96E00620379 /* MBProgressHUD.m */; };
 		DCA8024014F0A96E00620379 /* UIWebView_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8023514F0A96E00620379 /* UIWebView_Misc.m */; };
 		DCA8024414F0A9AA00620379 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024314F0A9AA00620379 /* Data.m */; };
+		DCA8024814F1328900620379 /* PowerCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024614F1328800620379 /* PowerCardViewController.m */; };
+		DCA8024914F1328900620379 /* PowerCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA8024714F1328800620379 /* PowerCardViewController.xib */; };
+		DCA8024C14F1335100620379 /* Power.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024B14F1335000620379 /* Power.m */; };
+		DCA8024F14F1335100620379 /* RulesElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024E14F1335100620379 /* RulesElement.m */; };
+		DCA8025214F1335100620379 /* Weapon.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8025114F1335100620379 /* Weapon.m */; };
+		DCA8025514F182CD00620379 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8025414F182CC00620379 /* CardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +71,17 @@
 		DCA8023A14F0A96E00620379 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		DCA8024214F0A9AA00620379 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Data.h; path = DataModel/Data.h; sourceTree = "<group>"; };
 		DCA8024314F0A9AA00620379 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Data.m; path = DataModel/Data.m; sourceTree = "<group>"; };
+		DCA8024514F1328800620379 /* PowerCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerCardViewController.h; sourceTree = "<group>"; };
+		DCA8024614F1328800620379 /* PowerCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowerCardViewController.m; sourceTree = "<group>"; };
+		DCA8024714F1328800620379 /* PowerCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PowerCardViewController.xib; sourceTree = "<group>"; };
+		DCA8024A14F1335000620379 /* Power.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Power.h; path = DataModel/Power.h; sourceTree = "<group>"; };
+		DCA8024B14F1335000620379 /* Power.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Power.m; path = DataModel/Power.m; sourceTree = "<group>"; };
+		DCA8024D14F1335100620379 /* RulesElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RulesElement.h; path = DataModel/RulesElement.h; sourceTree = "<group>"; };
+		DCA8024E14F1335100620379 /* RulesElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RulesElement.m; path = DataModel/RulesElement.m; sourceTree = "<group>"; };
+		DCA8025014F1335100620379 /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weapon.h; sourceTree = "<group>"; };
+		DCA8025114F1335100620379 /* Weapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weapon.m; sourceTree = "<group>"; };
+		DCA8025314F182CC00620379 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		DCA8025414F182CC00620379 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,16 +132,20 @@
 		DC693BF614EED86B00E68BF8 /* DND4e */ = {
 			isa = PBXGroup;
 			children = (
+				DC693BF714EED86B00E68BF8 /* Supporting Files */,
 				DCA8022B14F0A95E00620379 /* Utilities */,
 				DCA8021C14F0A8CC00620379 /* CoreData */,
-				DC693C1A14EED89300E68BF8 /* XMLSupport */,
 				DC693C2114EED9E700E68BF8 /* Hunter_1.xml */,
 				DC693BFF14EED86C00E68BF8 /* DNDAppDelegate.h */,
 				DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */,
-				DC693BF714EED86B00E68BF8 /* Supporting Files */,
+				DCA8024514F1328800620379 /* PowerCardViewController.h */,
+				DCA8024614F1328800620379 /* PowerCardViewController.m */,
+				DCA8024714F1328800620379 /* PowerCardViewController.xib */,
 				DC693C3514F0069200E68BF8 /* DictionaryExplorerViewController.h */,
 				DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */,
 				DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */,
+				DCA8025314F182CC00620379 /* CardView.h */,
+				DCA8025414F182CC00620379 /* CardView.m */,
 			);
 			path = DND4e;
 			sourceTree = "<group>";
@@ -159,6 +180,12 @@
 				DC693C0814EED86C00E68BF8 /* DND4e.xcdatamodeld */,
 				DCA8024214F0A9AA00620379 /* Data.h */,
 				DCA8024314F0A9AA00620379 /* Data.m */,
+				DCA8025014F1335100620379 /* Weapon.h */,
+				DCA8025114F1335100620379 /* Weapon.m */,
+				DCA8024D14F1335100620379 /* RulesElement.h */,
+				DCA8024E14F1335100620379 /* RulesElement.m */,
+				DCA8024A14F1335000620379 /* Power.h */,
+				DCA8024B14F1335000620379 /* Power.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -166,6 +193,7 @@
 		DCA8022B14F0A95E00620379 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DC693C1A14EED89300E68BF8 /* XMLSupport */,
 				DCA8023814F0A96E00620379 /* BlockActions.h */,
 				DCA8022D14F0A96E00620379 /* BlockActions.m */,
 				DCA8023114F0A96E00620379 /* Utility.h */,
@@ -235,6 +263,7 @@
 				DC693C3914F0069200E68BF8 /* DictionaryExplorerViewController.xib in Resources */,
 				DCA8021914F0A2A500620379 /* Window_iphone.xib in Resources */,
 				DCA8021B14F0A2B700620379 /* Window_ipad.xib in Resources */,
+				DCA8024914F1328900620379 /* PowerCardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +285,11 @@
 				DCA8023F14F0A96E00620379 /* MBProgressHUD.m in Sources */,
 				DCA8024014F0A96E00620379 /* UIWebView_Misc.m in Sources */,
 				DCA8024414F0A9AA00620379 /* Data.m in Sources */,
+				DCA8024814F1328900620379 /* PowerCardViewController.m in Sources */,
+				DCA8024C14F1335100620379 /* Power.m in Sources */,
+				DCA8024F14F1335100620379 /* RulesElement.m in Sources */,
+				DCA8025214F1335100620379 /* Weapon.m in Sources */,
+				DCA8025514F182CD00620379 /* CardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

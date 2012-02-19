@@ -7,11 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Weapon.h"
+#import "Power.h"
+#import "RulesElement.h"
+
 
 #define AppData ([Data sharedData])
 
 @interface Data : NSObject
 
 + (Data*) sharedData;
+
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+- (void)saveContext;
+- (NSURL *)applicationDocumentsDirectory;
+
+- (Power*) newPower;
+- (Weapon*) newWeapon;
 
 @end
