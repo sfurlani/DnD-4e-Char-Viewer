@@ -7,7 +7,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Char Viewer</string>
 	<key>CFBundleExecutable</key>
-	<string>dnd4e</string>
+	<string>DND4e</string>
 	<key>CFBundleIconFiles</key>
 	<array/>
 	<key>CFBundleIdentifier</key>
