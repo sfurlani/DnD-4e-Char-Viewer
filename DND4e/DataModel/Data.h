@@ -25,8 +25,4 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
-- (Power*) newPower;
-- (Weapon*) newWeapon;
-- (RulesElement*) newElement;
-
 @end

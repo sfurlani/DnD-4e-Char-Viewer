@@ -27,5 +27,7 @@
 
 - (id) initWithDictionary:(NSDictionary*)info;
 - (void) populateWithDictionary:(NSDictionary*)info;
+- (NSString*)html;
 
+- (BOOL) shouldDisplaySpecific:(NSString*)key;
 @end

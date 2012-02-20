@@ -9,6 +9,7 @@
 #import "Power.h"
 #import "Weapon.h"
 #import "Data.h"
+#import "Utility.h"
 
 @implementation Power
 
@@ -60,6 +61,7 @@
         else if ([key isEqualToString:@"Keywords"]) self.keywords = value;
         else if ([key isEqualToString:@"Action Type"]) self.actionType = value;
         else if ([key isEqualToString:@"Attack Type"]) self.attackType = value;
+        else if ([key isEqualToString:@"Power Type"]) self.powerType = value;
         else {
             [self.specifics addObject:obj];
         }
@@ -76,6 +78,89 @@
             }
         }];
     }
+}
+
+- (NSString*)html
+{
+    __block NSMutableString *html = [NSMutableString string];
+    #define replace(string) ([string stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"])
+    
+    // HEADER
+    [html appendFormat:@"<p><i>%@</i><p>",self.flavor];
+    [html appendFormat:@"<p>%@ * %@</p>", self.usage, self.actionType];
+    
+    __block NSString *withHeader = @"<p><b>%@</b> %@</p>";
+    __block NSString *withColon = @"<p><b>%@:</b> %@</p>";
+    if (self.keywords)
+        [html appendFormat:withHeader,@"Keywords:",self.keywords];
+    
+    if (self.attackType) {
+        NSMutableArray *words = [[self.attackType componentsSeparatedByString:@" "] mutableCopy];
+        if ([words count] > 1) {
+            NSString *first = NSFORMAT(@"%@ ", [words objectAtIndex:0]);
+            [words removeObjectAtIndex:0];
+            NSString *rest = [words componentsJoinedByString:@" "];
+            [html appendFormat:withHeader,first,rest];
+        } else {
+            [html appendFormat:withHeader,self.attackType,@""];
+        }
+    }
+    
+    // SPECIFICS
+    [self.specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *key = [obj valueForKey:@"name"];
+        NSString *value = [obj valueForKey:@"value"];
+        if ([self shouldDisplaySpecific:key])
+            [html appendFormat:withColon, key, replace(value)];
+        
+    }];
+    
+    
+    // WEAPON
+    if (self.selected_weapon) {
+        NSString *wpn_name = NSFORMAT(@"%@: ", self.selected_weapon.name);
+        NSString *bonus = ([self.selected_weapon.attackBonus intValue] > 0 ? 
+                           NSFORMAT(@"+%@", self.selected_weapon.attackBonus) : 
+                           self.selected_weapon.attackBonus);
+        NSString *text = NSFORMAT(@"%@ vs. %@, %@ damage", 
+                                  bonus,
+                                  self.selected_weapon.defense,
+                                  self.selected_weapon.damage);
+        [html appendFormat:@"<p><a href=\"%@\"><b>%@:</b> %@</a></p>",@"weapon://new",wpn_name,text];
+        
+        // CONDITIONALS 
+        [html appendFormat:withHeader,@"Additional Effects: ",replace(self.selected_weapon.conditions)];
+        
+        // HIT COMPONENTS
+        [html appendFormat:withHeader,@"Breakdown of Attack:",replace(self.selected_weapon.hitComponents)];
+        
+        // DAMAGE COMPONENTS
+        [html appendFormat:withHeader,@"Breakdown of Damage: ",replace(self.selected_weapon.damageComponents)];
+        
+        [self.selected_weapon.has_elements enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            RulesElement *element = obj;
+            NSString *title = element.name;
+            NSString *url = element.url_string;
+            
+            [html appendFormat:@"<p><a href=\"%@\"> Compendium Entry: %@ </a></p>",url, title];
+            
+        }];
+        
+    }
+    
+    
+    return html;
+}
+
+
+- (BOOL) shouldDisplaySpecific:(NSString*)key
+{
+    // Don't display rules elements
+    if ([key hasPrefix:@"_"]) return NO;
+    if ([key hasPrefix:@"Class"]) return NO;
+    if ([key hasPrefix:@"Level"]) return NO;
+    
+    return YES;
 }
 
 @end

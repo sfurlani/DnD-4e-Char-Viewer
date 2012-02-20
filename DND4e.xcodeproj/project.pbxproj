@@ -32,7 +32,6 @@
 		DCA8024914F1328900620379 /* PowerCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA8024714F1328800620379 /* PowerCardViewController.xib */; };
 		DCA8024C14F1335100620379 /* Power.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024B14F1335000620379 /* Power.m */; };
 		DCA8024F14F1335100620379 /* RulesElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024E14F1335100620379 /* RulesElement.m */; };
-		DCA8025514F182CD00620379 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8025414F182CC00620379 /* CardView.m */; };
 		DCDCC1DC14F2F68E004BE096 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1DB14F2F68E004BE096 /* Icon.png */; };
 		DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */; };
 /* End PBXBuildFile section */
@@ -80,8 +79,6 @@
 		DCA8024B14F1335000620379 /* Power.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Power.m; path = DataModel/Power.m; sourceTree = "<group>"; };
 		DCA8024D14F1335100620379 /* RulesElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RulesElement.h; path = DataModel/RulesElement.h; sourceTree = "<group>"; };
 		DCA8024E14F1335100620379 /* RulesElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RulesElement.m; path = DataModel/RulesElement.m; sourceTree = "<group>"; };
-		DCA8025314F182CC00620379 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
-		DCA8025414F182CC00620379 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		DCDCC1DB14F2F68E004BE096 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kaeltor12.dnd4e; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,8 +144,6 @@
 				DC693C3514F0069200E68BF8 /* DictionaryExplorerViewController.h */,
 				DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */,
 				DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */,
-				DCA8025314F182CC00620379 /* CardView.h */,
-				DCA8025414F182CC00620379 /* CardView.m */,
 			);
 			path = DND4e;
 			sourceTree = "<group>";
@@ -292,7 +287,6 @@
 				DCA8024814F1328900620379 /* PowerCardViewController.m in Sources */,
 				DCA8024C14F1335100620379 /* Power.m in Sources */,
 				DCA8024F14F1335100620379 /* RulesElement.m in Sources */,
-				DCA8025514F182CD00620379 /* CardView.m in Sources */,
 				DC52E7E614F1E838002FEEC9 /* Weapon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

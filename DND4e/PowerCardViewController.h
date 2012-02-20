@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class CardView, Power;
+@class Power;
 
-@interface PowerCardViewController : UIViewController <UIActionSheetDelegate>
+@interface PowerCardViewController : UIViewController <UIActionSheetDelegate, UIWebViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UIScrollView *scroll;
-@property (strong, nonatomic) IBOutlet CardView *cardView;
+@property (strong, nonatomic) IBOutlet UIWebView *cardView;
 @property (strong, nonatomic) Power *power;
 
 - (id)initWithPower:(Power*)power;

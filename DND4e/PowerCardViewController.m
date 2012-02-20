@@ -10,10 +10,11 @@
 #import "CardView.h"
 #import "Data.h"
 #import "Utility.h"
+#import "UIWebView_Misc.h"
 
 @implementation PowerCardViewController
 
-@synthesize scroll, cardView;
+@synthesize cardView;
 @synthesize power = _power;
 
 - (id)initWithPower:(Power*)power
@@ -40,12 +41,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, self.view.fsw, self.view.fsh*2.0f)];
-    [self.scroll addSubview:self.cardView];
     
     UILongPressGestureRecognizer *tapnhold = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(chooseNewWeapon:)];
     [self.cardView addGestureRecognizer:tapnhold];
-    
+    [self.cardView setShadowHidden:YES];
     
 }
 
@@ -65,7 +64,6 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.cardView.power = self.power;
     self.title = self.power.name;
     
     UIColor *barColor = [UIColor colorWithRed:0 green:0.4 blue:0 alpha:1.0];
@@ -75,15 +73,15 @@
         barColor = [UIColor lightGrayColor];
     }
     self.navigationController.navigationBar.tintColor = barColor;
+    
+    [self.cardView loadHTMLString:[_power html] baseURL:[AppData applicationDocumentsDirectory]];
+    
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    self.scroll.contentSize = self.cardView.frame.size;
-    self.scroll.contentOffset = CGPointZero;
-    [self.scroll flashScrollIndicators];
+    [self.cardView.scrollView flashScrollIndicators];
 }
 
 #pragma mark - IBActions
@@ -91,13 +89,13 @@
 - (void) chooseNewWeapon:(UILongPressGestureRecognizer*)hold
 {
     // if not at begining, then the popup gets called a bunch of times
-    if (hold.state == UIGestureRecognizerStateBegan && [self.power.has_weapons count] > 0) {
+    if (/*hold.state == UIGestureRecognizerStateBegan && */ [self.power.has_weapons count] > 0) {
         UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Choose New Weapon"
                                                            delegate:self
                                                   cancelButtonTitle:@"Cancel"
                                              destructiveButtonTitle:nil
                                                   otherButtonTitles: nil];
-        [self.power.has_weapons enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+        [self.power.has_weapons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             [sheet addButtonWithTitle:[obj name]];
         }];
         [sheet showInView:self.view];
@@ -111,17 +109,48 @@
 {
     NSString *name = [actionSheet buttonTitleAtIndex:buttonIndex];
     if (![name isEqualToString:@"Cancel"]) {        
-        Weapon *weapon = [[self.power.has_weapons objectsPassingTest:^BOOL(id obj, BOOL *stop) {
+        NSInteger index = [self.power.has_weapons indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
             *stop = [name isEqualToString:[obj name]];
             return *stop;
-        }] anyObject];
-        
+        }];
+        if (index == NSNotFound) return;
+        Weapon *weapon = [self.power.has_weapons objectAtIndex:index];
         self.power.selected_weapon = weapon;
-        [self.cardView setNeedsDisplay];
-        
-        self.scroll.contentSize = self.cardView.contentSize;
-        [self.scroll flashScrollIndicators];
+        [self.cardView loadHTMLString:[_power html] baseURL:[AppData applicationDocumentsDirectory]];
     }
+}
+
+#pragma mark - UIWEbvIew Delegate
+
+- (void) webViewDidStartLoad:(UIWebView *)webView
+{
+    
+}
+
+- (void) webViewDidFinishLoad:(UIWebView *)webView
+{
+    
+}
+
+- (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    
+}
+
+- (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSURL *url = request.URL;
+    NSString *scheme = [url scheme];
+    
+    if ([scheme isEqualToString:@"http"]) {
+        [[UIApplication sharedApplication] openURL:url];
+        return NO;
+    } else if ([scheme isEqualToString:@""]) {
+        [self chooseNewWeapon:nil];
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end

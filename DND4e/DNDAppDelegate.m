@@ -32,8 +32,7 @@
     NSArray *powers = [data valueForKeyPath:@"D20Character.CharacterSheet.PowerStats.Power"];
     NSMutableArray *powerObjs = [NSMutableArray arrayWithCapacity:[powers count]];
     [powers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        Power *power = [AppData newPower];
-        [power populateWithDictionary:obj];
+        Power *power = [[Power alloc] initWithDictionary:obj];
         [powerObjs addObject:power];
     }];
     //NSLog(@"Powers: %@", powerObjs);
