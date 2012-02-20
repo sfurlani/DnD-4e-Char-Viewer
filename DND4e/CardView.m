@@ -13,7 +13,7 @@
 
 @implementation CardView
 
-@synthesize power = _power;
+@synthesize power = _power, contentSize;
 
 - (id)initWithFrame:(CGRect)frame power:(Power*)power
 {
@@ -38,8 +38,8 @@
     UIFont *normal = [UIFont fontWithName:@"HelveticaNeue" size:14.0f];
     
     
-    CGFloat yPos = 0.0f;
-    CGFloat xPos = 0.0f;
+    __block CGFloat yPos = 0.0f;
+    __block CGFloat xPos = 0.0f;
     
     CGFloat border = 8.0f;
     xPos += border;
@@ -65,7 +65,7 @@
     
     // USAGE & ACTION TYPE
     void (^printOut)(NSString*, NSString*, UIFont*) = ^(NSString* header, NSString* text, UIFont* font){
-        new_rect.origin.x = border;
+        new_rect.origin.x = xPos;
         new_rect.origin.y += offset.height + border;
         new_rect.size = new_size;
         
@@ -73,16 +73,25 @@
             offset = [header drawInRect:new_rect
                                withFont:bold
                           lineBreakMode:UILineBreakModeWordWrap];
-            new_rect.origin.x += offset.width;
-            new_rect.size.width -= offset.width;
+            
+            CGSize test = [text sizeWithFont:font
+                                    forWidth:width
+                               lineBreakMode:UILineBreakModeWordWrap];
+            
+            if (offset.width + test.width > width) {
+                new_rect.origin.y += offset.height;
+            } else {
+                new_rect.origin.x += offset.width;
+                new_rect.size.width -= offset.width;
+            }
         }
         
         offset = [text drawInRect:new_rect
                           withFont:font
                      lineBreakMode:UILineBreakModeWordWrap];
     };
-    if (_power.usage || _power.actionType)
-        printOut(nil,NSFORMAT(@"%@ * %@", [_power usage], [_power actionType]),normal);
+    if (_power.usage || _power.actionType || _power.display)
+        printOut(nil,NSFORMAT(@"%@\n%@ * %@", _power.display, [_power usage], [_power actionType]),normal);
     
     
     // KEYWORDS
@@ -93,19 +102,34 @@
     // ATTACK TYPE
     if (_power.attackType) {
         NSMutableArray *words = [[[_power attackType] componentsSeparatedByString:@" "] mutableCopy];
-        NSString *first = [words objectAtIndex:0];
-        [words replaceObjectAtIndex:0 withObject:@" "];
-        NSString *rest = [words componentsJoinedByString:@" "];
-        printOut(first, rest, normal);
+        if ([words count] > 1) {
+            NSString *first = NSFORMAT(@"%@ ", [words objectAtIndex:0]);
+            [words removeObjectAtIndex:0];
+            NSString *rest = [words componentsJoinedByString:@" "];
+            printOut(first, rest, normal);
+        } else {
+            printOut(nil,_power.attackType,bold);
+        }
     }
+    
+    // SPECIAL
+    if (_power.special)
+        printOut(@"Special: ", _power.special, normal);
+    // SPECIAL
+    if (_power.requirement)
+        printOut(@"Requirements: ", _power.requirement, normal);
     
     // TARGET
     if (_power.target)
         printOut(@"Target: ", _power.target, normal);
+    else if (_power.primaryTarget)
+        printOut(@"Primary Target: ", _power.primaryTarget, normal);
     
     // ATTACK
     if (_power.attack)
         printOut(@"Attack: ", _power.attack, normal);
+    else if (_power.primaryAttack)
+        printOut(@"Primary Attack: ", _power.primaryAttack, normal);
     
     // HIT
     if (_power.hit)
@@ -114,6 +138,16 @@
     // EFFECT
     if (_power.effect)
         printOut(@"Effect: ", _power.effect, normal);
+    
+    // SECONDARY ATTACK
+    if (_power.secondaryTarget) {
+        xPos += 8.0f; // In
+        printOut(@"Secondary Target: ", _power.secondaryTarget, normal);
+        printOut(@"Secondary Attack: ", _power.secondaryAttack, normal);
+        printOut(@"Hit: ", _power.secondaryHit, normal);
+        xPos -= 8.0f;
+    }
+    
     
     // WEAPON
     if (_power.selected_weapon) {
@@ -128,20 +162,18 @@
         printOut(name, text, normal);
         
         // CONDITIONALS
-        printOut(nil,@"Additional Effects:",bold);
-        new_rect.origin.y -= border; // back up
-        printOut(nil,_power.selected_weapon.conditions, italics);
+        printOut(@"Additional Effects: ",_power.selected_weapon.conditions, normal);
         
         // HIT COMPONENTS
-        printOut(nil,@"Breakdown of Attack:",bold);
-        new_rect.origin.y -= border; // back up
-        printOut(nil,_power.selected_weapon.hitComponents, italics);
-        // HIT COMPONENTS
-        printOut(nil,@"Breakdown of Damage:",bold);
-        new_rect.origin.y -= border; // back up
-        printOut(nil,_power.selected_weapon.damageComponents, italics);
+        printOut(@"Breakdown of Attack:",_power.selected_weapon.hitComponents, italics);
+        
+        // DAMAGE COMPONENTS
+        printOut(@"Breakdown of Damage: ",_power.selected_weapon.damageComponents, italics);
     }
-
+    
+    new_rect.origin.y += offset.height + border;
+    
+    self.contentSize = CGSizeMake(width, new_rect.origin.y);
 }
 
 

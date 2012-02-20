@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC52E7E314F1E818002FEEC9 /* DNDObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DC52E7E214F1E818002FEEC9 /* DNDObject.m */; };
+		DC52E7E614F1E838002FEEC9 /* Weapon.m in Sources */ = {isa = PBXBuildFile; fileRef = DC52E7E514F1E838002FEEC9 /* Weapon.m */; };
 		DC693BEF14EED86B00E68BF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BEE14EED86B00E68BF8 /* UIKit.framework */; };
 		DC693BF114EED86B00E68BF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF014EED86B00E68BF8 /* Foundation.framework */; };
 		DC693BF314EED86B00E68BF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF214EED86B00E68BF8 /* CoreGraphics.framework */; };
@@ -32,12 +34,15 @@
 		DCA8024914F1328900620379 /* PowerCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA8024714F1328800620379 /* PowerCardViewController.xib */; };
 		DCA8024C14F1335100620379 /* Power.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024B14F1335000620379 /* Power.m */; };
 		DCA8024F14F1335100620379 /* RulesElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024E14F1335100620379 /* RulesElement.m */; };
-		DCA8025214F1335100620379 /* Weapon.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8025114F1335100620379 /* Weapon.m */; };
 		DCA8025514F182CD00620379 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8025414F182CC00620379 /* CardView.m */; };
 		DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC52E7E114F1E818002FEEC9 /* DNDObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNDObject.h; path = DataModel/DNDObject.h; sourceTree = "<group>"; };
+		DC52E7E214F1E818002FEEC9 /* DNDObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DNDObject.m; path = DataModel/DNDObject.m; sourceTree = "<group>"; };
+		DC52E7E414F1E838002FEEC9 /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Weapon.h; path = DataModel/Weapon.h; sourceTree = "<group>"; };
+		DC52E7E514F1E838002FEEC9 /* Weapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Weapon.m; path = DataModel/Weapon.m; sourceTree = "<group>"; };
 		DC693BEA14EED86B00E68BF8 /* DND4e.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DND4e.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC693BEE14EED86B00E68BF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DC693BF014EED86B00E68BF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -79,8 +84,6 @@
 		DCA8024B14F1335000620379 /* Power.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Power.m; path = DataModel/Power.m; sourceTree = "<group>"; };
 		DCA8024D14F1335100620379 /* RulesElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RulesElement.h; path = DataModel/RulesElement.h; sourceTree = "<group>"; };
 		DCA8024E14F1335100620379 /* RulesElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RulesElement.m; path = DataModel/RulesElement.m; sourceTree = "<group>"; };
-		DCA8025014F1335100620379 /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weapon.h; sourceTree = "<group>"; };
-		DCA8025114F1335100620379 /* Weapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weapon.m; sourceTree = "<group>"; };
 		DCA8025314F182CC00620379 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		DCA8025414F182CC00620379 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kaeltor12.dnd4e; sourceTree = "<group>"; };
@@ -181,10 +184,12 @@
 			isa = PBXGroup;
 			children = (
 				DC693C0814EED86C00E68BF8 /* DND4e.xcdatamodeld */,
+				DC52E7E114F1E818002FEEC9 /* DNDObject.h */,
+				DC52E7E214F1E818002FEEC9 /* DNDObject.m */,
+				DC52E7E414F1E838002FEEC9 /* Weapon.h */,
+				DC52E7E514F1E838002FEEC9 /* Weapon.m */,
 				DCA8024214F0A9AA00620379 /* Data.h */,
 				DCA8024314F0A9AA00620379 /* Data.m */,
-				DCA8025014F1335100620379 /* Weapon.h */,
-				DCA8025114F1335100620379 /* Weapon.m */,
 				DCA8024D14F1335100620379 /* RulesElement.h */,
 				DCA8024E14F1335100620379 /* RulesElement.m */,
 				DCA8024A14F1335000620379 /* Power.h */,
@@ -292,8 +297,9 @@
 				DCA8024814F1328900620379 /* PowerCardViewController.m in Sources */,
 				DCA8024C14F1335100620379 /* Power.m in Sources */,
 				DCA8024F14F1335100620379 /* RulesElement.m in Sources */,
-				DCA8025214F1335100620379 /* Weapon.m in Sources */,
 				DCA8025514F182CD00620379 /* CardView.m in Sources */,
+				DC52E7E314F1E818002FEEC9 /* DNDObject.m in Sources */,
+				DC52E7E614F1E838002FEEC9 /* Weapon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

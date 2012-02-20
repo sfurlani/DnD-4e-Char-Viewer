@@ -27,6 +27,13 @@
 @dynamic miss;
 @dynamic level11;
 @dynamic level21;
+@dynamic special;
+@dynamic requirement;
+@dynamic primaryAttack;
+@dynamic primaryTarget;
+@dynamic secondaryHit;
+@dynamic secondaryAttack;
+@dynamic secondaryTarget;
 @dynamic has_weapons;
 @dynamic selected_weapon;
 
@@ -36,9 +43,14 @@
 
 - (void) populateWithDictionary:(NSDictionary *)info
 {
+     self.name = [info valueForKey:@"name"];
+    
     NSArray *specifics = [info valueForKey:@"specific"];
     
-    NSLog(@"Power: %@", [info valueForKey:@"name"]);
+    NSLog(@"Power: %@", self.name);
+    if ([self.name isEqualToString:@"Stab and Shoot"]) {
+        NSLog(@"Info: %@", info);
+    }
     [specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *name = [obj valueForKey:@"name"];
         NSString *value = [obj valueForKey:@"value"];
@@ -57,20 +69,27 @@
         else if ([name isEqualToString:@"Miss"]) self.miss = value;
         else if ([name isEqualToString:@"Power Type"]) self.powerType = value;
         else if ([name isEqualToString:@"Effect"]) self.effect = value;
+        else if ([name isEqualToString:@"Special"]) self.special = value;
+        else if ([name isEqualToString:@"Requirement"]) self.requirement = value;
+        else if ([name isEqualToString:@"Primary Target"]) self.primaryTarget = value;
+        else if ([name isEqualToString:@"Primary Attack"]) self.primaryAttack = value;
+        else if ([name isEqualToString:@" Secondary Target"]) self.secondaryTarget = value;
+        else if ([name isEqualToString:@" Secondary Attack"]) self.secondaryAttack = value;
+        else if ([name isEqualToString:@" Hit"]) self.secondaryHit = value;
         
     }];
     
-    NSArray *weapons = [info valueForKey:@"Weapon"];
-    [weapons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        Weapon *weapon = [AppData newWeapon];
-        [weapon populateWithDictionary:obj];
-        [self addHas_weaponsObject:weapon];
-        if (!self.selected_weapon) {
-            self.selected_weapon = weapon;
-        }
-    }];
-    
-    self.name = [info valueForKey:@"name"];
+    id weapons = [info valueForKey:@"Weapon"];
+    if ([weapons isKindOfClass:[NSArray class]]) {
+        [weapons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            Weapon *weapon = [AppData newWeapon];
+            [weapon populateWithDictionary:obj];
+            [self addHas_weaponsObject:weapon];
+            if (!self.selected_weapon) {
+                self.selected_weapon = weapon;
+            }
+        }];
+    }
 }
 
 @end

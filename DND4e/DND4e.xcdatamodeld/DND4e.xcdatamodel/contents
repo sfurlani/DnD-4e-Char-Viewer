@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Power" representedClassName="Power" syncable="YES">
+    <entity name="DNDObject" representedClassName="DNDObject" syncable="YES">
+        <relationship name="has_elements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RulesElement" inverseName="in_object" inverseEntity="RulesElement" syncable="YES"/>
+    </entity>
+    <entity name="Power" representedClassName="Power" parentEntity="DNDObject" syncable="YES">
         <attribute name="actionType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="attack" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="attackType" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,6 +17,13 @@
         <attribute name="miss" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="powerType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primaryAttack" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primaryTarget" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requirement" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="secondaryAttack" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="secondaryHit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="secondaryTarget" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="special" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="target" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="usage" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="has_weapons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Weapon" inverseName="in_power" inverseEntity="Weapon" syncable="YES"/>
@@ -26,8 +36,9 @@
         <attribute name="legal" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url_string" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="in_object" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DNDObject" inverseName="has_elements" inverseEntity="DNDObject" syncable="YES"/>
     </entity>
-    <entity name="Weapon" representedClassName="Weapon" parentEntity="RulesElement" syncable="YES">
+    <entity name="Weapon" representedClassName="Weapon" parentEntity="DNDObject" syncable="YES">
         <attribute name="attackBonus" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="attackStat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="conditions" optional="YES" attributeType="String" syncable="YES"/>
@@ -39,8 +50,9 @@
         <relationship name="in_power" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Power" inverseName="selected_weapon" inverseEntity="Power" syncable="YES"/>
     </entity>
     <elements>
-        <element name="RulesElement" positionX="261" positionY="189" width="128" height="135"/>
+        <element name="Power" positionX="160" positionY="192" width="128" height="405"/>
+        <element name="RulesElement" positionX="261" positionY="189" width="128" height="150"/>
         <element name="Weapon" positionX="160" positionY="192" width="128" height="180"/>
-        <element name="Power" positionX="160" positionY="192" width="128" height="300"/>
+        <element name="DNDObject" positionX="160" positionY="192" width="128" height="60"/>
     </elements>
 </model>

@@ -13,6 +13,7 @@
 @interface CardView : UIView
 
 @property (strong, nonatomic) Power *power;
+@property (assign, nonatomic) CGSize contentSize;
 
 - (id)initWithFrame:(CGRect)frame power:(Power*)power;
 

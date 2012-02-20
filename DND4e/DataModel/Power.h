@@ -28,6 +28,13 @@
 @property (nonatomic, retain) NSString * miss;
 @property (nonatomic, retain) NSString * level11;
 @property (nonatomic, retain) NSString * level21;
+@property (nonatomic, retain) NSString * special;
+@property (nonatomic, retain) NSString * requirement;
+@property (nonatomic, retain) NSString * primaryTarget;
+@property (nonatomic, retain) NSString * primaryAttack;
+@property (nonatomic, retain) NSString * secondaryTarget;
+@property (nonatomic, retain) NSString * secondaryAttack;
+@property (nonatomic, retain) NSString * secondaryHit;
 @property (nonatomic, retain) NSSet *has_weapons;
 @property (nonatomic, retain) Weapon *selected_weapon;
 @end

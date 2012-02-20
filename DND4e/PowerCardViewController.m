@@ -71,6 +71,8 @@
     UIColor *barColor = [UIColor colorWithRed:0 green:0.4 blue:0 alpha:1.0];
     if ([_power.usage isEqualToString:@"Encounter"]) {
         barColor =  [UIColor colorWithRed:0.6 green:0 blue:0 alpha:1.0];
+    } else if ([_power.usage isEqualToString:@"Daily"]) {
+        barColor = [UIColor lightGrayColor];
     }
     self.navigationController.navigationBar.tintColor = barColor;
 }
@@ -81,23 +83,24 @@
     
     self.scroll.contentSize = self.cardView.frame.size;
     self.scroll.contentOffset = CGPointZero;
-    
+    [self.scroll flashScrollIndicators];
 }
 
 #pragma mark - IBActions
 
 - (void) chooseNewWeapon:(UILongPressGestureRecognizer*)hold
 {
-    if (hold.state == UIGestureRecognizerStateBegan) {
-    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Choose New Weapon"
-                                                       delegate:self
-                                              cancelButtonTitle:@"Cancel"
-                                         destructiveButtonTitle:nil
-                                              otherButtonTitles: nil];
-    [self.power.has_weapons enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
-        [sheet addButtonWithTitle:[obj name]];
-    }];
-    [sheet showInView:self.view];
+    // if not at begining, then the popup gets called a bunch of times
+    if (hold.state == UIGestureRecognizerStateBegan && [self.power.has_weapons count] > 0) {
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Choose New Weapon"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Cancel"
+                                             destructiveButtonTitle:nil
+                                                  otherButtonTitles: nil];
+        [self.power.has_weapons enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+            [sheet addButtonWithTitle:[obj name]];
+        }];
+        [sheet showInView:self.view];
     }
 }
 
@@ -115,6 +118,9 @@
         
         self.power.selected_weapon = weapon;
         [self.cardView setNeedsDisplay];
+        
+        self.scroll.contentSize = self.cardView.contentSize;
+        [self.scroll flashScrollIndicators];
     }
 }
 
