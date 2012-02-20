@@ -14,9 +14,15 @@
 
 @property (nonatomic, retain) NSNumber * charelem;
 @property (nonatomic, retain) NSString * type;
-@property (nonatomic, retain) NSString * elemname;
+@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * internal_id;
 @property (nonatomic, retain) NSNumber * legal;
 @property (nonatomic, retain) NSString * url_string;
+
+@end
+
+@interface RulesElement (User_Methods)
+
+- (void) populateWithDictionary:(NSDictionary *)info;
 
 @end

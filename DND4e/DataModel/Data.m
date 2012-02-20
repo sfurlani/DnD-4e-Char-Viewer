@@ -35,6 +35,12 @@ SYNTHESIZE_SINGLETON_ARC(Data)
           insertIntoManagedObjectContext:self.managedObjectContext];
 }
 
+- (RulesElement*) newElement
+{
+    return [[RulesElement alloc] initWithEntity:[NSEntityDescription entityForName:@"RulesElement" inManagedObjectContext:self.managedObjectContext]
+           insertIntoManagedObjectContext:self.managedObjectContext];
+}
+
 
 - (void)saveContext
 {

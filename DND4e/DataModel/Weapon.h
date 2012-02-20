@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "DNDObject.h"
 
 @class Power, RulesElement;
 
-@interface Weapon : NSManagedObject
+@interface Weapon : DNDObject
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * attackBonus;

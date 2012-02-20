@@ -27,5 +27,6 @@
 
 - (Power*) newPower;
 - (Weapon*) newWeapon;
+- (RulesElement*) newElement;
 
 @end

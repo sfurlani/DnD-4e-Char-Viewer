@@ -9,6 +9,7 @@
 #import "Weapon.h"
 #import "Power.h"
 #import "RulesElement.h"
+#import "Data.h"
 
 @implementation Weapon
 
@@ -55,7 +56,19 @@
         else if ([key isEqualToString:@"CridRange"]) self.critRange = value;
         else if ([key isEqualToString:@"CridDamage"]) self.critDamage = value;
         else if ([key isEqualToString:@"CridComponents"]) self.critComponents = value;
-        else if ([key isEqualToString:@"RulesElement"]) { /* [super populateWithDictionary:obj] */ }
+        else if ([key isEqualToString:@"RulesElement"]) { 
+            if ([obj isKindOfClass:[NSDictionary class]]) {
+                RulesElement *elem = [AppData newElement];
+                [elem populateWithDictionary:obj];
+                [self addHas_elementsObject:elem];
+            } else if ([obj isKindOfClass:[NSArray class]]) {
+                [obj enumerateObjectsUsingBlock:^(id ele, NSUInteger idx, BOOL *stop) {
+                    RulesElement *elem = [AppData newElement];
+                    [elem populateWithDictionary:ele];
+                    [self addHas_elementsObject:elem];
+                }];
+            }
+        }
         
     }];
     
