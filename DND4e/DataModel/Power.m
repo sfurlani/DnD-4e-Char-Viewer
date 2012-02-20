@@ -86,7 +86,9 @@
     #define replace(string) ([string stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"])
     
     // HEADER
-    [html appendFormat:@"<p><i>%@</i><p>",self.flavor];
+    if (self.flavor)
+        [html appendFormat:@"<p><i>%@</i><p>",self.flavor];
+    
     [html appendFormat:@"<p>%@ * %@</p>", self.usage, self.actionType];
     
     __block NSString *withHeader = @"<p><b>%@</b> %@</p>";
@@ -126,16 +128,18 @@
                                   bonus,
                                   self.selected_weapon.defense,
                                   self.selected_weapon.damage);
-        [html appendFormat:@"<p><a href=\"%@\"><b>%@:</b> %@</a></p>",@"weapon://new",wpn_name,text];
+        [html appendFormat:@"<p><b>%@:</b> %@ <br> <a href=\"weapon://\"> - Change Weapon - </a></p>",wpn_name,text];
         
         // CONDITIONALS 
-        [html appendFormat:withHeader,@"Additional Effects: ",replace(self.selected_weapon.conditions)];
+        [html appendFormat:withHeader,@"Additional Effects: <br>",replace(self.selected_weapon.conditions)];
+        
+        [html appendFormat:@"<p></p>"];
         
         // HIT COMPONENTS
-        [html appendFormat:withHeader,@"Breakdown of Attack:",replace(self.selected_weapon.hitComponents)];
+        [html appendFormat:withHeader,@"Breakdown of Attack: <br>",replace(self.selected_weapon.hitComponents)];
         
         // DAMAGE COMPONENTS
-        [html appendFormat:withHeader,@"Breakdown of Damage: ",replace(self.selected_weapon.damageComponents)];
+        [html appendFormat:withHeader,@"Breakdown of Damage: <br>",replace(self.selected_weapon.damageComponents)];
         
         [self.selected_weapon.has_elements enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             RulesElement *element = obj;
@@ -145,6 +149,8 @@
             [html appendFormat:@"<p><a href=\"%@\"> Compendium Entry: %@ </a></p>",url, title];
             
         }];
+        
+        
         
     }
     

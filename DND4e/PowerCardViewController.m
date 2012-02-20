@@ -145,7 +145,7 @@
     if ([scheme isEqualToString:@"http"]) {
         [[UIApplication sharedApplication] openURL:url];
         return NO;
-    } else if ([scheme isEqualToString:@""]) {
+    } else if ([scheme isEqualToString:@"weapon"]) {
         [self chooseNewWeapon:nil];
         return NO;
     }

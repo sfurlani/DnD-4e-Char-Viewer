@@ -33,6 +33,8 @@
 		DCA8024C14F1335100620379 /* Power.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024B14F1335000620379 /* Power.m */; };
 		DCA8024F14F1335100620379 /* RulesElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024E14F1335100620379 /* RulesElement.m */; };
 		DCDCC1DC14F2F68E004BE096 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1DB14F2F68E004BE096 /* Icon.png */; };
+		DCDCC1DE14F3145D004BE096 /* Dwrf_Axe.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1DD14F3145D004BE096 /* Dwrf_Axe.dnd4e */; };
+		DCDCC1E014F31469004BE096 /* Frakk30.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1DF14F31468004BE096 /* Frakk30.dnd4e */; };
 		DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,8 @@
 		DCA8024D14F1335100620379 /* RulesElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RulesElement.h; path = DataModel/RulesElement.h; sourceTree = "<group>"; };
 		DCA8024E14F1335100620379 /* RulesElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RulesElement.m; path = DataModel/RulesElement.m; sourceTree = "<group>"; };
 		DCDCC1DB14F2F68E004BE096 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		DCDCC1DD14F3145D004BE096 /* Dwrf_Axe.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Dwrf_Axe.dnd4e; sourceTree = "<group>"; };
+		DCDCC1DF14F31468004BE096 /* Frakk30.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Frakk30.dnd4e; sourceTree = "<group>"; };
 		DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kaeltor12.dnd4e; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +139,8 @@
 				DCA8022B14F0A95E00620379 /* Utilities */,
 				DCA8021C14F0A8CC00620379 /* CoreData */,
 				DC693C2114EED9E700E68BF8 /* Hunter_1.xml */,
+				DCDCC1DD14F3145D004BE096 /* Dwrf_Axe.dnd4e */,
+				DCDCC1DF14F31468004BE096 /* Frakk30.dnd4e */,
 				DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */,
 				DC693BFF14EED86C00E68BF8 /* DNDAppDelegate.h */,
 				DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */,
@@ -264,6 +270,8 @@
 				DCA8024914F1328900620379 /* PowerCardViewController.xib in Resources */,
 				DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */,
 				DCDCC1DC14F2F68E004BE096 /* Icon.png in Resources */,
+				DCDCC1DE14F3145D004BE096 /* Dwrf_Axe.dnd4e in Resources */,
+				DCDCC1E014F31469004BE096 /* Frakk30.dnd4e in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
