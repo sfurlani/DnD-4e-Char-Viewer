@@ -19,6 +19,7 @@
 @dynamic attackStat;
 @dynamic hitComponents;
 @dynamic damageComponents;
+@dynamic conditions;
 @dynamic in_power;
 
 @end
@@ -31,6 +32,7 @@
         NSString *value = obj;
         if ([obj isKindOfClass:[NSDictionary class]])
             value = [obj valueForKey:@"value"];
+        NSLog(@"%@: %@", key, value);
         
         if ([key isEqualToString:@"name"]) self.name = value;
         else if ([key isEqualToString:@"DamageComponents"]) self.damageComponents = value;
@@ -40,6 +42,7 @@
         else if ([key isEqualToString:@"Damage"]) self.damage = value;
         else if ([key isEqualToString:@"AttackStat"]) self.attackStat = value;
         else if ([key isEqualToString:@"RulesElement"]) { /* [super populateWithDictionary:obj] */ }
+        else if ([key isEqualToString:@"Conditions"]) self.conditions = value;
         
     }];
     

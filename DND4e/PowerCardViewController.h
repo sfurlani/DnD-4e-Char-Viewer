@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class CardView, Power;
+
 @interface PowerCardViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scroll;
-@property (strong, nonatomic) IBOutlet UIView *cardView;
+@property (strong, nonatomic) IBOutlet CardView *cardView;
+@property (strong, nonatomic) Power *power;
+
+- (id)initWithPower:(Power*)power;
 
 @end

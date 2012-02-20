@@ -9,6 +9,7 @@
 #import "DNDAppDelegate.h"
 
 #import "DictionaryExplorerViewController.h"
+#import "PowerCardViewController.h"
 #import "GDataXMLNode.h"
 #import "XMLReader.h"
 #import "Data.h"
@@ -20,12 +21,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Hunter_1" ofType:@"xml"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"kaeltor12" ofType:@"dnd4e"];
     NSData *xmlData = [[NSMutableData alloc] initWithContentsOfFile:filePath];
     NSError *error = nil;
     
     NSDictionary *data = [XMLReader dictionaryForXMLData:xmlData error:&error];
-    NSLog(@"XMLReader: %@", [[data valueForKeyPath:@"D20Character.CharacterSheet.PowerStats.Power"] objectAtIndex:1]);
+//    NSLog(@"XMLReader: %@", [[data valueForKeyPath:@"D20Character.CharacterSheet.PowerStats.Power"] objectAtIndex:1]);
     
     
     NSArray *powers = [data valueForKeyPath:@"D20Character.CharacterSheet.PowerStats.Power"];
@@ -36,11 +37,13 @@
         [powerObjs addObject:power];
     }];
     //NSLog(@"Powers: %@", powerObjs);
-    
+    [powerObjs insertObject:data atIndex:0];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    DictionaryExplorerViewController *devc = [[DictionaryExplorerViewController alloc] initWithData:data];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:devc];
+    DictionaryExplorerViewController *vc = [[DictionaryExplorerViewController alloc] initWithData:powerObjs];
+//    PowerCardViewController *vc2 = [[PowerCardViewController alloc] initWithPower:[powerObjs objectAtIndex:1]];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    [nav pushViewController:vc2 animated:NO];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     

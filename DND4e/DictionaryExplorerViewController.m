@@ -7,6 +7,8 @@
 //
 
 #import "DictionaryExplorerViewController.h"
+#import "PowerCardViewController.h"
+#import "Data.h"
 
 #define isArray(obj) [obj isKindOfClass:[NSArray class]]
 #define isDictionary(obj) [obj isKindOfClass:[NSDictionary class]]
@@ -58,6 +60,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -112,7 +115,6 @@
     if (isArray(self.data)) {
         data = [self.data objectAtIndex:[indexPath row]];
         
-        
         if (isDictionary(data)) {
             label = [data objectForKey:@"name"];
             if ([[data allObjects] count] == 2) {
@@ -133,21 +135,24 @@
     } else {
         label = [NSString stringWithFormat:@"%@", data];
     }
+    
     if (isDictionary(data)) {
         if ([[data allObjects] count] == 1) {
             detail = [NSString stringWithFormat:@"%@", [[data allObjects] lastObject]];
         }
     }
     
+    if ([data isKindOfClass:[Power class]]) {
+        label = [data name];
+    }
+    
     if (detail) {
         style = UITableViewCellStyleValue1;
-        acc = UITableViewCellAccessoryNone;
+        CellIdentifier = @"hasDetail";
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        
-        
         cell = [[UITableViewCell alloc] initWithStyle:style 
                                       reuseIdentifier:CellIdentifier];
     }
@@ -155,6 +160,7 @@
     // Configure the cell...
     cell.textLabel.text = label;
     if (detail) {
+        acc = UITableViewCellAccessoryNone;
         cell.detailTextLabel.text = detail;
     }
     cell.accessoryType = acc;
@@ -237,6 +243,12 @@
             
         }
         NSLog(@"Data: %@", data);
+        
+        if ([data isKindOfClass:[Power class]]) {
+            PowerCardViewController *pcvc = [[PowerCardViewController alloc] initWithPower:data];
+            [self.navigationController pushViewController:pcvc animated:YES];
+        }
+        
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

@@ -34,6 +34,7 @@
 		DCA8024F14F1335100620379 /* RulesElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024E14F1335100620379 /* RulesElement.m */; };
 		DCA8025214F1335100620379 /* Weapon.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8025114F1335100620379 /* Weapon.m */; };
 		DCA8025514F182CD00620379 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8025414F182CC00620379 /* CardView.m */; };
+		DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		DCA8025114F1335100620379 /* Weapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weapon.m; sourceTree = "<group>"; };
 		DCA8025314F182CC00620379 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		DCA8025414F182CC00620379 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kaeltor12.dnd4e; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				DCA8022B14F0A95E00620379 /* Utilities */,
 				DCA8021C14F0A8CC00620379 /* CoreData */,
 				DC693C2114EED9E700E68BF8 /* Hunter_1.xml */,
+				DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */,
 				DC693BFF14EED86C00E68BF8 /* DNDAppDelegate.h */,
 				DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */,
 				DCA8024514F1328800620379 /* PowerCardViewController.h */,
@@ -264,6 +267,7 @@
 				DCA8021914F0A2A500620379 /* Window_iphone.xib in Resources */,
 				DCA8021B14F0A2B700620379 /* Window_ipad.xib in Resources */,
 				DCA8024914F1328900620379 /* PowerCardViewController.xib in Resources */,
+				DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +379,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -398,6 +403,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "E1918D95-7690-4CB0-ACD2-0FED773A3075";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

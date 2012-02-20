@@ -41,6 +41,7 @@
     [specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *name = [obj valueForKey:@"name"];
         NSString *value = [obj valueForKey:@"value"];
+        NSLog(@"%@: %@", name, value);
         
         if ([name isEqualToString:@"Flavor"]) self.flavor = value;
         else if ([name isEqualToString:@"Power Usage"]) self.usage = value;
@@ -63,8 +64,12 @@
         Weapon *weapon = [AppData newWeapon];
         [weapon populateWithDictionary:obj];
         [self addHas_weaponsObject:weapon];
+        if (!self.selected_weapon) {
+            self.selected_weapon = weapon;
+        }
     }];
     
+    self.name = [info valueForKey:@"name"];
 }
 
 @end

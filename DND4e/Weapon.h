@@ -21,6 +21,7 @@
 @property (nonatomic, retain) NSString * attackStat;
 @property (nonatomic, retain) NSString * hitComponents;
 @property (nonatomic, retain) NSString * damageComponents;
+@property (nonatomic, retain) NSString * conditions;
 @property (nonatomic, retain) Power *in_power;
 
 @end

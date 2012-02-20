@@ -106,6 +106,8 @@ SYNTHESIZE_SINGLETON_ARC(Data)
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"DND4e.sqlite"];
     
     NSError *error = nil;
+    [[NSFileManager defaultManager] removeItemAtURL:storeURL error:&error];
+    
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
     {

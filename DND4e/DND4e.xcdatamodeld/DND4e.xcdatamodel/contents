@@ -30,6 +30,7 @@
     <entity name="Weapon" representedClassName="Weapon" parentEntity="RulesElement" syncable="YES">
         <attribute name="attackBonus" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="attackStat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="conditions" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="damage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="damageComponents" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="defense" optional="YES" attributeType="String" syncable="YES"/>
@@ -39,7 +40,7 @@
     </entity>
     <elements>
         <element name="RulesElement" positionX="261" positionY="189" width="128" height="135"/>
-        <element name="Weapon" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="Weapon" positionX="160" positionY="192" width="128" height="180"/>
         <element name="Power" positionX="160" positionY="192" width="128" height="300"/>
     </elements>
 </model>
