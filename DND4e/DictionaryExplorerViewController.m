@@ -148,7 +148,7 @@
     
     if (detail) {
         style = UITableViewCellStyleValue1;
-        CellIdentifier = @"hasDetail";
+//        CellIdentifier = @"hasDetail";
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];

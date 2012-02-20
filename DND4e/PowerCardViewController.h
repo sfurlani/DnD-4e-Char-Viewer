@@ -10,7 +10,7 @@
 
 @class CardView, Power;
 
-@interface PowerCardViewController : UIViewController
+@interface PowerCardViewController : UIViewController <UIActionSheetDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scroll;
 @property (strong, nonatomic) IBOutlet CardView *cardView;

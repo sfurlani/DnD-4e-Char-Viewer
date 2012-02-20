@@ -28,11 +28,12 @@
 
 - (void) populateWithDictionary:(NSDictionary *)info
 {
+    NSLog(@"Weapon: %@", [info objectForKey:@"name"]);
     [info enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *value = obj;
         if ([obj isKindOfClass:[NSDictionary class]])
             value = [obj valueForKey:@"value"];
-        NSLog(@"%@: %@", key, value);
+//        NSLog(@"%@: %@", key, value);
         
         if ([key isEqualToString:@"name"]) self.name = value;
         else if ([key isEqualToString:@"DamageComponents"]) self.damageComponents = value;

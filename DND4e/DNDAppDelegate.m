@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"kaeltor12" ofType:@"dnd4e"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Hunter_1" ofType:@"xml"];
     NSData *xmlData = [[NSMutableData alloc] initWithContentsOfFile:filePath];
     NSError *error = nil;
     

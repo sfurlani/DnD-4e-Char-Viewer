@@ -131,6 +131,15 @@
         printOut(nil,@"Additional Effects:",bold);
         new_rect.origin.y -= border; // back up
         printOut(nil,_power.selected_weapon.conditions, italics);
+        
+        // HIT COMPONENTS
+        printOut(nil,@"Breakdown of Attack:",bold);
+        new_rect.origin.y -= border; // back up
+        printOut(nil,_power.selected_weapon.hitComponents, italics);
+        // HIT COMPONENTS
+        printOut(nil,@"Breakdown of Damage:",bold);
+        new_rect.origin.y -= border; // back up
+        printOut(nil,_power.selected_weapon.damageComponents, italics);
     }
 
 }

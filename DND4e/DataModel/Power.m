@@ -38,10 +38,11 @@
 {
     NSArray *specifics = [info valueForKey:@"specific"];
     
+    NSLog(@"Power: %@", [info valueForKey:@"name"]);
     [specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *name = [obj valueForKey:@"name"];
         NSString *value = [obj valueForKey:@"value"];
-        NSLog(@"%@: %@", name, value);
+//        NSLog(@"%@: %@", name, value);
         
         if ([name isEqualToString:@"Flavor"]) self.flavor = value;
         else if ([name isEqualToString:@"Power Usage"]) self.usage = value;

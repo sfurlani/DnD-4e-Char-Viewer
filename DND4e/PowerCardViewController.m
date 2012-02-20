@@ -43,6 +43,10 @@
     self.cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, self.view.fsw, self.view.fsh*2.0f)];
     [self.scroll addSubview:self.cardView];
     
+    UILongPressGestureRecognizer *tapnhold = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(chooseNewWeapon:)];
+    [self.cardView addGestureRecognizer:tapnhold];
+    
+    
 }
 
 - (void)viewDidUnload
@@ -62,8 +66,6 @@
 {
     [super viewWillAppear:animated];
     self.cardView.power = self.power;
-    self.cardView.userInteractionEnabled = NO;
-    self.scroll.userInteractionEnabled = YES;
     self.title = self.power.name;
     
     UIColor *barColor = [UIColor colorWithRed:0 green:0.4 blue:0 alpha:1.0];
@@ -80,6 +82,40 @@
     self.scroll.contentSize = self.cardView.frame.size;
     self.scroll.contentOffset = CGPointZero;
     
+}
+
+#pragma mark - IBActions
+
+- (void) chooseNewWeapon:(UILongPressGestureRecognizer*)hold
+{
+    if (hold.state == UIGestureRecognizerStateBegan) {
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Choose New Weapon"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                         destructiveButtonTitle:nil
+                                              otherButtonTitles: nil];
+    [self.power.has_weapons enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+        [sheet addButtonWithTitle:[obj name]];
+    }];
+    [sheet showInView:self.view];
+    }
+}
+
+
+#pragma mark - UIActionSHeet Delegate
+
+- (void) actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    NSString *name = [actionSheet buttonTitleAtIndex:buttonIndex];
+    if (![name isEqualToString:@"Cancel"]) {        
+        Weapon *weapon = [[self.power.has_weapons objectsPassingTest:^BOOL(id obj, BOOL *stop) {
+            *stop = [name isEqualToString:[obj name]];
+            return *stop;
+        }] anyObject];
+        
+        self.power.selected_weapon = weapon;
+        [self.cardView setNeedsDisplay];
+    }
 }
 
 @end
