@@ -10,19 +10,16 @@
 #import <CoreData/CoreData.h>
 
 
-@interface RulesElement : NSManagedObject
+@interface RulesElement : NSObject
 
-@property (nonatomic, retain) NSNumber * charelem;
-@property (nonatomic, retain) NSString * type;
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * internal_id;
-@property (nonatomic, retain) NSNumber * legal;
-@property (nonatomic, retain) NSString * url_string;
+@property (nonatomic, strong) NSNumber * charelem;
+@property (nonatomic, strong) NSString * type;
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString * internal_id;
+@property (nonatomic, strong) NSNumber * legal;
+@property (nonatomic, strong) NSString * url_string;
 
-@end
-
-@interface RulesElement (User_Methods)
-
+- (id) initWithDictionary:(NSDictionary*)info;
 - (void) populateWithDictionary:(NSDictionary *)info;
 
 @end

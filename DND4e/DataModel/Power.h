@@ -8,49 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "DNDObject.h"
 
 @class Weapon;
 
-@interface Power : DNDObject
+@interface Power : NSObject
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * flavor;
-@property (nonatomic, retain) NSString * usage;
-@property (nonatomic, retain) NSString * display;
-@property (nonatomic, retain) NSString * keywords;
-@property (nonatomic, retain) NSString * actionType;
-@property (nonatomic, retain) NSString * attackType;
-@property (nonatomic, retain) NSString * powerType;
-@property (nonatomic, retain) NSString * target;
-@property (nonatomic, retain) NSString * attack;
-@property (nonatomic, retain) NSString * hit;
-@property (nonatomic, retain) NSString * effect;
-@property (nonatomic, retain) NSString * miss;
-@property (nonatomic, retain) NSString * level11;
-@property (nonatomic, retain) NSString * level21;
-@property (nonatomic, retain) NSString * special;
-@property (nonatomic, retain) NSString * requirement;
-@property (nonatomic, retain) NSString * primaryTarget;
-@property (nonatomic, retain) NSString * primaryAttack;
-@property (nonatomic, retain) NSString * secondaryTarget;
-@property (nonatomic, retain) NSString * secondaryAttack;
-@property (nonatomic, retain) NSString * secondaryHit;
-@property (nonatomic, retain) NSSet *has_weapons;
-@property (nonatomic, retain) Weapon *selected_weapon;
-@end
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString * flavor;
+@property (nonatomic, strong) NSString * usage;
+@property (nonatomic, strong) NSString * display;
+@property (nonatomic, strong) NSString * keywords;
+@property (nonatomic, strong) NSString * actionType;
+@property (nonatomic, strong) NSString * attackType;
+@property (nonatomic, strong) NSString * powerType;
+@property (nonatomic, strong) NSMutableArray * specifics;
+@property (nonatomic, strong) NSMutableArray * has_weapons;
+@property (nonatomic, strong) Weapon *selected_weapon;
 
-@interface Power (CoreDataGeneratedAccessors)
-
-- (void)addHas_weaponsObject:(Weapon *)value;
-- (void)removeHas_weaponsObject:(Weapon *)value;
-- (void)addHas_weapons:(NSSet *)values;
-- (void)removeHas_weapons:(NSSet *)values;
-@end
-
-
-@interface Power (User_Methods)
-
+- (id) initWithDictionary:(NSDictionary*)info;
 - (void) populateWithDictionary:(NSDictionary*)info;
 
 @end

@@ -13,23 +13,37 @@
 
 @implementation Weapon
 
-@dynamic name;
-@dynamic attackBonus;
-@dynamic defense;
-@dynamic damage;
-@dynamic attackStat;
-@dynamic hitComponents;
-@dynamic damageComponents;
-@dynamic conditions;
-@dynamic critRange;
-@dynamic critComponents;
-@dynamic critDamage;
-@dynamic in_power;
-@dynamic has_elements;
+@synthesize name;
+@synthesize attackBonus;
+@synthesize defense;
+@synthesize damage;
+@synthesize attackStat;
+@synthesize hitComponents;
+@synthesize damageComponents;
+@synthesize conditions;
+@synthesize critRange;
+@synthesize critComponents;
+@synthesize critDamage;
+@synthesize in_power;
+@synthesize has_elements;
 
-@end
+- (id) init
+{
+    self = [super init];
+    if (self) {
+        self.has_elements = [NSMutableArray array];
+    }
+    return self;
+}
 
-@implementation Weapon (User_Methods)
+- (id) initWithDictionary:(NSDictionary*)info
+{
+    self = [self init];
+    if (self) {
+        [self populateWithDictionary:info];
+    }
+    return self;
+}
 
 - (void) populateWithDictionary:(NSDictionary *)info
 {
@@ -58,14 +72,12 @@
         else if ([key isEqualToString:@"CridComponents"]) self.critComponents = value;
         else if ([key isEqualToString:@"RulesElement"]) { 
             if ([obj isKindOfClass:[NSDictionary class]]) {
-                RulesElement *elem = [AppData newElement];
-                [elem populateWithDictionary:obj];
-                [self addHas_elementsObject:elem];
+                RulesElement *elem = [[RulesElement alloc] initWithDictionary:obj];
+                [self.has_elements addObject:elem];
             } else if ([obj isKindOfClass:[NSArray class]]) {
                 [obj enumerateObjectsUsingBlock:^(id ele, NSUInteger idx, BOOL *stop) {
-                    RulesElement *elem = [AppData newElement];
-                    [elem populateWithDictionary:ele];
-                    [self addHas_elementsObject:elem];
+                    RulesElement *elem = [[RulesElement alloc] initWithDictionary:ele];
+                    [self.has_elements addObject:elem];
                 }];
             }
         }

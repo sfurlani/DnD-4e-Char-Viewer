@@ -23,25 +23,6 @@ SYNTHESIZE_SINGLETON_ARC(Data)
 
 #pragma mark - Factory Methods
 
-- (Power*) newPower
-{
-    return [[Power alloc] initWithEntity:[NSEntityDescription entityForName:@"Power" inManagedObjectContext:self.managedObjectContext]
-          insertIntoManagedObjectContext:self.managedObjectContext];
-}
-
-- (Weapon*) newWeapon
-{
-    return [[Weapon alloc] initWithEntity:[NSEntityDescription entityForName:@"Weapon" inManagedObjectContext:self.managedObjectContext]
-          insertIntoManagedObjectContext:self.managedObjectContext];
-}
-
-- (RulesElement*) newElement
-{
-    return [[RulesElement alloc] initWithEntity:[NSEntityDescription entityForName:@"RulesElement" inManagedObjectContext:self.managedObjectContext]
-           insertIntoManagedObjectContext:self.managedObjectContext];
-}
-
-
 - (void)saveContext
 {
     NSError *error = nil;

@@ -11,16 +11,30 @@
 
 @implementation RulesElement
 
-@dynamic charelem;
-@dynamic type;
-@dynamic name;
-@dynamic internal_id;
-@dynamic legal;
-@dynamic url_string;
+@synthesize charelem;
+@synthesize type;
+@synthesize name;
+@synthesize internal_id;
+@synthesize legal;
+@synthesize url_string;
 
-@end
+- (id) init
+{
+    self = [super init];
+    if (self) {
 
-@implementation RulesElement (User_Methods)
+    }
+    return self;
+}
+
+- (id) initWithDictionary:(NSDictionary*)info
+{
+    self = [self init];
+    if (self) {
+        [self populateWithDictionary:info];
+    }
+    return self;
+}
 
 - (void) populateWithDictionary:(NSDictionary *)info
 {

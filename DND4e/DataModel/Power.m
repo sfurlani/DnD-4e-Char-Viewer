@@ -12,79 +12,65 @@
 
 @implementation Power
 
-@dynamic name;
-@dynamic flavor;
-@dynamic usage;
-@dynamic display;
-@dynamic keywords;
-@dynamic actionType;
-@dynamic attackType;
-@dynamic powerType;
-@dynamic target;
-@dynamic attack;
-@dynamic hit;
-@dynamic effect;
-@dynamic miss;
-@dynamic level11;
-@dynamic level21;
-@dynamic special;
-@dynamic requirement;
-@dynamic primaryAttack;
-@dynamic primaryTarget;
-@dynamic secondaryHit;
-@dynamic secondaryAttack;
-@dynamic secondaryTarget;
-@dynamic has_weapons;
-@dynamic selected_weapon;
+@synthesize name;
+@synthesize flavor;
+@synthesize usage;
+@synthesize display;
+@synthesize keywords;
+@synthesize actionType;
+@synthesize attackType;
+@synthesize powerType;
+@synthesize specifics;
+@synthesize has_weapons;
+@synthesize selected_weapon;
 
-@end
+- (id) init
+{
+    self = [super init];
+    if (self) {
+        self.has_weapons = [NSMutableArray array];
+        self.specifics = [NSMutableArray array];
+    }
+    return self;
+}
 
-@implementation Power (User_Methods)
+- (id) initWithDictionary:(NSDictionary*)info
+{
+    self = [self init];
+    if (self) {
+        [self populateWithDictionary:info];
+    }
+    return self;
+}
 
 - (void) populateWithDictionary:(NSDictionary *)info
 {
      self.name = [info valueForKey:@"name"];
     
-    NSArray *specifics = [info valueForKey:@"specific"];
+    NSArray *specs = [info valueForKey:@"specific"];
     
     NSLog(@"Power: %@", self.name);
-    if ([self.name isEqualToString:@"Stab and Shoot"]) {
-        NSLog(@"Info: %@", info);
-    }
-    [specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSString *name = [obj valueForKey:@"name"];
+    [specs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *key = [obj valueForKey:@"name"];
         NSString *value = [obj valueForKey:@"value"];
-//        NSLog(@"%@: %@", name, value);
         
-        if ([name isEqualToString:@"Flavor"]) self.flavor = value;
-        else if ([name isEqualToString:@"Power Usage"]) self.usage = value;
-        else if ([name isEqualToString:@"Display"]) self.display = value;
-        else if ([name isEqualToString:@"Keywords"]) self.keywords = value;
-        else if ([name isEqualToString:@"Action Type"]) self.actionType = value;
-        else if ([name isEqualToString:@"Attack Type"]) self.attackType = value;
-        else if ([name isEqualToString:@"Target"]) self.target = value;
-        else if ([name isEqualToString:@"Attack"]) self.attack = value;
-        else if ([name isEqualToString:@"Hit"]) self.hit = value;
-        else if ([name isEqualToString:@" Level 21"]) self.level21 = value;
-        else if ([name isEqualToString:@"Miss"]) self.miss = value;
-        else if ([name isEqualToString:@"Power Type"]) self.powerType = value;
-        else if ([name isEqualToString:@"Effect"]) self.effect = value;
-        else if ([name isEqualToString:@"Special"]) self.special = value;
-        else if ([name isEqualToString:@"Requirement"]) self.requirement = value;
-        else if ([name isEqualToString:@"Primary Target"]) self.primaryTarget = value;
-        else if ([name isEqualToString:@"Primary Attack"]) self.primaryAttack = value;
-        else if ([name isEqualToString:@" Secondary Target"]) self.secondaryTarget = value;
-        else if ([name isEqualToString:@" Secondary Attack"]) self.secondaryAttack = value;
-        else if ([name isEqualToString:@" Hit"]) self.secondaryHit = value;
+        if ([key isEqualToString:@"Flavor"]) self.flavor = value;
+        else if ([key isEqualToString:@"Power Usage"]) self.usage = value;
+        else if ([key isEqualToString:@"Display"]) self.display = value;
+        else if ([key isEqualToString:@"Keywords"]) self.keywords = value;
+        else if ([key isEqualToString:@"Action Type"]) self.actionType = value;
+        else if ([key isEqualToString:@"Attack Type"]) self.attackType = value;
+        else {
+            [self.specifics addObject:obj];
+        }
         
     }];
     
     id weapons = [info valueForKey:@"Weapon"];
     if ([weapons isKindOfClass:[NSArray class]]) {
         [weapons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            Weapon *weapon = [AppData newWeapon];
-            [weapon populateWithDictionary:obj];
-            [self addHas_weaponsObject:weapon];
+            Weapon *weapon = [[Weapon alloc] initWithDictionary:obj];
+            [self.has_weapons addObject:weapon];
             if (!self.selected_weapon) {
                 self.selected_weapon = weapon;
             }

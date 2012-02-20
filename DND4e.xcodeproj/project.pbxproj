@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC52E7E314F1E818002FEEC9 /* DNDObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DC52E7E214F1E818002FEEC9 /* DNDObject.m */; };
 		DC52E7E614F1E838002FEEC9 /* Weapon.m in Sources */ = {isa = PBXBuildFile; fileRef = DC52E7E514F1E838002FEEC9 /* Weapon.m */; };
 		DC693BEF14EED86B00E68BF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BEE14EED86B00E68BF8 /* UIKit.framework */; };
 		DC693BF114EED86B00E68BF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF014EED86B00E68BF8 /* Foundation.framework */; };
@@ -16,7 +15,6 @@
 		DC693BFB14EED86B00E68BF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC693BF914EED86B00E68BF8 /* InfoPlist.strings */; };
 		DC693BFD14EED86B00E68BF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693BFC14EED86B00E68BF8 /* main.m */; };
 		DC693C0114EED86C00E68BF8 /* DNDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */; };
-		DC693C0A14EED86C00E68BF8 /* DND4e.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC693C0814EED86C00E68BF8 /* DND4e.xcdatamodeld */; };
 		DC693C1D14EED89300E68BF8 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C1C14EED89300E68BF8 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DC693C2014EED8C700E68BF8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693C1F14EED8C700E68BF8 /* libxml2.dylib */; };
 		DC693C2214EED9E700E68BF8 /* Hunter_1.xml in Resources */ = {isa = PBXBuildFile; fileRef = DC693C2114EED9E700E68BF8 /* Hunter_1.xml */; };
@@ -35,12 +33,11 @@
 		DCA8024C14F1335100620379 /* Power.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024B14F1335000620379 /* Power.m */; };
 		DCA8024F14F1335100620379 /* RulesElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8024E14F1335100620379 /* RulesElement.m */; };
 		DCA8025514F182CD00620379 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8025414F182CC00620379 /* CardView.m */; };
+		DCDCC1DC14F2F68E004BE096 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1DB14F2F68E004BE096 /* Icon.png */; };
 		DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DC52E7E114F1E818002FEEC9 /* DNDObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNDObject.h; path = DataModel/DNDObject.h; sourceTree = "<group>"; };
-		DC52E7E214F1E818002FEEC9 /* DNDObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DNDObject.m; path = DataModel/DNDObject.m; sourceTree = "<group>"; };
 		DC52E7E414F1E838002FEEC9 /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Weapon.h; path = DataModel/Weapon.h; sourceTree = "<group>"; };
 		DC52E7E514F1E838002FEEC9 /* Weapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Weapon.m; path = DataModel/Weapon.m; sourceTree = "<group>"; };
 		DC693BEA14EED86B00E68BF8 /* DND4e.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DND4e.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +51,6 @@
 		DC693BFE14EED86B00E68BF8 /* DND4e-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DND4e-Prefix.pch"; sourceTree = "<group>"; };
 		DC693BFF14EED86C00E68BF8 /* DNDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNDAppDelegate.h; sourceTree = "<group>"; };
 		DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNDAppDelegate.m; sourceTree = "<group>"; };
-		DC693C0914EED86C00E68BF8 /* DND4e.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DND4e.xcdatamodel; sourceTree = "<group>"; };
 		DC693C1B14EED89300E68BF8 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		DC693C1C14EED89300E68BF8 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		DC693C1F14EED8C700E68BF8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -86,6 +82,7 @@
 		DCA8024E14F1335100620379 /* RulesElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RulesElement.m; path = DataModel/RulesElement.m; sourceTree = "<group>"; };
 		DCA8025314F182CC00620379 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		DCA8025414F182CC00620379 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		DCDCC1DB14F2F68E004BE096 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kaeltor12.dnd4e; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +156,7 @@
 		DC693BF714EED86B00E68BF8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DCDCC1DB14F2F68E004BE096 /* Icon.png */,
 				DCA8021A14F0A2B700620379 /* Window_ipad.xib */,
 				DCA8021814F0A2A500620379 /* Window_iphone.xib */,
 				DC693BF814EED86B00E68BF8 /* DND4e-Info.plist */,
@@ -183,11 +181,8 @@
 		DCA8021C14F0A8CC00620379 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				DC693C0814EED86C00E68BF8 /* DND4e.xcdatamodeld */,
 				DCA8024214F0A9AA00620379 /* Data.h */,
 				DCA8024314F0A9AA00620379 /* Data.m */,
-				DC52E7E114F1E818002FEEC9 /* DNDObject.h */,
-				DC52E7E214F1E818002FEEC9 /* DNDObject.m */,
 				DCA8024D14F1335100620379 /* RulesElement.h */,
 				DCA8024E14F1335100620379 /* RulesElement.m */,
 				DC52E7E414F1E838002FEEC9 /* Weapon.h */,
@@ -273,6 +268,7 @@
 				DCA8021B14F0A2B700620379 /* Window_ipad.xib in Resources */,
 				DCA8024914F1328900620379 /* PowerCardViewController.xib in Resources */,
 				DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */,
+				DCDCC1DC14F2F68E004BE096 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +281,6 @@
 			files = (
 				DC693BFD14EED86B00E68BF8 /* main.m in Sources */,
 				DC693C0114EED86C00E68BF8 /* DNDAppDelegate.m in Sources */,
-				DC693C0A14EED86C00E68BF8 /* DND4e.xcdatamodeld in Sources */,
 				DC693C1D14EED89300E68BF8 /* GDataXMLNode.m in Sources */,
 				DC693C2514EEDCB500E68BF8 /* XMLReader.m in Sources */,
 				DC693C3814F0069200E68BF8 /* DictionaryExplorerViewController.m in Sources */,
@@ -298,7 +293,6 @@
 				DCA8024C14F1335100620379 /* Power.m in Sources */,
 				DCA8024F14F1335100620379 /* RulesElement.m in Sources */,
 				DCA8025514F182CD00620379 /* CardView.m in Sources */,
-				DC52E7E314F1E818002FEEC9 /* DNDObject.m in Sources */,
 				DC52E7E614F1E838002FEEC9 /* Weapon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,7 +401,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E1918D95-7690-4CB0-ACD2-0FED773A3075";
+				PROVISIONING_PROFILE = "CE781C25-FFF3-4BA4-8CDD-E75AB231589C";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
@@ -436,19 +430,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DC693C0814EED86C00E68BF8 /* DND4e.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DC693C0914EED86C00E68BF8 /* DND4e.xcdatamodel */,
-			);
-			currentVersion = DC693C0914EED86C00E68BF8 /* DND4e.xcdatamodel */;
-			path = DND4e.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DC693BE114EED86B00E68BF8 /* Project object */;
 }
