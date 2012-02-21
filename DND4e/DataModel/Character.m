@@ -69,8 +69,33 @@
             [self.elements addObject:element];
         }];
         
+        NSArray * skill = [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+            return [[(RulesElement*)obj name] hasPrefix:@"Endurance"];
+        }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
+        }];
+        NSLog(@"Skill: %@", skill);
+        
     }
     return self;
+}
+
+- (NSArray*) feats
+{
+    return [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+        return [[(RulesElement*)obj type] isEqualToString:@"Feat"];
+    }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
+    }];
+}
+
+- (NSArray*) skills
+{
+    return [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+        return [[(RulesElement*)obj type] isEqualToString:@"Skill"];
+    }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
+    }];
 }
 
 - (NSString*) html

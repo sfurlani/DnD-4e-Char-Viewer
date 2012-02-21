@@ -72,31 +72,35 @@ NSString * const keyCharisma = @"Charisma";
     }];
     
     [statBlock enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *key = nil;
+        
+        // Get Key
         if ([[obj valueForKey:@"alias"] isKindOfClass:[NSDictionary class]]) {
-            // TODO: additional stats
-            // NSLog(@"Not using Score: %@",[obj valueForKeyPath:@"alias.name"]);
-            if ([[obj valueForKeyPath:@"alias.name"] hasSuffix:@"modifier"]) {
-                // TODO: ability modifier?
-            }
-            return;
+            key = [obj valueForKeyPath:@"alias.name"];
+        } else {
+            key = [[[obj valueForKey:@"alias"] objectAtIndex:0] valueForKey:@"name"]; // more than on alias?  take first
         }
-        NSString *key = [[[obj valueForKey:@"alias"] objectAtIndex:0] valueForKey:@"name"];
+        
         __block Score *score = [self.scores valueForKey:key];
         
-        if (score) {
-            NSArray *statadd = [obj valueForKey:@"statadd"];
-            if ([statadd isKindOfClass:[NSArray array]] || [statadd isKindOfClass:[NSMutableArray class]]) {
-                [statadd enumerateObjectsUsingBlock:^(id com, NSUInteger idx, BOOL *stop) {
-                    NSDictionary *component = com;
-                    if ([component count] > 1) {
-                        [score.components addObject:component];
-                    }
-                }];
-            } else {
-                [score.components addObject:statadd];
-            }
+        // Add score
+        if (!score) {
+            score = [[Score alloc] initWithName:key];
+            [self.scores setObject:score forKey:key];
+        }
+        
+        NSArray *statadd = [obj valueForKey:@"statadd"];
+        if ([statadd isKindOfClass:[NSArray array]] || [statadd isKindOfClass:[NSMutableArray class]]) {
+            [statadd enumerateObjectsUsingBlock:^(id com, NSUInteger idx, BOOL *stop) {
+                NSDictionary *component = com;
+                if ([component count] > 1) {
+                    [score.components addObject:component];
+                }
+            }];
+        } else if (statadd) {
+            [score.components addObject:statadd];
         } else {
-            NSLog(@"No Score for key: %@", key);
+            [score.components addObject:obj];
         }
         
         
@@ -123,14 +127,14 @@ NSString * const keyCharisma = @"Charisma";
      "</tr>"];
     
     __block NSString * tableRow = @"<tr valign=\"middle\">"
-    "<td align=\"left\"><a href=\"stat://%@\">%@:</a></td>"
+    "<td align=\"left\">%@:</td>"
     "<td align=\"center\">%d</td>"
     "<td align=\"center\">%@</td>"
     "<td align=\"center\">%@</td>"
     "</tr>";
     
     __block NSString * tableRowGrey = @"<tr valign=\"middle\" bgcolor=\"#EEE\">"
-    "<td align=\"left\"><a href=\"stat://%@\">%@:</a></td>"
+    "<td align=\"left\">%@:</td>"
     "<td align=\"center\">%d</td>"
     "<td align=\"center\">%@</td>"
     "<td align=\"center\">%@</td>"
@@ -150,7 +154,7 @@ NSString * const keyCharisma = @"Charisma";
         NSString *modStr = (mod > 0) ? NSFORMAT(@"+%d", mod) : NSFORMAT(@"%d", mod);
         NSString *checkStr = (check > 0) ? NSFORMAT(@"+%d", check) : NSFORMAT(@"%d", check);
         
-        [html appendFormat:row,key,key,score,modStr,checkStr];
+        [html appendFormat:row,key,score,modStr,checkStr];
 
     };
     
@@ -165,6 +169,9 @@ NSString * const keyCharisma = @"Charisma";
     
     [html appendString:@"<hr width=\"200\">"];
     
+    [self.scores enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [html appendFormat:@"<a href=\"stat://%@\">%@</a><br>",key,key];
+    }];
     return html;
 }
 
@@ -172,7 +179,7 @@ NSString * const keyCharisma = @"Charisma";
 
 @implementation Score
 
-@synthesize name = _name, aliases, parent, components;
+@synthesize name = _name, aliases, parent, components, level;
 
 - (id) initWithName:(NSString *)name
 {
@@ -180,6 +187,7 @@ NSString * const keyCharisma = @"Charisma";
     if (self) {
         self.name = name;
         self.components = [NSMutableArray array];
+        self.level = NSINT(-1);
     }
     return self;
 }
@@ -190,7 +198,12 @@ NSString * const keyCharisma = @"Charisma";
     [html appendFormat:@"<h3>%@</h3>",self.name];
     
     if ([self.components count] == 1) {
-        [html appendString:@"No Modifiers"];
+        NSString *text = [[self.components lastObject] valueForKeyPath:@"String"];
+        if (text) {
+            [html appendString:text];
+        } else {
+            [html appendFormat:@"%@", [self.components lastObject]];
+        }
     } else {
         [self.components enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSNumber *eNum = NSINT([[obj valueForKey:@"charelem"] intValue]);

@@ -204,7 +204,7 @@
         
     } else if ([scheme isEqualToString:@"stat"]) {
         NSLog(@"Opening %@", url);
-        [self openStatDetail:host];
+        [self openStatDetail:[host stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         return NO;
     }
     

@@ -18,7 +18,7 @@
 @synthesize legal;
 @synthesize url_string;
 @synthesize specifics;
-@synthesize description;
+@synthesize desc;
 
 - (id) init
 {
@@ -57,7 +57,7 @@
     }
     NSString *value = [info valueForKey:@"value"];
     if ([value length] > 2) {
-        self.description = value;
+        self.desc = value;
     }
 }
 
@@ -83,8 +83,8 @@
             }
         }];
     }
-    if (self.description)
-        [html appendFormat:row,@"Description",self.description];
+    if (self.desc)
+        [html appendFormat:row,@"Description",self.desc];
     
     [html appendString:@"</dl>"];
     
@@ -101,8 +101,43 @@
     // Don't display rules elements
     if ([key hasPrefix:@"_"]) return NO;
     if ([key hasPrefix:@"Granted Powers"]) return NO;
+    if ([key hasPrefix:@"Short"]) return NO;
     
     return YES;
+}
+
+- (NSString*) description
+{
+    __block NSMutableString *html = [NSMutableString string];
+    
+    [html appendFormat:@"%@\n",self.name];
+    [html appendString:@"\n"];
+    __block NSString *row = @"%@: %@\n";
+    [html appendFormat:row,@"Type",self.type];
+    //[html appendFormat:row,@"Element",self.charelem];
+    if(![self.legal boolValue]) [html appendFormat:row,@"House Ruled",@"yes"];
+    if ([self.specifics count] > 0) {
+        [self.specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSString *key = [obj valueForKey:@"name"];
+            NSString *value = [obj valueForKey:@"value"];
+            if ([self shouldDisplaySpecific:key])
+                [html appendFormat:row,key,value];
+            else if ([key isEqualToString:@"Granted Powers"]) {
+                // TODO: add Power
+                
+            }
+        }];
+    }
+    if (self.desc)
+        [html appendFormat:row,@"Description",self.desc];
+    
+    [html appendString:@"\n"];
+    
+    NSString *url = self.url_string;
+    if (url)
+        [html appendFormat:@"URL: %@",url];
+    
+    return html;
 }
 
 

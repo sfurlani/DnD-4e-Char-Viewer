@@ -22,6 +22,9 @@
 @property (strong, nonatomic) AbilityScores *stats;
 @property (strong, nonatomic) id objectGraph;
 
+- (NSArray*) feats;
+- (NSArray*) skills;
+
 - (id) initWithFile:(NSString*)path;
 - (Loot*) lootForInternalID:(NSString*)internalID;
 - (RulesElement*) elementForCharelem:(NSNumber*)charElem;
