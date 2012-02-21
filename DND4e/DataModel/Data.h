@@ -28,3 +28,6 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 @end
+
+
+#define replace(string) ([[string stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"] stringByReplacingOccurrencesOfString:@"\t" withString:@"&nbsp;&nbsp;&nbsp;&nbsp;"])

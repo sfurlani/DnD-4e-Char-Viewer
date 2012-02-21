@@ -7,6 +7,7 @@
 //
 
 #import "RulesElement.h"
+#import "Data.h"
 #import "Utility.h"
 
 @implementation RulesElement
@@ -57,7 +58,7 @@
     }
     NSString *value = [info valueForKey:@"value"];
     if ([value length] > 2) {
-        self.desc = value;
+        self.desc = replace(value);
     }
 }
 

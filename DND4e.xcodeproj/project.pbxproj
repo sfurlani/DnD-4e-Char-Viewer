@@ -45,6 +45,7 @@
 		DCDCC1F914F34DE8004BE096 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC1F714F34DE7004BE096 /* MainViewController.m */; };
 		DCDCC1FA14F34DE8004BE096 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1F814F34DE7004BE096 /* MainViewController.xib */; };
 		DCDCC1FD14F3DF25004BE096 /* AbilityScores.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC1FC14F3DF25004BE096 /* AbilityScores.m */; };
+		DCDCC20014F41F3E004BE096 /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC1FF14F41F3E004BE096 /* Skill.m */; };
 		DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,8 @@
 		DCDCC1F814F34DE7004BE096 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		DCDCC1FB14F3DF25004BE096 /* AbilityScores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbilityScores.h; path = DataModel/AbilityScores.h; sourceTree = "<group>"; };
 		DCDCC1FC14F3DF25004BE096 /* AbilityScores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbilityScores.m; path = DataModel/AbilityScores.m; sourceTree = "<group>"; };
+		DCDCC1FE14F41F3D004BE096 /* Skill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skill.h; path = DataModel/Skill.h; sourceTree = "<group>"; };
+		DCDCC1FF14F41F3E004BE096 /* Skill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Skill.m; path = DataModel/Skill.m; sourceTree = "<group>"; };
 		DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kaeltor12.dnd4e; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +235,8 @@
 				DCDCC1EF14F34567004BE096 /* Character.m */,
 				DCDCC1FB14F3DF25004BE096 /* AbilityScores.h */,
 				DCDCC1FC14F3DF25004BE096 /* AbilityScores.m */,
+				DCDCC1FE14F41F3D004BE096 /* Skill.h */,
+				DCDCC1FF14F41F3E004BE096 /* Skill.m */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 				DCDCC1F414F34C47004BE096 /* CharacterViewController.m in Sources */,
 				DCDCC1F914F34DE8004BE096 /* MainViewController.m in Sources */,
 				DCDCC1FD14F3DF25004BE096 /* AbilityScores.m in Sources */,
+				DCDCC20014F41F3E004BE096 /* Skill.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +439,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = YES;
+				RUN_CLANG_STATIC_ANALYZER = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -457,7 +463,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "CE781C25-FFF3-4BA4-8CDD-E75AB231589C";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				RUN_CLANG_STATIC_ANALYZER = YES;
+				RUN_CLANG_STATIC_ANALYZER = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

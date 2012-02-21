@@ -88,7 +88,6 @@
 - (NSString*)html
 {
     __block NSMutableString *html = [NSMutableString string];
-    #define replace(string) ([string stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"])
     
     // HEADER
     if (self.flavor)

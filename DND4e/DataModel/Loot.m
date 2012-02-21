@@ -9,7 +9,7 @@
 #import "Loot.h"
 #import "Data.h"
 
-#define replace(string) ([string stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"])
+#define replace(string) ([[string stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"] stringByReplacingOccurrencesOfString:@"\t" withString:@"&nbsp;&nbsp;&nbsp;&nbsp;"])
 
 @implementation Loot
 
