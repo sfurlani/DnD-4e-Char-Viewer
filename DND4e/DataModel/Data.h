@@ -11,6 +11,7 @@
 #import "Power.h"
 #import "RulesElement.h"
 #import "Loot.h"
+#import "Character.h"
 
 #define AppData ([Data sharedData])
 

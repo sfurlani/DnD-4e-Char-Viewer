@@ -37,7 +37,11 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>0.1.3</string>
+	<string>0.1.6</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>dnd_4e_icons_v3.ttf</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array/>
 	<key>UISupportedInterfaceOrientations</key>
@@ -52,10 +56,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>dnd_4e_icons_v3.ttf</string>
 	</array>
 </dict>
 </plist>

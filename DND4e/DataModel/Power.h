@@ -11,7 +11,7 @@
 
 #import "DNDHTML.h"
 
-@class Weapon;
+@class Weapon, Character;
 
 @interface Power : NSObject <DNDHTML>
 
@@ -26,6 +26,7 @@
 @property (nonatomic, strong) NSMutableArray * specifics;
 @property (nonatomic, strong) NSMutableArray * has_weapons;
 @property (nonatomic, strong) Weapon *selected_weapon;
+@property (nonatomic, unsafe_unretained) Character* character;
 
 - (id) initWithDictionary:(NSDictionary*)info;
 - (void) populateWithDictionary:(NSDictionary*)info;

@@ -7,7 +7,6 @@
 //
 
 #import "Power.h"
-#import "Weapon.h"
 #import "Data.h"
 #import "Utility.h"
 
@@ -24,6 +23,7 @@
 @synthesize specifics;
 @synthesize has_weapons;
 @synthesize selected_weapon;
+@synthesize character;
 
 - (id) init
 {

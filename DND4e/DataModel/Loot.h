@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "DNDHTML.h"
 
-@class RulesElement;
+@class RulesElement, Character;
 
 @interface Loot : NSObject <DNDHTML>
 
 @property (nonatomic, strong) NSMutableArray * items;
 @property (nonatomic, strong) RulesElement *element;
+@property (nonatomic, unsafe_unretained) Character* character;
 
 - (id) initWithDictionary:(NSDictionary*)info;
 - (void) populateWithDictionary:(NSDictionary*)info;

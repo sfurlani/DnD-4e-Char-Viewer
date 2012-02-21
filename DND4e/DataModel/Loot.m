@@ -14,6 +14,7 @@
 @implementation Loot
 
 @synthesize items, element;
+@synthesize character;
 
 - (id) init
 {
