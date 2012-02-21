@@ -28,6 +28,7 @@
         [powerInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             Power *power = [[Power alloc] initWithDictionary:obj];
             [self.powers addObject:power];
+            power.character = self; // weak
         }];
         
         NSArray *lootInfo = [data valueForKeyPath:@"D20Character.CharacterSheet.LootTally.loot"];
@@ -35,6 +36,7 @@
         [lootInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             Loot *item = [[Loot alloc] initWithDictionary:obj];
             [self.loot addObject:item];
+            item.character = self; // weak
         }];
         
         self.name = [data valueForKeyPath:@"D20Character.CharacterSheet.Details.name.value"];
@@ -46,6 +48,23 @@
 - (NSString*) html
 {
     return @"";
+}
+
+- (Loot*) lootForInternalID:(NSString*)internalID
+{
+    __block Loot *ret = nil;
+    [self.loot enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        Loot *lt = obj;
+        [lt.items enumerateObjectsUsingBlock:^(id obj2, NSUInteger idx, BOOL *stop) {
+            Item *it = obj2;
+            if ([it.element.internal_id isEqualToString:internalID]) {
+                ret = obj;
+                *stop = YES;
+            }
+        }];
+        if (ret) *stop = YES;
+    }];
+    return ret;
 }
 
 @end

@@ -115,6 +115,26 @@
     [sheet showInView:self.view];
 }
 
+- (void) weaponDetail
+{
+    if (![self.thing isKindOfClass:[Power class]]) return;
+    Power *power = (Power*)_thing;
+    NSString *internalID = [power.selected_weapon.has_elements lastObject]; // Trying magic item
+    Loot *loot = [power.character lootForInternalID:internalID];
+    if (loot) {
+        PowerCardViewController *pcvc = [[PowerCardViewController alloc] initWithThing:loot];
+        [self.navigationController pushViewController:pcvc animated:YES];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:@"This isn't the item you're looking for."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
+}
+
 
 #pragma mark - UIActionSHeet Delegate
 
@@ -161,8 +181,11 @@
     if ([scheme isEqualToString:@"http"]) {
         [[UIApplication sharedApplication] openURL:url];
         return NO;
-    } else if ([scheme isEqualToString:@"weapon"]) {
+    } else if ([scheme isEqualToString:@"change"]) {
         [self chooseNewWeapon:nil];
+        return NO;
+    } else if ([scheme isEqualToString:@"weapon"]) {
+        [self weaponDetail];
         return NO;
     }
     

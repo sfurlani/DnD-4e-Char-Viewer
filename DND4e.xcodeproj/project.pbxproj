@@ -40,6 +40,10 @@
 		DCDCC1E614F327B6004BE096 /* dnd_4e_icons_v3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1E514F327B6004BE096 /* dnd_4e_icons_v3.ttf */; };
 		DCDCC1E914F32DFC004BE096 /* Loot.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC1E814F32DFC004BE096 /* Loot.m */; };
 		DCDCC1F014F34567004BE096 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC1EF14F34567004BE096 /* Character.m */; };
+		DCDCC1F414F34C47004BE096 /* CharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC1F214F34C46004BE096 /* CharacterViewController.m */; };
+		DCDCC1F514F34C47004BE096 /* CharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1F314F34C47004BE096 /* CharacterViewController.xib */; };
+		DCDCC1F914F34DE8004BE096 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC1F714F34DE7004BE096 /* MainViewController.m */; };
+		DCDCC1FA14F34DE8004BE096 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1F814F34DE7004BE096 /* MainViewController.xib */; };
 		DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +101,12 @@
 		DCDCC1EA14F338D1004BE096 /* DNDHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNDHTML.h; path = DataModel/DNDHTML.h; sourceTree = "<group>"; };
 		DCDCC1EE14F34567004BE096 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Character.h; path = DataModel/Character.h; sourceTree = "<group>"; };
 		DCDCC1EF14F34567004BE096 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Character.m; path = DataModel/Character.m; sourceTree = "<group>"; };
+		DCDCC1F114F34C46004BE096 /* CharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterViewController.h; sourceTree = "<group>"; };
+		DCDCC1F214F34C46004BE096 /* CharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterViewController.m; sourceTree = "<group>"; };
+		DCDCC1F314F34C47004BE096 /* CharacterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterViewController.xib; sourceTree = "<group>"; };
+		DCDCC1F614F34DE6004BE096 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		DCDCC1F714F34DE7004BE096 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		DCDCC1F814F34DE7004BE096 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kaeltor12.dnd4e; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +172,12 @@
 				DCA8024514F1328800620379 /* PowerCardViewController.h */,
 				DCA8024614F1328800620379 /* PowerCardViewController.m */,
 				DCA8024714F1328800620379 /* PowerCardViewController.xib */,
+				DCDCC1F114F34C46004BE096 /* CharacterViewController.h */,
+				DCDCC1F214F34C46004BE096 /* CharacterViewController.m */,
+				DCDCC1F314F34C47004BE096 /* CharacterViewController.xib */,
+				DCDCC1F614F34DE6004BE096 /* MainViewController.h */,
+				DCDCC1F714F34DE7004BE096 /* MainViewController.m */,
+				DCDCC1F814F34DE7004BE096 /* MainViewController.xib */,
 				DC693C3514F0069200E68BF8 /* DictionaryExplorerViewController.h */,
 				DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */,
 				DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */,
@@ -296,6 +312,8 @@
 				DCDCC1E214F31984004BE096 /* ShadarKai_Wizard6.dnd4e in Resources */,
 				DCDCC1E414F3199F004BE096 /* Fighter_Assassin_21.dnd4e in Resources */,
 				DCDCC1E614F327B6004BE096 /* dnd_4e_icons_v3.ttf in Resources */,
+				DCDCC1F514F34C47004BE096 /* CharacterViewController.xib in Resources */,
+				DCDCC1FA14F34DE8004BE096 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +340,8 @@
 				DC52E7E614F1E838002FEEC9 /* Weapon.m in Sources */,
 				DCDCC1E914F32DFC004BE096 /* Loot.m in Sources */,
 				DCDCC1F014F34567004BE096 /* Character.m in Sources */,
+				DCDCC1F414F34C47004BE096 /* CharacterViewController.m in Sources */,
+				DCDCC1F914F34DE8004BE096 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

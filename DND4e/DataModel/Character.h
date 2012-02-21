@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "DNDHTML.h"
 
+@class Loot;
+
 @interface Character : NSObject <DNDHTML>
 
 @property (strong, nonatomic) NSString * name;
@@ -16,5 +18,6 @@
 @property (strong, nonatomic) NSMutableArray * loot;
 
 - (id) initWithFile:(NSString*)path;
+- (Loot*) lootForInternalID:(NSString*)internalID;
 
 @end

@@ -8,8 +8,7 @@
 
 #import "DNDAppDelegate.h"
 
-#import "DictionaryExplorerViewController.h"
-#import "PowerCardViewController.h"
+#import "MainViewController.h"
 #import "GDataXMLNode.h"
 #import "XMLReader.h"
 #import "Data.h"
@@ -20,40 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    // Load Data
     NSArray *filePaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"dnd4e" inDirectory:nil];
-    NSMutableArray * characters = [NSMutableArray arrayWithCapacity:[filePaths count]];
-    [filePaths enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSData *xmlData = [[NSData alloc] initWithContentsOfFile:obj];
-        NSError *error = nil;
-        NSDictionary *data = [XMLReader dictionaryForXMLData:xmlData error:&error];
-        
-        NSArray *powers = [data valueForKeyPath:@"D20Character.CharacterSheet.PowerStats.Power"];
-        NSMutableArray *powerObjs = [NSMutableArray arrayWithCapacity:[powers count]];
-        [powers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            Power *power = [[Power alloc] initWithDictionary:obj];
-            [powerObjs addObject:power];
-        }];
-        
-        NSArray *loot = [data valueForKeyPath:@"D20Character.CharacterSheet.LootTally.loot"];
-        NSMutableArray *lootObjs = [NSMutableArray arrayWithCapacity:[loot count]];
-        [loot enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            Loot *item = [[Loot alloc] initWithDictionary:obj];
-            [lootObjs addObject:item];
-        }];
-        
-        NSString *name = [data valueForKeyPath:@"D20Character.CharacterSheet.Details.name.value"];
-        NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:
-                              name,@"name",
-                              powerObjs,@"Power Cards",
-                              lootObjs,@"Inventory",
-                              [data valueForKeyPath:@"D20Character"],@"Object Graph (ref only)",
-                              nil];
-        [characters addObject:info];
-    }];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    DictionaryExplorerViewController *vc = [[DictionaryExplorerViewController alloc] initWithData:characters];
+    
+    MainViewController *vc = [[MainViewController alloc] initWithData:filePaths];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
