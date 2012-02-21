@@ -45,7 +45,7 @@
         if ([ele.type isEqualToString:@"Skill"]) {
             [ele.specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                 if ([[obj valueForKey:@"name"] hasPrefix:@"Key"]) {
-                    NSNumber *stat = [self.character.stats.stats objectForKey:[obj valueForKey:@"value"]];
+                    NSNumber *stat = [self.character.stats objectForKey:[obj valueForKey:@"value"]];
                     NSInteger mod = ([stat intValue]-10)/2;
                     bonus += mod;
                 }
@@ -59,27 +59,27 @@
 - (void) populateFromCharacter:(Character*)character
 {
     self.character = character;
-    NSDictionary *stats = character.stats.stats;
-    Score *stat = [stats objectForKey:self.name];
+    NSDictionary *stats = character.stats;
+    Stat *stat = [stats objectForKey:self.name];
     __block NSInteger bonus = 0;
-    NSLog(@"Stat: %@", stat.name);
-    [stat.components enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSString *statlink = [obj valueForKey:@"statlink"];
-        NSString *type = [obj valueForKey:@"type"];
-        NSInteger level = [[obj valueForKey:@"Level"] intValue];
-        
-        Score *st = [stats objectForKey:statlink];
-        if ([st.name isEqualToString:@"HALF-LEVEL"]) bonus += [st.components count];
-        else if ([type isEqualToString:@"Ability"]) { NSLog(@"TODO: Add Ability: %@",st.name); }
-        else if ([st.name rangeOfString:@"Trained"].length > 0) bonus +=5;
-        else if ([st.
-        else {
-            NSLog(@"Component: %@", statlink);
-            Score *comp = [stats objectForKey:statlink];
-            NSLog(@"Data: %@", comp.components);
-        }
-        
-    }];
+//    NSLog(@"Stat: %@", stat.name);
+//    [stat.components enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//        NSString *statlink = [obj valueForKey:@"statlink"];
+//        NSString *type = [obj valueForKey:@"type"];
+//        NSInteger level = [[obj valueForKey:@"Level"] intValue];
+//        
+//        Score *st = [stats objectForKey:statlink];
+//        if ([st.name isEqualToString:@"HALF-LEVEL"]) bonus += [st.components count];
+//        else if ([type isEqualToString:@"Ability"]) { NSLog(@"TODO: Add Ability: %@",st.name); }
+//        else if ([st.name rangeOfString:@"Trained"].length > 0) bonus +=5;
+////        else if ([st.
+//        else {
+//            NSLog(@"Component: %@", statlink);
+//            Score *comp = [stats objectForKey:statlink];
+//            NSLog(@"Data: %@", comp.components);
+//        }
+//        
+//    }];
     
     NSLog(@"Bonus: %d", bonus);
             self.bonus = NSINT(bonus);

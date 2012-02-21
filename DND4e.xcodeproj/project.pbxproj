@@ -46,6 +46,7 @@
 		DCDCC1FA14F34DE8004BE096 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1F814F34DE7004BE096 /* MainViewController.xib */; };
 		DCDCC1FD14F3DF25004BE096 /* AbilityScores.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC1FC14F3DF25004BE096 /* AbilityScores.m */; };
 		DCDCC20014F41F3E004BE096 /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC1FF14F41F3E004BE096 /* Skill.m */; };
+		DCDCC23314F44CA7004BE096 /* Stat.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC23214F44CA6004BE096 /* Stat.m */; };
 		DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,8 @@
 		DCDCC1FC14F3DF25004BE096 /* AbilityScores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbilityScores.m; path = DataModel/AbilityScores.m; sourceTree = "<group>"; };
 		DCDCC1FE14F41F3D004BE096 /* Skill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skill.h; path = DataModel/Skill.h; sourceTree = "<group>"; };
 		DCDCC1FF14F41F3E004BE096 /* Skill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Skill.m; path = DataModel/Skill.m; sourceTree = "<group>"; };
+		DCDCC23114F44CA6004BE096 /* Stat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stat.h; path = DataModel/Stat.h; sourceTree = "<group>"; };
+		DCDCC23214F44CA6004BE096 /* Stat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stat.m; path = DataModel/Stat.m; sourceTree = "<group>"; };
 		DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kaeltor12.dnd4e; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,6 +240,8 @@
 				DCDCC1FC14F3DF25004BE096 /* AbilityScores.m */,
 				DCDCC1FE14F41F3D004BE096 /* Skill.h */,
 				DCDCC1FF14F41F3E004BE096 /* Skill.m */,
+				DCDCC23114F44CA6004BE096 /* Stat.h */,
+				DCDCC23214F44CA6004BE096 /* Stat.m */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				DCDCC1F914F34DE8004BE096 /* MainViewController.m in Sources */,
 				DCDCC1FD14F3DF25004BE096 /* AbilityScores.m in Sources */,
 				DCDCC20014F41F3E004BE096 /* Skill.m in Sources */,
+				DCDCC23314F44CA7004BE096 /* Stat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

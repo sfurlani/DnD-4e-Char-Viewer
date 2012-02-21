@@ -16,7 +16,7 @@
 @synthesize name, level;
 @synthesize powers, loot;
 @synthesize objectGraph;
-@synthesize details, stats, elements;
+@synthesize details, stats, elements, scores;
 @synthesize skills, feats;
 
 - (id) initWithFile:(NSString *)path
@@ -60,8 +60,16 @@
             
         }];
         
-        self.stats = [[AbilityScores alloc] initWithDictionary:[data valueForKeyPath:@"D20Character.CharacterSheet"]];
-        self.stats.character = self;
+        self.scores = [[AbilityScores alloc] initWithDictionary:[data valueForKeyPath:@"D20Character.CharacterSheet"]];
+        self.scores.character = self;
+        
+        NSArray *statInfo = [data valueForKeyPath:@"D20Character.CharacterSheet.StatBlock.Stat"];
+        self.stats = [NSMutableDictionary dictionaryWithCapacity:[statInfo count]];
+        [statInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            Stat *stat = [[Stat alloc] initWithDictionary:obj];
+            stat.character = self;
+            [self.stats setObject:stat forKey:stat.name];
+        }];
         
         NSArray *elementInfo = [data valueForKeyPath:@"D20Character.CharacterSheet.RulesElementTally.RulesElement"];
         self.elements = [NSMutableArray arrayWithCapacity:[elementInfo count]];

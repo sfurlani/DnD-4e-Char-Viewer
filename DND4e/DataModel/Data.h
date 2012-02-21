@@ -14,6 +14,7 @@
 #import "Character.h"
 #import "AbilityScores.h"
 #import "Skill.h"
+#import "Stat.h"
 
 #define AppData ([Data sharedData])
 

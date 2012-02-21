@@ -19,7 +19,8 @@
 @property (strong, nonatomic) NSMutableArray * loot;
 @property (strong, nonatomic) NSMutableDictionary * details;
 @property (strong, nonatomic) NSMutableArray * elements;
-@property (strong, nonatomic) AbilityScores *stats;
+@property (strong, nonatomic) NSMutableDictionary *stats;
+@property (strong, nonatomic) AbilityScores *scores;
 @property (strong, nonatomic) id objectGraph;
 @property (strong, nonatomic) NSMutableArray * skills;
 @property (strong, nonatomic) NSArray * feats;
