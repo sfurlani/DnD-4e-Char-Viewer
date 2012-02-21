@@ -12,6 +12,7 @@
 #import "RulesElement.h"
 #import "Loot.h"
 #import "Character.h"
+#import "AbilityScores.h"
 
 #define AppData ([Data sharedData])
 

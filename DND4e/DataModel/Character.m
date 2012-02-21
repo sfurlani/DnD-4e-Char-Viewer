@@ -9,12 +9,14 @@
 #import "Character.h"
 #import "Data.h"
 #import "XMLReader.h"
+#import "Utility.h"
 
 @implementation Character
 
-@synthesize name;
+@synthesize name, level;
 @synthesize powers, loot;
 @synthesize objectGraph;
+@synthesize details, stats;
 
 - (id) initWithFile:(NSString *)path
 {
@@ -41,16 +43,38 @@
         }];
         
         self.name = [data valueForKeyPath:@"D20Character.CharacterSheet.Details.name.value"];
+        self.level = NSINT([[data valueForKeyPath:@"D20Character.CharacterSheet.Details.Level.value"] intValue]);
         
         self.objectGraph = [data valueForKeyPath:@"D20Character"];
         
+        NSDictionary *detailInfo = [data valueForKeyPath:@"D20Character.CharacterSheet.Details"];
+        self.details = [NSMutableDictionary dictionaryWithCapacity:[detailInfo count]];
+        [detailInfo enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            if ([obj isKindOfClass:[NSDictionary class]]) {
+                NSString *value = [obj valueForKey:@"value"];
+                [self.details setObject:value forKey:key];
+            } else {
+                NSLog(@"No Value for %@, %@", key, obj);
+            }
+            
+        }];
+        
+        self.stats = [[AbilityScores alloc] initWithDictionary:[data valueForKeyPath:@"D20Character.CharacterSheet"]];
     }
     return self;
 }
 
 - (NSString*) html
 {
-    return @"";
+    NSMutableString *html = [NSMutableString string];
+    
+    [self.details enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+             
+        [html appendFormat:@"<p><b>%@: </b>%@</p>",key, obj];
+        
+    }];
+    
+    return html;
 }
 
 - (Loot*) lootForInternalID:(NSString*)internalID

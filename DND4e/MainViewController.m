@@ -109,6 +109,7 @@
     
     // Configure the cell...
     cell.textLabel.text = [[[self.data objectAtIndex:[indexPath row]] lastPathComponent] stringByDeletingPathExtension];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }

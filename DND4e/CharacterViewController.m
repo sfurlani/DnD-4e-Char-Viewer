@@ -7,6 +7,7 @@
 //
 
 #import "CharacterViewController.h"
+#import "ContentViewController.h"
 #import "DictionaryExplorerViewController.h"
 #import "Data.h"
 
@@ -22,9 +23,12 @@
     if (self) {
         // Custom initialization
         self.character = character;
+        // TODO: switch over to array (or Tab View Controller)
         self.rows = [NSDictionary dictionaryWithObjectsAndKeys:
                      character.loot, @"Inventory",
                      character.powers, @"Powers",
+                     character, @"Details",
+                     character.stats, @"Stats",
                      character.objectGraph, @"Object Graph (ref only)",
                      nil];
     }
@@ -112,6 +116,7 @@
     
     // Configure the cell...
     cell.textLabel.text = [[rows allKeys] objectAtIndex:[indexPath row]];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -161,8 +166,17 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     id data = [[rows allValues] objectAtIndex:[indexPath row]];
-    DictionaryExplorerViewController *devc = [[DictionaryExplorerViewController alloc] initWithData:data];
-    [self.navigationController pushViewController:devc animated:YES];
+    NSString *key = [[rows allKeys] objectAtIndex:[indexPath row]];
+    
+    UIViewController *vc = nil;
+    
+    if ([key isEqualToString:@"Details"]) {
+        vc = [[ContentViewController alloc] initWithThing:data];
+    } else {
+        vc = [[DictionaryExplorerViewController alloc] initWithData:data];
+    }
+    if (vc)
+        [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

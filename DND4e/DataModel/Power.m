@@ -50,7 +50,7 @@
     
     NSArray *specs = [info valueForKey:@"specific"];
     
-    if ([self.name isEqualToString:@"Dispel Magic"]) {
+    if (NO && [self.name isEqualToString:@"Dispel Magic"]) {
         NSLog(@"Power: %@", self.name);
         NSLog(@"Info: %@", info);
     }

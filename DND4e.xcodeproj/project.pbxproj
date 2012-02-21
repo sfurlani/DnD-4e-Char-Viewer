@@ -44,6 +44,7 @@
 		DCDCC1F514F34C47004BE096 /* CharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1F314F34C47004BE096 /* CharacterViewController.xib */; };
 		DCDCC1F914F34DE8004BE096 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC1F714F34DE7004BE096 /* MainViewController.m */; };
 		DCDCC1FA14F34DE8004BE096 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1F814F34DE7004BE096 /* MainViewController.xib */; };
+		DCDCC1FD14F3DF25004BE096 /* AbilityScores.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC1FC14F3DF25004BE096 /* AbilityScores.m */; };
 		DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +84,7 @@
 		DCA8023A14F0A96E00620379 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		DCA8024214F0A9AA00620379 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Data.h; path = DataModel/Data.h; sourceTree = "<group>"; };
 		DCA8024314F0A9AA00620379 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Data.m; path = DataModel/Data.m; sourceTree = "<group>"; };
-		DCA8024514F1328800620379 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = ContentViewController.h; sourceTree = "<group>"; };
+		DCA8024514F1328800620379 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		DCA8024614F1328800620379 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		DCA8024714F1328800620379 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
 		DCA8024A14F1335000620379 /* Power.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Power.h; path = DataModel/Power.h; sourceTree = "<group>"; };
@@ -107,6 +108,8 @@
 		DCDCC1F614F34DE6004BE096 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		DCDCC1F714F34DE7004BE096 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		DCDCC1F814F34DE7004BE096 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		DCDCC1FB14F3DF25004BE096 /* AbilityScores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbilityScores.h; path = DataModel/AbilityScores.h; sourceTree = "<group>"; };
+		DCDCC1FC14F3DF25004BE096 /* AbilityScores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbilityScores.m; path = DataModel/AbilityScores.m; sourceTree = "<group>"; };
 		DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kaeltor12.dnd4e; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +230,8 @@
 				DCDCC1EA14F338D1004BE096 /* DNDHTML.h */,
 				DCDCC1EE14F34567004BE096 /* Character.h */,
 				DCDCC1EF14F34567004BE096 /* Character.m */,
+				DCDCC1FB14F3DF25004BE096 /* AbilityScores.h */,
+				DCDCC1FC14F3DF25004BE096 /* AbilityScores.m */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				DCDCC1F014F34567004BE096 /* Character.m in Sources */,
 				DCDCC1F414F34C47004BE096 /* CharacterViewController.m in Sources */,
 				DCDCC1F914F34DE8004BE096 /* MainViewController.m in Sources */,
+				DCDCC1FD14F3DF25004BE096 /* AbilityScores.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
