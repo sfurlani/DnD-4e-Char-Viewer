@@ -25,6 +25,7 @@
         self.rows = [NSDictionary dictionaryWithObjectsAndKeys:
                      character.loot, @"Inventory",
                      character.powers, @"Powers",
+                     character.objectGraph, @"Object Graph (ref only)",
                      nil];
     }
     return self;
@@ -159,7 +160,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSArray *data = [[rows allValues] objectAtIndex:[indexPath row]];
+    id data = [[rows allValues] objectAtIndex:[indexPath row]];
     DictionaryExplorerViewController *devc = [[DictionaryExplorerViewController alloc] initWithData:data];
     [self.navigationController pushViewController:devc animated:YES];
 }

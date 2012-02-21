@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString * name;
 @property (strong, nonatomic) NSMutableArray * powers;
 @property (strong, nonatomic) NSMutableArray * loot;
+@property (strong, nonatomic) id objectGraph;
 
 - (id) initWithFile:(NSString*)path;
 - (Loot*) lootForInternalID:(NSString*)internalID;

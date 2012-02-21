@@ -9,11 +9,12 @@
 #import "MainViewController.h"
 #import "CharacterViewController.h"
 #import "Data.h"
-
+#import "MBProgressHUD.h"
 
 @implementation MainViewController
 
 @synthesize data = _data;
+@synthesize back;
 
 - (id)initWithData:(NSArray*)data
 {
@@ -44,6 +45,10 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    self.title = @"DnD 4e Char Viewer";
+    
 }
 
 - (void)viewDidUnload
@@ -151,10 +156,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString *path = [self.data objectAtIndex:[indexPath row]];
+    NSLog(@"Opening Path: %@", path);
+    
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Loading";
+    [hud showWhileExecuting:@selector(openFilePath:)
+                   onTarget:self
+                 withObject:path
+                   animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    Character *character = [[Character alloc] initWithFile:[self.data objectAtIndex:[indexPath row]]];
+}
+
+- (void) openFilePath:(NSString*)path
+{
+    Character *character = [[Character alloc] initWithFile:path];
     CharacterViewController *cvc = [[CharacterViewController alloc] initWithCharacter:character];
     [self.navigationController pushViewController:cvc animated:YES];
+    
 }
 
 @end

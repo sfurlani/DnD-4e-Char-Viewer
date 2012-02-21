@@ -14,6 +14,7 @@
 
 @synthesize name;
 @synthesize powers, loot;
+@synthesize objectGraph;
 
 - (id) initWithFile:(NSString *)path
 {
@@ -40,6 +41,8 @@
         }];
         
         self.name = [data valueForKeyPath:@"D20Character.CharacterSheet.Details.name.value"];
+        
+        self.objectGraph = [data valueForKeyPath:@"D20Character"];
         
     }
     return self;

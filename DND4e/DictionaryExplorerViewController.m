@@ -7,7 +7,7 @@
 //
 
 #import "DictionaryExplorerViewController.h"
-#import "PowerCardViewController.h"
+#import "ContentViewController.h"
 #import "Data.h"
 
 #define isArray(obj) [obj isKindOfClass:[NSArray class]]
@@ -243,7 +243,7 @@
         }
         
         if ([data conformsToProtocol:@protocol(DNDHTML)]) {
-            PowerCardViewController *pcvc = [[PowerCardViewController alloc] initWithThing:data];
+            ContentViewController *pcvc = [[ContentViewController alloc] initWithThing:data];
             [self.navigationController pushViewController:pcvc animated:YES];
         }
         
