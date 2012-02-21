@@ -79,8 +79,8 @@
         self.skills = [NSMutableArray arrayWithCapacity:[skillObjs count]];
         [skillObjs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             Skill *skill = [[Skill alloc] initWithName:[obj name]];
-            skill.character = self;
-            [skill populateFromElements:self.elements];
+//            [skill populateFromElements:self.elements];
+            [skill populateFromCharacter:self];
             [self.skills addObject:skill];
         }];
         

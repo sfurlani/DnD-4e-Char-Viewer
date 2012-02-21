@@ -153,8 +153,6 @@
     
     if (detail) {
         style = UITableViewCellStyleValue1;
-        if ([data isKindOfClass:[Skill class]])
-            style = UITableViewCellStyleValue2;
         CellIdentifier = @"hasDetail";
     }
     

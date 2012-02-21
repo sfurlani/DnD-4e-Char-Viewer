@@ -29,6 +29,8 @@
 @property (strong, nonatomic) NSNumber *level;
 @property (unsafe_unretained, nonatomic) AbilityScores *parent;
 @property (strong, nonatomic) NSMutableArray * components;
+@property (strong, nonatomic) NSString * type;
+@property (strong, nonatomic) NSString * statlink;
 
 - (id) initWithName:(NSString*)name;
 

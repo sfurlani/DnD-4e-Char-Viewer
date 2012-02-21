@@ -101,6 +101,8 @@ NSString * const keyCharisma = @"Charisma";
             [score.components addObject:statadd];
         } else {
             [score.components addObject:obj];
+            score.statlink = [obj valueForKey:@"statlink"];
+            score.type = [obj valueForKey:@"Type"];
         }
         
         
@@ -182,7 +184,7 @@ NSString * const keyCharisma = @"Charisma";
 
 @implementation Score
 
-@synthesize name = _name, aliases, parent, components, level;
+@synthesize name = _name, aliases, parent, components, level, statlink, type;
 
 - (id) initWithName:(NSString *)name
 {

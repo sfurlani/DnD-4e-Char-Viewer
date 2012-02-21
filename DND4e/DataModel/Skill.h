@@ -19,6 +19,7 @@
 @property (unsafe_unretained, nonatomic) Character* character;
 
 - (id) initWithName:(NSString*)name;
-- (void) populateFromElements:(NSArray*)elements;
+- (void) populateFromElements:(NSArray*)elements; // Deprecated
+- (void) populateFromCharacter:(Character*)character;
 
 @end
