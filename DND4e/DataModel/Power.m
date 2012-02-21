@@ -50,7 +50,12 @@
     
     NSArray *specs = [info valueForKey:@"specific"];
     
-    NSLog(@"Power: %@", self.name);
+    if ([self.name isEqualToString:@"Dispel Magic"]) {
+        NSLog(@"Power: %@", self.name);
+        NSLog(@"Info: %@", info);
+    }
+    
+    
     [specs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *key = [obj valueForKey:@"name"];
         NSString *value = [obj valueForKey:@"value"];
@@ -124,13 +129,18 @@
         NSString *bonus = ([self.selected_weapon.attackBonus intValue] > 0 ? 
                            NSFORMAT(@"+%@", self.selected_weapon.attackBonus) : 
                            self.selected_weapon.attackBonus);
+        
         NSString *text = NSFORMAT(@"%@ vs. %@, %@ damage", 
                                   bonus,
                                   self.selected_weapon.defense,
                                   self.selected_weapon.damage);
-        [html appendFormat:@"<p><b>%@:</b> %@ <br> <a href=\"weapon://\"> - Change Weapon - </a></p>",wpn_name,text];
+        if (!self.selected_weapon.defense)
+            text = NSFORMAT(@"%@ damage", self.selected_weapon.damage);
+        
+        [html appendFormat:@"<p><b>%@</b> %@ <br> <a href=\"weapon://\"> - Change Weapon - </a></p>",wpn_name,text];
         
         // CONDITIONALS 
+        if (self.selected_weapon.conditions)
         [html appendFormat:withHeader,@"Additional Effects: <br>",replace(self.selected_weapon.conditions)];
         
         [html appendFormat:@"<p></p>"];

@@ -35,10 +35,18 @@
             [powerObjs addObject:power];
         }];
         
+        NSArray *loot = [data valueForKeyPath:@"D20Character.CharacterSheet.LootTally.loot"];
+        NSMutableArray *lootObjs = [NSMutableArray arrayWithCapacity:[loot count]];
+        [loot enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            Loot *item = [[Loot alloc] initWithDictionary:obj];
+            [lootObjs addObject:item];
+        }];
+        
         NSString *name = [data valueForKeyPath:@"D20Character.CharacterSheet.Details.name.value"];
         NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:
                               name,@"name",
                               powerObjs,@"Power Cards",
+                              lootObjs,@"Inventory",
                               [data valueForKeyPath:@"D20Character"],@"Object Graph (ref only)",
                               nil];
         [characters addObject:info];

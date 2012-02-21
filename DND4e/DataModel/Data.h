@@ -10,7 +10,7 @@
 #import "Weapon.h"
 #import "Power.h"
 #import "RulesElement.h"
-
+#import "Loot.h"
 
 #define AppData ([Data sharedData])
 

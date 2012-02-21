@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+#import "DNDHTML.h"
+
 @class Weapon;
 
-@interface Power : NSObject
+@interface Power : NSObject <DNDHTML>
 
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * flavor;
@@ -27,7 +29,6 @@
 
 - (id) initWithDictionary:(NSDictionary*)info;
 - (void) populateWithDictionary:(NSDictionary*)info;
-- (NSString*)html;
 
 - (BOOL) shouldDisplaySpecific:(NSString*)key;
 @end

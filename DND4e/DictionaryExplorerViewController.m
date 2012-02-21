@@ -142,7 +142,7 @@
         }
     }
     
-    if ([data isKindOfClass:[Power class]]) {
+    if ([data conformsToProtocol:@protocol(DNDHTML)]) {
         label = [data name];
     }
     
@@ -239,13 +239,11 @@
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             [web loadRequest:request];
             [self.navigationController pushViewController:uivc animated:YES];
-//            [[UIApplication sharedApplication] openURL:url];
             
         }
-        NSLog(@"Data: %@", data);
         
-        if ([data isKindOfClass:[Power class]]) {
-            PowerCardViewController *pcvc = [[PowerCardViewController alloc] initWithPower:data];
+        if ([data conformsToProtocol:@protocol(DNDHTML)]) {
+            PowerCardViewController *pcvc = [[PowerCardViewController alloc] initWithThing:data];
             [self.navigationController pushViewController:pcvc animated:YES];
         }
         

@@ -15,14 +15,14 @@
 @implementation PowerCardViewController
 
 @synthesize cardView;
-@synthesize power = _power;
+@synthesize thing = _thing;
 
-- (id)initWithPower:(Power*)power
+- (id)initWithThing:(id<DNDHTML>)thing
 {
     self = [super initWithNibName:@"PowerCardViewController" bundle:nil];
     if (self) {
         // Custom initialization
-        self.power = power;
+        self.thing = thing;
     }
     return self;
 }
@@ -64,17 +64,30 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.title = self.power.name;
+    self.title = [self.thing name];
     
-    UIColor *barColor = [UIColor colorWithRed:0 green:0.4 blue:0 alpha:1.0];
-    if ([_power.usage isEqualToString:@"Encounter"]) {
-        barColor =  [UIColor colorWithRed:0.6 green:0 blue:0 alpha:1.0];
-    } else if ([_power.usage isEqualToString:@"Daily"]) {
-        barColor = [UIColor lightGrayColor];
+    UIColor *barColor = [UIColor blackColor];
+    if ([_thing isKindOfClass:[Power class]]) {
+        Power *power = (Power*)_thing;
+        if ([power.usage isEqualToString:@"At-Will"]) {
+            barColor = [UIColor colorWithRed:0 green:0.4 blue:0 alpha:1.0];
+        } else if ([power.usage isEqualToString:@"Encounter"]) {
+            barColor =  [UIColor colorWithRed:0.6 green:0 blue:0 alpha:1.0];
+        } else if ([power.usage isEqualToString:@"Daily"]) {
+            barColor = [UIColor lightGrayColor];
+        }
+    } else if ([_thing isKindOfClass:[Loot class]]) {
+        Loot *loot = (Loot*)_thing;
+        if ([[loot items] count] == 1) {
+            barColor = [UIColor lightGrayColor];
+        } else {
+            barColor = [UIColor colorWithRed:0.8 green:0.75 blue:0 alpha:1.0];
+        }
     }
     self.navigationController.navigationBar.tintColor = barColor;
+        
     
-    [self.cardView loadHTMLString:[_power html] baseURL:[AppData applicationDocumentsDirectory]];
+    [self.cardView loadHTMLString:[_thing html] baseURL:[AppData applicationDocumentsDirectory]];
     
 }
 
@@ -88,18 +101,18 @@
 
 - (void) chooseNewWeapon:(UILongPressGestureRecognizer*)hold
 {
+    if (![self.thing isKindOfClass:[Power class]]) return;
+    Power *power = (Power*)_thing;
     // if not at begining, then the popup gets called a bunch of times
-    if (/*hold.state == UIGestureRecognizerStateBegan && */ [self.power.has_weapons count] > 0) {
-        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Choose New Weapon"
-                                                           delegate:self
-                                                  cancelButtonTitle:@"Cancel"
-                                             destructiveButtonTitle:nil
-                                                  otherButtonTitles: nil];
-        [self.power.has_weapons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            [sheet addButtonWithTitle:[obj name]];
-        }];
-        [sheet showInView:self.view];
-    }
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Choose New Weapon"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                         destructiveButtonTitle:nil
+                                              otherButtonTitles: nil];
+    [power.has_weapons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [sheet addButtonWithTitle:[obj name]];
+    }];
+    [sheet showInView:self.view];
 }
 
 
@@ -107,16 +120,19 @@
 
 - (void) actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
+    if (![self.thing isKindOfClass:[Power class]]) return;
+    Power *power = (Power*)_thing;
+    
     NSString *name = [actionSheet buttonTitleAtIndex:buttonIndex];
     if (![name isEqualToString:@"Cancel"]) {        
-        NSInteger index = [self.power.has_weapons indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+        NSInteger index = [power.has_weapons indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
             *stop = [name isEqualToString:[obj name]];
             return *stop;
         }];
         if (index == NSNotFound) return;
-        Weapon *weapon = [self.power.has_weapons objectAtIndex:index];
-        self.power.selected_weapon = weapon;
-        [self.cardView loadHTMLString:[_power html] baseURL:[AppData applicationDocumentsDirectory]];
+        Weapon *weapon = [power.has_weapons objectAtIndex:index];
+        power.selected_weapon = weapon;
+        [self.cardView loadHTMLString:[_thing html] baseURL:[AppData applicationDocumentsDirectory]];
     }
 }
 

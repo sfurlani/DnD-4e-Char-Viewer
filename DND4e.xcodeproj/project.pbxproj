@@ -37,6 +37,8 @@
 		DCDCC1E014F31469004BE096 /* Frakk30.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1DF14F31468004BE096 /* Frakk30.dnd4e */; };
 		DCDCC1E214F31984004BE096 /* ShadarKai_Wizard6.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1E114F31984004BE096 /* ShadarKai_Wizard6.dnd4e */; };
 		DCDCC1E414F3199F004BE096 /* Fighter_Assassin_21.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1E314F3199E004BE096 /* Fighter_Assassin_21.dnd4e */; };
+		DCDCC1E614F327B6004BE096 /* dnd_4e_icons_v3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1E514F327B6004BE096 /* dnd_4e_icons_v3.ttf */; };
+		DCDCC1E914F32DFC004BE096 /* Loot.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDCC1E814F32DFC004BE096 /* Loot.m */; };
 		DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,10 @@
 		DCDCC1DF14F31468004BE096 /* Frakk30.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Frakk30.dnd4e; sourceTree = "<group>"; };
 		DCDCC1E114F31984004BE096 /* ShadarKai_Wizard6.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShadarKai_Wizard6.dnd4e; sourceTree = "<group>"; };
 		DCDCC1E314F3199E004BE096 /* Fighter_Assassin_21.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fighter_Assassin_21.dnd4e; sourceTree = "<group>"; };
+		DCDCC1E514F327B6004BE096 /* dnd_4e_icons_v3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dnd_4e_icons_v3.ttf; sourceTree = "<group>"; };
+		DCDCC1E714F32DFC004BE096 /* Loot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Loot.h; path = DataModel/Loot.h; sourceTree = "<group>"; };
+		DCDCC1E814F32DFC004BE096 /* Loot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Loot.m; path = DataModel/Loot.m; sourceTree = "<group>"; };
+		DCDCC1EA14F338D1004BE096 /* DNDHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DNDHTML.h; path = DataModel/DNDHTML.h; sourceTree = "<group>"; };
 		DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kaeltor12.dnd4e; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +169,7 @@
 		DC693BF714EED86B00E68BF8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DCDCC1E514F327B6004BE096 /* dnd_4e_icons_v3.ttf */,
 				DCDCC1DB14F2F68E004BE096 /* Icon.png */,
 				DCA8021A14F0A2B700620379 /* Window_ipad.xib */,
 				DCA8021814F0A2A500620379 /* Window_iphone.xib */,
@@ -196,6 +203,9 @@
 				DC52E7E514F1E838002FEEC9 /* Weapon.m */,
 				DCA8024A14F1335000620379 /* Power.h */,
 				DCA8024B14F1335000620379 /* Power.m */,
+				DCDCC1E714F32DFC004BE096 /* Loot.h */,
+				DCDCC1E814F32DFC004BE096 /* Loot.m */,
+				DCDCC1EA14F338D1004BE096 /* DNDHTML.h */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -280,6 +290,7 @@
 				DCDCC1E014F31469004BE096 /* Frakk30.dnd4e in Resources */,
 				DCDCC1E214F31984004BE096 /* ShadarKai_Wizard6.dnd4e in Resources */,
 				DCDCC1E414F3199F004BE096 /* Fighter_Assassin_21.dnd4e in Resources */,
+				DCDCC1E614F327B6004BE096 /* dnd_4e_icons_v3.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +315,7 @@
 				DCA8024C14F1335100620379 /* Power.m in Sources */,
 				DCA8024F14F1335100620379 /* RulesElement.m in Sources */,
 				DC52E7E614F1E838002FEEC9 /* Weapon.m in Sources */,
+				DCDCC1E914F32DFC004BE096 /* Loot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

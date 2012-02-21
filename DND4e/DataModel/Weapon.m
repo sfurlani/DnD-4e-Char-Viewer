@@ -48,10 +48,10 @@
 - (void) populateWithDictionary:(NSDictionary *)info
 {
     self.name = [info objectForKey:@"name"];
-    NSLog(@"Weapon: %@", self.name);
-//    if ([self.name isEqualToString:@"Supreme Skirmisher's Bow Greatbow +2"]) {
+    if (NO  && [self.name isEqualToString:@""]) {
+        NSLog(@"Weapon: %@", self.name);
         NSLog(@"Info: %@", info);
-//    }
+    }
     
     [info enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *value = obj;

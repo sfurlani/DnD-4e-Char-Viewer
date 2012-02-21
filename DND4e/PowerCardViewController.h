@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DNDHTML.h"
 
 @class Power;
 
 @interface PowerCardViewController : UIViewController <UIActionSheetDelegate, UIWebViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWebView *cardView;
-@property (strong, nonatomic) Power *power;
+@property (strong, nonatomic) id<DNDHTML> thing;
 
-- (id)initWithPower:(Power*)power;
+- (id)initWithThing:(id<DNDHTML>)thing;
 
 @end
