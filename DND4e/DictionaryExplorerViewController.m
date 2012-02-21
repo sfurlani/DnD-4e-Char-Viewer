@@ -8,6 +8,7 @@
 
 #import "DictionaryExplorerViewController.h"
 #import "ContentViewController.h"
+#import "Utility.h"
 #import "Data.h"
 
 #define isArray(obj) [obj isKindOfClass:[NSArray class]]
@@ -143,11 +144,17 @@
     }
     
     if ([data conformsToProtocol:@protocol(DNDHTML)]) {
+        if ([data isKindOfClass:[Skill class]]) {
+            Skill *skill = data;
+            detail = (([skill.bonus intValue] > 0) ? NSFORMAT(@"+%@",skill.bonus) : NSFORMAT(@"%@",skill.bonus));
+        }
         label = [data name];
     }
     
     if (detail) {
         style = UITableViewCellStyleValue1;
+        if ([data isKindOfClass:[Skill class]])
+            style = UITableViewCellStyleValue2;
         CellIdentifier = @"hasDetail";
     }
     
@@ -160,7 +167,8 @@
     // Configure the cell...
     cell.textLabel.text = label;
     if (detail) {
-        acc = UITableViewCellAccessoryNone;
+        if (![data isKindOfClass:[Skill class]])
+            acc = UITableViewCellAccessoryNone;
         cell.detailTextLabel.text = detail;
     }
     cell.accessoryType = acc;

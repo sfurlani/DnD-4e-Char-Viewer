@@ -13,6 +13,7 @@
 #import "Loot.h"
 #import "Character.h"
 #import "AbilityScores.h"
+#import "Skill.h"
 
 #define AppData ([Data sharedData])
 

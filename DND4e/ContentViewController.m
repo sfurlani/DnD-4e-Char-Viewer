@@ -142,6 +142,7 @@
     AbilityScores *ability = (AbilityScores*)_thing;
     
     Score *score = [ability.scores objectForKey:stat];
+    NSLog(@"Score: %@", score.components);
     ContentViewController *vc = [[ContentViewController alloc] initWithThing:score];
     [self.navigationController pushViewController:vc animated:YES];
     

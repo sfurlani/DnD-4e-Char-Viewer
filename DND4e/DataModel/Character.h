@@ -21,9 +21,10 @@
 @property (strong, nonatomic) NSMutableArray * elements;
 @property (strong, nonatomic) AbilityScores *stats;
 @property (strong, nonatomic) id objectGraph;
+@property (strong, nonatomic) NSMutableArray * skills;
+@property (strong, nonatomic) NSArray * feats;
 
 - (NSArray*) feats;
-- (NSArray*) skills;
 
 - (id) initWithFile:(NSString*)path;
 - (Loot*) lootForInternalID:(NSString*)internalID;

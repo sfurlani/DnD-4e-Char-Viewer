@@ -14,7 +14,8 @@
 @interface Skill : NSObject <DNDHTML>
 
 @property (strong, nonatomic) NSString * name;
-@property (strong, nonatomic) NSMutableArray * components;
+@property (strong, nonatomic) NSArray * components;
+@property (strong, nonatomic) NSNumber * bonus;
 @property (unsafe_unretained, nonatomic) Character* character;
 
 - (id) initWithName:(NSString*)name;

@@ -169,8 +169,11 @@ NSString * const keyCharisma = @"Charisma";
     
     [html appendString:@"<hr width=\"200\">"];
     
-    [self.scores enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        [html appendFormat:@"<a href=\"stat://%@\">%@</a><br>",key,key];
+    NSArray *sortedScore = [[self.scores allValues] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [[obj1 name] compare:[obj2 name]];
+    }];
+    [sortedScore enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [html appendFormat:@"<p><a href=\"stat://%@\">%@</a></p>",[obj name],[obj name]];
     }];
     return html;
 }

@@ -17,6 +17,7 @@
 @synthesize powers, loot;
 @synthesize objectGraph;
 @synthesize details, stats, elements;
+@synthesize skills, feats;
 
 - (id) initWithFile:(NSString *)path
 {
@@ -69,33 +70,28 @@
             [self.elements addObject:element];
         }];
         
-        NSArray * skill = [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
-            return [[(RulesElement*)obj name] hasPrefix:@"Endurance"];
+        NSArray *skillObjs = [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+            return [[(RulesElement*)obj type] isEqualToString:@"Skill"];
         }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
             return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
         }];
-        NSLog(@"Skill: %@", skill);
+        
+        self.skills = [NSMutableArray arrayWithCapacity:[skillObjs count]];
+        [skillObjs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            Skill *skill = [[Skill alloc] initWithName:[obj name]];
+            skill.character = self;
+            [skill populateFromElements:self.elements];
+            [self.skills addObject:skill];
+        }];
+        
+        self.feats = [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+            return [[(RulesElement*)obj type] isEqualToString:@"Feat"];
+        }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
+        }];
         
     }
     return self;
-}
-
-- (NSArray*) feats
-{
-    return [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
-        return [[(RulesElement*)obj type] isEqualToString:@"Feat"];
-    }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-        return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
-    }];
-}
-
-- (NSArray*) skills
-{
-    return [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
-        return [[(RulesElement*)obj type] isEqualToString:@"Skill"];
-    }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-        return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
-    }];
 }
 
 - (NSString*) html
