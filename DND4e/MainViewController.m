@@ -49,6 +49,9 @@
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     self.title = @"DnD 4e Char Viewer";
     
+    self.navigationItem.backBarButtonItem = self.back;
+    
+    
 }
 
 - (void)viewDidUnload

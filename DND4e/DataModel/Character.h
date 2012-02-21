@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DNDHTML.h"
 
-@class Loot, AbilityScores;
+@class Loot, AbilityScores, RulesElement;
 
 @interface Character : NSObject <DNDHTML>
 
@@ -18,10 +18,12 @@
 @property (strong, nonatomic) NSMutableArray * powers;
 @property (strong, nonatomic) NSMutableArray * loot;
 @property (strong, nonatomic) NSMutableDictionary * details;
+@property (strong, nonatomic) NSMutableArray * elements;
 @property (strong, nonatomic) AbilityScores *stats;
 @property (strong, nonatomic) id objectGraph;
 
 - (id) initWithFile:(NSString*)path;
 - (Loot*) lootForInternalID:(NSString*)internalID;
+- (RulesElement*) elementForCharelem:(NSNumber*)charElem;
 
 @end

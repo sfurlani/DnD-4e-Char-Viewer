@@ -16,7 +16,7 @@
 @synthesize name, level;
 @synthesize powers, loot;
 @synthesize objectGraph;
-@synthesize details, stats;
+@synthesize details, stats, elements;
 
 - (id) initWithFile:(NSString *)path
 {
@@ -60,6 +60,15 @@
         }];
         
         self.stats = [[AbilityScores alloc] initWithDictionary:[data valueForKeyPath:@"D20Character.CharacterSheet"]];
+        self.stats.character = self;
+        
+        NSArray *elementInfo = [data valueForKeyPath:@"D20Character.CharacterSheet.RulesElementTally.RulesElement"];
+        self.elements = [NSMutableArray arrayWithCapacity:[elementInfo count]];
+        [elementInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            RulesElement *element = [[RulesElement alloc] initWithDictionary:obj];
+            [self.elements addObject:element];
+        }];
+        
     }
     return self;
 }
@@ -92,6 +101,18 @@
         if (ret) *stop = YES;
     }];
     return ret;
+}
+
+- (RulesElement*) elementForCharelem:(NSNumber*)charElem
+{
+    __block RulesElement *elem = nil;
+    [self.elements enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([charElem isEqualToNumber:[obj charelem]]) {
+            *stop = YES;
+            elem = obj;
+        }
+    }];
+    return elem;
 }
 
 @end

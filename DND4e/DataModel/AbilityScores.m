@@ -69,11 +69,16 @@ NSString * const keyCharisma = @"Charisma";
     }];
     
     [statBlock enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([[obj valueForKey:@"alias"] isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"Not using Stat: %@",[obj valueForKeyPath:@"alias.name"]);
+            return;
+        }
         NSString *key = [[[obj valueForKey:@"alias"] objectAtIndex:0] valueForKey:@"name"];
         __block Score *score = [self.scores valueForKey:key];
         
         if (score) {
             NSArray *components = [obj valueForKey:@"statadd"];
+            if ([components isKindOfClass:[NSArray array]])
             [components enumerateObjectsUsingBlock:^(id com, NSUInteger idx, BOOL *stop) {
                 NSDictionary *component = com;
                 if ([component count] > 1) {
@@ -92,19 +97,62 @@ NSString * const keyCharisma = @"Charisma";
 
 - (NSString*) name
 {
-    return @"Ability Scores";
+    return @"Stats";
 }
 
 - (NSString*) html
 {
     NSMutableString *html = [NSMutableString string];
     
-    [html appendFormat:@"<p><b>STR: </b> %@</p>",[self.stats objectForKey:keyStrength]];
-    [html appendFormat:@"<p><b>CON: </b> %@</p>",[self.stats objectForKey:keyConstitution]];
-    [html appendFormat:@"<p><b>DEX: </b> %@</p>",[self.stats objectForKey:keyDexterity]];
-    [html appendFormat:@"<p><b>INT: </b> %@</p>",[self.stats objectForKey:keyIntelligence]];
-    [html appendFormat:@"<p><b>WIS: </b> %@</p>",[self.stats objectForKey:keyWisdom]];
-    [html appendFormat:@"<p><b>CHA: </b> %@</p>",[self.stats objectForKey:keyCharisma]];
+    [html appendString:@"<table border=\"0\" width=\"100%\" style=\"margin: 0px;\" CELLPADDING=5 CELLSPACING=0>"];
+    [html appendString:@"<tr valign=\"middle\">"
+     "<th align=\"left\">Ability</th>"
+     "<th align=\"center\">Score</th>"
+     "<th align=\"center\">Mod</th>"
+     "<th align=\"center\">Check</th>"
+     "</tr>"];
+    
+    __block NSString * tableRow = @"<tr valign=\"middle\">"
+    "<td align=\"left\">%@:</td>"
+    "<td align=\"center\">%d</td>"
+    "<td align=\"center\">%@</td>"
+    "<td align=\"center\">%@</td>"
+    "</tr>";
+    
+    __block NSString * tableRowGrey = @"<tr valign=\"middle\" bgcolor=\"#EEE\">"
+    "<td align=\"left\">%@:</td>"
+    "<td align=\"center\">%d</td>"
+    "<td align=\"center\">%@</td>"
+    "<td align=\"center\">%@</td>"
+    "</tr>";
+    
+    __block int count = 0;
+    
+    void (^printOut)(NSString*) = ^(NSString* key){
+        count++;
+        NSString * row = (count%2 == 0) ? tableRow : tableRowGrey;
+        
+        NSInteger score = [[self.stats objectForKey:key] intValue];
+        NSInteger mod = (score - 10)/2;
+        NSInteger check = mod + [character.level intValue]/2;
+        
+        // TODO: Check for modifiers!!!
+        NSString *modStr = (mod > 0) ? NSFORMAT(@"+%d", mod) : NSFORMAT(@"%d", mod);
+        NSString *checkStr = (check > 0) ? NSFORMAT(@"+%d", check) : NSFORMAT(@"%d", check);
+        
+        [html appendFormat:row,key,score,modStr,checkStr];
+
+    };
+    
+    printOut(keyStrength);
+    printOut(keyConstitution);
+    printOut(keyDexterity);
+    printOut(keyIntelligence);
+    printOut(keyWisdom);
+    printOut(keyCharisma);
+    
+    [html appendString:@"</table>"];
+    
     [html appendString:@"<hr width=\"200\">"];
     
     return html;

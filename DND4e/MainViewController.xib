@@ -54,7 +54,7 @@
 				<float key="IBUISectionHeaderHeight">22</float>
 				<float key="IBUISectionFooterHeight">22</float>
 			</object>
-			<object class="IBUIBarButtonItem" id="520486719">
+			<object class="IBUIBarButtonItem" id="515210141">
 				<string key="IBUITitle">Back</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUIStyle">1</int>
@@ -74,7 +74,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">back</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="520486719"/>
+						<reference key="destination" ref="515210141"/>
 					</object>
 					<int key="connectionID">9</int>
 				</object>
@@ -121,7 +121,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
-						<reference key="object" ref="520486719"/>
+						<reference key="object" ref="515210141"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</array>

@@ -17,12 +17,13 @@
 @synthesize internal_id;
 @synthesize legal;
 @synthesize url_string;
+@synthesize specifics;
 
 - (id) init
 {
     self = [super init];
     if (self) {
-
+        self.specifics = [NSMutableArray array];
     }
     return self;
 }
@@ -44,6 +45,14 @@
     self.legal = NSBOOL([[info valueForKey:@"legality"] isEqualToString:@"rules-legal"]);
     self.internal_id = [info valueForKey:@"internal-id"];
     self.type = [info valueForKey:@"type"];
+    id specInfo = [info valueForKey:@"specific"];
+    if ([specInfo isKindOfClass:[NSArray class]]) {
+        [specInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            [self.specifics addObject:obj];
+        }];
+    } else {
+        [self.specifics addObject:specInfo];
+    }
 }
 
 @end

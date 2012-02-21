@@ -170,7 +170,7 @@
     
     UIViewController *vc = nil;
     
-    if ([key isEqualToString:@"Details"]) {
+    if ([key isEqualToString:@"Details"] || [key isEqualToString:@"Stats"]) {
         vc = [[ContentViewController alloc] initWithThing:data];
     } else {
         vc = [[DictionaryExplorerViewController alloc] initWithData:data];

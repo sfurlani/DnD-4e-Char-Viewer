@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSString * internal_id;
 @property (nonatomic, strong) NSNumber * legal;
 @property (nonatomic, strong) NSString * url_string;
+@property (nonatomic, strong) NSMutableArray *specifics;
 
 - (id) initWithDictionary:(NSDictionary*)info;
 - (void) populateWithDictionary:(NSDictionary *)info;
