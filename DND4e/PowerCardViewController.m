@@ -119,7 +119,8 @@
 {
     if (![self.thing isKindOfClass:[Power class]]) return;
     Power *power = (Power*)_thing;
-    NSString *internalID = [power.selected_weapon.has_elements lastObject]; // Trying magic item
+    NSString *internalID = [[power.selected_weapon.has_elements lastObject] internal_id]; // Trying magic item
+    NSLog(@"Internal-ID: %@", internalID);
     Loot *loot = [power.character lootForInternalID:internalID];
     if (loot) {
         PowerCardViewController *pcvc = [[PowerCardViewController alloc] initWithThing:loot];

@@ -137,9 +137,8 @@
         if (!self.selected_weapon.defense)
             text = NSFORMAT(@"%@ damage", self.selected_weapon.damage);
         
-        [html appendFormat:@"<p><b>%@</b> %@ <br></p>",wpn_name,text];
-        [html appendString:@"<a href=\"weapon://\"> - Weapon Details - </a><br><br>"];
-        [html appendString:@"<a href=\"change://\"> - Change Weapon - </a><br><br>"];
+        [html appendFormat:@"<p><a href=\"weapon://\"><b>%@</b></a> %@</p>",wpn_name,text];
+        [html appendString:@"<a href=\"change://\"> - Change Weapon - </a>"];
         
         // CONDITIONALS 
         if (self.selected_weapon.conditions)
