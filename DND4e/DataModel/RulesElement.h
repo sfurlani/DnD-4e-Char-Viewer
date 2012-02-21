@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+#import "DNDHTML.h"
 
-
-@interface RulesElement : NSObject
+@interface RulesElement : NSObject <DNDHTML>
 
 @property (nonatomic, strong) NSNumber * charelem;
 @property (nonatomic, strong) NSString * type;
@@ -18,9 +17,11 @@
 @property (nonatomic, strong) NSString * internal_id;
 @property (nonatomic, strong) NSNumber * legal;
 @property (nonatomic, strong) NSString * url_string;
+@property (nonatomic, strong) NSString * description;
 @property (nonatomic, strong) NSMutableArray *specifics;
 
 - (id) initWithDictionary:(NSDictionary*)info;
 - (void) populateWithDictionary:(NSDictionary *)info;
+- (BOOL) shouldDisplaySpecific:(NSString*)key;
 
 @end

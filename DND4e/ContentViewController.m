@@ -136,6 +136,17 @@
     
 }
 
+- (void) openStatDetail:(NSString*)stat
+{
+    if (![self.thing isKindOfClass:[AbilityScores class]]) return;
+    AbilityScores *ability = (AbilityScores*)_thing;
+    
+    Score *score = [ability.scores objectForKey:stat];
+    ContentViewController *vc = [[ContentViewController alloc] initWithThing:score];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
 
 #pragma mark - UIActionSHeet Delegate
 
@@ -178,6 +189,7 @@
 {
     NSURL *url = request.URL;
     NSString *scheme = [url scheme];
+    NSString *host = [url host];
     
     if ([scheme isEqualToString:@"http"]) {
         [[UIApplication sharedApplication] openURL:url];
@@ -187,6 +199,12 @@
         return NO;
     } else if ([scheme isEqualToString:@"weapon"]) {
         [self weaponDetail];
+        return NO;
+    } else if ([scheme isEqualToString:@"element"]) {
+        
+    } else if ([scheme isEqualToString:@"stat"]) {
+        NSLog(@"Opening %@", url);
+        [self openStatDetail:host];
         return NO;
     }
     

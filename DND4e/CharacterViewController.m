@@ -29,6 +29,7 @@
                      character.powers, @"Powers",
                      character, @"Details",
                      character.stats, @"Stats",
+                     character.elements, @"Rule Elements (ref only)",
                      character.objectGraph, @"Object Graph (ref only)",
                      nil];
     }

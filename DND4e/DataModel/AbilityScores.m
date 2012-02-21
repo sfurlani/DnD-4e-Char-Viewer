@@ -43,6 +43,9 @@ NSString * const keyCharisma = @"Charisma";
                        [[Score alloc] initWithName:keyCharisma],keyCharisma,
                        nil];
         
+        [self.scores enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            [obj setParent:self];
+        }];
         
         
     }
@@ -70,23 +73,30 @@ NSString * const keyCharisma = @"Charisma";
     
     [statBlock enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if ([[obj valueForKey:@"alias"] isKindOfClass:[NSDictionary class]]) {
-            NSLog(@"Not using Stat: %@",[obj valueForKeyPath:@"alias.name"]);
+            // TODO: additional stats
+            // NSLog(@"Not using Score: %@",[obj valueForKeyPath:@"alias.name"]);
+            if ([[obj valueForKeyPath:@"alias.name"] hasSuffix:@"modifier"]) {
+                // TODO: ability modifier?
+            }
             return;
         }
         NSString *key = [[[obj valueForKey:@"alias"] objectAtIndex:0] valueForKey:@"name"];
         __block Score *score = [self.scores valueForKey:key];
         
         if (score) {
-            NSArray *components = [obj valueForKey:@"statadd"];
-            if ([components isKindOfClass:[NSArray array]])
-            [components enumerateObjectsUsingBlock:^(id com, NSUInteger idx, BOOL *stop) {
-                NSDictionary *component = com;
-                if ([component count] > 1) {
-                    [score.components addObject:component];
-                }
-            }];
+            NSArray *statadd = [obj valueForKey:@"statadd"];
+            if ([statadd isKindOfClass:[NSArray array]] || [statadd isKindOfClass:[NSMutableArray class]]) {
+                [statadd enumerateObjectsUsingBlock:^(id com, NSUInteger idx, BOOL *stop) {
+                    NSDictionary *component = com;
+                    if ([component count] > 1) {
+                        [score.components addObject:component];
+                    }
+                }];
+            } else {
+                [score.components addObject:statadd];
+            }
         } else {
-            NSLog(@"No Score for  key: %@", key);
+            NSLog(@"No Score for key: %@", key);
         }
         
         
@@ -113,14 +123,14 @@ NSString * const keyCharisma = @"Charisma";
      "</tr>"];
     
     __block NSString * tableRow = @"<tr valign=\"middle\">"
-    "<td align=\"left\">%@:</td>"
+    "<td align=\"left\"><a href=\"stat://%@\">%@:</a></td>"
     "<td align=\"center\">%d</td>"
     "<td align=\"center\">%@</td>"
     "<td align=\"center\">%@</td>"
     "</tr>";
     
     __block NSString * tableRowGrey = @"<tr valign=\"middle\" bgcolor=\"#EEE\">"
-    "<td align=\"left\">%@:</td>"
+    "<td align=\"left\"><a href=\"stat://%@\">%@:</a></td>"
     "<td align=\"center\">%d</td>"
     "<td align=\"center\">%@</td>"
     "<td align=\"center\">%@</td>"
@@ -140,7 +150,7 @@ NSString * const keyCharisma = @"Charisma";
         NSString *modStr = (mod > 0) ? NSFORMAT(@"+%d", mod) : NSFORMAT(@"%d", mod);
         NSString *checkStr = (check > 0) ? NSFORMAT(@"+%d", check) : NSFORMAT(@"%d", check);
         
-        [html appendFormat:row,key,score,modStr,checkStr];
+        [html appendFormat:row,key,key,score,modStr,checkStr];
 
     };
     
@@ -169,14 +179,31 @@ NSString * const keyCharisma = @"Charisma";
     self = [super init];
     if (self) {
         self.name = name;
+        self.components = [NSMutableArray array];
     }
     return self;
 }
 
 - (NSString*) html
 {
-    // TODO: populate
-    return @"nothing for now";
+    __block NSMutableString *html = [NSMutableString string];
+    [html appendFormat:@"<h3>%@</h3>",self.name];
+    
+    if ([self.components count] == 1) {
+        [html appendString:@"No Modifiers"];
+    } else {
+        [self.components enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSNumber *eNum = NSINT([[obj valueForKey:@"charelem"] intValue]);
+            if (eNum) {
+                RulesElement * element = [self.parent.character elementForCharelem:eNum];
+                if (element)
+                    [html appendString:[element html]];
+            }
+            
+        }];
+    }
+    
+    return html;
 }
 
 @end
