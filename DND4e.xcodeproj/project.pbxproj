@@ -35,6 +35,8 @@
 		DCDCC1DC14F2F68E004BE096 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1DB14F2F68E004BE096 /* Icon.png */; };
 		DCDCC1DE14F3145D004BE096 /* Dwrf_Axe.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1DD14F3145D004BE096 /* Dwrf_Axe.dnd4e */; };
 		DCDCC1E014F31469004BE096 /* Frakk30.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1DF14F31468004BE096 /* Frakk30.dnd4e */; };
+		DCDCC1E214F31984004BE096 /* ShadarKai_Wizard6.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1E114F31984004BE096 /* ShadarKai_Wizard6.dnd4e */; };
+		DCDCC1E414F3199F004BE096 /* Fighter_Assassin_21.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCDCC1E314F3199E004BE096 /* Fighter_Assassin_21.dnd4e */; };
 		DCF7344C14F1CDE2007DC3F5 /* kaeltor12.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		DCDCC1DB14F2F68E004BE096 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		DCDCC1DD14F3145D004BE096 /* Dwrf_Axe.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Dwrf_Axe.dnd4e; sourceTree = "<group>"; };
 		DCDCC1DF14F31468004BE096 /* Frakk30.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Frakk30.dnd4e; sourceTree = "<group>"; };
+		DCDCC1E114F31984004BE096 /* ShadarKai_Wizard6.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShadarKai_Wizard6.dnd4e; sourceTree = "<group>"; };
+		DCDCC1E314F3199E004BE096 /* Fighter_Assassin_21.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fighter_Assassin_21.dnd4e; sourceTree = "<group>"; };
 		DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kaeltor12.dnd4e; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +146,8 @@
 				DCDCC1DD14F3145D004BE096 /* Dwrf_Axe.dnd4e */,
 				DCDCC1DF14F31468004BE096 /* Frakk30.dnd4e */,
 				DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */,
+				DCDCC1E114F31984004BE096 /* ShadarKai_Wizard6.dnd4e */,
+				DCDCC1E314F3199E004BE096 /* Fighter_Assassin_21.dnd4e */,
 				DC693BFF14EED86C00E68BF8 /* DNDAppDelegate.h */,
 				DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */,
 				DCA8024514F1328800620379 /* PowerCardViewController.h */,
@@ -272,6 +278,8 @@
 				DCDCC1DC14F2F68E004BE096 /* Icon.png in Resources */,
 				DCDCC1DE14F3145D004BE096 /* Dwrf_Axe.dnd4e in Resources */,
 				DCDCC1E014F31469004BE096 /* Frakk30.dnd4e in Resources */,
+				DCDCC1E214F31984004BE096 /* ShadarKai_Wizard6.dnd4e in Resources */,
+				DCDCC1E414F3199F004BE096 /* Fighter_Assassin_21.dnd4e in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

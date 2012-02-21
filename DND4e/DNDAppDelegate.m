@@ -21,28 +21,32 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"kaeltor12" ofType:@"dnd4e"];
-    NSData *xmlData = [[NSMutableData alloc] initWithContentsOfFile:filePath];
-    NSError *error = nil;
-    
-    NSDictionary *data = [XMLReader dictionaryForXMLData:xmlData error:&error];
-//    NSLog(@"XMLReader: %@", [[data valueForKeyPath:@"D20Character.CharacterSheet.PowerStats.Power"] objectAtIndex:1]);
-    
-    
-    NSArray *powers = [data valueForKeyPath:@"D20Character.CharacterSheet.PowerStats.Power"];
-    NSMutableArray *powerObjs = [NSMutableArray arrayWithCapacity:[powers count]];
-    [powers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        Power *power = [[Power alloc] initWithDictionary:obj];
-        [powerObjs addObject:power];
+    NSArray *filePaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"dnd4e" inDirectory:nil];
+    NSMutableArray * characters = [NSMutableArray arrayWithCapacity:[filePaths count]];
+    [filePaths enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSData *xmlData = [[NSData alloc] initWithContentsOfFile:obj];
+        NSError *error = nil;
+        NSDictionary *data = [XMLReader dictionaryForXMLData:xmlData error:&error];
+        
+        NSArray *powers = [data valueForKeyPath:@"D20Character.CharacterSheet.PowerStats.Power"];
+        NSMutableArray *powerObjs = [NSMutableArray arrayWithCapacity:[powers count]];
+        [powers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            Power *power = [[Power alloc] initWithDictionary:obj];
+            [powerObjs addObject:power];
+        }];
+        
+        NSString *name = [data valueForKeyPath:@"D20Character.CharacterSheet.Details.name.value"];
+        NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:
+                              name,@"name",
+                              powerObjs,@"Power Cards",
+                              [data valueForKeyPath:@"D20Character"],@"Object Graph (ref only)",
+                              nil];
+        [characters addObject:info];
     }];
-    //NSLog(@"Powers: %@", powerObjs);
-    [powerObjs insertObject:data atIndex:0];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    DictionaryExplorerViewController *vc = [[DictionaryExplorerViewController alloc] initWithData:powerObjs];
-//    PowerCardViewController *vc2 = [[PowerCardViewController alloc] initWithPower:[powerObjs objectAtIndex:1]];
+    DictionaryExplorerViewController *vc = [[DictionaryExplorerViewController alloc] initWithData:characters];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-//    [nav pushViewController:vc2 animated:NO];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
