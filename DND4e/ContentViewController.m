@@ -19,7 +19,7 @@
 
 - (id)initWithThing:(id<DNDHTML>)thing
 {
-    self = [super initWithNibName:@"PowerCardViewController" bundle:nil];
+    self = [super initWithNibName:@"ContentViewController" bundle:nil];
     if (self) {
         // Custom initialization
         self.thing = thing;
