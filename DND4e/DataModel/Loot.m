@@ -97,6 +97,14 @@
     return name;
 }
 
+- (NSString*) shortname
+{
+    if ([items count] > 0)
+        return [[self.items objectAtIndex:0] name];
+    else
+        return @"";
+}
+
 @end
 
 @implementation Item

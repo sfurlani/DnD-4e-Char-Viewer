@@ -20,6 +20,8 @@
 - (id) initWithDictionary:(NSDictionary*)info;
 - (void) populateWithDictionary:(NSDictionary*)info;
 
+- (NSString*) shortname;
+
 @end
 
 

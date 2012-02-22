@@ -151,4 +151,21 @@
     return elem;
 }
 
+- (Loot*) lootForCharelem:(NSNumber*)charElem
+{
+    __block Loot *ret = nil;
+    [self.loot enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        Loot *lt = obj;
+        [lt.items enumerateObjectsUsingBlock:^(id obj2, NSUInteger idx, BOOL *stop) {
+            Item *it = obj2;
+            if ([it.element.charelem isEqualToNumber:charElem]) {
+                ret = obj;
+                *stop = YES;
+            }
+        }];
+        if (ret) *stop = YES;
+    }];
+    return ret;
+}
+
 @end

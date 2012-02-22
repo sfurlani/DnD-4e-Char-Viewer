@@ -30,6 +30,7 @@
 
 - (id) initWithFile:(NSString*)path;
 - (Loot*) lootForInternalID:(NSString*)internalID;
+- (Loot*) lootForCharelem:(NSNumber*)charElem;
 - (RulesElement*) elementForCharelem:(NSNumber*)charElem;
 
 @end

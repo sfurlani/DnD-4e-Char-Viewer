@@ -91,8 +91,15 @@
             RulesElement *element = [self.character elementForCharelem:self.charelem];
             if (element) {
                 NSLog(@"Element2: %@ - %@ %@", element.name, element.type, element.charelem);
-                
-            } else NSLog(@"No Element: %@", self.charelem);
+            } 
+            
+            Loot *loot = [self.character lootForCharelem:self.charelem];
+            if (loot) {
+                NSLog(@"Loot2: %@ - %@ %@", element.name, element.type, element.charelem);
+            }
+            
+            if (!element && !loot)
+             NSLog(@"Can't Find Element: %@", self.charelem);
         }
     }
     NSLog(@"%@ (%d) - %@ %@", self.name, value, self.type, self.charelem);
@@ -141,6 +148,15 @@ id valueStr = [value intValue] > 0 ? NSFORMAT(@"+%@",value) : value; \
             if (element) {
                 [html appendFormat:rowGO,element.type,element.charelem,element.name];
             }
+            
+            Loot *loot = [self.character lootForCharelem:self.charelem];
+            if (loot) {
+                [html appendFormat:row,self.type,[loot shortname]];
+            }
+            
+            if (!element && !loot)
+                NSLog(@"Can't Find Element: %@", self.charelem);
+            
         }
     }
     
