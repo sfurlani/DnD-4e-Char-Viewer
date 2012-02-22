@@ -16,6 +16,7 @@
 @synthesize character = _character;
 @synthesize components;
 @synthesize bonus = _bonus;
+@synthesize element;
 
 - (id) initWithName:(NSString*)name
 {
@@ -32,6 +33,7 @@
     // Performed using Elements
     self.components = [elements objectsAtIndexes:[elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
         RulesElement *ele = obj;
+        NSLog(@"Element Name: %@", ele.name);
         return ([ele.name hasPrefix:self.name] ||
                 ([ele.type hasPrefix:@"Skill"] && [ele.name rangeOfString:self.name].length > 0));
     }]];
@@ -61,6 +63,10 @@
     self.character = character;
     NSDictionary *stats = character.stats;
     Stat *stat = [stats objectForKey:self.name];
+    self.element = [character.elements objectAtIndex:[character.elements indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+        *stop = [[obj name] isEqualToString:self.name];
+        return *stop;
+    }]];
     self.bonus = NSINT([stat value]);
     NSLog(@"Stat: %@ - %@", stat.name, self.bonus);
 }
@@ -70,14 +76,15 @@
 {
     __block NSMutableString *html = [NSMutableString string];
     
-    [html appendString:@"<p><i>This won't correctly calculate the bonuses from items, features, or armor check penalties.  I have no idea where they're pulling these numbers from (probably internally in the database) so the values displayed here are not accurate.  Use the links to get the full bonus tally.</i></p>"];
+    [html appendString:@"<p><b>Disclaimer:</b> <i>This won't correctly calculate the bonuses from items, features, or armor check penalties.  I have no idea where they're pulling these numbers from (probably internally in the database) so the values displayed here are not accurate.</p><p>So just use this as a guide or explaination as to the skill bonuses.</i></p>"];
     
-    if ([self.bonus intValue] > 0)
-        [html appendFormat:@"<p><b>Total Bonus:</b> +%@</p>",self.bonus];
-    else
-        [html appendFormat:@"<p><b>Total Bonus:</b> %@</p>",self.bonus];
+//    if ([self.bonus intValue] > 0)
+//        [html appendFormat:@"<p><b>Total Bonus:</b> +%@</p>",self.bonus];
+//    else
+//        [html appendFormat:@"<p><b>Total Bonus:</b> %@</p>",self.bonus];
     
     [html appendString:[[self.character.stats objectForKey:self.name] html]];
+    [html appendString:[self.element html]];
     
     return html;
 }

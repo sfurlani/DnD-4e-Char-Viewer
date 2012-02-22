@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DNDHTML.h"
 
-@class Character;
+@class Character, RulesElement;
 
 @interface Skill : NSObject <DNDHTML>
 
@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSArray * components;
 @property (strong, nonatomic) NSNumber * bonus;
 @property (unsafe_unretained, nonatomic) Character* character;
+@property (strong, nonatomic) RulesElement * element;
 
 - (id) initWithName:(NSString*)name;
 - (void) populateFromElements:(NSArray*)elements; // Deprecated
