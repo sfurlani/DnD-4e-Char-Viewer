@@ -27,14 +27,13 @@
         else 
             self.name = [[[info valueForKey:@"alias"] objectAtIndex:0] valueForKey:@"name"];
         
-//        NSLog(@"Making Stat: %@", self.name);
+        NSLog(@"Making Stat: %@", self.name);
         
         self.level = [[info valueForKey:@"level"] intValue];
-        self.charelem = NSINT([[info valueForKey:@"charelem"] intValue]);
         
         // Stat Add
         id addInfo = [info valueForKey:@"statadd"];
-        if ([self.name rangeOfString:@"Misc"].length > 0) NSLog(@"%@: %@",self.name, addInfo);
+        NSLog(@"statadd: %@",addInfo);
         NSMutableArray *addMut = [NSMutableArray arrayWithCapacity:[addInfo count]];
         if (addInfo) {
             if (![addInfo isKindOfClass:[NSDictionary class]]) {
@@ -45,11 +44,16 @@
                     } else
                         [addMut addObject:obj];
                 }];
+                self.charelem = NSINT([[info valueForKey:@"charelem"] intValue]);
+                self.type = [info valueForKey:@"type"];
             } else {
-                NSString *alias = [addInfo valueForKeyPath:@"statlink"];
-                if (alias)
-                    [addMut addObject:alias];
+                // Leaf Object
+                self.charelem = NSINT([[addInfo valueForKey:@"charelem"] intValue]);
+                self.type = [addInfo valueForKey:@"type"];
+                NSLog(@"Leaf Object: %@ %@ %@", self.name, self.type, self.charelem);
             }
+        } else {
+            
         }
         self.statadd = addMut;
         
@@ -61,24 +65,38 @@
 - (NSInteger)value
 {
     __block NSInteger value = 0;
-    
     if ([self.name isEqualToString:@"HALF-LEVEL"]) value += [self.statadd count];
-    else if ([self.type isEqualToString:@"Ability"]) NSLog(@"Go Get: %@", self.name);
-    else if ([self.name rangeOfString:@"Trained"].length > 0) value += 5;
-    else if ([self.name rangeOfString:@"Misc"].length > 0) {
-//        NSLog(@"Stat Info: %@", self.info);
-        
-    } else {
+    else if ([self.type isEqualToString:@"Ability"]) {NSLog(@"Go Get: %@", self.name);}
+    else if ([self.type isEqualToString:@"trained"]) value+=5;
+    else if ([self.statadd count] > 0) {
         [self.statadd enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            if ([obj isKindOfClass:[NSString class]]) {
-                Stat *stat = [self.character.stats objectForKey:obj];
-                value += [stat value];
-            } else {
-               // TODO: what?
+            Stat *stat = [self.character.stats objectForKey:obj];
+            if (stat) value += [stat value];
+            else {
+                // Attribute Block
+                NSNumber *_charelem = NSINT([[obj valueForKey:@"charelem"] intValue]);
+                RulesElement *element = [self.character elementForCharelem:_charelem];
+                if (element) {
+                    NSLog(@"Element1: %@ - %@ %@", element.name, element.type, element.charelem);
+                    if ([element.type isEqualToString:@"Race Ability Bonus"]) value+=2;
+                    else if ([element.type rangeOfString:@"Ability Increase"].length > 0) value+=1;
+                    else if ([element.type rangeOfString:@"Level"].length > 0) value+=1;
+                } else {
+                    value += ([[self.character.scores.stats objectForKey:self.name] intValue]-10)/2;
+                }
             }
         }];
+    } 
+    else {
+        if (self.charelem) {
+            RulesElement *element = [self.character elementForCharelem:self.charelem];
+            if (element) {
+                NSLog(@"Element2: %@ - %@ %@", element.name, element.type, element.charelem);
+                
+            } else NSLog(@"No Element: %@", self.charelem);
+        }
     }
-
+    NSLog(@"%@ (%d) - %@ %@", self.name, value, self.type, self.charelem);
     return value;
 }
 
@@ -88,28 +106,37 @@
     
     __block NSString * row = @"<b>%@: </b>%@<br>";
     
-    if ([self.name isEqualToString:@"HALF-LEVEL"]) [html appendFormat:row,@"Half-Level",NSFORMAT(@"+%d",[self.statadd count])];
-    else if ([self.type isEqualToString:@"Ability"]) [html appendFormat:row,self.name,@" - need to calculate - "];
-    else if ([self.name rangeOfString:@"Trained"].length > 0) [html appendFormat:row, self.name, @"+5"];
-//    else if ([self.name rangeOfString:@"Misc"].length > 0) {
-////        NSLog(@"Stat Info: %@", self.info);
-//        Stat *stat = [self.character.stats objectForKey:self.name];
-//        [html appendFormat:row, @"Info", stat.statadd];
-//        
-//    } 
-    else {
+    if ([self.name isEqualToString:@"HALF-LEVEL"]) [html appendFormat:row, @"Half-Level", NSFORMAT(@"+%d",[self.statadd count])];
+    else if ([self.type isEqualToString:@"Ability"]) [html appendFormat:row,@"Stat (TODO:)",self.name];
+    else if ([self.type isEqualToString:@"trained"]) [html appendFormat:row,@"Trained",@"+5"];
+    else if ([self.statadd count] > 0) {
         [self.statadd enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            if ([obj isKindOfClass:[NSString class]]) {
-                Stat *stat = [self.character.stats objectForKey:obj];
-                [html appendString:[stat html]];
-            } else {
-                // TODO: fix this
-//                value += 1;
-//                if ([[obj valueForKey:@"Level"] intValue] == 1) value += 1;
+            Stat *stat = [self.character.stats objectForKey:obj];
+            if (stat) [html appendString:[stat html]];
+            else {
+                NSNumber *_charelem = NSINT([[obj valueForKey:@"charelem"] intValue]);
+                RulesElement *element = [self.character elementForCharelem:_charelem];
+                if (element) {
+                    [html appendFormat:row,element.type,element.name];   
+                } else {
+                    int mod = ([[self.character.scores.stats objectForKey:self.name] intValue]-10)/2;
+                    if (mod > 0)
+                        [html appendFormat:@"<b>%@ Modifier: </b>+%d<br>",self.name, mod];
+                    else
+                        [html appendFormat:@"<b>%@ Modifier: </b>%d<br>",self.name, mod];
+                }
             }
         }];
     }
-    //    NSLog(@"Stat: %@ (%d)", self.name, value);
+    else {
+        if (self.charelem) {
+            RulesElement *element = [self.character elementForCharelem:self.charelem];
+            if (element) {
+                [html appendFormat:row,element.type,element.name];
+            }
+        }
+    }
+    
     return html;
 }
 
