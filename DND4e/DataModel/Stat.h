@@ -19,6 +19,7 @@
 @property (strong, nonatomic) NSString * type;
 @property (strong, nonatomic) NSArray * statadd;
 @property (unsafe_unretained, nonatomic) Character *character;
+@property (strong, nonatomic) NSDictionary * info;
 
 - (id) initWithDictionary:(NSDictionary*)info;
 

@@ -29,8 +29,9 @@
                      character.powers, @"Powers",
                      character, @"Details",
                      character.stats, @"Stats",
-                     [character feats], @"Feats",
-                     [character skills], @"Skills",
+                     character.feats, @"Feats",
+                     character.features, @"Features",
+                     character.skills, @"Skills",
                      character.elements, @"Rule Elements (ref only)",
                      character.objectGraph, @"Object Graph (ref only)",
                      nil];

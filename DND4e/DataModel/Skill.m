@@ -61,28 +61,8 @@
     self.character = character;
     NSDictionary *stats = character.stats;
     Stat *stat = [stats objectForKey:self.name];
-    __block NSInteger bonus = 0;
-//    NSLog(@"Stat: %@", stat.name);
-//    [stat.components enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//        NSString *statlink = [obj valueForKey:@"statlink"];
-//        NSString *type = [obj valueForKey:@"type"];
-//        NSInteger level = [[obj valueForKey:@"Level"] intValue];
-//        
-//        Score *st = [stats objectForKey:statlink];
-//        if ([st.name isEqualToString:@"HALF-LEVEL"]) bonus += [st.components count];
-//        else if ([type isEqualToString:@"Ability"]) { NSLog(@"TODO: Add Ability: %@",st.name); }
-//        else if ([st.name rangeOfString:@"Trained"].length > 0) bonus +=5;
-////        else if ([st.
-//        else {
-//            NSLog(@"Component: %@", statlink);
-//            Score *comp = [stats objectForKey:statlink];
-//            NSLog(@"Data: %@", comp.components);
-//        }
-//        
-//    }];
-    
-    NSLog(@"Bonus: %d", bonus);
-            self.bonus = NSINT(bonus);
+    self.bonus = NSINT([stat value]);
+    NSLog(@"Stat: %@ - %@", stat.name, self.bonus);
 }
 
 
@@ -91,13 +71,11 @@
     __block NSMutableString *html = [NSMutableString string];
     
     if ([self.bonus intValue] > 0)
-        [html appendFormat:@"<b>Bonus:</b> +%@<br>",self.bonus];
+        [html appendFormat:@"<p><b>Total Bonus:</b> +%@</p>",self.bonus];
     else
-        [html appendFormat:@"<b>Bonus:</b> %@<br>",self.bonus];
+        [html appendFormat:@"<p><b>Total Bonus:</b> %@</p>",self.bonus];
     
-    [self.components enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [html appendFormat:@"%@<br>",[obj html]]; 
-    }];
+    [html appendString:[[self.character.stats objectForKey:self.name] html]];
     
     return html;
 }

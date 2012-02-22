@@ -24,6 +24,7 @@
 @property (strong, nonatomic) id objectGraph;
 @property (strong, nonatomic) NSMutableArray * skills;
 @property (strong, nonatomic) NSArray * feats;
+@property (strong, nonatomic) NSArray * features;
 
 - (NSArray*) feats;
 

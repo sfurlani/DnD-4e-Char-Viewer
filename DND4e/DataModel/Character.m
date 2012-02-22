@@ -17,7 +17,7 @@
 @synthesize powers, loot;
 @synthesize objectGraph;
 @synthesize details, stats, elements, scores;
-@synthesize skills, feats;
+@synthesize skills, feats, features;
 
 - (id) initWithFile:(NSString *)path
 {
@@ -94,6 +94,12 @@
         
         self.feats = [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
             return [[(RulesElement*)obj type] isEqualToString:@"Feat"];
+        }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
+        }];
+        
+        self.features = [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+            return ([[(RulesElement*)obj type] rangeOfString:@"Feature"].length > 0);
         }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
             return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
         }];
