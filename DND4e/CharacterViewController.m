@@ -29,11 +29,12 @@
                      character.powers, @"Powers",
                      character, @"Details",
                      character.scores, @"Ability Scores",
-                     character.feats, @"Feats",
-                     character.features, @"Features",
                      character.skills, @"Skills",
-                     character.elements, @"Rule Elements (ref only)",
-                     character.objectGraph, @"Object Graph (ref only)",
+                     character.feats, @"Feats",
+                     character.features, @"Class Features",
+                     character.traits, @"Racial Traits",
+                     //character.elements, @"Rule Elements (ref only)",
+                     //character.objectGraph, @"Object Graph (ref only)",
                      nil];
     }
     return self;
@@ -178,6 +179,7 @@
         vc = [[ContentViewController alloc] initWithThing:data];
     } else {
         vc = [[DictionaryExplorerViewController alloc] initWithData:data];
+        vc.title = key;
     }
     if (vc)
         [self.navigationController pushViewController:vc animated:YES];

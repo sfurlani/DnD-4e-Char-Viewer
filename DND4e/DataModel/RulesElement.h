@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "DNDHTML.h"
 
+@class Character;
+
 @interface RulesElement : NSObject <DNDHTML>
 
 @property (nonatomic, strong) NSNumber * charelem;
@@ -19,6 +21,7 @@
 @property (nonatomic, strong) NSString * url_string;
 @property (nonatomic, strong) NSString * desc;
 @property (nonatomic, strong) NSMutableArray *specifics;
+@property (nonatomic, strong) Character * character;
 
 - (id) initWithDictionary:(NSDictionary*)info;
 - (void) populateWithDictionary:(NSDictionary *)info;

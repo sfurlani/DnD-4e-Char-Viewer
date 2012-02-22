@@ -150,19 +150,21 @@ id valueStr = [value intValue] > 0 ? NSFORMAT(@"+%@",value) : value; \
             if (stat) [html appendString:[stat html]];
             else {
                 NSNumber *_charelem = NSINT([[obj valueForKey:@"charelem"] intValue]);
-                NSString *_type = [obj valueForKey:@"type"];
+                //NSString *_type = [obj valueForKey:@"type"];
+                //NSString *_name = [obj valueForKey:@"name"];
                 RulesElement *element = [self.character elementForCharelem:_charelem];
-                if (element) {
+                if (element) { // Element 1
                     [html appendFormat:rowGO,element.type,element.charelem,element.name];   
                 }
                 
                 Loot *loot = [self.character lootForCharelem:_charelem];
-                if (loot) {
-                    [html appendFormat:rowItem,_type,_charelem,[loot shortname]];
+                if (loot) { // Loot 1
+                    [html appendFormat:rowItem,@"Item",_charelem,[loot shortname]];
                 }
                 
-                if (!element && !loot)
-                    NSLog(@"Can't Find Element: %@", _charelem);
+                if (!element && !loot) {
+//                    NSLog(@"Can't Find Element1: %@", _charelem);
+                }
                 
             }
         }];
@@ -171,17 +173,18 @@ id valueStr = [value intValue] > 0 ? NSFORMAT(@"+%@",value) : value; \
         
         if (self.charelem) {
             RulesElement *element = [self.character elementForCharelem:self.charelem];
-            if (element) {
+            if (element) { // Element 2
                 [html appendFormat:rowGO,element.type,element.charelem,element.name];
             }
             
             Loot *loot = [self.character lootForCharelem:self.charelem];
-            if (loot) {
-                [html appendFormat:rowItem,self.type,self.charelem,[loot shortname]];
+            if (loot) { // Loot2
+                [html appendFormat:rowItem,@"Item",self.charelem,[loot shortname]];
             }
             
-            if (!element && !loot)
-                NSLog(@"Can't Find Element: %@", self.charelem);
+            if (!element && !loot) {
+//                NSLog(@"Can't Find Element2: %@", self.charelem);
+            }
             
         }
     }

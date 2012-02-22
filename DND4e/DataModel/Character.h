@@ -25,12 +25,14 @@
 @property (strong, nonatomic) NSMutableArray * skills;
 @property (strong, nonatomic) NSArray * feats;
 @property (strong, nonatomic) NSArray * features;
+@property (strong, nonatomic) NSArray * traits;
 
 - (NSArray*) feats;
 
 - (id) initWithFile:(NSString*)path;
 - (Loot*) lootForInternalID:(NSString*)internalID;
 - (Loot*) lootForCharelem:(NSNumber*)charElem;
+- (RulesElement*) elementForInternalID:(NSString*)internalID;
 - (RulesElement*) elementForCharelem:(NSNumber*)charElem;
 
 @end

@@ -78,7 +78,7 @@ NSString * const keyCharisma = @"Charisma";
             }
         }
     }];
-    NSLog(@"Base Score: %d Value: %d", baseScore, value);
+//    NSLog(@"Base Score: %d Value: %d", baseScore, value);
     return NSINT(baseScore+value);
 }
 

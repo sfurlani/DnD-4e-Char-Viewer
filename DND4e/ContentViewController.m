@@ -148,10 +148,8 @@
 
 - (void) openElementDetail:(NSString*)elem
 {
-    if (![self.thing isKindOfClass:[Skill class]]) return;
-    Skill *skill = _thing;
     NSNumber *num = NSINT([elem intValue]);
-    RulesElement *element = [skill.character elementForCharelem:num];
+    RulesElement *element = [[(id)_thing character] elementForCharelem:num];
     ContentViewController *vc = [[ContentViewController alloc] initWithThing:element];
     [self.navigationController pushViewController:vc animated:YES];
 }

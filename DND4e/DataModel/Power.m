@@ -55,7 +55,6 @@
         NSLog(@"Info: %@", info);
     }
     
-    
     [specs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *key = [obj valueForKey:@"name"];
         NSString *value = [obj valueForKey:@"value"];

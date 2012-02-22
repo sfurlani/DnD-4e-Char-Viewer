@@ -17,7 +17,7 @@
 @synthesize powers, loot;
 @synthesize objectGraph;
 @synthesize details, stats, elements, scores;
-@synthesize skills, feats, features;
+@synthesize skills, feats, features, traits;
 
 - (id) initWithFile:(NSString *)path
 {
@@ -76,6 +76,7 @@
         self.elements = [NSMutableArray arrayWithCapacity:[elementInfo count]];
         [elementInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             RulesElement *element = [[RulesElement alloc] initWithDictionary:obj];
+            element.character = self;
             [self.elements addObject:element];
         }];
         
@@ -100,7 +101,15 @@
         }];
         
         self.features = [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+//            NSLog(@"Element Type: %@", [(RulesElement*)obj type]);
             return ([[(RulesElement*)obj type] rangeOfString:@"Feature"].length > 0);
+        }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
+        }];
+        
+        self.traits = [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+            //            NSLog(@"Element Type: %@", [(RulesElement*)obj type]);
+            return ([[(RulesElement*)obj type] rangeOfString:@"Trait"].length > 0);
         }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
             return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
         }];
@@ -137,6 +146,18 @@
         if (ret) *stop = YES;
     }];
     return ret;
+}
+
+- (RulesElement*) elementForInternalID:(NSString*)internalID
+{
+    __block RulesElement *elem = nil;
+    [self.elements enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([internalID isEqualToString:[obj internal_id]]) {
+            *stop = YES;
+            elem = obj;
+        }
+    }];
+    return elem;
 }
 
 - (RulesElement*) elementForCharelem:(NSNumber*)charElem

@@ -20,6 +20,7 @@
 @synthesize url_string;
 @synthesize specifics;
 @synthesize desc;
+@synthesize character;
 
 - (id) init
 {
@@ -76,11 +77,22 @@
         [self.specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSString *key = [obj valueForKey:@"name"];
             NSString *value = [obj valueForKey:@"value"];
-            if ([self shouldDisplaySpecific:key])
+            if ([self shouldDisplaySpecific:key]) {
                 [html appendFormat:row,key,value];
-            else if ([key isEqualToString:@"Granted Powers"]) {
+            } else if ([key rangeOfString:@"Power"].length > 0) {
                 // TODO: add Power
-                
+                NSLog(@"Power: %@ - %@", key, value);
+                NSArray *values = [value componentsSeparatedByString:@","];
+                [values enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    NSString *internalID = [obj stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+                    RulesElement *element = [self.character elementForInternalID:internalID];
+                    if (element) {
+                        [html appendFormat:@"<dt><b>Power: </b><a href=\"element://%@\">%@</a></dt>",element.charelem, element.name];
+                    }
+                }];
+
+            } else if ([key isEqualToString:@"Flavor"]) {
+                [html appendFormat:@"<dt><b>%@:</b><i> %@</i></dt>",key,value];
             }
         }];
     }
@@ -101,8 +113,9 @@
 {
     // Don't display rules elements
     if ([key hasPrefix:@"_"]) return NO;
-    if ([key hasPrefix:@"Granted Powers"]) return NO;
+    if ([key rangeOfString:@"Power"].length > 0) return NO;
     if ([key hasPrefix:@"Short"]) return NO;
+    if ([key hasPrefix:@"Flavor"]) return NO;
     
     return YES;
 }
@@ -121,10 +134,12 @@
         [self.specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSString *key = [obj valueForKey:@"name"];
             NSString *value = [obj valueForKey:@"value"];
-            if ([self shouldDisplaySpecific:key])
+            if ([self shouldDisplaySpecific:key]) {
                 [html appendFormat:row,key,value];
-            else if ([key isEqualToString:@"Granted Powers"]) {
+            } else if ([key isEqualToString:@"Granted Powers"]) {
                 // TODO: add Power
+                
+            } else if ([key isEqualToString:@"Flavor"]) {
                 
             }
         }];

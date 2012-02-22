@@ -68,7 +68,7 @@
         return *stop;
     }]];
     self.bonus = NSINT([stat value]);
-    NSLog(@"Stat: %@ - %@", stat.name, self.bonus);
+//    NSLog(@"Stat: %@ - %@", stat.name, self.bonus);
 }
 
 
