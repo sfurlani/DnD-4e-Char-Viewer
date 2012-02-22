@@ -156,6 +156,16 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void) openItemDetail:(NSString*)elem
+{
+    if (![self.thing isKindOfClass:[Skill class]]) return;
+    Skill *skill = _thing;
+    NSNumber *num = NSINT([elem intValue]);
+    Loot *loot = [skill.character lootForCharelem:num];
+    ContentViewController *vc = [[ContentViewController alloc] initWithThing:loot];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 #pragma mark - UIActionSHeet Delegate
 
@@ -215,6 +225,9 @@
     } else if ([scheme isEqualToString:@"stat"]) {
         NSLog(@"Opening %@", url);
         [self openStatDetail:[host stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        return NO;
+    } else if ([scheme isEqualToString:@"item"]) {
+        [self openItemDetail:host];
         return NO;
     }
     

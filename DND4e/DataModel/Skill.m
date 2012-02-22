@@ -70,6 +70,8 @@
 {
     __block NSMutableString *html = [NSMutableString string];
     
+    [html appendString:@"<p><i>This won't correctly calculate the bonuses from items, features, or armor check penalties.  I have no idea where they're pulling these numbers from (probably internally in the database) so the values displayed here are not accurate.  Use the links to get the full bonus tally.</i></p>"];
+    
     if ([self.bonus intValue] > 0)
         [html appendFormat:@"<p><b>Total Bonus:</b> +%@</p>",self.bonus];
     else

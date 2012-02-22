@@ -29,7 +29,7 @@
             self.type = @"Ability";
         }
         
-        NSLog(@"Making Stat: %@ %@", self.name, self.type);
+//        NSLog(@"Making Stat: %@ %@", self.name, self.type);
         
         self.level = [[info valueForKey:@"level"] intValue];
         
@@ -52,7 +52,7 @@
                 // Leaf Object
                 self.charelem = NSINT([[addInfo valueForKey:@"charelem"] intValue]);
                 self.type = [addInfo valueForKey:@"type"];
-                NSLog(@"Leaf Object: %@ %@ %@", self.name, self.type, self.charelem);
+//                NSLog(@"Leaf Object: %@ %@ %@", self.name, self.type, self.charelem);
             }
         } else {
             
@@ -83,7 +83,22 @@
             Stat *stat = [self.character.stats objectForKey:obj];
             if (stat) value += [stat value];
             else {
-                NSLog(@"No Stat: %@", obj);
+                
+                NSNumber *_charelem = NSINT([[obj valueForKey:@"charelem"] intValue]);
+                NSString *_type = [obj valueForKey:@"type"];
+                // TODO: look for element or items?
+                RulesElement *element = [self.character elementForCharelem:_charelem];
+                if (element) {
+                    NSLog(@"Element1: %@ - %@ %@", element.name, element.type, element.charelem);
+                } 
+                
+                Loot *loot = [self.character lootForCharelem:_charelem];
+                if (loot) {
+                    NSLog(@"Loot1: %@ - %@", [loot name], _type);
+                }
+                
+                if (!element && !loot)
+                    NSLog(@"Can't Find Element1: %@", _charelem);
             }
         }];
     } else {
@@ -95,14 +110,14 @@
             
             Loot *loot = [self.character lootForCharelem:self.charelem];
             if (loot) {
-                NSLog(@"Loot2: %@ - %@ %@", element.name, element.type, element.charelem);
+                NSLog(@"Loot2: %@", [loot name]);
             }
             
             if (!element && !loot)
-             NSLog(@"Can't Find Element: %@", self.charelem);
+             NSLog(@"Can't Find Element2: %@", self.charelem);
         }
     }
-    NSLog(@"%@ (%d) - %@ %@", self.name, value, self.type, self.charelem);
+//    NSLog(@"%@ (%d) - %@ %@", self.name, value, self.type, self.charelem);
     return value;
 }
 
@@ -112,6 +127,7 @@
     
     __block NSString * row = @"<b>%@: </b>%@<br>";
     __block NSString * rowGO = @"<b>%@: </b><a href=\"element://%@\">%@</a><br>";
+    __block NSString * rowItem = @"<b>%@: </b><a href=\"item://%@\">%@</a><br>";
     NSString * rowMod = @"<b>%@ Modifier: </b>%@<br>";
 
 #define ABILITY_HTML(key) else if ([self.name isEqualToString:key]) {\
@@ -134,10 +150,20 @@ id valueStr = [value intValue] > 0 ? NSFORMAT(@"+%@",value) : value; \
             if (stat) [html appendString:[stat html]];
             else {
                 NSNumber *_charelem = NSINT([[obj valueForKey:@"charelem"] intValue]);
+                NSString *_type = [obj valueForKey:@"type"];
                 RulesElement *element = [self.character elementForCharelem:_charelem];
                 if (element) {
                     [html appendFormat:rowGO,element.type,element.charelem,element.name];   
                 }
+                
+                Loot *loot = [self.character lootForCharelem:_charelem];
+                if (loot) {
+                    [html appendFormat:rowItem,_type,_charelem,[loot shortname]];
+                }
+                
+                if (!element && !loot)
+                    NSLog(@"Can't Find Element: %@", _charelem);
+                
             }
         }];
     }
@@ -151,7 +177,7 @@ id valueStr = [value intValue] > 0 ? NSFORMAT(@"+%@",value) : value; \
             
             Loot *loot = [self.character lootForCharelem:self.charelem];
             if (loot) {
-                [html appendFormat:row,self.type,[loot shortname]];
+                [html appendFormat:rowItem,self.type,self.charelem,[loot shortname]];
             }
             
             if (!element && !loot)
