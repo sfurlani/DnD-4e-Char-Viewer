@@ -28,7 +28,7 @@
                      character.loot, @"Inventory",
                      character.powers, @"Powers",
                      character, @"Details",
-                     character.stats, @"Stats",
+                     character.scores, @"Ability Scores",
                      character.feats, @"Feats",
                      character.features, @"Features",
                      character.skills, @"Skills",
@@ -174,7 +174,7 @@
     
     UIViewController *vc = nil;
     
-    if ([key isEqualToString:@"Details"] || [key isEqualToString:@"Stats"]) {
+    if ([key isEqualToString:@"Details"] || [key isEqualToString:@"Ability Scores"]) {
         vc = [[ContentViewController alloc] initWithThing:data];
     } else {
         vc = [[DictionaryExplorerViewController alloc] initWithData:data];

@@ -24,16 +24,18 @@
         // Alias
         if ([[info valueForKey:@"alias"] isKindOfClass:[NSDictionary class]])
             self.name = [info valueForKeyPath:@"alias.name"];
-        else 
+        else {
             self.name = [[[info valueForKey:@"alias"] objectAtIndex:0] valueForKey:@"name"];
+            self.type = @"Ability";
+        }
         
-        NSLog(@"Making Stat: %@", self.name);
+        NSLog(@"Making Stat: %@ %@", self.name, self.type);
         
         self.level = [[info valueForKey:@"level"] intValue];
         
         // Stat Add
         id addInfo = [info valueForKey:@"statadd"];
-        NSLog(@"statadd: %@",addInfo);
+//        NSLog(@"statadd: %@",info);
         NSMutableArray *addMut = [NSMutableArray arrayWithCapacity:[addInfo count]];
         if (addInfo) {
             if (![addInfo isKindOfClass:[NSDictionary class]]) {
@@ -65,29 +67,26 @@
 - (NSInteger)value
 {
     __block NSInteger value = 0;
+    
+#define ABILITY_VALUE(key) else if ([self.name isEqualToString:key]) value += [[self.character.scores modifier:key] intValue];
+    
     if ([self.name isEqualToString:@"HALF-LEVEL"]) value += [self.statadd count];
-    else if ([self.type isEqualToString:@"Ability"]) {NSLog(@"Go Get: %@", self.name);}
+    ABILITY_VALUE(keyStrength)
+    ABILITY_VALUE(keyConstitution)
+    ABILITY_VALUE(keyDexterity)
+    ABILITY_VALUE(keyIntelligence)
+    ABILITY_VALUE(keyWisdom)
+    ABILITY_VALUE(keyCharisma)
     else if ([self.type isEqualToString:@"trained"]) value+=5;
     else if ([self.statadd count] > 0) {
         [self.statadd enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             Stat *stat = [self.character.stats objectForKey:obj];
             if (stat) value += [stat value];
             else {
-                // Attribute Block
-                NSNumber *_charelem = NSINT([[obj valueForKey:@"charelem"] intValue]);
-                RulesElement *element = [self.character elementForCharelem:_charelem];
-                if (element) {
-                    NSLog(@"Element1: %@ - %@ %@", element.name, element.type, element.charelem);
-                    if ([element.type isEqualToString:@"Race Ability Bonus"]) value+=2;
-                    else if ([element.type rangeOfString:@"Ability Increase"].length > 0) value+=1;
-                    else if ([element.type rangeOfString:@"Level"].length > 0) value+=1;
-                } else {
-                    value += ([[self.character.scores.stats objectForKey:self.name] intValue]-10)/2;
-                }
+                NSLog(@"No Stat: %@", obj);
             }
         }];
-    } 
-    else {
+    } else {
         if (self.charelem) {
             RulesElement *element = [self.character elementForCharelem:self.charelem];
             if (element) {
@@ -105,9 +104,22 @@
     __block NSMutableString *html = [NSMutableString string];
     
     __block NSString * row = @"<b>%@: </b>%@<br>";
+    __block NSString * rowGO = @"<b>%@: </b><a href=\"element://%@\">%@</a><br>";
+    NSString * rowMod = @"<b>%@ Modifier: </b>%@<br>";
+
+#define ABILITY_HTML(key) else if ([self.name isEqualToString:key]) {\
+NSNumber *value = [self.character.scores modifier:key]; \
+id valueStr = [value intValue] > 0 ? NSFORMAT(@"+%@",value) : value; \
+[html appendFormat:rowMod,key,valueStr];\
+}
     
     if ([self.name isEqualToString:@"HALF-LEVEL"]) [html appendFormat:row, @"Half-Level", NSFORMAT(@"+%d",[self.statadd count])];
-    else if ([self.type isEqualToString:@"Ability"]) [html appendFormat:row,@"Stat (TODO:)",self.name];
+    ABILITY_HTML(keyStrength)
+    ABILITY_HTML(keyConstitution)
+    ABILITY_HTML(keyDexterity)
+    ABILITY_HTML(keyIntelligence)
+    ABILITY_HTML(keyWisdom)
+    ABILITY_HTML(keyCharisma)
     else if ([self.type isEqualToString:@"trained"]) [html appendFormat:row,@"Trained",@"+5"];
     else if ([self.statadd count] > 0) {
         [self.statadd enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -117,22 +129,17 @@
                 NSNumber *_charelem = NSINT([[obj valueForKey:@"charelem"] intValue]);
                 RulesElement *element = [self.character elementForCharelem:_charelem];
                 if (element) {
-                    [html appendFormat:row,element.type,element.name];   
-                } else {
-                    int mod = ([[self.character.scores.stats objectForKey:self.name] intValue]-10)/2;
-                    if (mod > 0)
-                        [html appendFormat:@"<b>%@ Modifier: </b>+%d<br>",self.name, mod];
-                    else
-                        [html appendFormat:@"<b>%@ Modifier: </b>%d<br>",self.name, mod];
+                    [html appendFormat:rowGO,element.type,element.charelem,element.name];   
                 }
             }
         }];
     }
     else {
+        
         if (self.charelem) {
             RulesElement *element = [self.character elementForCharelem:self.charelem];
             if (element) {
-                [html appendFormat:row,element.type,element.name];
+                [html appendFormat:rowGO,element.type,element.charelem,element.name];
             }
         }
     }

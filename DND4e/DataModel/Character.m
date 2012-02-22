@@ -60,9 +60,6 @@
             
         }];
         
-        self.scores = [[AbilityScores alloc] initWithDictionary:[data valueForKeyPath:@"D20Character.CharacterSheet"]];
-        self.scores.character = self;
-        
         NSArray *statInfo = [data valueForKeyPath:@"D20Character.CharacterSheet.StatBlock.Stat"];
         self.stats = [NSMutableDictionary dictionaryWithCapacity:[statInfo count]];
         [statInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -70,6 +67,10 @@
             stat.character = self;
             [self.stats setObject:stat forKey:stat.name];
         }];
+        
+        self.scores = [[AbilityScores alloc] init];
+        self.scores.character = self;
+        [self.scores populateWithDictionary:[data valueForKeyPath:@"D20Character.CharacterSheet.AbilityScores"]];
         
         NSArray *elementInfo = [data valueForKeyPath:@"D20Character.CharacterSheet.RulesElementTally.RulesElement"];
         self.elements = [NSMutableArray arrayWithCapacity:[elementInfo count]];

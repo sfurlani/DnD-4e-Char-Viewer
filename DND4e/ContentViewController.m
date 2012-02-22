@@ -140,12 +140,20 @@
 {
     if (![self.thing isKindOfClass:[AbilityScores class]]) return;
     AbilityScores *ability = (AbilityScores*)_thing;
-    
-    Score *score = [ability.scores objectForKey:stat];
-    NSLog(@"Score: %@", score.components);
+    Stat *score = [ability.character.stats objectForKey:stat];
     ContentViewController *vc = [[ContentViewController alloc] initWithThing:score];
     [self.navigationController pushViewController:vc animated:YES];
     
+}
+
+- (void) openElementDetail:(NSString*)elem
+{
+    if (![self.thing isKindOfClass:[Skill class]]) return;
+    Skill *skill = _thing;
+    NSNumber *num = NSINT([elem intValue]);
+    RulesElement *element = [skill.character elementForCharelem:num];
+    ContentViewController *vc = [[ContentViewController alloc] initWithThing:element];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
@@ -202,7 +210,8 @@
         [self weaponDetail];
         return NO;
     } else if ([scheme isEqualToString:@"element"]) {
-        
+        [self openElementDetail:host];
+        return NO;
     } else if ([scheme isEqualToString:@"stat"]) {
         NSLog(@"Opening %@", url);
         [self openStatDetail:[host stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];

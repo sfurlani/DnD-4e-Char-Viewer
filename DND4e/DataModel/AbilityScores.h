@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "DNDHTML.h"
 
+extern NSString * const keyStrength;
+extern NSString * const keyConstitution;
+extern NSString * const keyDexterity;
+extern NSString * const keyIntelligence;
+extern NSString * const keyWisdom;
+extern NSString * const keyCharisma;
+
 @class Character, RulesElement;
 
 @interface AbilityScores : NSObject <DNDHTML>
