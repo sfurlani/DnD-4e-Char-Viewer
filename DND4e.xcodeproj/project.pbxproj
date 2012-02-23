@@ -17,10 +17,15 @@
 		DC693C0114EED86C00E68BF8 /* DNDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */; };
 		DC693C1D14EED89300E68BF8 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C1C14EED89300E68BF8 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DC693C2014EED8C700E68BF8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693C1F14EED8C700E68BF8 /* libxml2.dylib */; };
-		DC693C2214EED9E700E68BF8 /* Hunter_1.xml in Resources */ = {isa = PBXBuildFile; fileRef = DC693C2114EED9E700E68BF8 /* Hunter_1.xml */; };
+		DC693C2214EED9E700E68BF8 /* Hunter_1.dnd4e in Resources */ = {isa = PBXBuildFile; fileRef = DC693C2114EED9E700E68BF8 /* Hunter_1.dnd4e */; };
 		DC693C2514EEDCB500E68BF8 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C2414EEDCB500E68BF8 /* XMLReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DC693C3814F0069200E68BF8 /* DictionaryExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */; };
 		DC693C3914F0069200E68BF8 /* DictionaryExplorerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */; };
+		DC9AB7AD14F6702000B3B0F3 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AC14F6701F00B3B0F3 /* help.html */; };
+		DC9AB7B014F6722A00B3B0F3 /* dropbox.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AE14F6722900B3B0F3 /* dropbox.png */; };
+		DC9AB7B114F6722A00B3B0F3 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AF14F6722900B3B0F3 /* mail.png */; };
+		DC9AB7BC14F6795D00B3B0F3 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9AB7BA14F6795D00B3B0F3 /* HelpViewController.m */; };
+		DC9AB7BD14F6795D00B3B0F3 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7BB14F6795D00B3B0F3 /* HelpViewController.xib */; };
 		DCA8021914F0A2A500620379 /* Window_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA8021814F0A2A500620379 /* Window_iphone.xib */; };
 		DCA8021B14F0A2B700620379 /* Window_ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA8021A14F0A2B700620379 /* Window_ipad.xib */; };
 		DCA8023C14F0A96E00620379 /* BlockActions.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA8022D14F0A96E00620379 /* BlockActions.m */; };
@@ -67,12 +72,18 @@
 		DC693C1B14EED89300E68BF8 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		DC693C1C14EED89300E68BF8 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		DC693C1F14EED8C700E68BF8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		DC693C2114EED9E700E68BF8 /* Hunter_1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Hunter_1.xml; sourceTree = "<group>"; };
+		DC693C2114EED9E700E68BF8 /* Hunter_1.dnd4e */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Hunter_1.dnd4e; sourceTree = "<group>"; };
 		DC693C2314EEDCB500E68BF8 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
 		DC693C2414EEDCB500E68BF8 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
 		DC693C3514F0069200E68BF8 /* DictionaryExplorerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryExplorerViewController.h; sourceTree = "<group>"; };
 		DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryExplorerViewController.m; sourceTree = "<group>"; };
 		DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictionaryExplorerViewController.xib; sourceTree = "<group>"; };
+		DC9AB7AC14F6701F00B3B0F3 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
+		DC9AB7AE14F6722900B3B0F3 /* dropbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropbox.png; sourceTree = "<group>"; };
+		DC9AB7AF14F6722900B3B0F3 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		DC9AB7B914F6795D00B3B0F3 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		DC9AB7BA14F6795D00B3B0F3 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		DC9AB7BB14F6795D00B3B0F3 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 		DCA8021814F0A2A500620379 /* Window_iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Window_iphone.xib; path = ../Window_iphone.xib; sourceTree = "<group>"; };
 		DCA8021A14F0A2B700620379 /* Window_ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Window_ipad.xib; path = ../Window_ipad.xib; sourceTree = "<group>"; };
 		DCA8022D14F0A96E00620379 /* BlockActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockActions.m; sourceTree = "<group>"; };
@@ -167,15 +178,11 @@
 		DC693BF614EED86B00E68BF8 /* DND4e */ = {
 			isa = PBXGroup;
 			children = (
+				DC9AB7B314F6724400B3B0F3 /* Sample Files */,
+				DC9AB7B214F6722E00B3B0F3 /* Help */,
 				DC693BF714EED86B00E68BF8 /* Supporting Files */,
 				DCA8022B14F0A95E00620379 /* Utilities */,
 				DCA8021C14F0A8CC00620379 /* Data Model */,
-				DC693C2114EED9E700E68BF8 /* Hunter_1.xml */,
-				DCDCC1DD14F3145D004BE096 /* Dwrf_Axe.dnd4e */,
-				DCDCC1DF14F31468004BE096 /* Frakk30.dnd4e */,
-				DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */,
-				DCDCC1E114F31984004BE096 /* ShadarKai_Wizard6.dnd4e */,
-				DCDCC1E314F3199E004BE096 /* Fighter_Assassin_21.dnd4e */,
 				DC693BFF14EED86C00E68BF8 /* DNDAppDelegate.h */,
 				DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */,
 				DCA8024514F1328800620379 /* ContentViewController.h */,
@@ -218,6 +225,32 @@
 				DC693C2414EEDCB500E68BF8 /* XMLReader.m */,
 			);
 			path = XMLSupport;
+			sourceTree = "<group>";
+		};
+		DC9AB7B214F6722E00B3B0F3 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				DC9AB7AC14F6701F00B3B0F3 /* help.html */,
+				DC9AB7AE14F6722900B3B0F3 /* dropbox.png */,
+				DC9AB7AF14F6722900B3B0F3 /* mail.png */,
+				DC9AB7B914F6795D00B3B0F3 /* HelpViewController.h */,
+				DC9AB7BA14F6795D00B3B0F3 /* HelpViewController.m */,
+				DC9AB7BB14F6795D00B3B0F3 /* HelpViewController.xib */,
+			);
+			name = Help;
+			sourceTree = "<group>";
+		};
+		DC9AB7B314F6724400B3B0F3 /* Sample Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC693C2114EED9E700E68BF8 /* Hunter_1.dnd4e */,
+				DCDCC1DD14F3145D004BE096 /* Dwrf_Axe.dnd4e */,
+				DCDCC1DF14F31468004BE096 /* Frakk30.dnd4e */,
+				DCF7344B14F1CDE2007DC3F5 /* kaeltor12.dnd4e */,
+				DCDCC1E114F31984004BE096 /* ShadarKai_Wizard6.dnd4e */,
+				DCDCC1E314F3199E004BE096 /* Fighter_Assassin_21.dnd4e */,
+			);
+			name = "Sample Files";
 			sourceTree = "<group>";
 		};
 		DCA8021C14F0A8CC00620379 /* Data Model */ = {
@@ -315,7 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC693BFB14EED86B00E68BF8 /* InfoPlist.strings in Resources */,
-				DC693C2214EED9E700E68BF8 /* Hunter_1.xml in Resources */,
+				DC693C2214EED9E700E68BF8 /* Hunter_1.dnd4e in Resources */,
 				DC693C3914F0069200E68BF8 /* DictionaryExplorerViewController.xib in Resources */,
 				DCA8021914F0A2A500620379 /* Window_iphone.xib in Resources */,
 				DCA8021B14F0A2B700620379 /* Window_ipad.xib in Resources */,
@@ -329,6 +362,10 @@
 				DCDCC1E614F327B6004BE096 /* dnd_4e_icons_v3.ttf in Resources */,
 				DCDCC1F514F34C47004BE096 /* CharacterViewController.xib in Resources */,
 				DCDCC1FA14F34DE8004BE096 /* MainViewController.xib in Resources */,
+				DC9AB7AD14F6702000B3B0F3 /* help.html in Resources */,
+				DC9AB7B014F6722A00B3B0F3 /* dropbox.png in Resources */,
+				DC9AB7B114F6722A00B3B0F3 /* mail.png in Resources */,
+				DC9AB7BD14F6795D00B3B0F3 /* HelpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +397,7 @@
 				DCDCC1FD14F3DF25004BE096 /* AbilityScores.m in Sources */,
 				DCDCC20014F41F3E004BE096 /* Skill.m in Sources */,
 				DCDCC23314F44CA7004BE096 /* Stat.m in Sources */,
+				DC9AB7BC14F6795D00B3B0F3 /* HelpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

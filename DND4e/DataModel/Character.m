@@ -43,8 +43,8 @@
             item.character = self; // weak
         }];
         
-        self.name = [data valueForKeyPath:@"D20Character.CharacterSheet.Details.name.value"];
-        self.level = NSINT([[data valueForKeyPath:@"D20Character.CharacterSheet.Details.Level.value"] intValue]);
+        self.name = [[data valueForKeyPath:@"D20Character.CharacterSheet.Details.name"] valueForKey:kXMLReaderTextNodeKey];
+        self.level = NSINT([[[data valueForKeyPath:@"D20Character.CharacterSheet.Details.Level"] valueForKey:kXMLReaderTextNodeKey] intValue]);
         
         self.objectGraph = [data valueForKeyPath:@"D20Character"];
         
