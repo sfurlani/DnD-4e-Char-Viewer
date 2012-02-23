@@ -153,9 +153,9 @@
 {
     __block NSMutableString *html = [NSMutableString string];
     
-    __block NSString * row = @"<b>%@: </b>%@<br>";
-    __block NSString * rowGO = @"<b>%@: </b><a href=\"element://%@\">%@</a> %@<br>";
-    __block NSString * rowItem = @"<b>%@: </b><a href=\"item://%@\">%@</a> %@<br>";
+    __block NSString * row = @"%@: %@<br>";
+    __block NSString * rowGO = @"%@: <a href=\"element://%@\">%@</a> %@<br>";
+    __block NSString * rowItem = @"%@: <a href=\"item://%@\">%@</a> %@<br>";
     
 #define ABILITY_HTML(key) else if ([self.name isEqualToString:key]) {\
 [html appendString:[[self.character.stats objectForKey:NSFORMAT(@"%@ modifier",self.name)] html]]; \
@@ -187,7 +187,7 @@
                 RulesElement *element = [self.character elementForCharelem:subElem];
                 if (element) { // Element 1
                     if (!subType) {
-
+                        subType = element.type;
                     }
                     [html appendFormat:rowGO,subType,element.charelem,element.name, PFORMAT(subValue)];   
                 }
