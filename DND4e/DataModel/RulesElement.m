@@ -78,7 +78,7 @@
             NSString *key = [obj valueForKey:@"name"];
             NSString *value = [obj valueForKey:kXMLReaderTextNodeKey];
             if ([self shouldDisplaySpecific:key]) {
-                [html appendFormat:row,key,value];
+                [html appendFormat:row,key,replace(value)];
             } else if ([key rangeOfString:@"Power"].length > 0) {
                 // TODO: add Power
                 NSLog(@"Power: %@ - %@", key, value);

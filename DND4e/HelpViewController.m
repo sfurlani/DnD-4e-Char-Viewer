@@ -7,6 +7,7 @@
 //
 
 #import "HelpViewController.h"
+#import "UIWebView_Misc.h"
 
 @implementation HelpViewController
 
@@ -35,6 +36,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.webHelp setShadowHidden:YES];
 }
 
 - (void)viewDidUnload
@@ -50,13 +52,37 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    self.fileVersion.text = @"0.07a";
+    self.appVersion.text = [NSString stringWithFormat:@"%@",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
+    NSURL *help = [[NSBundle mainBundle] URLForResource:@"help" withExtension:@"html"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:help];
+    [self.webHelp loadRequest:request];
+}
+
 #pragma mark - IBActions
 
 - (void)back:(id)sender
 {
-    [self dismissModalViewController:YES]
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 #pragma mark - UIWEbViewDelegate
+
+- (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSURL *url = request.URL;
+    NSString *scheme = [url scheme];
+    if ([scheme isEqualToString:@"file"]) {
+        return YES;
+    }
+    if ([scheme isEqualToString:@"http"]) {
+        [[UIApplication sharedApplication] openURL:url];
+        return NO;
+    }
+    return YES;
+}
 
 @end

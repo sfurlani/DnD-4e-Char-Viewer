@@ -12,8 +12,11 @@
 
 @property (strong, nonatomic) NSMutableArray *data;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *back;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *info;
 
 - (id)initWithData:(NSMutableArray*)data;
 - (void) openFilePath:(NSString*)path;
+
+- (IBAction)showHelp:(id)sender;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "CharacterViewController.h"
+#import "HelpViewController.h"
 #import "Data.h"
 #import "MBProgressHUD.h"
 #import "Utility.h"
@@ -15,7 +16,7 @@
 @implementation MainViewController
 
 @synthesize data = _data;
-@synthesize back;
+@synthesize back, info;
 
 - (id)initWithData:(NSMutableArray*)data
 {
@@ -50,9 +51,6 @@
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     self.title = @"DnD 4e Char Viewer";
     
-    self.navigationItem.backBarButtonItem = self.back;
-    
-    
 }
 
 - (void)viewDidUnload
@@ -65,6 +63,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Info" style:UIBarButtonItemStyleBordered target:self action:@selector(showHelp:)];
     [self.tableView reloadData];
 }
 
@@ -88,6 +88,17 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+#pragma mark - IBActions
+
+- (void) showHelp:(id)sender
+{
+    HelpViewController *help = [[HelpViewController alloc] init];
+    [self.navigationController presentViewController:help
+                                            animated:YES
+                                          completion:nil];
+}
+
 
 #pragma mark - Table view data source
 
