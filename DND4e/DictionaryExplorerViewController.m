@@ -145,9 +145,8 @@
     
     if ([data conformsToProtocol:@protocol(DNDHTML)]) {
         if ([data isKindOfClass:[Skill class]]) {
-//            Skill *skill = data;
-//            // TODO: fix the Skill bonus so it shows up correctly!
-//            detail = (([skill.bonus intValue] > 0) ? NSFORMAT(@"+%@",skill.bonus) : NSFORMAT(@"%@",skill.bonus));
+            Skill *skill = data;
+            detail = (([skill.bonus intValue] > 0) ? NSFORMAT(@"+%@",skill.bonus) : NSFORMAT(@"%@",skill.bonus));
         }
         label = [data name];
     }

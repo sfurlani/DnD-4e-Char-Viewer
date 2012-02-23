@@ -52,7 +52,7 @@
         self.details = [NSMutableDictionary dictionaryWithCapacity:[detailInfo count]];
         [detailInfo enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
             if ([obj isKindOfClass:[NSDictionary class]]) {
-                NSString *value = [obj valueForKey:@"value"];
+                NSString *value = [obj valueForKey:kXMLReaderTextNodeKey];
                 [self.details setObject:value forKey:key];
             } else {
                 NSLog(@"No Value for %@, %@", key, obj);

@@ -28,36 +28,6 @@
     return self;
 }
 
-- (void) populateFromElements:(NSArray*)elements
-{
-    // Performed using Elements
-    self.components = [elements objectsAtIndexes:[elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
-        RulesElement *ele = obj;
-        NSLog(@"Element Name: %@", ele.name);
-        return ([ele.name hasPrefix:self.name] ||
-                ([ele.type hasPrefix:@"Skill"] && [ele.name rangeOfString:self.name].length > 0));
-    }]];
-    
-    __block NSInteger bonus = [self.character.level intValue]/2;
-    [self.components enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        RulesElement *ele = obj;
-        if ([ele.type isEqualToString:@"Skill Training"]) bonus += 5;
-        if ([ele.type isEqualToString:@"Racial Trait"]) bonus += 2;
-        if ([ele.type isEqualToString:@"Background Choice"]) bonus += 2;
-        if ([ele.type isEqualToString:@"Skill"]) {
-            [ele.specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                if ([[obj valueForKey:@"name"] hasPrefix:@"Key"]) {
-                    NSNumber *stat = [self.character.stats objectForKey:[obj valueForKey:@"value"]];
-                    NSInteger mod = ([stat intValue]-10)/2;
-                    bonus += mod;
-                }
-            }];
-        }
-        NSLog(@"%@ %@ %d", self.name, ele.type, bonus);
-    }];
-    self.bonus = NSINT(bonus);
-}
-
 - (void) populateFromCharacter:(Character*)character
 {
     self.character = character;
@@ -76,15 +46,19 @@
 {
     __block NSMutableString *html = [NSMutableString string];
     
-    [html appendString:@"<p><b>Disclaimer:</b> <i>This won't correctly calculate the bonuses from items, features, or armor check penalties.  I have no idea where they're pulling these numbers from (probably internally in the database) so the values displayed here are not accurate.</p><p>So just use this as a guide or explaination as to the skill bonuses.</i></p>"];
+//    [html appendString:@"<p><b>Disclaimer:</b> <i>This won't correctly calculate the bonuses from items, features, or armor check penalties.  I have no idea where they're pulling these numbers from (probably internally in the database) so the values displayed here are not accurate.</p><p>So just use this as a guide or explaination as to the skill bonuses.</i></p>"];
     
 //    if ([self.bonus intValue] > 0)
 //        [html appendFormat:@"<p><b>Total Bonus:</b> +%@</p>",self.bonus];
 //    else
 //        [html appendFormat:@"<p><b>Total Bonus:</b> %@</p>",self.bonus];
     
-    [html appendString:[[self.character.stats objectForKey:self.name] html]];
     [html appendString:[self.element html]];
+    [html appendString:@"<hr width=200/><br>"];
+    
+    [html appendFormat:@"<h3>Total %@: %@</h3><b>Breakdown:</b><br>",self.name, PFORMAT(self.bonus)];
+    [html appendString:[[self.character.stats objectForKey:self.name] html]];
+    
     
     return html;
 }

@@ -14,6 +14,7 @@
 
 @synthesize name, level, charelem, type, statadd, character;
 @synthesize info = _info;
+@synthesize _value;
 
 - (id) initWithDictionary:(NSDictionary*)info
 {
@@ -21,17 +22,22 @@
     if (self) {
         self.info = info;
         
+        
         // Alias
         if ([[info valueForKey:@"alias"] isKindOfClass:[NSDictionary class]])
             self.name = [info valueForKeyPath:@"alias.name"];
         else {
             self.name = [[[info valueForKey:@"alias"] objectAtIndex:0] valueForKey:@"name"];
-            self.type = @"Ability";
+//            self.type = @"Ability";
         }
         
-//        NSLog(@"Making Stat: %@ %@", self.name, self.type);
+        
+//        NSLog(@"Stat: %@, info: %@", self.name, info);
         
         self.level = [[info valueForKey:@"level"] intValue];
+        self._value = [info valueForKey:@"value"];
+        self.charelem = NSINT([[info valueForKey:@"charelem"] intValue]);
+        self.type = [info valueForKey:@"type"];
         
         // Stat Add
         id addInfo = [info valueForKey:@"statadd"];
@@ -42,23 +48,43 @@
                 [addInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                     NSString *link = [obj valueForKeyPath:@"statlink"];
                     if (link) {
+                        NSLog(@"--- Link: %@", link);
                         [addMut addObject:link];
-                    } else
-                        [addMut addObject:obj];
+                    } else {
+                        if ([obj count] > 1) {
+                            
+                            if ([obj valueForKey:@"type"]) {
+                                NSLog(@"--- Leaf Stat: %@ (%@)", [obj valueForKey:@"type"], [obj valueForKey:@"value"]);
+                            } else {
+                                NSLog(@"--- Leaf Elem: %@ (%@)", [obj valueForKey:@"charelem"], [obj valueForKey:@"value"]);
+                            }
+                            [addMut addObject:obj];
+                        }
+                    }
                 }];
-                self.charelem = NSINT([[info valueForKey:@"charelem"] intValue]);
-                self.type = [info valueForKey:@"type"];
             } else {
                 // Leaf Object
                 self.charelem = NSINT([[addInfo valueForKey:@"charelem"] intValue]);
                 self.type = [addInfo valueForKey:@"type"];
+//                NSLog(@"+++ Leaf: %@, info: %@", self.name, addInfo);
+                
+                id mod = [addInfo valueForKey:@"abilmod"];
+                if (mod && (mod != [NSNull null])) {
+                    self.type = @"Ability";
+                } else {
+                    self._value = [addInfo valueForKey:@"value"];
+                }
+                
 //                NSLog(@"Leaf Object: %@ %@ %@", self.name, self.type, self.charelem);
             }
         } else {
             
         }
         self.statadd = addMut;
-        
+        if (self.type)
+            NSLog(@"Made Stat: %@ (%@) - %@", self.name, self._value, self.type);
+        else
+            NSLog(@"Made Stat: %@ (%@)", self.name, self._value);
         
     }
     return self;
@@ -66,6 +92,8 @@
 
 - (NSInteger)value
 {
+    return [_value intValue];
+    
     __block NSInteger value = 0;
     
 #define ABILITY_VALUE(key) else if ([self.name isEqualToString:key]) value += [[self.character.scores modifier:key] intValue];
@@ -126,40 +154,47 @@
     __block NSMutableString *html = [NSMutableString string];
     
     __block NSString * row = @"<b>%@: </b>%@<br>";
-    __block NSString * rowGO = @"<b>%@: </b><a href=\"element://%@\">%@</a><br>";
-    __block NSString * rowItem = @"<b>%@: </b><a href=\"item://%@\">%@</a><br>";
-    NSString * rowMod = @"<b>%@ Modifier: </b>%@<br>";
-
+    __block NSString * rowGO = @"<b>%@: </b><a href=\"element://%@\">%@</a> %@<br>";
+    __block NSString * rowItem = @"<b>%@: </b><a href=\"item://%@\">%@</a> %@<br>";
+    
 #define ABILITY_HTML(key) else if ([self.name isEqualToString:key]) {\
-NSNumber *value = [self.character.scores modifier:key]; \
-id valueStr = [value intValue] > 0 ? NSFORMAT(@"+%@",value) : value; \
-[html appendFormat:rowMod,key,valueStr];\
+[html appendString:[[self.character.stats objectForKey:NSFORMAT(@"%@ modifier",self.name)] html]]; \
 }
     
-    if ([self.name isEqualToString:@"HALF-LEVEL"]) [html appendFormat:row, @"Half-Level", NSFORMAT(@"+%d",[self.statadd count])];
+    if ([self.name isEqualToString:@"HALF-LEVEL"]) [html appendFormat:row, @"Half-Level", PFORMAT(self._value)];
     ABILITY_HTML(keyStrength)
     ABILITY_HTML(keyConstitution)
     ABILITY_HTML(keyDexterity)
     ABILITY_HTML(keyIntelligence)
     ABILITY_HTML(keyWisdom)
     ABILITY_HTML(keyCharisma)
-    else if ([self.type isEqualToString:@"trained"]) [html appendFormat:row,@"Trained",@"+5"];
+    else if ([self.type isEqualToString:@"trained"]) [html appendFormat:row,@"Trained",PFORMAT(self._value)];
+    else if ([self.type isEqualToString:@"Ability"]) [html appendFormat:row,self.name,PFORMAT(self._value)];
     else if ([self.statadd count] > 0) {
+        //[html appendFormat:row,self.name,@""]; // Parent
+        //[html appendFormat:@"<div style=\"padding-left: 1em; \">"]; //padding-left: 2em; text-indent: -2em;
         [self.statadd enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             Stat *stat = [self.character.stats objectForKey:obj];
             if (stat) [html appendString:[stat html]];
             else {
-                NSNumber *_charelem = NSINT([[obj valueForKey:@"charelem"] intValue]);
-                //NSString *_type = [obj valueForKey:@"type"];
-                //NSString *_name = [obj valueForKey:@"name"];
-                RulesElement *element = [self.character elementForCharelem:_charelem];
+                
+                // A Sub stat that has no Stat Link (values contained herin)
+                
+                NSNumber *subElem = NSINT([[obj valueForKey:@"charelem"] intValue]);
+                NSString *subType = [obj valueForKey:@"type"];
+                //NSString *subName = [obj valueForKey:@"name"];
+                NSString *subValue = [obj valueForKey:@"value"];
+                RulesElement *element = [self.character elementForCharelem:subElem];
                 if (element) { // Element 1
-                    [html appendFormat:rowGO,element.type,element.charelem,element.name];   
+                    if (!subType) {
+
+                    }
+                    [html appendFormat:rowGO,subType,element.charelem,element.name, PFORMAT(subValue)];   
                 }
                 
-                Loot *loot = [self.character lootForCharelem:_charelem];
+                Loot *loot = [self.character lootForCharelem:subElem];
                 if (loot) { // Loot 1
-                    [html appendFormat:rowItem,@"Item",_charelem,[loot shortname]];
+                    [html appendFormat:rowItem,subType,@"Item",[loot shortname], PFORMAT(subValue)];
                 }
                 
                 if (!element && !loot) {
@@ -168,18 +203,19 @@ id valueStr = [value intValue] > 0 ? NSFORMAT(@"+%@",value) : value; \
                 
             }
         }];
+        //[html appendFormat:@"</div>"];
     }
     else {
         
         if (self.charelem) {
             RulesElement *element = [self.character elementForCharelem:self.charelem];
             if (element) { // Element 2
-                [html appendFormat:rowGO,element.type,element.charelem,element.name];
+                [html appendFormat:rowGO,element.type,element.charelem,element.name,PFORMAT(self._value)];
             }
             
             Loot *loot = [self.character lootForCharelem:self.charelem];
             if (loot) { // Loot2
-                [html appendFormat:rowItem,@"Item",self.charelem,[loot shortname]];
+                [html appendFormat:rowItem,self.name,self.charelem,[loot shortname],PFORMAT(self._value)];
             }
             
             if (!element && !loot) {

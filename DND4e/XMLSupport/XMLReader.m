@@ -3,7 +3,7 @@
 //
 #import "XMLReader.h"
 
-NSString *const kXMLReaderTextNodeKey = @"value";
+NSString *const kXMLReaderTextNodeKey = @"text_value";
 
 @interface XMLReader (Internal)
 

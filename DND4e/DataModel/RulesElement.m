@@ -57,7 +57,7 @@
     } else {
         [self.specifics addObject:specInfo];
     }
-    NSString *value = [info valueForKey:@"value"];
+    NSString *value = [info valueForKey:kXMLReaderTextNodeKey];
     if ([value length] > 2) {
         self.desc = replace(value);
     }
@@ -76,7 +76,7 @@
     if ([self.specifics count] > 0) {
         [self.specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSString *key = [obj valueForKey:@"name"];
-            NSString *value = [obj valueForKey:@"value"];
+            NSString *value = [obj valueForKey:kXMLReaderTextNodeKey];
             if ([self shouldDisplaySpecific:key]) {
                 [html appendFormat:row,key,value];
             } else if ([key rangeOfString:@"Power"].length > 0) {
@@ -133,7 +133,7 @@
     if ([self.specifics count] > 0) {
         [self.specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSString *key = [obj valueForKey:@"name"];
-            NSString *value = [obj valueForKey:@"value"];
+            NSString *value = [obj valueForKey:kXMLReaderTextNodeKey];
             if ([self shouldDisplaySpecific:key]) {
                 [html appendFormat:row,key,value];
             } else if ([key isEqualToString:@"Granted Powers"]) {

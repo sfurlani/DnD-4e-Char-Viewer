@@ -3,6 +3,8 @@
 //
 #import <Foundation/Foundation.h>
 
+extern NSString *const kXMLReaderTextNodeKey;
+
 @interface XMLReader : NSObject <NSXMLParserDelegate>
 {
     NSMutableArray *dictionaryStack;

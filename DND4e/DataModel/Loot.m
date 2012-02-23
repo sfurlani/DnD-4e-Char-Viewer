@@ -8,6 +8,7 @@
 
 #import "Loot.h"
 #import "Data.h"
+#import "Utility.h"
 
 #define replace(string) ([[string stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"] stringByReplacingOccurrencesOfString:@"\t" withString:@"&nbsp;&nbsp;&nbsp;&nbsp;"])
 
@@ -139,7 +140,7 @@
     id specs = [info valueForKey:@"specific"];
     [specs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *key = [obj valueForKey:@"name"];
-        NSString *value = [obj valueForKey:@"value"];
+        NSString *value = [obj valueForKey:kXMLReaderTextNodeKey];
         
         if ([key isEqualToString:@"Flavor"]) self.flavor = value;
         else if ([key isEqualToString:@"Full Text"]) self.fullText = replace(value);
@@ -165,7 +166,7 @@
     // SPECIFICS
     [self.specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *key = [obj valueForKey:@"name"];
-        NSString *value = [obj valueForKey:@"value"];
+        NSString *value = [obj valueForKey:kXMLReaderTextNodeKey];
         if ([self shouldDisplaySpecific:key])
             [html appendFormat:withColon, key, replace(value)];
         

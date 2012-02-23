@@ -20,7 +20,6 @@
 @property (strong, nonatomic) RulesElement * element;
 
 - (id) initWithName:(NSString*)name;
-- (void) populateFromElements:(NSArray*)elements; // Deprecated
 - (void) populateFromCharacter:(Character*)character;
 
 @end

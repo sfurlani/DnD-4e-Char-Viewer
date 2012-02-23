@@ -19,6 +19,9 @@
 
 #define FONT_DND @"D&D 4e icons"
 
+#define PFORMAT(value) (NFORMAT([value intValue]))
+#define NFORMAT(n) (n > 0 ? NSFORMAT(@"+%d",n) : NSFORMAT(@"%d",n))
+
 ////////////////////////////////////////////////////////////////////////////////
 // Client-specific macros, like fonts, colors, etc.
 
@@ -137,6 +140,7 @@ typedef NSInteger tNumberType;
 @end
 
 #import "BlockActions.h"
+#import "XMLReader.h"
 
 @interface NSError (UserLogging)
 

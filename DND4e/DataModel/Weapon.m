@@ -10,6 +10,7 @@
 #import "Power.h"
 #import "RulesElement.h"
 #import "Data.h"
+#import "Utility.h"
 
 @implementation Weapon
 
@@ -56,7 +57,7 @@
     [info enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *value = obj;
         if ([obj isKindOfClass:[NSDictionary class]])
-            value = [obj valueForKey:@"value"];
+            value = [obj valueForKey:kXMLReaderTextNodeKey];
 //        NSLog(@"%@: %@", key, value);
         
         if ([key isEqualToString:@"name"]) {} // handled above
