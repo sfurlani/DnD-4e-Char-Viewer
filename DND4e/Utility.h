@@ -22,6 +22,8 @@
 #define PFORMAT(value) (NFORMAT([value intValue]))
 #define NFORMAT(n) (n > 0 ? NSFORMAT(@"+%d",n) : NSFORMAT(@"%d",n))
 
+#define AppDefaults ([NSUserDefaults standardUserDefaults])
+
 ////////////////////////////////////////////////////////////////////////////////
 // Client-specific macros, like fonts, colors, etc.
 

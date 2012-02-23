@@ -12,6 +12,9 @@
 #import "GDataXMLNode.h"
 #import "XMLReader.h"
 #import "Data.h"
+#import "Utility.h"
+
+NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfdsaljhkadfslhjk";
 
 @implementation DNDAppDelegate
 
@@ -21,20 +24,42 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // TODO: handle incoming data
+    NSURL *url = (NSURL *)[launchOptions valueForKey:UIApplicationLaunchOptionsURLKey];
+    if ([url isFileURL])
+    {
+        // Handle file being passed in
+    }
+    else
+    {
+        // Handle custom URL scheme
+    }
     
     // Load Data
-    NSArray *filePaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"dnd4e" inDirectory:nil];
+    if (![AppDefaults boolForKey:keyAfterFirstOpen]) {
+        NSArray *filePaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"dnd4e" inDirectory:nil];
+        [filePaths enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSString *old = obj;
+            NSString *name = [old lastPathComponent];
+            NSString *new = [[[AppData applicationDocumentsDirectory] path] stringByAppendingPathComponent:name];
+            NSError *error = nil;
+            [[NSFileManager defaultManager] copyItemAtPath:old
+                                                    toPath:new 
+                                                     error:&error];
+            [error log];
+        }];
+        [AppDefaults setBool:YES forKey:keyAfterFirstOpen];
+    }
     NSArray *docs = [[NSFileManager defaultManager] contentsOfDirectoryAtPath: [[AppData applicationDocumentsDirectory] path] error:nil];
     NSMutableArray *dnd4eDocs = [NSMutableArray array];
     [docs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *path = obj;
         if ([[path pathExtension] isEqualToString:@"dnd4e"]) [dnd4eDocs addObject:path];
     }];
-    [dnd4eDocs addObjectsFromArray:filePaths];
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    MainViewController *vc = [[MainViewController alloc] initWithData:filePaths];
+    MainViewController *vc = [[MainViewController alloc] initWithData:dnd4eDocs];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
