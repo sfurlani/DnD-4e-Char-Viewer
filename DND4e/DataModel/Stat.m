@@ -48,6 +48,12 @@
                 [addInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                     NSString *link = [obj valueForKeyPath:@"statlink"];
                     if (link) {
+                        if ([link isEqualToString:keyStrength] ||
+                            [link isEqualToString:keyConstitution] ||
+                            [link isEqualToString:keyDexterity] ||
+                            [link isEqualToString:keyIntelligence] ||
+                            [link isEqualToString:keyWisdom] ||
+                            [link isEqualToString:keyCharisma] ) link = [link stringByAppendingString:@" modifier"];
                         NSLog(@"--- Link: %@", link);
                         [addMut addObject:link];
                     } else {
@@ -162,12 +168,12 @@
 }
     
     if ([self.name isEqualToString:@"HALF-LEVEL"]) [html appendFormat:row, @"Half-Level", PFORMAT(self._value)];
-    ABILITY_HTML(keyStrength)
-    ABILITY_HTML(keyConstitution)
-    ABILITY_HTML(keyDexterity)
-    ABILITY_HTML(keyIntelligence)
-    ABILITY_HTML(keyWisdom)
-    ABILITY_HTML(keyCharisma)
+//    ABILITY_HTML(keyStrength)
+//    ABILITY_HTML(keyConstitution)
+//    ABILITY_HTML(keyDexterity)
+//    ABILITY_HTML(keyIntelligence)
+//    ABILITY_HTML(keyWisdom)
+//    ABILITY_HTML(keyCharisma)
     else if ([self.type isEqualToString:@"trained"]) [html appendFormat:row,@"Trained",PFORMAT(self._value)];
     else if ([self.type isEqualToString:@"Ability"]) [html appendFormat:row,self.name,PFORMAT(self._value)];
     else if ([self.statadd count] > 0) {
@@ -179,7 +185,7 @@
             else {
                 
                 // A Sub stat that has no Stat Link (values contained herin)
-                
+                NSString *conditional = [obj valueForKey:@"conditional"];
                 NSNumber *subElem = NSINT([[obj valueForKey:@"charelem"] intValue]);
                 NSString *subType = [obj valueForKey:@"type"];
                 //NSString *subName = [obj valueForKey:@"name"];
@@ -194,11 +200,15 @@
                 
                 Loot *loot = [self.character lootForCharelem:subElem];
                 if (loot) { // Loot 1
-                    [html appendFormat:rowItem,subType,@"Item",[loot shortname], PFORMAT(subValue)];
+                    [html appendFormat:rowItem,subType,subElem,[loot shortname], PFORMAT(subValue)];
                 }
                 
                 if (!element && !loot) {
 //                    NSLog(@"Can't Find Element1: %@", _charelem);
+                    
+                }
+                if (conditional) {
+                    [html appendFormat:@"<div style=\"padding-left: 2em; \"><i>%@</i></div>",conditional]; 
                 }
                 
             }

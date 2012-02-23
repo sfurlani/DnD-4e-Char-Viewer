@@ -62,24 +62,8 @@ NSString * const keyCharisma = @"Charisma";
 
 - (NSNumber*) score:(NSString *)ability
 {
-    NSInteger baseScore = [[self.base objectForKey:ability] intValue];
     Stat *stat = [self.character.stats objectForKey:ability];
-    __block NSInteger value = 0;
-    [stat.statadd enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        // Attribute Block
-        NSNumber *_charelem = NSINT([[obj valueForKey:@"charelem"] intValue]);
-        RulesElement *element = [self.character elementForCharelem:_charelem];
-        if (element) {
-            if ([element.type isEqualToString:@"Race Ability Bonus"]) value+=2;
-            else if ([element.type rangeOfString:@"Ability Increase"].length > 0) value+=1;
-            else if ([element.type rangeOfString:@"Level"].length > 0) value+=1;
-            else {
-                NSLog(@"Unknown Ability Score: %@ - %@ %@", element.name, element.type, element.charelem);
-            }
-        }
-    }];
-//    NSLog(@"Base Score: %d Value: %d", baseScore, value);
-    return NSINT(baseScore+value);
+    return NSINT([stat._value intValue]);
 }
 
 - (NSNumber*) modifier:(NSString *)ability
@@ -106,14 +90,14 @@ NSString * const keyCharisma = @"Charisma";
      "</tr>"];
     
     __block NSString * tableRow = @"<tr valign=\"middle\">"
-    "<td align=\"left\">%@:</td>"
+    "<td align=\"left\"><a href=\"abil://%@\">%@:</a></td>"
     "<td align=\"center\">%@</td>"
     "<td align=\"center\">%@</td>"
     "<td align=\"center\">%@</td>"
     "</tr>";
     
     __block NSString * tableRowGrey = @"<tr valign=\"middle\" bgcolor=\"#EEE\">"
-    "<td align=\"left\">%@:</td>"
+    "<td align=\"left\"><a href=\"abil://%@\">%@:</a></td>"
     "<td align=\"center\">%@</td>"
     "<td align=\"center\">%@</td>"
     "<td align=\"center\">%@</td>"
@@ -121,19 +105,17 @@ NSString * const keyCharisma = @"Charisma";
     
     __block int count = 0;
     
+    __block Stat *halfLevel = [self.character.stats objectForKey:@"HALF-LEVEL"];
+    
     void (^printOut)(NSString*) = ^(NSString* key){
         count++;
         NSString * row = (count%2 == 0) ? tableRow : tableRowGrey;
         
-        NSNumber *score = [self score:key];
-        NSNumber *mod = [self modifier:key];
-        NSInteger check = [mod intValue] + [character.level intValue]/2;
+        Stat *score = [self.character.stats objectForKey:key];
+        Stat *mod = [self.character.stats objectForKey:NSFORMAT(@"%@ modifier", key)];
+        NSInteger check = [halfLevel._value intValue] + [mod._value intValue];
         
-        // TODO: Check for modifiers!!!
-        NSString *modStr = ([mod intValue] > 0) ? NSFORMAT(@"+%@", mod) : NSFORMAT(@"%@", mod);
-        NSString *checkStr = (check > 0) ? NSFORMAT(@"+%d", check) : NSFORMAT(@"%d", check);
-        
-        [html appendFormat:row,key,score,modStr,checkStr];
+        [html appendFormat:row,key,key,score._value,PFORMAT(mod._value),NFORMAT(check)];
 
     };
     
@@ -148,14 +130,46 @@ NSString * const keyCharisma = @"Charisma";
     
     [html appendString:@"<hr width=\"200\">"];
     
-//    NSString *link = @"<a href=\"stat://%@\">%@ Details</a><br>";
-//    
-//    [html appendFormat:link,keyStrength,keyStrength];
-//    [html appendFormat:link,keyConstitution,keyConstitution];
-//    [html appendFormat:link,keyDexterity,keyDexterity];
-//    [html appendFormat:link,keyIntelligence,keyIntelligence];
-//    [html appendFormat:link,keyWisdom,keyWisdom];
-//    [html appendFormat:link,keyCharisma,keyCharisma];
+    NSString *row = @"<b><a href=\"stat://%@\">%@:</a></b><t> %@<br>";
+    /*
+     AC
+     Fortitude Defense
+     Will Defense
+     Reflex Defense
+     Level
+     Hit Points
+     Healing Surges
+     Initiative
+     XP Needed
+     Passive Perception
+     Passive Insight
+     Speed
+     Saving Throws
+     
+     */
+    
+#define ABILITY_HTML(stat) [html appendFormat:row,stat,stat,[[self.character.stats objectForKey:stat] _value]]
+    
+    ABILITY_HTML(@"AC");
+    ABILITY_HTML(@"Fortitude Defense");
+    ABILITY_HTML(@"Reflex Defense");
+    ABILITY_HTML(@"Will Defense");
+    ABILITY_HTML(@"Hit Points");
+    ABILITY_HTML(@"Healing Surges");
+    ABILITY_HTML(@"Initiative");
+    ABILITY_HTML(@"Speed");
+    ABILITY_HTML(@"Passive Perception");
+    ABILITY_HTML(@"Passive Insight");
+    
+    
+    return html;
+}
+
+- (NSString*) htmlAbil:(NSString*)key
+{
+    NSMutableString *html = [NSMutableString string];
+    
+    [html appendString:[self.character.stats objectForKey:key]];
     
     return html;
 }

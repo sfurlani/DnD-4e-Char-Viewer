@@ -136,11 +136,19 @@
     
 }
 
-- (void) openStatDetail:(NSString*)stat
+- (void) openAbility:(NSString*)abil
 {
     if (![self.thing isKindOfClass:[AbilityScores class]]) return;
     AbilityScores *ability = (AbilityScores*)_thing;
-    Stat *score = [ability.character.stats objectForKey:stat];
+    
+    Stat *score = [ability.character.stats objectForKey:abil];
+    ContentViewController *vc = [[ContentViewController alloc] initWithThing:score];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void) openStatDetail:(NSString*)stat
+{
+    Stat *score = [[(id)_thing character].stats objectForKey:stat];
     ContentViewController *vc = [[ContentViewController alloc] initWithThing:score];
     [self.navigationController pushViewController:vc animated:YES];
     
@@ -156,10 +164,8 @@
 
 - (void) openItemDetail:(NSString*)elem
 {
-    if (![self.thing isKindOfClass:[Skill class]]) return;
-    Skill *skill = _thing;
     NSNumber *num = NSINT([elem intValue]);
-    Loot *loot = [skill.character lootForCharelem:num];
+    Loot *loot = [[(id)_thing character] lootForCharelem:num];
     ContentViewController *vc = [[ContentViewController alloc] initWithThing:loot];
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -208,6 +214,8 @@
     NSString *scheme = [url scheme];
     NSString *host = [url host];
     
+    NSLog(@"Opening %@", url);
+    
     if ([scheme isEqualToString:@"http"]) {
         [[UIApplication sharedApplication] openURL:url];
         return NO;
@@ -221,13 +229,16 @@
         [self openElementDetail:host];
         return NO;
     } else if ([scheme isEqualToString:@"stat"]) {
-        NSLog(@"Opening %@", url);
         [self openStatDetail:[host stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         return NO;
     } else if ([scheme isEqualToString:@"item"]) {
         [self openItemDetail:host];
         return NO;
+    } else if ([scheme isEqualToString:@"abil"]) {
+        [self openAbility:host];
+        return NO;
     }
+    
     
     return YES;
 }

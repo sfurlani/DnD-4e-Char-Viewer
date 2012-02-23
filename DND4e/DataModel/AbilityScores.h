@@ -29,5 +29,6 @@ extern NSString * const keyCharisma;
 
 - (NSNumber*)score:(NSString*)ability;
 - (NSNumber*)modifier:(NSString*)ability;
+- (NSString*) htmlAbil:(NSString*)key;
 
 @end
