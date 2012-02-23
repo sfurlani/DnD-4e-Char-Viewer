@@ -54,15 +54,15 @@
                             [link isEqualToString:keyIntelligence] ||
                             [link isEqualToString:keyWisdom] ||
                             [link isEqualToString:keyCharisma] ) link = [link stringByAppendingString:@" modifier"];
-                        NSLog(@"--- Link: %@", link);
+//                        NSLog(@"--- Link: %@", link);
                         [addMut addObject:link];
                     } else {
                         if ([obj count] > 1) {
                             
                             if ([obj valueForKey:@"type"]) {
-                                NSLog(@"--- Leaf Stat: %@ (%@)", [obj valueForKey:@"type"], [obj valueForKey:@"value"]);
+//                                NSLog(@"--- Leaf Stat: %@ (%@)", [obj valueForKey:@"type"], [obj valueForKey:@"value"]);
                             } else {
-                                NSLog(@"--- Leaf Elem: %@ (%@)", [obj valueForKey:@"charelem"], [obj valueForKey:@"value"]);
+//                                NSLog(@"--- Leaf Elem: %@ (%@)", [obj valueForKey:@"charelem"], [obj valueForKey:@"value"]);
                             }
                             [addMut addObject:obj];
                         }
@@ -87,10 +87,10 @@
             
         }
         self.statadd = addMut;
-        if (self.type)
-            NSLog(@"Made Stat: %@ (%@) - %@", self.name, self._value, self.type);
-        else
-            NSLog(@"Made Stat: %@ (%@)", self.name, self._value);
+//        if (self.type)
+//            NSLog(@"Made Stat: %@ (%@) - %@", self.name, self._value, self.type);
+//        else
+//            NSLog(@"Made Stat: %@ (%@)", self.name, self._value);
         
     }
     return self;

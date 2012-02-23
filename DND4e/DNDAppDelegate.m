@@ -13,6 +13,7 @@
 #import "XMLReader.h"
 #import "Data.h"
 #import "Utility.h"
+#import "MBProgressHUD.h"
 
 NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfdsaljhkadfslhjk";
 
@@ -21,6 +22,7 @@ NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfd
 @synthesize window = _window;
 @synthesize navigationController = _navigationController;
 @synthesize main;
+@synthesize mostRecentPath;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -72,16 +74,20 @@ NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfd
 {
     // Handle file being passed in
     NSLog(@"Handle URL: %@", url);
-    NSString *name = NSFORMAT(@"%@_%@",generateUUID(), [[url path] lastPathComponent]);
-    NSURL *new = [[AppData applicationDocumentsDirectory] URLByAppendingPathComponent:name];
     NSError *error = nil;
-    [[NSFileManager defaultManager] copyItemAtURL:url
-                                            toURL:new
-                                            error:&error];
-    if (error) [error log];
-    else {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    //NSString *name = NSFORMAT(@"%@_%@",generateUUID(), [[url path] lastPathComponent]);
+    NSString *name = [[url path] lastPathComponent];
+    NSURL *new = [[AppData applicationDocumentsDirectory] URLByAppendingPathComponent:name];
+    
+    error = nil; // reset error
+    [fileManager copyItemAtURL:url toURL:new error:&error];
+    if (error) {
+        [error log]; DBTrace;
+    } else {
         [self resetDocs];
-        [self.navigationController performSelectorOnMainThread:@selector(popToRootViewControllerAnimated:) withObject:nil waitUntilDone:NO];
+        self.mostRecentPath = [new path];
     }
 }
 
@@ -117,7 +123,6 @@ NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfd
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
      */
-    [self resetDocs];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -125,6 +130,19 @@ NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfd
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+//    [self.main.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+    if (self.mostRecentPath) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:hud];
+        hud.mode = MBProgressHUDModeIndeterminate;
+        hud.labelText = @"Loading";
+        [hud showWhileExecuting:@selector(openFilePath:)
+                       onTarget:self.main
+                     withObject:self.mostRecentPath
+                       animated:YES];
+        self.mostRecentPath = nil;
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

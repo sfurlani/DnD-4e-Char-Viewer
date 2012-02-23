@@ -65,6 +65,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -139,9 +140,9 @@
         NSFileManager *fileManager = [NSFileManager defaultManager];
         NSError *error = nil;
         BOOL fileExists = [fileManager fileExistsAtPath:path];
-        NSLog(@"Path to file: %@", path);        
-        NSLog(@"File exists: %d", fileExists);
-        NSLog(@"Is deletable file at path: %d", [fileManager isDeletableFileAtPath:path]);
+        //NSLog(@"Path to file: %@", path);        
+        //NSLog(@"File exists: %d", fileExists);
+        //NSLog(@"Is deletable file at path: %d", [fileManager isDeletableFileAtPath:path]);
         BOOL success = NO;
         if (fileExists) 
         {
@@ -152,15 +153,10 @@
             [error log];
             [tableView setEditing:NO animated:YES];
         } else if (success) {
-            NSLog(@"Rows0: %d",[tableView numberOfRowsInSection:0]);
             [tableView beginUpdates];
-            NSLog(@"Rows1: %d",[tableView numberOfRowsInSection:0]);
             [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            NSLog(@"Rows2: %d",[tableView numberOfRowsInSection:0]);
             [self.data removeObject:name];
-            NSLog(@"Rows3: %d",[tableView numberOfRowsInSection:0]);
             [tableView endUpdates];
-            NSLog(@"Rows4: %d",[tableView numberOfRowsInSection:0]);
         }
         
     }   
@@ -190,9 +186,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *path = [self.data objectAtIndex:[indexPath row]];
-    NSLog(@"Opening Path: %@", path);
-    
+    NSString *name = [self.data objectAtIndex:[indexPath row]];
+    NSLog(@"Opening File Name: %@", name);
+    NSString *path = [[[AppData applicationDocumentsDirectory] path] stringByAppendingPathComponent:name];
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
     [self.navigationController.view addSubview:hud];
     hud.mode = MBProgressHUDModeIndeterminate;
@@ -208,6 +204,7 @@
 {
     Character *character = [[Character alloc] initWithFile:path];
     CharacterViewController *cvc = [[CharacterViewController alloc] initWithCharacter:character];
+    cvc.title = character.name;
     [self.navigationController pushViewController:cvc animated:YES];
     
 }

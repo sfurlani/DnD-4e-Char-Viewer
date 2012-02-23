@@ -15,6 +15,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) MainViewController *main;
+@property (strong, nonatomic) NSString * mostRecentPath;
 
 - (void) handleFileURL:(NSURL*)url;
 - (void) resetDocs;
