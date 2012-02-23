@@ -20,19 +20,13 @@ NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfd
 
 @synthesize window = _window;
 @synthesize navigationController = _navigationController;
+@synthesize main;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // TODO: handle incoming data
     NSURL *url = (NSURL *)[launchOptions valueForKey:UIApplicationLaunchOptionsURLKey];
-    if ([url isFileURL])
-    {
-        // Handle file being passed in
-    }
-    else
-    {
-        // Handle custom URL scheme
-    }
+    if ([url isFileURL]) [self handleFileURL:url];
     
     // Load Data
     if (![AppDefaults boolForKey:keyAfterFirstOpen]) {
@@ -45,7 +39,7 @@ NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfd
             [[NSFileManager defaultManager] copyItemAtPath:old
                                                     toPath:new 
                                                      error:&error];
-            [error log];
+            if (error) [error log];
         }];
         [AppDefaults setBool:YES forKey:keyAfterFirstOpen];
     }
@@ -59,12 +53,47 @@ NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfd
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    MainViewController *vc = [[MainViewController alloc] initWithData:dnd4eDocs];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.main = [[MainViewController alloc] initWithData:dnd4eDocs];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.main];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    if ([url isFileURL]) [self handleFileURL:url];
+    
+    return YES;
+}
+
+- (void) handleFileURL:(NSURL*)url
+{
+    // Handle file being passed in
+    NSLog(@"Handle URL: %@", url);
+    NSString *name = NSFORMAT(@"%@_%@",generateUUID(), [[url path] lastPathComponent]);
+    NSURL *new = [[AppData applicationDocumentsDirectory] URLByAppendingPathComponent:name];
+    NSError *error = nil;
+    [[NSFileManager defaultManager] copyItemAtURL:url
+                                            toURL:new
+                                            error:&error];
+    if (error) [error log];
+    else {
+        [self resetDocs];
+        [self.navigationController performSelectorOnMainThread:@selector(popToRootViewControllerAnimated:) withObject:nil waitUntilDone:NO];
+    }
+}
+
+- (void) resetDocs
+{
+    NSArray *docs = [[NSFileManager defaultManager] contentsOfDirectoryAtPath: [[AppData applicationDocumentsDirectory] path] error:nil];
+    NSMutableArray *dnd4eDocs = [NSMutableArray array];
+    [docs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *path = obj;
+        if ([[path pathExtension] isEqualToString:@"dnd4e"]) [dnd4eDocs addObject:path];
+    }];
+    self.main.data = dnd4eDocs;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -88,6 +117,7 @@ NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfd
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
      */
+    [self resetDocs];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

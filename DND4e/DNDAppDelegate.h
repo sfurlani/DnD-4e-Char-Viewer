@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class MainViewController;
+
 @interface DNDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) MainViewController *main;
+
+- (void) handleFileURL:(NSURL*)url;
+- (void) resetDocs;
 
 @end

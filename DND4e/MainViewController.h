@@ -10,10 +10,10 @@
 
 @interface MainViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *data;
+@property (strong, nonatomic) NSMutableArray *data;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *back;
 
-- (id)initWithData:(NSArray*)data;
+- (id)initWithData:(NSMutableArray*)data;
 - (void) openFilePath:(NSString*)path;
 
 @end

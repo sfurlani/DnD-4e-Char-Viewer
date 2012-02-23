@@ -17,7 +17,7 @@
 @synthesize data = _data;
 @synthesize back;
 
-- (id)initWithData:(NSArray*)data
+- (id)initWithData:(NSMutableArray*)data
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
@@ -133,11 +133,36 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-         NSString *path = [self.data objectAtIndex:[indexPath row]];
+        
+        NSString *name = [self.data objectAtIndex:[indexPath row]];
+        NSString *path = [[[AppData applicationDocumentsDirectory] path] stringByAppendingPathComponent:name];
+        NSFileManager *fileManager = [NSFileManager defaultManager];
         NSError *error = nil;
-        [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
-        if (error) [error log];
+        BOOL fileExists = [fileManager fileExistsAtPath:path];
+        NSLog(@"Path to file: %@", path);        
+        NSLog(@"File exists: %d", fileExists);
+        NSLog(@"Is deletable file at path: %d", [fileManager isDeletableFileAtPath:path]);
+        BOOL success = NO;
+        if (fileExists) 
+        {
+            success = [fileManager removeItemAtPath:path error:&error];
+        }
+        
+        if (error || !success) {
+            [error log];
+            [tableView setEditing:NO animated:YES];
+        } else if (success) {
+            NSLog(@"Rows0: %d",[tableView numberOfRowsInSection:0]);
+            [tableView beginUpdates];
+            NSLog(@"Rows1: %d",[tableView numberOfRowsInSection:0]);
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            NSLog(@"Rows2: %d",[tableView numberOfRowsInSection:0]);
+            [self.data removeObject:name];
+            NSLog(@"Rows3: %d",[tableView numberOfRowsInSection:0]);
+            [tableView endUpdates];
+            NSLog(@"Rows4: %d",[tableView numberOfRowsInSection:0]);
+        }
+        
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
