@@ -15,7 +15,7 @@
 #import "Utility.h"
 #import "MBProgressHUD.h"
 
-NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfdsaljhkadfslhjk";
+
 
 @implementation DNDAppDelegate
 
@@ -28,30 +28,15 @@ NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfd
 {
     // TODO: handle incoming data
     NSURL *url = (NSURL *)[launchOptions valueForKey:UIApplicationLaunchOptionsURLKey];
-    if ([url isFileURL]) [self handleFileURL:url];
+    if ([url isFileURL]) [AppData handleFileURL:url];
     
-    // Load Data
-    if (![AppDefaults boolForKey:keyAfterFirstOpen]) {
-        NSArray *filePaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"dnd4e" inDirectory:nil];
-        [filePaths enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            NSString *old = obj;
-            NSString *name = [old lastPathComponent];
-            NSString *new = [[[AppData applicationDocumentsDirectory] path] stringByAppendingPathComponent:name];
-            NSError *error = nil;
-            [[NSFileManager defaultManager] copyItemAtPath:old
-                                                    toPath:new 
-                                                     error:&error];
-            if (error) [error log];
-        }];
-        [AppDefaults setBool:YES forKey:keyAfterFirstOpen];
-    }
+    
     NSArray *docs = [[NSFileManager defaultManager] contentsOfDirectoryAtPath: [[AppData applicationDocumentsDirectory] path] error:nil];
     NSMutableArray *dnd4eDocs = [NSMutableArray array];
     [docs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *path = obj;
         if ([[path pathExtension] isEqualToString:@"dnd4e"]) [dnd4eDocs addObject:path];
     }];
-    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -65,43 +50,12 @@ NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfd
 
 - (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    if ([url isFileURL]) [self handleFileURL:url];
+    if ([url isFileURL]) [AppData handleFileURL:url];
     
     return YES;
 }
 
-- (void) handleFileURL:(NSURL*)url
-{
-    // Handle file being passed in
-    NSLog(@"Handle URL: %@", url);
-    NSError *error = nil;
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    //NSString *name = NSFORMAT(@"%@_%@",generateUUID(), [[url path] lastPathComponent]);
-    NSString *name = [[url path] lastPathComponent];
-    NSURL *new = [[AppData applicationDocumentsDirectory] URLByAppendingPathComponent:name];
-    
-    error = nil; // reset error
-    [fileManager copyItemAtURL:url toURL:new error:&error];
-    if (error) {
-        [error log]; DBTrace;
-    } else {
-        [self resetDocs];
-        self.mostRecentPath = [new path];
-    }
-}
-
-- (void) resetDocs
-{
-    NSArray *docs = [[NSFileManager defaultManager] contentsOfDirectoryAtPath: [[AppData applicationDocumentsDirectory] path] error:nil];
-    NSMutableArray *dnd4eDocs = [NSMutableArray array];
-    [docs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSString *path = obj;
-        if ([[path pathExtension] isEqualToString:@"dnd4e"]) [dnd4eDocs addObject:path];
-    }];
-    self.main.data = dnd4eDocs;
-}
-							
+		
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*
@@ -130,7 +84,8 @@ NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfd
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
-//    [self.main.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+
+    // TODO: Fix this!!
     if (self.mostRecentPath) {
         [self.navigationController popToRootViewControllerAnimated:YES];
         MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];

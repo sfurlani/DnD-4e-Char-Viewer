@@ -63,6 +63,8 @@
 	<array>
 		<string>dnd_4e_icons_v3.ttf</string>
 	</array>
+	<key>UIMainStoryboardFile</key>
+	<string>MainStoryboard~iphone</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array/>
 	<key>UISupportedInterfaceOrientations</key>

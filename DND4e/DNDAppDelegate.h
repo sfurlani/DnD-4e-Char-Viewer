@@ -17,7 +17,4 @@
 @property (strong, nonatomic) MainViewController *main;
 @property (strong, nonatomic) NSString * mostRecentPath;
 
-- (void) handleFileURL:(NSURL*)url;
-- (void) resetDocs;
-
 @end

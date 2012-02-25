@@ -18,18 +18,29 @@
 
 #define AppData ([Data sharedData])
 
+@protocol DataFileDelegate;
+
 @interface Data : NSObject
 
 + (Data*) sharedData;
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
-- (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+
+@property (strong, nonatomic) NSArray *files;
+@property (strong, nonatomic) NSDictionary *characters;
+@property (unsafe_unretained, nonatomic) id<DataFileDelegate> delegate;
+
+
+- (void) resetDocs;
+- (NSString*)nameFromPath:(NSString*)path;
+- (void) handleFileURL:(NSURL*)url;
 
 @end
 
+@protocol DataFileDelegate <NSObject>
+
+- (void) newData:(NSArray*)files;
+
+@end
 
 #define replace(string) ([[string stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"] stringByReplacingOccurrencesOfString:@"\t" withString:@"&nbsp;&nbsp;&nbsp;&nbsp;"])

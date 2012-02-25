@@ -40,6 +40,9 @@
 		DC97120C14F9585A0039443C /* back@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97120A14F9585A0039443C /* back@2x~iphone.png */; };
 		DC97120E14F961090039443C /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97120D14F961090039443C /* 06-magnify.png */; };
 		DC97121014F961180039443C /* 06-magnify@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97120F14F961180039443C /* 06-magnify@2x~iphone.png */; };
+		DC97121514F9654B0039443C /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97121414F9654B0039443C /* FileViewController.m */; };
+		DC97121814F9655E0039443C /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97121714F9655E0039443C /* PageViewController.m */; };
+		DC97121B14F96B240039443C /* FileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97121A14F96B240039443C /* FileCell.m */; };
 		DC9AB7AD14F6702000B3B0F3 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AC14F6701F00B3B0F3 /* help.html */; };
 		DC9AB7B014F6722A00B3B0F3 /* dropbox.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AE14F6722900B3B0F3 /* dropbox.png */; };
 		DC9AB7B114F6722A00B3B0F3 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AF14F6722900B3B0F3 /* mail.png */; };
@@ -132,6 +135,12 @@
 		DC97120A14F9585A0039443C /* back@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x~iphone.png"; sourceTree = "<group>"; };
 		DC97120D14F961090039443C /* 06-magnify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify.png"; sourceTree = "<group>"; };
 		DC97120F14F961180039443C /* 06-magnify@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify@2x~iphone.png"; sourceTree = "<group>"; };
+		DC97121314F9654B0039443C /* FileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileViewController.h; path = Storyboard/FileViewController.h; sourceTree = "<group>"; };
+		DC97121414F9654B0039443C /* FileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileViewController.m; path = Storyboard/FileViewController.m; sourceTree = "<group>"; };
+		DC97121614F9655E0039443C /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageViewController.h; path = Storyboard/PageViewController.h; sourceTree = "<group>"; };
+		DC97121714F9655E0039443C /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PageViewController.m; path = Storyboard/PageViewController.m; sourceTree = "<group>"; };
+		DC97121914F96B240039443C /* FileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileCell.h; path = Storyboard/FileCell.h; sourceTree = "<group>"; };
+		DC97121A14F96B240039443C /* FileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileCell.m; path = Storyboard/FileCell.m; sourceTree = "<group>"; };
 		DC9AB7AC14F6701F00B3B0F3 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		DC9AB7AE14F6722900B3B0F3 /* dropbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropbox.png; sourceTree = "<group>"; };
 		DC9AB7AF14F6722900B3B0F3 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
@@ -259,18 +268,8 @@
 				DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */,
 				DC9711E814F954C60039443C /* MainStoryboard~iphone.storyboard */,
 				DC97120814F9577F0039443C /* CustomCells */,
-				DCA8024514F1328800620379 /* ContentViewController.h */,
-				DCA8024614F1328800620379 /* ContentViewController.m */,
-				DCA8024714F1328800620379 /* ContentViewController.xib */,
-				DCDCC1F114F34C46004BE096 /* CharacterViewController.h */,
-				DCDCC1F214F34C46004BE096 /* CharacterViewController.m */,
-				DCDCC1F314F34C47004BE096 /* CharacterViewController.xib */,
-				DCDCC1F614F34DE6004BE096 /* MainViewController.h */,
-				DCDCC1F714F34DE7004BE096 /* MainViewController.m */,
-				DCDCC1F814F34DE7004BE096 /* MainViewController.xib */,
-				DC693C3514F0069200E68BF8 /* DictionaryExplorerViewController.h */,
-				DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */,
-				DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */,
+				DC97121114F964070039443C /* Storyboard ViewControllers */,
+				DC97121214F9641C0039443C /* Nib ViewControllers */,
 			);
 			path = DND4e;
 			sourceTree = "<group>";
@@ -329,8 +328,40 @@
 		DC97120814F9577F0039443C /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				DC97121914F96B240039443C /* FileCell.h */,
+				DC97121A14F96B240039443C /* FileCell.m */,
 			);
 			name = CustomCells;
+			sourceTree = "<group>";
+		};
+		DC97121114F964070039443C /* Storyboard ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC97121314F9654B0039443C /* FileViewController.h */,
+				DC97121414F9654B0039443C /* FileViewController.m */,
+				DC97121614F9655E0039443C /* PageViewController.h */,
+				DC97121714F9655E0039443C /* PageViewController.m */,
+			);
+			name = "Storyboard ViewControllers";
+			sourceTree = "<group>";
+		};
+		DC97121214F9641C0039443C /* Nib ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCA8024514F1328800620379 /* ContentViewController.h */,
+				DCA8024614F1328800620379 /* ContentViewController.m */,
+				DCA8024714F1328800620379 /* ContentViewController.xib */,
+				DCDCC1F114F34C46004BE096 /* CharacterViewController.h */,
+				DCDCC1F214F34C46004BE096 /* CharacterViewController.m */,
+				DCDCC1F314F34C47004BE096 /* CharacterViewController.xib */,
+				DCDCC1F614F34DE6004BE096 /* MainViewController.h */,
+				DCDCC1F714F34DE7004BE096 /* MainViewController.m */,
+				DCDCC1F814F34DE7004BE096 /* MainViewController.xib */,
+				DC693C3514F0069200E68BF8 /* DictionaryExplorerViewController.h */,
+				DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */,
+				DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */,
+			);
+			name = "Nib ViewControllers";
 			sourceTree = "<group>";
 		};
 		DC9AB7B214F6722E00B3B0F3 /* Help */ = {
@@ -562,6 +593,9 @@
 				DCDCC20014F41F3E004BE096 /* Skill.m in Sources */,
 				DCDCC23314F44CA7004BE096 /* Stat.m in Sources */,
 				DC9AB7BC14F6795D00B3B0F3 /* HelpViewController.m in Sources */,
+				DC97121514F9654B0039443C /* FileViewController.m in Sources */,
+				DC97121814F9655E0039443C /* PageViewController.m in Sources */,
+				DC97121B14F96B240039443C /* FileCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,7 +678,7 @@
 				GCC_PREFIX_HEADER = "DND4e/DND4e-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "DND4e/DND4e-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -666,7 +700,7 @@
 				GCC_PREFIX_HEADER = "DND4e/DND4e-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "DND4e/DND4e-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "CE781C25-FFF3-4BA4-8CDD-E75AB231589C";
