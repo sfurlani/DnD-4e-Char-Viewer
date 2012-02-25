@@ -62,6 +62,9 @@
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    if ([[self.data lastObject] isKindOfClass:[Power class]]) {
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -103,6 +106,15 @@
         return 1;
     }
     
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([[self.data lastObject] isKindOfClass:[Power class]]) {
+        return 36.0f;
+    } else {
+        return 44.0f;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -160,6 +172,49 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:style 
                                       reuseIdentifier:CellIdentifier];
+    }
+    
+    if ([data isKindOfClass:[Power class]]) {
+        cell.textLabel.backgroundColor = [UIColor clearColor];
+        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.textLabel.shadowColor = [UIColor colorWithWhite:0.2 alpha:0.6];
+        cell.textLabel.shadowOffset = CGSizeMake(0, -1);
+        cell.textLabel.highlightedTextColor = [UIColor lightGrayColor];
+        acc = UITableViewCellAccessoryNone;
+        Power *power = (id)data;
+        if ([power.usage rangeOfString:@"At-Will"].length > 0) {
+            cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"atwillrow"]];
+            cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"atwillrow"]];
+        } else if ([power.usage rangeOfString:@"Encounter"].length > 0) {
+            cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"encounter"]];
+            cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"encounter"]];
+        } else if ([power.usage rangeOfString:@"Daily"].length > 0) {
+            cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"daily"]];
+            cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"daily"]];
+        }
+        
+        if ([power.attackType rangeOfString:@"Melee"].length > 0 && 
+            [power.attackType rangeOfString:@"Ranged"].length > 0) {
+            cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"meleeranged"]];
+            
+        } else if ([power.attackType rangeOfString:@"Melee"].length > 0) {
+            cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"melee"]];
+        } else if ([power.attackType rangeOfString:@"Ranged"].length > 0) {
+            cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ranged"]];
+        } else if ([power.attackType rangeOfString:@"Close"].length > 0) {
+            cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"close"]];
+        } else if ([power.attackType rangeOfString:@"Area"].length > 0) {
+            cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"area"]];
+        } else {
+            cell.accessoryView = nil;
+        }
+        if (cell.accessoryView) {
+            cell.accessoryView.frame = CGRectInset(cell.accessoryView.frame, -8.0f,1);
+            ((UIImageView*)cell.accessoryView).contentMode = UIViewContentModeScaleAspectFit;
+        }
+        
+    } else {
+            
     }
     
     // Configure the cell...
