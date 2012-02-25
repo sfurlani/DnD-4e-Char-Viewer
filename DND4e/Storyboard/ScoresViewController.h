@@ -34,5 +34,5 @@
 
 
 - (void) refresh;
-
+- (IBAction)openDetail:(id)sender
 @end

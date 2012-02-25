@@ -374,6 +374,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openDetail:" destination="Uoe-Wp-fPE" eventType="touchUpInside" id="kJh-NF-LWb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -393,6 +396,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openDetail:" destination="Uoe-Wp-fPE" eventType="touchUpInside" id="8I7-RP-DoF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -412,6 +418,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openDetail:" destination="Uoe-Wp-fPE" eventType="touchUpInside" id="TCT-li-3bL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -559,6 +568,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="openDetail:" destination="Uoe-Wp-fPE" eventType="touchUpInside" id="49U-fq-0WP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oqF-Jx-hfE">
                                 <rect key="frame" x="0.0" y="196" width="162" height="24"/>
@@ -571,6 +583,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="openDetail:" destination="Uoe-Wp-fPE" eventType="touchUpInside" id="Pmh-2c-kLY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Gv-c4-3ef">
                                 <rect key="frame" x="0.0" y="258" width="162" height="24"/>
@@ -583,6 +598,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="openDetail:" destination="Uoe-Wp-fPE" eventType="touchUpInside" id="ukR-Dp-yTk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -886,6 +904,7 @@
         <class className="ScoresViewController" superclassName="PageViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ScoresViewController.h"/>
             <relationships>
+                <relationship kind="action" name="openDetail:"/>
                 <relationship kind="outlet" name="chaDetail" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="chaMod" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="chaScore" candidateClass="UILabel"/>

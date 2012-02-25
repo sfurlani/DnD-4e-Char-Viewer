@@ -102,4 +102,17 @@
     
 }
 
+- (void) openDetail:(id)sender
+{
+    NSString *key = nil;
+    if ([sender tag] == 2001) key = keyStrength;
+    else if ([sender tag] == 2002) key = keyConstitution;
+    else if ([sender tag] == 2003) key = keyDexterity;
+    else if ([sender tag] == 2004) key = keyIntelligence;
+    else if ([sender tag] == 2005) key = keyWisdom;
+    else if ([sender tag] == 2006) key = keyCharisma;
+    id<DNDHTML> item = [self.character.stats objectForKey:key];
+    [self showDetail:item];
+}
+
 @end
