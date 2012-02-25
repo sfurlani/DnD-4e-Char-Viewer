@@ -8,9 +8,9 @@
         <scene sceneID="g1i-5W-o47">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Az5-h3-AaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" id="nAV-C6-Gzi" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="nAV-C6-Gzi" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackTranslucent" id="DxR-aM-wSL">
                         <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -350,7 +350,7 @@
         <scene sceneID="2vw-yy-3PA">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZW1-lH-kib" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Uoe-Wp-fPE" customClass="PageViewController" sceneMemberID="viewController">
+                <viewController id="Uoe-Wp-fPE" customClass="ScoresViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vWF-8k-6YF">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -362,16 +362,58 @@
                             <view contentMode="scaleToFill" id="t1y-Gc-1PX" userLabel="Shade">
                                 <rect key="frame" x="0.0" y="105" width="320" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" tag="2001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7sw-LN-fcT">
+                                        <rect key="frame" x="0.0" y="-1" width="162" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
+                                        <state key="normal" title=" Strength">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="chG-TG-T5E" userLabel="Shade">
                                 <rect key="frame" x="0.0" y="166" width="320" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" tag="2003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="786-Ar-cLI">
+                                        <rect key="frame" x="0.0" y="-1" width="162" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
+                                        <state key="normal" title=" Dexterity">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="AuQ-6V-YS4" userLabel="Shade">
                                 <rect key="frame" x="0.0" y="228" width="320" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" tag="2005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JRR-uD-ghf">
+                                        <rect key="frame" x="0.0" y="-1" width="162" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
+                                        <state key="normal" title=" Wisdom">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="fti-YI-31b" userLabel="Line">
@@ -379,48 +421,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Strength" lineBreakMode="tailTruncation" minimumFontSize="10" id="lIq-nt-SC4">
-                                <rect key="frame" x="0.0" y="106" width="123" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Constitution" lineBreakMode="tailTruncation" minimumFontSize="10" id="16z-kq-smN">
-                                <rect key="frame" x="0.0" y="135" width="141" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dexterity" lineBreakMode="tailTruncation" minimumFontSize="10" id="HbH-jZ-bZF">
-                                <rect key="frame" x="0.0" y="166" width="141" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Intelligence" lineBreakMode="tailTruncation" minimumFontSize="10" id="g8J-xw-aoN">
-                                <rect key="frame" x="0.0" y="197" width="141" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wisdom" lineBreakMode="tailTruncation" minimumFontSize="10" id="Bij-0y-Q9M">
-                                <rect key="frame" x="0.0" y="228" width="141" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Charisma" lineBreakMode="tailTruncation" minimumFontSize="10" id="l5R-qd-2bJ">
-                                <rect key="frame" x="0.0" y="259" width="141" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Character Name" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="13x-lm-NwW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -460,6 +460,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="back:" destination="Uoe-Wp-fPE" eventType="touchUpInside" id="Dg7-6R-COP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="kRj-GX-48X">
                                 <rect key="frame" x="170" y="101" width="42" height="31"/>
@@ -545,13 +548,119 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" tag="2002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5lm-Q9-qOT">
+                                <rect key="frame" x="0.0" y="134" width="162" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
+                                <state key="normal" title=" Constitution">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="2004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oqF-Jx-hfE">
+                                <rect key="frame" x="0.0" y="196" width="162" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
+                                <state key="normal" title=" Intelligence">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="2006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Gv-c4-3ef">
+                                <rect key="frame" x="0.0" y="258" width="162" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
+                                <state key="normal" title=" Charisma">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Rfh-gV-t77"/>
+                    <connections>
+                        <outlet property="back" destination="r5K-jN-vdq" id="g6f-bV-BBh"/>
+                        <outlet property="bg" destination="eVI-u5-B8e" id="f3S-mW-5mc"/>
+                        <outlet property="chaDetail" destination="2Gv-c4-3ef" id="CIn-5k-HbX"/>
+                        <outlet property="chaMod" destination="m4h-RQ-crQ" id="uCI-36-wW0"/>
+                        <outlet property="chaScore" destination="DJR-G3-YI8" id="hf6-ha-fbD"/>
+                        <outlet property="conDetail" destination="5lm-Q9-qOT" id="uUi-wp-S7v"/>
+                        <outlet property="conMod" destination="Lfb-Mx-3tk" id="33d-Zl-zUV"/>
+                        <outlet property="conScore" destination="VZS-ny-5z8" id="Aoe-pY-v7m"/>
+                        <outlet property="dexDetail" destination="786-Ar-cLI" id="014-Rf-zlZ"/>
+                        <outlet property="dexMod" destination="BhQ-nV-qII" id="0zu-vO-HcS"/>
+                        <outlet property="dexScore" destination="4Qh-mo-va4" id="36g-cE-ljD"/>
+                        <outlet property="intDetail" destination="oqF-Jx-hfE" id="ECy-m6-EA3"/>
+                        <outlet property="intMod" destination="f7r-dw-4Q7" id="mu3-vG-cYZ"/>
+                        <outlet property="intScore" destination="q8Q-Q2-5Fg" id="fpa-Zg-I9e"/>
+                        <outlet property="strDetail" destination="7sw-LN-fcT" id="URL-S8-2Rl"/>
+                        <outlet property="strMod" destination="tkk-bi-z6M" id="NLy-kq-tfg"/>
+                        <outlet property="strScore" destination="kRj-GX-48X" id="wLi-9J-RYm"/>
+                        <outlet property="titleLabel" destination="13x-lm-NwW" id="c1L-Ha-tGE"/>
+                        <outlet property="wisDetail" destination="JRR-uD-ghf" id="Kc2-Bo-G0X"/>
+                        <outlet property="wisMod" destination="bZR-WF-Shy" id="Zkp-Ch-75u"/>
+                        <outlet property="wisScore" destination="KhR-ba-C26" id="xJv-op-4Uv"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1623" y="26"/>
+        </scene>
+        <scene sceneID="KxK-qt-eE2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x7q-jX-1Vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="contentDetail" id="Jms-vK-8lH" customClass="ContentViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6wu-vk-7sc">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg~iphone.png" id="boX-2p-Wba">
+                                <rect key="frame" x="0.0" y="-20" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Content Title" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="HD4-Aq-IET">
+                                <rect key="frame" x="0.0" y="415" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView opaque="NO" contentMode="scaleToFill" id="cW2-aR-OXY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="421"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2gf-NW-z5O">
+                                <rect key="frame" x="0.0" y="423" width="47" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="back.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c3V-i0-LXK"/>
+                    <connections>
+                        <outlet property="cardView" destination="cW2-aR-OXY" id="jS5-kt-l9x"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1053" y="-588"/>
         </scene>
         <scene sceneID="V4M-Yx-5pY">
             <objects>
@@ -709,6 +818,25 @@
             </objects>
             <point key="canvasLocation" x="2073" y="621"/>
         </scene>
+        <scene sceneID="6sa-ql-U9h">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKO-XK-6Uq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController navigationBarHidden="YES" id="tAo-I3-HgJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qfC-CP-Aef">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jms-vK-8lH" kind="relationship" relationship="rootViewController" id="wON-OB-307"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="527" y="-588"/>
+        </scene>
     </scenes>
     <resources>
         <image name="06-magnify.png" width="24" height="24"/>
@@ -721,6 +849,12 @@
     <classes>
         <class className="CharViewController" superclassName="PageViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CharViewController.h"/>
+        </class>
+        <class className="ContentViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContentViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cardView" candidateClass="UIWebView"/>
+            </relationships>
         </class>
         <class className="FileCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FileCell.h"/>
@@ -756,6 +890,29 @@
                 <relationship kind="outlet" name="back" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="bg" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ScoresViewController" superclassName="PageViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScoresViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="chaDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="chaMod" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="chaScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="conDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="conMod" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="conScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dexDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="dexMod" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dexScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="intDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="intMod" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="intScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="strDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="strMod" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="strScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wisDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="wisMod" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wisScore" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

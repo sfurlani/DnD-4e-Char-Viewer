@@ -7,9 +7,17 @@
 //
 
 #import "ScoresViewController.h"
-#import 
+#import "Data.h"
+#import "Utility.h"
 
 @implementation ScoresViewController
+
+@synthesize strDetail, strScore, strMod;
+@synthesize conDetail, conScore, conMod;
+@synthesize dexDetail, dexScore, dexMod;
+@synthesize intDetail, intScore, intMod;
+@synthesize wisDetail, wisScore, wisMod;
+@synthesize chaDetail, chaScore, chaMod;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,13 +45,11 @@
 }
 */
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 }
-*/
 
 - (void)viewDidUnload
 {
@@ -53,10 +59,47 @@
 }
 
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self refresh];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void) refresh
+{
+    AbilityScores *scores = self.character.scores;
+    
+    self.strScore.text = NSFORMAT(@"%@",[scores score:keyStrength]);
+    self.strMod.text = PFORMAT([scores modifier:keyStrength]);
+    
+    self.conScore.text = NSFORMAT(@"%@",[scores score:keyConstitution]);
+    self.conMod.text = PFORMAT([scores modifier:keyConstitution]);
+    
+    self.dexScore.text = NSFORMAT(@"%@",[scores score:keyDexterity]);
+    self.dexMod.text = PFORMAT([scores modifier:keyDexterity]);
+    
+    self.intScore.text = NSFORMAT(@"%@",[scores score:keyIntelligence]);
+    self.intMod.text = PFORMAT([scores modifier:keyIntelligence]);
+    
+    self.wisScore.text = NSFORMAT(@"%@",[scores score:keyWisdom]);
+    self.wisMod.text = PFORMAT([scores modifier:keyWisdom]);
+    
+    self.chaScore.text = NSFORMAT(@"%@",[scores score:keyCharisma]);
+    self.chaMod.text = PFORMAT([scores modifier:keyCharisma]);
+    
+    [self.strDetail setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [self.conDetail setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [self.dexDetail setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [self.intDetail setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [self.wisDetail setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [self.chaDetail setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    
 }
 
 @end

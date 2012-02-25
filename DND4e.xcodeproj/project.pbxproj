@@ -45,6 +45,7 @@
 		DC97121B14F96B240039443C /* FileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97121A14F96B240039443C /* FileCell.m */; };
 		DC97121E14F9748D0039443C /* CharViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97121D14F9748D0039443C /* CharViewController.m */; };
 		DC97122114F97F210039443C /* ScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97122014F97F210039443C /* ScoresViewController.m */; };
+		DC97122414F985DD0039443C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97122314F985DC0039443C /* DetailViewController.m */; };
 		DC9AB7AD14F6702000B3B0F3 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AC14F6701F00B3B0F3 /* help.html */; };
 		DC9AB7B014F6722A00B3B0F3 /* dropbox.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AE14F6722900B3B0F3 /* dropbox.png */; };
 		DC9AB7B114F6722A00B3B0F3 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AF14F6722900B3B0F3 /* mail.png */; };
@@ -147,6 +148,8 @@
 		DC97121D14F9748D0039443C /* CharViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CharViewController.m; path = Storyboard/CharViewController.m; sourceTree = "<group>"; };
 		DC97121F14F97F210039443C /* ScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoresViewController.h; path = Storyboard/ScoresViewController.h; sourceTree = "<group>"; };
 		DC97122014F97F210039443C /* ScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoresViewController.m; path = Storyboard/ScoresViewController.m; sourceTree = "<group>"; };
+		DC97122214F985DC0039443C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Storyboard/DetailViewController.h; sourceTree = "<group>"; };
+		DC97122314F985DC0039443C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Storyboard/DetailViewController.m; sourceTree = "<group>"; };
 		DC9AB7AC14F6701F00B3B0F3 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		DC9AB7AE14F6722900B3B0F3 /* dropbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropbox.png; sourceTree = "<group>"; };
 		DC9AB7AF14F6722900B3B0F3 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
@@ -351,6 +354,8 @@
 				DC97121D14F9748D0039443C /* CharViewController.m */,
 				DC97121F14F97F210039443C /* ScoresViewController.h */,
 				DC97122014F97F210039443C /* ScoresViewController.m */,
+				DC97122214F985DC0039443C /* DetailViewController.h */,
+				DC97122314F985DC0039443C /* DetailViewController.m */,
 			);
 			name = "Storyboard ViewControllers";
 			sourceTree = "<group>";
@@ -608,6 +613,7 @@
 				DC97121B14F96B240039443C /* FileCell.m in Sources */,
 				DC97121E14F9748D0039443C /* CharViewController.m in Sources */,
 				DC97122114F97F210039443C /* ScoresViewController.m in Sources */,
+				DC97122414F985DD0039443C /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
