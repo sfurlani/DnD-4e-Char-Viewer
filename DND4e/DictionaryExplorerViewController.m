@@ -186,11 +186,11 @@
             cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"atwillrow"]];
             cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"atwillrow"]];
         } else if ([power.usage rangeOfString:@"Encounter"].length > 0) {
-            cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"encounter"]];
-            cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"encounter"]];
+            cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"encounterrow"]];
+            cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"encounterrow"]];
         } else if ([power.usage rangeOfString:@"Daily"].length > 0) {
-            cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"daily"]];
-            cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"daily"]];
+            cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dailyrow"]];
+            cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dailyrow"]];
         }
         
         if ([power.attackType rangeOfString:@"Melee"].length > 0 && 

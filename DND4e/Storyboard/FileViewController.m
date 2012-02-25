@@ -8,6 +8,8 @@
 
 #import "FileViewController.h"
 #import "PageViewController.h"
+#import "CharViewController.h"
+#import "MBProgressHUD.h"
 #import "FileCell.h"
 
 @implementation FileViewController
@@ -82,7 +84,10 @@
 {
     if ([segue.identifier isEqualToString:@"openFile"]) {
         [segue.destinationViewController setFirst:segue.destinationViewController];
-        
+        NSIndexPath *indexPath = [self.fileTable indexPathForCell:sender];
+        NSString *path = [self.files objectAtIndex:[indexPath row]];
+        Character *character = [AppData loadCharacterWithFile:path];
+        [segue.destinationViewController setCharacter:character]; 
     }
 }
 

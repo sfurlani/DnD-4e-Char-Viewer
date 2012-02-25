@@ -12,6 +12,8 @@
 #import "Power.h"
 #import "RulesElement.h"
 #import "Utility.h"
+#import "DNDAppDelegate.h"
+#import "MBProgressHUD.h"
 
 NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfdsaljhkadfslhjk";
 
@@ -48,6 +50,7 @@ SYNTHESIZE_SINGLETON_ARC(Data)
         }
         
         [self resetDocs];
+        self.characters = [NSMutableDictionary dictionaryWithCapacity:[self.files count]];
     }
     return self;
 }
@@ -58,8 +61,9 @@ SYNTHESIZE_SINGLETON_ARC(Data)
     NSArray *docs = [[NSFileManager defaultManager] contentsOfDirectoryAtPath: [[self applicationDocumentsDirectory] path] error:nil];
     NSMutableArray *dnd4eDocs = [NSMutableArray array];
     [docs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSString *path = obj;
-        if ([[path pathExtension] isEqualToString:@"dnd4e"]) {
+        NSString *file = obj;
+        if ([[file pathExtension] isEqualToString:@"dnd4e"]) {
+            NSString *path = [[[self applicationDocumentsDirectory] path] stringByAppendingPathComponent:file];
             [dnd4eDocs addObject:path];
         }
     }];
@@ -84,7 +88,7 @@ SYNTHESIZE_SINGLETON_ARC(Data)
     
     //NSString *name = NSFORMAT(@"%@_%@",generateUUID(), [[url path] lastPathComponent]);
     NSString *name = [[url path] lastPathComponent];
-    NSURL *new = [[AppData applicationDocumentsDirectory] URLByAppendingPathComponent:name];
+    NSURL *new = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:name];
     
     error = nil; // reset error
     [fileManager copyItemAtURL:url toURL:new error:&error];
@@ -96,6 +100,30 @@ SYNTHESIZE_SINGLETON_ARC(Data)
     }
 }
 
+- (Character*)loadCharacterWithFile:(NSString*)path
+{
+    NSString *name = [self nameFromPath:path];
+    Character *character = [self.characters objectForKey:name];
+    if (!character) {
+        NSLog(@"Creating: %@", name);
+        
+        MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:AppDelegate.navigationController.view];
+        hud.mode = MBProgressHUDModeIndeterminate;
+        hud.labelText = @"Loading";
+        [AppDelegate.navigationController.view addSubview:hud];
+        [hud show:YES];
+        character = [[Character alloc] initWithFile:path];
+//        [hud showWhileExecuting:@selector(initWithFile:)
+//                       onTarget:character
+//                     withObject:path
+//                       animated:YES];
+        [self.characters setObject:character forKey:name];
+        [hud hide:YES afterDelay:0.3];
+    } else {
+        NSLog(@"Loading: %@", name);
+    }
+    return character;
+}
 
 #pragma mark - Application's Documents directory
 

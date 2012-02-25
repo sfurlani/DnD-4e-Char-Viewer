@@ -8,9 +8,12 @@
 
 #import "PageViewController.h"
 
+#import "Data.h"
+
 @implementation PageViewController
 
 @synthesize bg, titleLabel, back, first;
+@synthesize character = _character;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,6 +50,7 @@
     UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(home:)];
     swipe.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.titleLabel addGestureRecognizer:swipe];
+    [self.back setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
     
 }
 
@@ -67,6 +71,7 @@
 {
     if ([segue.destinationViewController isKindOfClass:[PageViewController class]]) {
         [segue.destinationViewController setFirst:self.first];
+        [segue.destinationViewController setCharacter:self.character];
     }
     
 }

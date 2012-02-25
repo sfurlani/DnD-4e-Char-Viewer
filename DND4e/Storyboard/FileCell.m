@@ -10,7 +10,7 @@
 
 @implementation FileCell
 
-@synthesize fileTitle;
+@synthesize fileTitle, arrow;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -26,6 +26,11 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void) didMoveToWindow
+{
+    self.arrow.image = [UIImage imageNamed:@"arrow"];
 }
 
 @end

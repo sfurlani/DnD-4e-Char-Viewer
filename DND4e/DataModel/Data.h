@@ -27,13 +27,14 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 @property (strong, nonatomic) NSArray *files;
-@property (strong, nonatomic) NSDictionary *characters;
+@property (strong, nonatomic) NSMutableDictionary *characters;
 @property (unsafe_unretained, nonatomic) id<DataFileDelegate> delegate;
 
 
 - (void) resetDocs;
 - (NSString*)nameFromPath:(NSString*)path;
 - (void) handleFileURL:(NSURL*)url;
+- (Character*)loadCharacterWithFile:(NSString*)path;
 
 @end
 

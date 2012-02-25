@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class Character;
+
 @interface PageViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *back;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *bg;
 @property (strong, nonatomic) PageViewController *first;
+
+@property (strong, nonatomic) Character *character;
 
 - (IBAction)back:(id)sender;
 - (IBAction)home:(id)sender;

@@ -10,6 +10,8 @@
 
 @class MainViewController;
 
+#define AppDelegate ((DNDAppDelegate*)[[UIApplication sharedApplication] delegate])
+
 @interface DNDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

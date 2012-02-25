@@ -27,6 +27,11 @@
         NSError *error = nil;
         NSDictionary *data = [XMLReader dictionaryForXMLData:xmlData error:&error];
         
+        self.name = [[data valueForKeyPath:@"D20Character.CharacterSheet.Details.name"] valueForKey:kXMLReaderTextNodeKey];
+        self.level = NSINT([[[data valueForKeyPath:@"D20Character.CharacterSheet.Details.Level"] valueForKey:kXMLReaderTextNodeKey] intValue]);
+        
+        self.objectGraph = [data valueForKeyPath:@"D20Character"];
+        
         NSArray *powerInfo = [data valueForKeyPath:@"D20Character.CharacterSheet.PowerStats.Power"];
         self.powers = [NSMutableArray arrayWithCapacity:[powerInfo count]];
         [powerInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -42,11 +47,6 @@
             [self.loot addObject:item];
             item.character = self; // weak
         }];
-        
-        self.name = [[data valueForKeyPath:@"D20Character.CharacterSheet.Details.name"] valueForKey:kXMLReaderTextNodeKey];
-        self.level = NSINT([[[data valueForKeyPath:@"D20Character.CharacterSheet.Details.Level"] valueForKey:kXMLReaderTextNodeKey] intValue]);
-        
-        self.objectGraph = [data valueForKeyPath:@"D20Character"];
         
         NSDictionary *detailInfo = [data valueForKeyPath:@"D20Character.CharacterSheet.Details"];
         self.details = [NSMutableDictionary dictionaryWithCapacity:[detailInfo count]];

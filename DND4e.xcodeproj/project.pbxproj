@@ -43,6 +43,7 @@
 		DC97121514F9654B0039443C /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97121414F9654B0039443C /* FileViewController.m */; };
 		DC97121814F9655E0039443C /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97121714F9655E0039443C /* PageViewController.m */; };
 		DC97121B14F96B240039443C /* FileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97121A14F96B240039443C /* FileCell.m */; };
+		DC97121E14F9748D0039443C /* CharViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97121D14F9748D0039443C /* CharViewController.m */; };
 		DC9AB7AD14F6702000B3B0F3 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AC14F6701F00B3B0F3 /* help.html */; };
 		DC9AB7B014F6722A00B3B0F3 /* dropbox.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AE14F6722900B3B0F3 /* dropbox.png */; };
 		DC9AB7B114F6722A00B3B0F3 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AF14F6722900B3B0F3 /* mail.png */; };
@@ -54,10 +55,10 @@
 		DC9AB7EE14F6C37200B3B0F3 /* atwillrow@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7DE14F6C37200B3B0F3 /* atwillrow@2x~iphone.png */; };
 		DC9AB7EF14F6C37200B3B0F3 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7DF14F6C37200B3B0F3 /* close.png */; };
 		DC9AB7F014F6C37200B3B0F3 /* close@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7E014F6C37200B3B0F3 /* close@2x~iphone.png */; };
-		DC9AB7F114F6C37200B3B0F3 /* daily.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7E114F6C37200B3B0F3 /* daily.png */; };
-		DC9AB7F214F6C37200B3B0F3 /* daily@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7E214F6C37200B3B0F3 /* daily@2x~iphone.png */; };
-		DC9AB7F314F6C37200B3B0F3 /* encounter.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7E314F6C37200B3B0F3 /* encounter.png */; };
-		DC9AB7F414F6C37200B3B0F3 /* encounter@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7E414F6C37200B3B0F3 /* encounter@2x~iphone.png */; };
+		DC9AB7F114F6C37200B3B0F3 /* dailyrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7E114F6C37200B3B0F3 /* dailyrow.png */; };
+		DC9AB7F214F6C37200B3B0F3 /* dailyrow@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7E214F6C37200B3B0F3 /* dailyrow@2x~iphone.png */; };
+		DC9AB7F314F6C37200B3B0F3 /* encounterrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7E314F6C37200B3B0F3 /* encounterrow.png */; };
+		DC9AB7F414F6C37200B3B0F3 /* encounterrow@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7E414F6C37200B3B0F3 /* encounterrow@2x~iphone.png */; };
 		DC9AB7F514F6C37200B3B0F3 /* melee.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7E514F6C37200B3B0F3 /* melee.png */; };
 		DC9AB7F614F6C37200B3B0F3 /* melee@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7E614F6C37200B3B0F3 /* melee@2x~iphone.png */; };
 		DC9AB7F714F6C37200B3B0F3 /* meleeranged.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7E714F6C37200B3B0F3 /* meleeranged.png */; };
@@ -141,6 +142,8 @@
 		DC97121714F9655E0039443C /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PageViewController.m; path = Storyboard/PageViewController.m; sourceTree = "<group>"; };
 		DC97121914F96B240039443C /* FileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileCell.h; path = Storyboard/FileCell.h; sourceTree = "<group>"; };
 		DC97121A14F96B240039443C /* FileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileCell.m; path = Storyboard/FileCell.m; sourceTree = "<group>"; };
+		DC97121C14F9748D0039443C /* CharViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CharViewController.h; path = Storyboard/CharViewController.h; sourceTree = "<group>"; };
+		DC97121D14F9748D0039443C /* CharViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CharViewController.m; path = Storyboard/CharViewController.m; sourceTree = "<group>"; };
 		DC9AB7AC14F6701F00B3B0F3 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		DC9AB7AE14F6722900B3B0F3 /* dropbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropbox.png; sourceTree = "<group>"; };
 		DC9AB7AF14F6722900B3B0F3 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
@@ -153,10 +156,10 @@
 		DC9AB7DE14F6C37200B3B0F3 /* atwillrow@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "atwillrow@2x~iphone.png"; sourceTree = "<group>"; };
 		DC9AB7DF14F6C37200B3B0F3 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		DC9AB7E014F6C37200B3B0F3 /* close@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x~iphone.png"; sourceTree = "<group>"; };
-		DC9AB7E114F6C37200B3B0F3 /* daily.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daily.png; sourceTree = "<group>"; };
-		DC9AB7E214F6C37200B3B0F3 /* daily@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "daily@2x~iphone.png"; sourceTree = "<group>"; };
-		DC9AB7E314F6C37200B3B0F3 /* encounter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = encounter.png; sourceTree = "<group>"; };
-		DC9AB7E414F6C37200B3B0F3 /* encounter@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "encounter@2x~iphone.png"; sourceTree = "<group>"; };
+		DC9AB7E114F6C37200B3B0F3 /* dailyrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dailyrow.png; sourceTree = "<group>"; };
+		DC9AB7E214F6C37200B3B0F3 /* dailyrow@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dailyrow@2x~iphone.png"; sourceTree = "<group>"; };
+		DC9AB7E314F6C37200B3B0F3 /* encounterrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = encounterrow.png; sourceTree = "<group>"; };
+		DC9AB7E414F6C37200B3B0F3 /* encounterrow@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "encounterrow@2x~iphone.png"; sourceTree = "<group>"; };
 		DC9AB7E514F6C37200B3B0F3 /* melee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melee.png; sourceTree = "<group>"; };
 		DC9AB7E614F6C37200B3B0F3 /* melee@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "melee@2x~iphone.png"; sourceTree = "<group>"; };
 		DC9AB7E714F6C37200B3B0F3 /* meleeranged.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meleeranged.png; sourceTree = "<group>"; };
@@ -341,6 +344,8 @@
 				DC97121414F9654B0039443C /* FileViewController.m */,
 				DC97121614F9655E0039443C /* PageViewController.h */,
 				DC97121714F9655E0039443C /* PageViewController.m */,
+				DC97121C14F9748D0039443C /* CharViewController.h */,
+				DC97121D14F9748D0039443C /* CharViewController.m */,
 			);
 			name = "Storyboard ViewControllers";
 			sourceTree = "<group>";
@@ -399,10 +404,10 @@
 				DC9AB7DE14F6C37200B3B0F3 /* atwillrow@2x~iphone.png */,
 				DC9AB7DF14F6C37200B3B0F3 /* close.png */,
 				DC9AB7E014F6C37200B3B0F3 /* close@2x~iphone.png */,
-				DC9AB7E114F6C37200B3B0F3 /* daily.png */,
-				DC9AB7E214F6C37200B3B0F3 /* daily@2x~iphone.png */,
-				DC9AB7E314F6C37200B3B0F3 /* encounter.png */,
-				DC9AB7E414F6C37200B3B0F3 /* encounter@2x~iphone.png */,
+				DC9AB7E114F6C37200B3B0F3 /* dailyrow.png */,
+				DC9AB7E214F6C37200B3B0F3 /* dailyrow@2x~iphone.png */,
+				DC9AB7E314F6C37200B3B0F3 /* encounterrow.png */,
+				DC9AB7E414F6C37200B3B0F3 /* encounterrow@2x~iphone.png */,
 				DC9AB7E514F6C37200B3B0F3 /* melee.png */,
 				DC9AB7E614F6C37200B3B0F3 /* melee@2x~iphone.png */,
 				DC9AB7E714F6C37200B3B0F3 /* meleeranged.png */,
@@ -532,10 +537,10 @@
 				DC9AB7EE14F6C37200B3B0F3 /* atwillrow@2x~iphone.png in Resources */,
 				DC9AB7EF14F6C37200B3B0F3 /* close.png in Resources */,
 				DC9AB7F014F6C37200B3B0F3 /* close@2x~iphone.png in Resources */,
-				DC9AB7F114F6C37200B3B0F3 /* daily.png in Resources */,
-				DC9AB7F214F6C37200B3B0F3 /* daily@2x~iphone.png in Resources */,
-				DC9AB7F314F6C37200B3B0F3 /* encounter.png in Resources */,
-				DC9AB7F414F6C37200B3B0F3 /* encounter@2x~iphone.png in Resources */,
+				DC9AB7F114F6C37200B3B0F3 /* dailyrow.png in Resources */,
+				DC9AB7F214F6C37200B3B0F3 /* dailyrow@2x~iphone.png in Resources */,
+				DC9AB7F314F6C37200B3B0F3 /* encounterrow.png in Resources */,
+				DC9AB7F414F6C37200B3B0F3 /* encounterrow@2x~iphone.png in Resources */,
 				DC9AB7F514F6C37200B3B0F3 /* melee.png in Resources */,
 				DC9AB7F614F6C37200B3B0F3 /* melee@2x~iphone.png in Resources */,
 				DC9AB7F714F6C37200B3B0F3 /* meleeranged.png in Resources */,
@@ -596,6 +601,7 @@
 				DC97121514F9654B0039443C /* FileViewController.m in Sources */,
 				DC97121814F9655E0039443C /* PageViewController.m in Sources */,
 				DC97121B14F96B240039443C /* FileCell.m in Sources */,
+				DC97121E14F9748D0039443C /* CharViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

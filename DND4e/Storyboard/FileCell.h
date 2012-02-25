@@ -11,5 +11,6 @@
 @interface FileCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *fileTitle;
+@property (strong, nonatomic) IBOutlet UIImageView *arrow;
 
 @end
