@@ -164,7 +164,7 @@
     __block NSString * rowItem = @"%@: <a href=\"item://%@\">%@</a> %@<br>";
     
 #define ABILITY_HTML(key) if ([self.name isEqualToString:key]) {\
-[html appendFormat:@"Base Score: %@<br>",[self.character.scores.base objectForKey:NSFORMAT(@"%@",key)]]; \
+[html appendFormat:@"Base Ability Score: %@<br>",[self.character.scores.base objectForKey:NSFORMAT(@"%@",key)]]; \
 }
 
     ABILITY_HTML(keyStrength)
