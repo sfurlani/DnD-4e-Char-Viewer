@@ -6,15 +6,19 @@
 //  Copyright (c) 2012 Accella, LLC. All rights reserved.
 //
 
-#import "PageViewController.h"
+#import <UIKit/UIKit.h>
 #import "DNDHTML.h"
 
-@interface DetailViewController : PageViewController <UIWebViewDelegate>
+@interface DetailViewController : UIViewController <UIWebViewDelegate>
 
 @property (strong, nonatomic) id<DNDHTML> item;
-
+@property (strong, nonatomic) IBOutlet UIButton *back;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UIImageView * bg;
 @property (strong, nonatomic) IBOutlet UIWebView *webDetail;
 
 - (IBAction) back:(id)sender;
+
+- (void) pushNewItem:(id<DNDHTML>)item;
 
 @end

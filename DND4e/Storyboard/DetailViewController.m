@@ -8,10 +8,13 @@
 
 #import "DetailViewController.h"
 #import "UIWebView_Misc.h"
+#import "Utility.h"
+#import "Data.h"
 
 @implementation DetailViewController
 
 @synthesize item = _item;
+@synthesize webDetail, back, titleLabel,bg;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,6 +47,9 @@
 {
     [super viewDidLoad];
     [self.webDetail setShadowHidden:YES];
+    self.bg.image = [UIImage imageNamed:@"bg"];
+    [self.back setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    self.modalTransitionStyle = UIModalTransitionStylePartialCurl;
 }
 
 - (void)viewDidUnload
@@ -56,14 +62,15 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSString *html = NSFORMAT(@"%@",[self.item html]);
-    [self.webDetail loadHTMLString: baseURL:[AppData applicationDocumentsDirectory]];
+    NSString *html = NSFORMAT(@"<html><body style=\"font-family:Copperplate;background-color:transparent\"><br><br><br><br><br><br>%@</body></html>",[self.item html]);
+    [self.webDetail loadHTMLString:html baseURL:[AppData applicationDocumentsDirectory]];
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     [self.webDetail.scrollView flashScrollIndicators];
+    self.titleLabel.text = [self.item name];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -75,7 +82,7 @@
 - (void) back:(id)sender
 {
     if ([[self.navigationController viewControllers] count] == 1) {
-        [self dismissModalViewController:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
     } else {
         [self.navigationController popViewControllerAnimated:YES];
     }
@@ -85,8 +92,7 @@
 
 - (void) chooseNewWeapon:(UILongPressGestureRecognizer*)hold
 {
-    if (![self.thing isKindOfClass:[Power class]]) return;
-    Power *power = (Power*)_thing;
+    Power *power = (Power*)_item;
     // if not at begining, then the popup gets called a bunch of times
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Choose New Weapon"
                                                        delegate:self
@@ -101,14 +107,12 @@
 
 - (void) weaponDetail
 {
-    if (![self.thing isKindOfClass:[Power class]]) return;
-    Power *power = (Power*)_thing;
+    Power *power = (Power*)_item;
     NSString *internalID = [[power.selected_weapon.has_elements lastObject] internal_id]; // Trying magic item
     NSLog(@"Internal-ID: %@", internalID);
     Loot *loot = [power.character lootForInternalID:internalID];
     if (loot) {
-        ContentViewController *pcvc = [[ContentViewController alloc] initWithThing:loot];
-        [self.navigationController pushViewController:pcvc animated:YES];
+        [self pushNewItem:loot];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
                                                         message:@"This isn't the item you're looking for."
@@ -122,40 +126,38 @@
 
 - (void) openAbility:(NSString*)abil
 {
-    if (![self.thing isKindOfClass:[AbilityScores class]]) return;
-    AbilityScores *ability = (AbilityScores*)_thing;
+    AbilityScores *ability = (AbilityScores*)_item;
     
     Stat *score = [ability.character.stats objectForKey:abil];
-    ContentViewController *vc = [[ContentViewController alloc] initWithThing:score];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self pushNewItem:score];
 }
 
 - (void) openStatDetail:(NSString*)stat
 {
-    Stat *score = [[(id)_thing character].stats objectForKey:stat];
-    ContentViewController *vc = [[ContentViewController alloc] initWithThing:score];
-    [self.navigationController pushViewController:vc animated:YES];
-    
+    Stat *score = [[(id)_item character].stats objectForKey:stat];
+    [self pushNewItem:score];
 }
 
 - (void) openElementDetail:(NSString*)elem
 {
     NSNumber *num = NSINT([elem intValue]);
-    RulesElement *element = [[(id)_thing character] elementForCharelem:num];
-    ContentViewController *vc = [[ContentViewController alloc] initWithThing:element];
-    [self.navigationController pushViewController:vc animated:YES];
+    RulesElement *element = [[(id)_item character] elementForCharelem:num];
+    [self pushNewItem:element];
 }
 
 - (void) openItemDetail:(NSString*)elem
 {
     NSNumber *num = NSINT([elem intValue]);
-    Loot *loot = [[(id)_thing character] lootForCharelem:num];
-    ContentViewController *vc = [[ContentViewController alloc] initWithThing:loot];
-    [self.navigationController pushViewController:vc animated:YES];
+    Loot *loot = [[(id)_item character] lootForCharelem:num];
+    [self pushNewItem:loot];
 }
 
 - (void) pushNewItem:(id<DNDHTML>)item
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard~iphone" bundle:nil];
+    DetailViewController *dvc = [storyboard instantiateViewControllerWithIdentifier:@"detailVC"];
+    dvc.item = item;
+    [self.navigationController pushViewController:dvc animated:YES];
 }
 
 

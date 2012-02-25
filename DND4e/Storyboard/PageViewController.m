@@ -7,7 +7,7 @@
 //
 
 #import "PageViewController.h"
-
+#import "DetailViewController.h"
 #import "Data.h"
 
 @implementation PageViewController
@@ -83,6 +83,15 @@
     
 }
 
+- (void) showDetail:(id<DNDHTML>)item
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard~iphone" bundle:nil];
+    DetailViewController *dvc = [storyboard instantiateViewControllerWithIdentifier:@"detailVC"];
+    dvc.item = item;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:dvc];
+    nav.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
+}
 
 #pragma mark - IBActions
 

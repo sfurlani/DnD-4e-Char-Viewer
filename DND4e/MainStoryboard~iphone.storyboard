@@ -107,7 +107,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="527" y="26"/>
+            <point key="canvasLocation" x="477" y="26"/>
         </scene>
         <scene sceneID="T1D-Qe-kJ4">
             <objects>
@@ -618,7 +618,7 @@
         <scene sceneID="KxK-qt-eE2">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7q-jX-1Vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="contentDetail" id="Jms-vK-8lH" customClass="ContentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailVC" id="Jms-vK-8lH" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6wu-vk-7sc">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -650,17 +650,23 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="back:" destination="Jms-vK-8lH" eventType="touchUpInside" id="Mqo-Zf-N8L"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="c3V-i0-LXK"/>
                     <connections>
-                        <outlet property="cardView" destination="cW2-aR-OXY" id="jS5-kt-l9x"/>
+                        <outlet property="back" destination="2gf-NW-z5O" id="pqq-sE-92p"/>
+                        <outlet property="bg" destination="boX-2p-Wba" id="Orr-GK-xRN"/>
+                        <outlet property="titleLabel" destination="HD4-Aq-IET" id="lIo-P8-t4p"/>
+                        <outlet property="webDetail" destination="cW2-aR-OXY" id="KaP-Ti-cgZ"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1053" y="-588"/>
+            <point key="canvasLocation" x="2155" y="-586"/>
         </scene>
         <scene sceneID="V4M-Yx-5pY">
             <objects>
@@ -818,25 +824,6 @@
             </objects>
             <point key="canvasLocation" x="2073" y="621"/>
         </scene>
-        <scene sceneID="6sa-ql-U9h">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bKO-XK-6Uq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController navigationBarHidden="YES" id="tAo-I3-HgJ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qfC-CP-Aef">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Jms-vK-8lH" kind="relationship" relationship="rootViewController" id="wON-OB-307"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="527" y="-588"/>
-        </scene>
     </scenes>
     <resources>
         <image name="06-magnify.png" width="24" height="24"/>
@@ -850,10 +837,14 @@
         <class className="CharViewController" superclassName="PageViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CharViewController.h"/>
         </class>
-        <class className="ContentViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContentViewController.h"/>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="cardView" candidateClass="UIWebView"/>
+                <relationship kind="action" name="back:"/>
+                <relationship kind="outlet" name="back" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="bg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="webDetail" candidateClass="UIWebView"/>
             </relationships>
         </class>
         <class className="FileCell" superclassName="UITableViewCell">

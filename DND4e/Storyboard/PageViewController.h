@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class Character;
+@protocol DNDHTML;
 
 @interface PageViewController : UIViewController
 
@@ -21,5 +22,6 @@
 
 - (IBAction)back:(id)sender;
 - (IBAction)home:(id)sender;
+- (void) showDetail:(id<DNDHTML>)item;
 
 @end
