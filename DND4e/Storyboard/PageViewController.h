@@ -10,4 +10,12 @@
 
 @interface PageViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *back;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *bg;
+@property (strong, nonatomic) PageViewController *first;
+
+- (IBAction)back:(id)sender;
+- (IBAction)home:(id)sender;
+
 @end

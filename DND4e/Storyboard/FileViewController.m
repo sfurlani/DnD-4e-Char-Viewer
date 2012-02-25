@@ -46,6 +46,9 @@
     [super viewDidLoad];
     self.bg.image = [UIImage imageNamed:@"bg"];
     self.files = [AppData files];
+    
+    // !!!: This should never be over-written at any point.
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewDidUnload

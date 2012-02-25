@@ -10,6 +10,8 @@
 
 @implementation PageViewController
 
+@synthesize bg, titleLabel, back, first;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -36,13 +38,17 @@
 }
 */
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.bg.image = [UIImage imageNamed:@"bg"];
+    self.titleLabel.text = self.title;
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(home:)];
+    swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.titleLabel addGestureRecognizer:swipe];
+    
 }
-*/
 
 - (void)viewDidUnload
 {
@@ -55,6 +61,20 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void) back:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) home:(id)sender
+{
+    if (!(self.first != nil) || [self isEqual:self.first]) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    } else {
+        [self.navigationController popToViewController:self.first animated:YES];
+    }
 }
 
 @end
