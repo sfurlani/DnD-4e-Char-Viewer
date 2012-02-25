@@ -15,4 +15,6 @@
 
 @property (strong, nonatomic) IBOutlet UIWebView *webDetail;
 
+- (IBAction) back:(id)sender;
+
 @end
