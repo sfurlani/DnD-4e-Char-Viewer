@@ -9,6 +9,7 @@
 #import "PowerListViewController.h"
 #import "PowerCell.h"
 #import "Data.h"
+#import "Utility.h"
 
 @implementation PowerListViewController
 
@@ -63,7 +64,18 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-#pragma mark - UITAbleView Delegate & Datasource
+#pragma mark - IBActions
+
+- (void) sort:(id)sender
+{
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Sort the Power List By:"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                         destructiveButtonTitle:nil
+                                              otherButtonTitles:@"Name",@"Usage",@"Action",@"Attack"];
+    [sheet showFromRect:sender.frame inView:self.view animated:YES]; // for iPad
+}
+
 
 #pragma mark - UITableView Delegate & Datasource
 
@@ -92,5 +104,28 @@ static NSString * const kCellIdentifier = @"powerCell";
     return cell;
 }
 
+#pragma mark - UIActionSheet Delegate
+// Called when a button is clicked. The view will be automatically dismissed after this call returns
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
+{
+    NSString *key = nil;
+    if (buttonIndex == actionSheet.cancelButtonIndex) {
+        return;
+    } else if (buttonIndex == actionSheet.firstOtherButtonIndex) { // name
+        key = @"name";
+    } else if (buttonIndex == actionSheet.firstOtherButtonIndex+1) { //
+        key = @"usage";
+    } else if (buttonIndex == actionSheet.firstOtherButtonIndex+2) {
+        key = @"attackType";
+    } else if (buttonIndex == actionSheet.firstOtherButtonIndex+3) {
+        key = @"actionType";
+    }
+    if (!key) return;
+    [self.powers sortUsingComparator:(NSComparisonResult ^(id obj1, id obj2)) {
+        return [[obj1 valueForKey:key] compare:[obj2 valueForKey:key]];
+    }];
+    
+    
+}
 
 @end

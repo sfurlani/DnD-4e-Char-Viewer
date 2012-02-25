@@ -55,6 +55,8 @@
         self.attack.image = [UIImage imageNamed:@"close"];
     } else if ([power.attackType rangeOfString:@"Area"].length > 0) {
         self.attack.image = [UIImage imageNamed:@"area"];
+    } else {
+        self.attack.image = nil;
     }
     
     self.arrow.image = [UIImage imageNamed:@"arrow"];
