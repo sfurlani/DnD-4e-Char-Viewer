@@ -37,6 +37,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.webHelp setShadowHidden:YES];
+    [self.webHelp setAllBackgroundColors:[UIColor clearColor]];
 }
 
 - (void)viewDidUnload
@@ -67,6 +68,12 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
     
+}
+
+- (void) sfg:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"http://strongfortress.com"];
+     [[UIApplication sharedApplication] openURL:url];
 }
 
 #pragma mark - UIWEbViewDelegate

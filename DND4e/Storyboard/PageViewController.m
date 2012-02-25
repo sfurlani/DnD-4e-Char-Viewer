@@ -63,6 +63,17 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[PageViewController class]]) {
+        [segue.destinationViewController setFirst:self.first];
+    }
+    
+}
+
+
+#pragma mark - IBActions
+
 - (void) back:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];

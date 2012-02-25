@@ -37,7 +37,7 @@ SYNTHESIZE_SINGLETON_ARC(Data)
             [filePaths enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                 NSString *old = obj;
                 NSString *name = [old lastPathComponent];
-                NSString *new = [[[AppData applicationDocumentsDirectory] path] stringByAppendingPathComponent:name];
+                NSString *new = [[[self applicationDocumentsDirectory] path] stringByAppendingPathComponent:name];
                 NSError *error = nil;
                 [[NSFileManager defaultManager] copyItemAtPath:old
                                                         toPath:new 
@@ -55,7 +55,7 @@ SYNTHESIZE_SINGLETON_ARC(Data)
 
 - (void) resetDocs
 {
-    NSArray *docs = [[NSFileManager defaultManager] contentsOfDirectoryAtPath: [[AppData applicationDocumentsDirectory] path] error:nil];
+    NSArray *docs = [[NSFileManager defaultManager] contentsOfDirectoryAtPath: [[self applicationDocumentsDirectory] path] error:nil];
     NSMutableArray *dnd4eDocs = [NSMutableArray array];
     [docs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *path = obj;

@@ -15,5 +15,6 @@
 @property (strong, nonatomic) IBOutlet UIWebView *webHelp;
 
 - (IBAction) back:(id)sender;
+- (IBAction) sfg:(id)sender;
 
 @end

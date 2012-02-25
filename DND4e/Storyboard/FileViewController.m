@@ -7,6 +7,7 @@
 //
 
 #import "FileViewController.h"
+#import "PageViewController.h"
 #import "FileCell.h"
 
 @implementation FileViewController
@@ -74,6 +75,15 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"openFile"]) {
+        [segue.destinationViewController setFirst:segue.destinationViewController];
+        
+    }
 }
 
 #pragma mark - DataFile Delegate

@@ -38,10 +38,18 @@
         if ([[path pathExtension] isEqualToString:@"dnd4e"]) [dnd4eDocs addObject:path];
     }];
     
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.main = [[MainViewController alloc] initWithData:dnd4eDocs];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.main];
+    if (iPad) {
+        self.main = [[MainViewController alloc] initWithData:dnd4eDocs];
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.main];
+    } else {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard~iphone" bundle:nil];
+        self.navigationController = [storyboard instantiateInitialViewController];
+        self.main = [[self.navigationController viewControllers] lastObject];
+    }
+    
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
