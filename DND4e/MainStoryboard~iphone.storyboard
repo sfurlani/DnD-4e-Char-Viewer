@@ -656,6 +656,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Jms-vK-8lH" id="RSl-Wa-45E"/>
+                                </connections>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2gf-NW-z5O">
                                 <rect key="frame" x="0.0" y="423" width="47" height="37"/>
@@ -676,6 +679,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="c3V-i0-LXK"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="back" destination="2gf-NW-z5O" id="pqq-sE-92p"/>
                         <outlet property="bg" destination="boX-2p-Wba" id="Orr-GK-xRN"/>
@@ -684,7 +688,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2155" y="-586"/>
+            <point key="canvasLocation" x="2073" y="26"/>
         </scene>
         <scene sceneID="V4M-Yx-5pY">
             <objects>
@@ -927,7 +931,7 @@
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>

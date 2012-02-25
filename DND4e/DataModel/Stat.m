@@ -163,17 +163,19 @@
     __block NSString * rowGO = @"%@: <a href=\"element://%@\">%@</a> %@<br>";
     __block NSString * rowItem = @"%@: <a href=\"item://%@\">%@</a> %@<br>";
     
-#define ABILITY_HTML(key) else if ([self.name isEqualToString:key]) {\
-[html appendString:[[self.character.stats objectForKey:NSFORMAT(@"%@ modifier",self.name)] html]]; \
+#define ABILITY_HTML(key) if ([self.name isEqualToString:key]) {\
+[html appendFormat:@"Base Score: %@<br>",[self.character.scores.base objectForKey:NSFORMAT(@"%@",key)]]; \
 }
+
+    ABILITY_HTML(keyStrength)
+    ABILITY_HTML(keyConstitution)
+    ABILITY_HTML(keyDexterity)
+    ABILITY_HTML(keyIntelligence)
+    ABILITY_HTML(keyWisdom)
+    ABILITY_HTML(keyCharisma)
+
     
     if ([self.name isEqualToString:@"HALF-LEVEL"]) [html appendFormat:row, @"Half-Level", PFORMAT(self._value)];
-//    ABILITY_HTML(keyStrength)
-//    ABILITY_HTML(keyConstitution)
-//    ABILITY_HTML(keyDexterity)
-//    ABILITY_HTML(keyIntelligence)
-//    ABILITY_HTML(keyWisdom)
-//    ABILITY_HTML(keyCharisma)
     else if ([self.type isEqualToString:@"trained"]) [html appendFormat:row,@"Trained",PFORMAT(self._value)];
     else if ([self.type isEqualToString:@"Ability"]) [html appendFormat:row,self.name,PFORMAT(self._value)];
     else if ([self.statadd count] > 0) {

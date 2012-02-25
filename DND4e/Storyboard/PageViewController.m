@@ -90,6 +90,7 @@
     dvc.item = item;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:dvc];
     nav.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    nav.navigationBarHidden = YES;
     [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
