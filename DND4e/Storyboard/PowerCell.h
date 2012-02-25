@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class Power;
+
 @interface PowerCell : UITableViewCell
+
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *usage;
+@property (strong, nonatomic) IBOutlet UIImageView *attack;
+@property (strong, nonatomic) IBOutlet UIImageView *arrow;
+
+- (void) setPower:(Power*)power;
 
 @end
