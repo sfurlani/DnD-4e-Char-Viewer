@@ -10,7 +10,7 @@
 
 @implementation SkillCells
 
-@synthesize skillTitle, skillValue;
+@synthesize skillTitle, skillValue, arrow;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

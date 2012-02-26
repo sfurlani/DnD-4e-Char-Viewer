@@ -99,7 +99,7 @@
     if ([item isKindOfClass:[Skill class]]) {
         Skill *skill = item;
         NSString * kCellIdentifier = @"skillCell";
-        if (row%2==0) kCellIdentifier = @"skillCellGrey";
+        if (row%2==0) kCellIdentifier = @"skillCellGray";
         SkillCells *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
         NSAssert(cell!=nil, @"Could not find cell with identifier \"%@\"",kCellIdentifier);
         cell.skillTitle.text = skill.name;

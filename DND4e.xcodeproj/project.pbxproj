@@ -52,6 +52,13 @@
 		DC97123314F9BBE50039443C /* PageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97123214F9BBE40039443C /* PageDetailViewController.m */; };
 		DC97123614F9C1650039443C /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97123514F9C1640039443C /* ListViewController.m */; };
 		DC97123914F9D4BD0039443C /* SkillCells.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97123814F9D4BC0039443C /* SkillCells.m */; };
+		DC97123B14F9D9B30039443C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97123A14F9D9B20039443C /* Default.png */; };
+		DC97123D14F9D9B80039443C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97123C14F9D9B60039443C /* Default@2x.png */; };
+		DC97123F14F9DB9E0039443C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97123E14F9DB9D0039443C /* Icon@2x.png */; };
+		DC97124114F9DBA50039443C /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97124014F9DBA40039443C /* Icon-72.png */; };
+		DC97124514F9DBD40039443C /* Doc~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97124214F9DBD00039443C /* Doc~ipad.png */; };
+		DC97124614F9DBD40039443C /* Doc.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97124314F9DBD20039443C /* Doc.png */; };
+		DC97124714F9DBD40039443C /* Doc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97124414F9DBD30039443C /* Doc@2x.png */; };
 		DC9AB7AD14F6702000B3B0F3 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AC14F6701F00B3B0F3 /* help.html */; };
 		DC9AB7B014F6722A00B3B0F3 /* dropbox.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AE14F6722900B3B0F3 /* dropbox.png */; };
 		DC9AB7B114F6722A00B3B0F3 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AF14F6722900B3B0F3 /* mail.png */; };
@@ -168,6 +175,13 @@
 		DC97123514F9C1640039443C /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		DC97123714F9D4BC0039443C /* SkillCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SkillCells.h; path = Storyboard/SkillCells.h; sourceTree = "<group>"; };
 		DC97123814F9D4BC0039443C /* SkillCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SkillCells.m; path = Storyboard/SkillCells.m; sourceTree = "<group>"; };
+		DC97123A14F9D9B20039443C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		DC97123C14F9D9B60039443C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		DC97123E14F9DB9D0039443C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		DC97124014F9DBA40039443C /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
+		DC97124214F9DBD00039443C /* Doc~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Doc~ipad.png"; path = "../Doc~ipad.png"; sourceTree = "<group>"; };
+		DC97124314F9DBD20039443C /* Doc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Doc.png; path = ../Doc.png; sourceTree = "<group>"; };
+		DC97124414F9DBD30039443C /* Doc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Doc@2x.png"; path = "../Doc@2x.png"; sourceTree = "<group>"; };
 		DC9AB7AC14F6701F00B3B0F3 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		DC9AB7AE14F6722900B3B0F3 /* dropbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropbox.png; sourceTree = "<group>"; };
 		DC9AB7AF14F6722900B3B0F3 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
@@ -304,6 +318,13 @@
 		DC693BF714EED86B00E68BF8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC97124214F9DBD00039443C /* Doc~ipad.png */,
+				DC97124314F9DBD20039443C /* Doc.png */,
+				DC97124414F9DBD30039443C /* Doc@2x.png */,
+				DC97124014F9DBA40039443C /* Icon-72.png */,
+				DC97123E14F9DB9D0039443C /* Icon@2x.png */,
+				DC97123C14F9D9B60039443C /* Default@2x.png */,
+				DC97123A14F9D9B20039443C /* Default.png */,
 				DCDCC1E514F327B6004BE096 /* dnd_4e_icons_v3.ttf */,
 				DCDCC1DB14F2F68E004BE096 /* Icon.png */,
 				DCA8021A14F0A2B700620379 /* Window_ipad.xib */,
@@ -606,6 +627,13 @@
 				DC97120C14F9585A0039443C /* back@2x~iphone.png in Resources */,
 				DC97120E14F961090039443C /* 06-magnify.png in Resources */,
 				DC97121014F961180039443C /* 06-magnify@2x~iphone.png in Resources */,
+				DC97123B14F9D9B30039443C /* Default.png in Resources */,
+				DC97123D14F9D9B80039443C /* Default@2x.png in Resources */,
+				DC97123F14F9DB9E0039443C /* Icon@2x.png in Resources */,
+				DC97124114F9DBA50039443C /* Icon-72.png in Resources */,
+				DC97124514F9DBD40039443C /* Doc~ipad.png in Resources */,
+				DC97124614F9DBD40039443C /* Doc.png in Resources */,
+				DC97124714F9DBD40039443C /* Doc@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
