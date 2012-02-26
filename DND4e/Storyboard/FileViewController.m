@@ -11,6 +11,7 @@
 #import "CharViewController.h"
 #import "MBProgressHUD.h"
 #import "FileCell.h"
+#import "Utility.h"
 
 @implementation FileViewController
 
@@ -95,7 +96,7 @@
 
 - (void) newData:(NSArray *)files
 {
-    self.files = files;
+    self.files = [files mutableCopy];
     [self.fileTable reloadData];
 }
 
@@ -128,5 +129,38 @@
     cell.fileTitle.text = [AppData nameFromPath:path];
     return cell;
 }
+
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        
+        NSString *path = [self.files objectAtIndex:[indexPath row]];
+        
+        BOOL success = [AppData deleteFile:path];
+        
+        if (!success) {
+            [tableView setEditing:NO animated:YES];
+        } else if (success) {
+            [tableView beginUpdates];
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.files removeObject:path];
+            [tableView endUpdates];
+        }
+        
+    }   
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+
 
 @end

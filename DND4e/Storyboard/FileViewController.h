@@ -16,6 +16,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *info;
 @property (strong, nonatomic) IBOutlet UITableView *fileTable;
 
-@property (strong, nonatomic) NSArray *files;
+@property (strong, nonatomic) NSMutableArray *files;
 
 @end

@@ -125,6 +125,25 @@ SYNTHESIZE_SINGLETON_ARC(Data)
     return character;
 }
 
+- (BOOL) deleteFileAtPath:(NSString*)path
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error = nil;
+    BOOL fileExists = [fileManager fileExistsAtPath:path];
+    //NSLog(@"Path to file: %@", path);        
+    //NSLog(@"File exists: %d", fileExists);
+    //NSLog(@"Is deletable file at path: %d", [fileManager isDeletableFileAtPath:path]);
+    BOOL success = NO;
+    if (fileExists) 
+    {
+        success = [fileManager removeItemAtPath:path error:&error];
+        
+    }
+    
+    return success && !error;
+}
+
+
 #pragma mark - Application's Documents directory
 
 /**

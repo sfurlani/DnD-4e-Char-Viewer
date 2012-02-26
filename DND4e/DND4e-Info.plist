@@ -14,7 +14,11 @@
 				<string>dnd4e</string>
 			</array>
 			<key>CFBundleTypeIconFiles</key>
-			<array/>
+			<array>
+				<string>Doc</string>
+				<string>Doc~ipad</string>
+				<string>Doc@2x</string>
+			</array>
 			<key>CFBundleTypeName</key>
 			<string>D&amp;D 4e Character File</string>
 			<key>CFBundleTypeRole</key>
@@ -46,7 +50,7 @@
 				<string>Icon-72.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
@@ -98,6 +102,10 @@
 			<string>D&amp;D 4e Character File</string>
 			<key>UTTypeIdentifier</key>
 			<string>com.strongfortress.dnd4eviewer.dnd4e</string>
+			<key>UTTypeSize320IconFile</key>
+			<string>Doc@2x</string>
+			<key>UTTypeSize64IconFile</key>
+			<string>Doc</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
