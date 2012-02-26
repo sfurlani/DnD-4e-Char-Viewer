@@ -146,9 +146,9 @@ NSString *const keyPowerSort = @"keyPowerSort";
     } else if (buttonIndex == actionSheet.firstOtherButtonIndex+1) { //
         key = @"usage";
     } else if (buttonIndex == actionSheet.firstOtherButtonIndex+2) {
-        key = @"attackType";
-    } else if (buttonIndex == actionSheet.firstOtherButtonIndex+3) {
         key = @"actionType";
+    } else if (buttonIndex == actionSheet.firstOtherButtonIndex+3) {
+        key = @"attackType";
     }
     if (!key) return;
     

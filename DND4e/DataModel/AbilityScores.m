@@ -165,6 +165,91 @@ NSString * const keyCharisma = @"Charisma";
     return html;
 }
 
+- (NSString*)combatHTML
+{
+    NSMutableString *html = [NSMutableString string];
+    
+    [html appendString:@"<table border=\"0\" width=\"100%\" style=\"margin: 0px;\" CELLPADDING=5 CELLSPACING=0>"];
+    [html appendString:@"<tr valign=\"middle\">"
+     "<th align=\"left\">Stat</th>"
+     "<th align=\"center\">Value</th>"
+     "</tr>"];
+    
+    __block NSString * tableRow = @"<tr valign=\"middle\">"
+    "<td align=\"left\"><a href=\"stat://%@\">%@:</a></td>"
+    "<td align=\"center\">%@</td>"
+    "</tr>";
+    
+    __block NSString * tableRowGrey = @"<tr valign=\"middle\" style=\"background-color:rgba(44,44,44,.12)\">"
+    "<td align=\"left\"><a href=\"stat://%@\">%@:</a></td>"
+    "<td align=\"center\">%@</td>"
+    "</tr>";
+    
+    __block int count = 0;
+    
+    void (^printOut)(NSString*, NSString*) = ^(NSString* stat, NSString* name){
+        count++;
+        NSString * row = (count%2 == 0) ? tableRow : tableRowGrey;
+        
+        [html appendFormat:row,stat,name,[[self.character.stats objectForKey:stat] _value]];
+        
+    };
+    
+    printOut(@"AC",@"AC");
+    printOut(@"Fortitude Defense",@"Fortitude");
+    printOut(@"Reflex Defense",@"Reflex");
+    printOut(@"Will Defense",@"Will");
+    [html appendString:@"<tr/>"]; count = 0;
+    printOut(@"Hit Points",@"Hit Points");
+    printOut(@"Healing Surges",@"Surges");
+    [html appendString:@"<tr/>"]; count = 0;
+    printOut(@"Speed",@"Speed");
+    printOut(@"Initiative",@"Initiative");
+    [html appendString:@"<tr/>"]; count = 0;
+    printOut(@"Passive Perception", @"Pass. Perception");
+    printOut(@"Passive Insight", @"Pass. Insight");
+    
+//    ABILITY_HTML(@"AC");
+//    ABILITY_HTML(@"Fortitude Defense");
+//    ABILITY_HTML(@"Reflex Defense");
+//    ABILITY_HTML(@"Will Defense");
+//    ABILITY_HTML(@"Hit Points");
+//    ABILITY_HTML(@"Healing Surges");
+//    ABILITY_HTML(@"Initiative");
+//    ABILITY_HTML(@"Speed");
+//    ABILITY_HTML(@"Passive Perception");
+//    ABILITY_HTML(@"Passive Insight");
+    
+    [html appendString:@"</table>"];
+    
+//    [html appendString:@"<hr width=\"200\">"];
+    
+//    NSString *row = @"<b><a href=\"stat://%@\">%@:</a></b><t> %@<br>";
+    /*
+     AC
+     Fortitude Defense
+     Will Defense
+     Reflex Defense
+     Level
+     Hit Points
+     Healing Surges
+     Initiative
+     XP Needed
+     Passive Perception
+     Passive Insight
+     Speed
+     Saving Throws
+     
+     */
+    
+#define ABILITY_HTML(stat) [html appendFormat:row,stat,stat,[[self.character.stats objectForKey:stat] _value]]
+    
+    
+    
+    
+    return html;
+}
+
 - (NSString*) htmlAbil:(NSString*)key
 {
     NSMutableString *html = [NSMutableString string];

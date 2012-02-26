@@ -116,11 +116,13 @@
         return 0;
 }
 
-static NSString * const kCellIdentifier = @"fileCell";
+
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = [indexPath row];
-    FileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"fileCell"];
+    NSString * kCellIdentifier = @"fileCell";
+    if (row%2==0) kCellIdentifier = @"fileCellGray";
+    FileCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     NSAssert(cell!=nil, @"Could not find cell with identifier \"%@\"",kCellIdentifier);
     NSString *path = [self.files objectAtIndex:row];
     cell.fileTitle.text = [AppData nameFromPath:path];
