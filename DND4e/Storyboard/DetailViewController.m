@@ -62,7 +62,7 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSString *html = NSFORMAT(@"<html><body style=\"font-family:Copperplate;background-color:transparent\"><br><br><br>%@</body></html>",[self.item html]);
+    NSString *html = NSFORMAT(@"<html><body style=\"font-family:Copperplate;background-color:transparent;color:rgba(0,0,0,.8)\"><br><br><br>%@</body></html>",[self.item html]);
     [self.webDetail loadHTMLString:html baseURL:[AppData applicationDocumentsDirectory]];
     self.titleLabel.text = [self.item name];
 }

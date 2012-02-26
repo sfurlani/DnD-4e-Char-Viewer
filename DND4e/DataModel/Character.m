@@ -93,6 +93,9 @@
             [skill populateFromCharacter:self];
             [self.skills addObject:skill];
         }];
+        [self.skills sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
+        }];
         
         self.feats = [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
             return [[(RulesElement*)obj type] isEqualToString:@"Feat"];
@@ -102,17 +105,19 @@
         
         self.features = [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
 //            NSLog(@"Element Type: %@", [(RulesElement*)obj type]);
-            return ([[(RulesElement*)obj type] rangeOfString:@"Feature"].length > 0);
+            return ([[(RulesElement*)obj type] rangeOfString:@"Class"].length > 0);
         }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
             return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
         }];
+//        NSArray *class = [self elementsForKey:@"type" matchingValue:@"Class" exact:NO];
+//        [self.features addObjectsFromArray:class];
         
-        self.traits = [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+        self.traits = [[[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
             //            NSLog(@"Element Type: %@", [(RulesElement*)obj type]);
-            return ([[(RulesElement*)obj type] rangeOfString:@"Trait"].length > 0);
+            return ([[(RulesElement*)obj type] rangeOfString:@"Trait"].length > 0) || ([[(RulesElement*)obj type] rangeOfString:@"Race"].length > 0);
         }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
             return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
-        }];
+        }] mutableCopy];
         
     }
     return self;
@@ -122,11 +127,16 @@
 {
     NSMutableString *html = [NSMutableString string];
     
+    [html appendString:@"<dl>"];
+    __block int count = 1;
+    __block NSString *row = @"<dt><b>%@:</b> %@</dt>";
+    __block NSString *rowG = @"<dt style=\"background-color:rgba(44,44,44,.12)\"><b>%@:</b> %@</dt>";
+    #define rowColor ((count++)%2 == 0 ? row : rowG)
     [self.details enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-             
-        [html appendFormat:@"<p><b>%@: </b>%@</p>",key, obj];
+        [html appendFormat:rowColor,key, obj];
         
     }];
+    [html appendString:@"</dl>"];
     
     return html;
 }
@@ -187,6 +197,37 @@
         if (ret) *stop = YES;
     }];
     return ret;
+}
+
+- (NSArray*) elementsForKey:(NSString*)key matchingValue:(NSString*)value exact:(BOOL)exact
+{
+    
+    NSIndexSet * indexes = [self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+        RulesElement *element = obj;
+        
+        id val = [element valueForKey:key];
+        if (!val) {
+            NSUInteger index = [element.specifics indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+                if ([key caseInsensitiveCompare:[obj valueForKey:@"name"]] == NSOrderedSame) *stop = YES;
+                return *stop;
+            }];
+            if (index != NSNotFound) {
+                val = [[element.specifics objectAtIndex:index] valueForKey:kXMLReaderTextNodeKey];
+            }
+        }
+        
+        if (val) {
+            if (exact) {
+                return ([val isEqualToString:value]);
+            } else {
+                return ([val rangeOfString:value].length > 0);
+            }
+        }
+        
+        return NO;
+    }];
+    
+    return ([indexes count] > 0 ? [self.elements objectsAtIndexes:indexes] : nil);
 }
 
 @end

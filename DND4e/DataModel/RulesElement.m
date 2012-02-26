@@ -67,12 +67,14 @@
 {
     __block NSMutableString *html = [NSMutableString string];
     
-    [html appendFormat:@"<h3>%@</h3>",self.name];
     [html appendString:@"<dl>"];
+    __block int count = 0;
     __block NSString *row = @"<dt><b>%@:</b> %@</dt>";
+    __block NSString *rowG = @"<dt style=\"background-color:rgba(44,44,44,.12)\"><b>%@:</b> %@</dt>";
+#define rowColor ((count++)%2 == 0 ? row : rowG)
     [html appendFormat:row,@"Type",self.type];
     //[html appendFormat:row,@"Element",self.charelem];
-    if(![self.legal boolValue]) [html appendFormat:row,@"House Ruled",@"yes"];
+    if(![self.legal boolValue]) [html appendFormat:rowColor,@"House Ruled",@"yes"];
     if ([self.specifics count] > 0) {
         [self.specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSString *key = [obj valueForKey:@"name"];
@@ -92,12 +94,12 @@
                 }];
 
             } else if ([key isEqualToString:@"Flavor"]) {
-                [html appendFormat:@"<dt><b>%@:</b><i> %@</i></dt>",key,value];
+                [html appendFormat:@"<dt style=\"background-color:rgba(44,44,44,.12)\"><b>%@:</b><i> %@</i></dt>",key,value];
             }
         }];
     }
     if (self.desc)
-        [html appendFormat:row,@"Description",self.desc];
+        [html appendFormat:rowG,@"Description",self.desc];
     
     [html appendString:@"</dl>"];
     

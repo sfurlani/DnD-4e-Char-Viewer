@@ -25,7 +25,7 @@
 @property (strong, nonatomic) NSMutableArray * skills;
 @property (strong, nonatomic) NSArray * feats;
 @property (strong, nonatomic) NSArray * features;
-@property (strong, nonatomic) NSArray * traits;
+@property (strong, nonatomic) NSMutableArray * traits;
 
 - (NSArray*) feats;
 
@@ -34,5 +34,6 @@
 - (Loot*) lootForCharelem:(NSNumber*)charElem;
 - (RulesElement*) elementForInternalID:(NSString*)internalID;
 - (RulesElement*) elementForCharelem:(NSNumber*)charElem;
+- (NSArray*) elementsForKey:(NSString*)key matchingValue:(NSString*)value exact:(BOOL)exact;
 
 @end

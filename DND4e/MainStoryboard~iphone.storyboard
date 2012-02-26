@@ -274,7 +274,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d2F-E2-W3H">
-                                <rect key="frame" x="0.0" y="78" width="320" height="43"/>
+                                <rect key="frame" x="0.0" y="49" width="320" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="29"/>
@@ -292,7 +292,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WIl-rG-bxO">
-                                <rect key="frame" x="0.0" y="139" width="320" height="43"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="29"/>
                                 <inset key="titleEdgeInsets" minX="-86" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -305,11 +305,11 @@
                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fRb-FZ-IYa" kind="push" id="zVR-LO-5mP"/>
+                                    <segue destination="nF9-Xd-SvI" kind="push" identifier="showCombat" id="IbY-kg-r6T"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="w6P-fl-3BP">
-                                <rect key="frame" x="0.0" y="198" width="320" height="43"/>
+                                <rect key="frame" x="0.0" y="135" width="320" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="29"/>
@@ -322,9 +322,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Nod-eQ-M2o" kind="push" identifier="showClass" id="63M-fb-38y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mpx-tg-DjU">
-                                <rect key="frame" x="0.0" y="258" width="320" height="43"/>
+                                <rect key="frame" x="0.0" y="178" width="320" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="29"/>
                                 <inset key="titleEdgeInsets" minX="-86" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -336,9 +339,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Nod-eQ-M2o" kind="push" identifier="showRace" id="Xhx-6a-phV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LaF-0I-wXl">
-                                <rect key="frame" x="0.0" y="319" width="320" height="43"/>
+                                <rect key="frame" x="0.0" y="222" width="320" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="29"/>
@@ -352,22 +358,78 @@
                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HkX-Xr-JXv" kind="push" identifier="gotoPowers" id="tgn-8X-gjZ"/>
+                                    <segue destination="HkX-Xr-JXv" kind="push" identifier="showPowers" id="tgn-8X-gjZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hRp-CE-ghI">
-                                <rect key="frame" x="0.0" y="378" width="320" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="frc-Ha-9Ld">
+                                <rect key="frame" x="0.0" y="308" width="320" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="29"/>
                                 <inset key="titleEdgeInsets" minX="-86" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="243" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Inventory" image="arrow.png">
+                                <inset key="imageEdgeInsets" minX="245" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Skills" image="arrow.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Nod-eQ-M2o" kind="push" identifier="showSkills" id="wXW-db-MI1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fuv-hB-eW7">
+                                <rect key="frame" x="0.0" y="393" width="320" height="43"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="29"/>
+                                <inset key="titleEdgeInsets" minX="-86" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="245" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Details" image="arrow.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nF9-Xd-SvI" kind="push" identifier="showDetails" id="wd7-v7-pvD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="owr-dF-N3c">
+                                <rect key="frame" x="0.0" y="351" width="320" height="43"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="29"/>
+                                <inset key="titleEdgeInsets" minX="-86" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="243" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Loot" image="arrow.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Nod-eQ-M2o" kind="push" identifier="showItems" id="eg2-7f-5hk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hRp-CE-ghI">
+                                <rect key="frame" x="0.0" y="265" width="320" height="43"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="29"/>
+                                <inset key="titleEdgeInsets" minX="-86" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="243" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Feats" image="arrow.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Nod-eQ-M2o" kind="push" identifier="showFeats" id="ZDO-2p-Sg6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Character Name CHaracter Name Character Name" textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="10" id="EJC-OP-cUx">
                                 <rect key="frame" x="39" y="0.0" width="242" height="41"/>
@@ -683,7 +745,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1623" y="26"/>
+            <point key="canvasLocation" x="1623" y="-564"/>
         </scene>
         <scene sceneID="KxK-qt-eE2">
             <objects>
@@ -745,7 +807,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2073" y="26"/>
+            <point key="canvasLocation" x="1017" y="-564"/>
         </scene>
         <scene sceneID="V4M-Yx-5pY">
             <objects>
@@ -827,7 +889,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Power Name Power Name Power Name" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="PHD-QX-1ru">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Power Name Power Name Power Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="PHD-QX-1ru">
                                                     <rect key="frame" x="0.0" y="2" width="213" height="41"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
@@ -874,7 +936,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
                                                 </view>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Power Name Power Name Power Name" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="pb9-lq-tBd">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Power Name " lineBreakMode="tailTruncation" minimumFontSize="10" id="pb9-lq-tBd">
                                                     <rect key="frame" x="0.0" y="2" width="213" height="41"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
@@ -984,46 +1046,44 @@
                         <outlet property="back" destination="iXe-HJ-zPB" id="LW4-dU-4qg"/>
                         <outlet property="bg" destination="7DP-Ga-eqg" id="Jcv-lm-gXu"/>
                         <outlet property="titleLabel" destination="N8c-g8-7ca" id="ANC-s9-BGZ"/>
-                        <outlet property="webPower" destination="Dy6-s3-ARH" id="hPg-CA-0Yw"/>
+                        <outlet property="webDetail" destination="Dy6-s3-ARH" id="qW1-rD-Ccg"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2073" y="621"/>
         </scene>
-        <scene sceneID="Ot1-0h-xpz">
+        <scene sceneID="VdX-g6-acZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wwA-xj-CA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="fRb-FZ-IYa" customClass="ScoresViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tFg-hW-gcV">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QqG-jf-oOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Nod-eQ-M2o" customClass="ListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RKo-hk-xDQ">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg~iphone.png" id="YTM-M2-SKN">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg~iphone.png" id="5pn-uS-tAD">
                                 <rect key="frame" x="0.0" y="-20" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <view contentMode="scaleToFill" id="lK9-H1-rm2" userLabel="Line">
-                                <rect key="frame" x="0.0" y="48" width="320" height="1"/>
+                            <view contentMode="scaleToFill" id="8IR-Uy-NrM" userLabel="Line">
+                                <rect key="frame" x="0.0" y="63" width="320" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                             </view>
-                            <webView opaque="NO" contentMode="scaleToFill" id="X8P-Os-Pvk">
-                                <rect key="frame" x="0.0" y="49" width="320" height="411"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                                <connections>
-                                    <outlet property="delegate" destination="I3x-7B-QPz" id="SAQ-Z0-XLJ"/>
-                                </connections>
-                            </webView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Character Name" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Lcx-I9-nnf">
-                                <rect key="frame" x="37" y="0.0" width="246" height="45"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Character Name" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Pan-Um-LQZ">
+                                <rect key="frame" x="37" y="0.0" width="247" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TgO-Ie-J5v">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="NGh-EA-nQs">
+                                <rect key="frame" x="0.0" y="27" width="97" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="O0q-6w-Zsg">
                                 <rect key="frame" x="0.0" y="4" width="45" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -1035,21 +1095,242 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="back:" destination="fRb-FZ-IYa" eventType="touchUpInside" id="Lr0-UT-2dP"/>
+                                    <action selector="back:" destination="Nod-eQ-M2o" eventType="touchUpInside" id="5zN-2Q-4MN"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="adN-E6-IjI">
+                                <rect key="frame" x="0.0" y="64" width="320" height="396"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fileCell" id="C4X-w5-u2v" customClass="FileCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Element Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="qxK-hW-780">
+                                                    <rect key="frame" x="0.0" y="2" width="269" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="arrow.png" id="wL6-0H-vhw">
+                                                    <rect key="frame" x="285" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="arrow" destination="wL6-0H-vhw" id="CPd-O8-e0G"/>
+                                            <outlet property="fileTitle" destination="qxK-hW-780" id="Tow-sK-eTz"/>
+                                            <segue destination="nF9-Xd-SvI" kind="push" identifier="showDetail" id="PIE-Zb-PEg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fileCellGray" id="XPy-0G-rcg" customClass="FileCell">
+                                        <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="Gvt-zv-sIy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="vgc-V3-6fX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Element Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="aqN-dU-4mf">
+                                                    <rect key="frame" x="0.0" y="2" width="277" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="arrow.png" id="dGw-Kk-S6D">
+                                                    <rect key="frame" x="285" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="arrow" destination="dGw-Kk-S6D" id="b4J-b7-uFX"/>
+                                            <outlet property="backgroundView" destination="Gvt-zv-sIy" id="mSL-CQ-imD"/>
+                                            <outlet property="fileTitle" destination="aqN-dU-4mf" id="Exd-6F-saT"/>
+                                            <outlet property="selectedBackgroundView" destination="vgc-V3-6fX" id="Wrz-R9-osd"/>
+                                            <segue destination="nF9-Xd-SvI" kind="push" identifier="showDetail" id="HoX-LR-aLN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="skillCell" id="hYP-er-EIP" customClass="SkillCells">
+                                        <rect key="frame" x="0.0" y="110" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Skill Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="vHZ-jg-2eP">
+                                                    <rect key="frame" x="0.0" y="2" width="233" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+33" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="iXt-6r-Me6">
+                                                    <rect key="frame" x="233" y="2" width="54" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="arrow.png" id="aNb-DK-EhA">
+                                                    <rect key="frame" x="285" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="arrow" destination="aNb-DK-EhA" id="vIx-LH-eXh"/>
+                                            <outlet property="fileTitle" destination="vHZ-jg-2eP" id="pHC-iE-OQv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="skillCellGray" id="yr5-bq-NBY" customClass="SkillCells">
+                                        <rect key="frame" x="0.0" y="154" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="JCZ-bG-wtT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="hgS-Vw-roA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Skill Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="j5d-Y2-UaM">
+                                                            <rect key="frame" x="0.0" y="1" width="233" height="41"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                            <color key="highlightedColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+33" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="N9h-FW-nVO">
+                                                            <rect key="frame" x="233" y="1" width="54" height="41"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                            <color key="highlightedColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="arrow.png" id="bru-Am-aPQ">
+                                                    <rect key="frame" x="285" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="arrow" destination="bru-Am-aPQ" id="Spk-Xf-3CQ"/>
+                                            <outlet property="backgroundView" destination="JCZ-bG-wtT" id="Cji-WU-Fsg"/>
+                                            <outlet property="selectedBackgroundView" destination="hgS-Vw-roA" id="IUF-uV-LKJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nod-eQ-M2o" id="skx-lH-KaS"/>
+                                    <outlet property="delegate" destination="Nod-eQ-M2o" id="xgA-RR-2Qa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wVM-fH-o4n"/>
+                    <connections>
+                        <outlet property="back" destination="O0q-6w-Zsg" id="qk6-Ny-zvr"/>
+                        <outlet property="bg" destination="5pn-uS-tAD" id="pJB-Tx-dAQ"/>
+                        <outlet property="itemTable" destination="adN-E6-IjI" id="wWs-qU-8iq"/>
+                        <outlet property="titleLabel" destination="Pan-Um-LQZ" id="D4j-s0-Yfs"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1623" y="26"/>
+        </scene>
+        <scene sceneID="uSj-2k-AOO">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWE-si-1nF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Combat Stats" id="nF9-Xd-SvI" customClass="PageDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JTT-7Q-T0X">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg~iphone.png" id="osi-G4-eeU">
+                                <rect key="frame" x="0.0" y="-20" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="15S-Oc-YoL" userLabel="Line">
+                                <rect key="frame" x="0.0" y="48" width="320" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                            </view>
+                            <webView opaque="NO" contentMode="scaleToFill" id="cEm-8P-1hc">
+                                <rect key="frame" x="0.0" y="49" width="320" height="411"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nF9-Xd-SvI" id="nEh-yJ-xfA"/>
+                                </connections>
+                            </webView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Detail Name" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="2Vz-He-nwU">
+                                <rect key="frame" x="37" y="0.0" width="246" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RNC-W3-O6N">
+                                <rect key="frame" x="0.0" y="4" width="45" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="back.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="nF9-Xd-SvI" eventType="touchUpInside" id="QyG-rI-NzX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="J6e-ag-FAh"/>
+                    <navigationItem key="navigationItem" id="WZ2-la-ONN"/>
                     <connections>
-                        <outlet property="back" destination="TgO-Ie-J5v" id="Mda-nh-kY1"/>
-                        <outlet property="bg" destination="YTM-M2-SKN" id="yuJ-kj-vHV"/>
-                        <outlet property="titleLabel" destination="Lcx-I9-nnf" id="asv-FH-VO9"/>
+                        <outlet property="back" destination="RNC-W3-O6N" id="ivv-Fv-O30"/>
+                        <outlet property="bg" destination="osi-G4-eeU" id="mVg-u6-a9F"/>
+                        <outlet property="titleLabel" destination="2Vz-He-nwU" id="6Dg-aW-XmW"/>
+                        <outlet property="webDetail" destination="cEm-8P-1hc" id="C4u-yS-sYs"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1623" y="1220"/>
+            <point key="canvasLocation" x="2125" y="-64"/>
         </scene>
     </scenes>
     <resources>
@@ -1100,6 +1381,18 @@
                 <relationship kind="outlet" name="webHelp" candidateClass="UIWebView"/>
             </relationships>
         </class>
+        <class className="ListViewController" superclassName="PageViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="itemTable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="PageDetailViewController" superclassName="PageViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PageDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webDetail" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
         <class className="PageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PageViewController.h"/>
             <relationships>
@@ -1119,11 +1412,8 @@
                 <relationship kind="outlet" name="usage" candidateClass="UIImageView"/>
             </relationships>
         </class>
-        <class className="PowerDetailViewController" superclassName="PageViewController">
+        <class className="PowerDetailViewController" superclassName="PageDetailViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PowerDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webPower" candidateClass="UIWebView"/>
-            </relationships>
         </class>
         <class className="PowerListViewController" superclassName="PageViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PowerListViewController.h"/>
@@ -1157,6 +1447,14 @@
                 <relationship kind="outlet" name="wisScore" candidateClass="UILabel"/>
             </relationships>
         </class>
+        <class className="SkillCells" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SkillCells.h"/>
+            <relationships>
+                <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="skillTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="skillValue" candidateClass="UILabel"/>
+            </relationships>
+        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
@@ -1165,6 +1463,8 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Vtr-bh-pmz"/>
+        <segue reference="wd7-v7-pvD"/>
+        <segue reference="wXW-db-MI1"/>
         <segue reference="HJ0-qU-UeU"/>
     </inferredMetricsTieBreakers>
 </document>

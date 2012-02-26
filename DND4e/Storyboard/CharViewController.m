@@ -7,6 +7,8 @@
 //
 
 #import "CharViewController.h"
+#import "PageDetailViewController.h"
+#import "ListViewController.h"
 #import "Data.h"
 
 @implementation CharViewController
@@ -65,6 +67,29 @@
 - (void) refresh
 {
     self.titleLabel.text = self.character.name;
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [super prepareForSegue:segue sender:sender];
+    
+    if ([segue.identifier isEqualToString:@"showCombat"]) {
+        [segue.destinationViewController setItem:self.character.scores];
+    } else if ([segue.identifier isEqualToString:@"showFeats"]) {
+        [segue.destinationViewController setItems:self.character.feats];
+    } else if ([segue.identifier isEqualToString:@"showItems"]) {
+        [segue.destinationViewController setItems:self.character.loot];
+    } else if ([segue.identifier isEqualToString:@"showClass"]) {
+        [segue.destinationViewController setItems:self.character.features];
+    } else if ([segue.identifier isEqualToString:@"showRace"]) {
+        [segue.destinationViewController setItems:self.character.traits];
+    } else if ([segue.identifier isEqualToString:@"showDetails"]) {
+        [segue.destinationViewController setItem:self.character];
+    } else if ([segue.identifier isEqualToString:@"showSkills"]) {
+        [segue.destinationViewController setItems:self.character.skills];
+    } 
+    
+    
 }
 
 @end

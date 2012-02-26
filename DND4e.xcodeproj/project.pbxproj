@@ -50,6 +50,8 @@
 		DC97122D14F99DAD0039443C /* PowerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97122C14F99DAA0039443C /* PowerListViewController.m */; };
 		DC97123014F9A72A0039443C /* PowerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97122F14F9A7290039443C /* PowerDetailViewController.m */; };
 		DC97123314F9BBE50039443C /* PageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97123214F9BBE40039443C /* PageDetailViewController.m */; };
+		DC97123614F9C1650039443C /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97123514F9C1640039443C /* ListViewController.m */; };
+		DC97123914F9D4BD0039443C /* SkillCells.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97123814F9D4BC0039443C /* SkillCells.m */; };
 		DC9AB7AD14F6702000B3B0F3 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AC14F6701F00B3B0F3 /* help.html */; };
 		DC9AB7B014F6722A00B3B0F3 /* dropbox.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AE14F6722900B3B0F3 /* dropbox.png */; };
 		DC9AB7B114F6722A00B3B0F3 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AF14F6722900B3B0F3 /* mail.png */; };
@@ -162,6 +164,10 @@
 		DC97122F14F9A7290039443C /* PowerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PowerDetailViewController.m; path = Storyboard/PowerDetailViewController.m; sourceTree = "<group>"; };
 		DC97123114F9BBE30039443C /* PageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageDetailViewController.h; path = Storyboard/PageDetailViewController.h; sourceTree = "<group>"; };
 		DC97123214F9BBE40039443C /* PageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PageDetailViewController.m; path = Storyboard/PageDetailViewController.m; sourceTree = "<group>"; };
+		DC97123414F9C1630039443C /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		DC97123514F9C1640039443C /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		DC97123714F9D4BC0039443C /* SkillCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SkillCells.h; path = Storyboard/SkillCells.h; sourceTree = "<group>"; };
+		DC97123814F9D4BC0039443C /* SkillCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SkillCells.m; path = Storyboard/SkillCells.m; sourceTree = "<group>"; };
 		DC9AB7AC14F6701F00B3B0F3 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		DC9AB7AE14F6722900B3B0F3 /* dropbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropbox.png; sourceTree = "<group>"; };
 		DC9AB7AF14F6722900B3B0F3 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
@@ -353,6 +359,8 @@
 				DC97121A14F96B240039443C /* FileCell.m */,
 				DC97122814F99D830039443C /* PowerCell.h */,
 				DC97122914F99D830039443C /* PowerCell.m */,
+				DC97123714F9D4BC0039443C /* SkillCells.h */,
+				DC97123814F9D4BC0039443C /* SkillCells.m */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -364,6 +372,8 @@
 				DC97121414F9654B0039443C /* FileViewController.m */,
 				DC97121614F9655E0039443C /* PageViewController.h */,
 				DC97121714F9655E0039443C /* PageViewController.m */,
+				DC97123414F9C1630039443C /* ListViewController.h */,
+				DC97123514F9C1640039443C /* ListViewController.m */,
 				DC97123114F9BBE30039443C /* PageDetailViewController.h */,
 				DC97123214F9BBE40039443C /* PageDetailViewController.m */,
 				DC97121C14F9748D0039443C /* CharViewController.h */,
@@ -638,6 +648,8 @@
 				DC97122D14F99DAD0039443C /* PowerListViewController.m in Sources */,
 				DC97123014F9A72A0039443C /* PowerDetailViewController.m in Sources */,
 				DC97123314F9BBE50039443C /* PageDetailViewController.m in Sources */,
+				DC97123614F9C1650039443C /* ListViewController.m in Sources */,
+				DC97123914F9D4BD0039443C /* SkillCells.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

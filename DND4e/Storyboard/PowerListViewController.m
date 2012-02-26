@@ -7,6 +7,7 @@
 //
 
 #import "PowerListViewController.h"
+#import "PowerDetailViewController.h"
 #import "PowerCell.h"
 #import "Data.h"
 #import "Utility.h"
@@ -84,8 +85,7 @@ NSString *const keyPowerSort = @"keyPowerSort";
     if ([segue.identifier isEqualToString:@"powerDetail"]) {
         NSIndexPath *indexPath = [self.powerTable indexPathForCell:sender];
         Power *power = [self.powers objectAtIndex:[indexPath row]];
-        
-        [segue.destinationViewController setPower:power];
+        [segue.destinationViewController setItem:power];
         
     }
     
