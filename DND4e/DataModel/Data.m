@@ -95,8 +95,11 @@ SYNTHESIZE_SINGLETON_ARC(Data)
     if (error) {
         [error log]; DBTrace;
     } else {
+        [fileManager removeItemAtURL:url error:&error];
         [self resetDocs];
-//        self.mostRecentPath = [new path];
+        if (delegate) {
+            [delegate openFilePath:[new path]];
+        }
     }
 }
 
@@ -127,6 +130,7 @@ SYNTHESIZE_SINGLETON_ARC(Data)
 
 - (BOOL) deleteFileAtPath:(NSString*)path
 {
+    
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError *error = nil;
     BOOL fileExists = [fileManager fileExistsAtPath:path];
@@ -137,6 +141,7 @@ SYNTHESIZE_SINGLETON_ARC(Data)
     if (fileExists) 
     {
         success = [fileManager removeItemAtPath:path error:&error];
+        if (success) NSLog(@"Deleted file at Path: %@", path);
         
     }
     

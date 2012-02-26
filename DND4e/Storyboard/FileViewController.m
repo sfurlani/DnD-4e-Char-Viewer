@@ -49,7 +49,8 @@
 {
     [super viewDidLoad];
     self.bg.image = [UIImage imageNamed:@"bg"];
-    self.files = [AppData files];
+    self.files = [[AppData files] mutableCopy];
+    [AppData setDelegate:self];
     
     // !!!: This should never be over-written at any point.
     self.navigationController.navigationBarHidden = YES;
@@ -100,6 +101,18 @@
     [self.fileTable reloadData];
 }
 
+- (void) openFilePath:(NSString *)path
+{
+    NSUInteger index = [self.files indexOfObject:path];
+    if (index == NSNotFound) {
+        NSLog(@"Could not find: %@", path);
+        return;
+    }
+    id cell = [self.fileTable cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
+    if (cell) [self performSegueWithIdentifier:@"openFile" sender:cell];
+    else NSLog(@"No Cell at index: %d", index);
+}
+
 
 #pragma mark - UITableView Delegate & Datasource
 
@@ -145,7 +158,7 @@
         
         NSString *path = [self.files objectAtIndex:[indexPath row]];
         
-        BOOL success = [AppData deleteFile:path];
+        BOOL success = [AppData deleteFileAtPath:path];
         
         if (!success) {
             [tableView setEditing:NO animated:YES];

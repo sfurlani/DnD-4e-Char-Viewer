@@ -58,6 +58,12 @@
     [self loadHTML:[item html]];
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.webDetail.scrollView flashScrollIndicators];
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];

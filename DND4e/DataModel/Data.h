@@ -36,11 +36,14 @@
 - (void) handleFileURL:(NSURL*)url;
 - (Character*)loadCharacterWithFile:(NSString*)path;
 
+- (BOOL) deleteFileAtPath:(NSString*)path;
+
 @end
 
 @protocol DataFileDelegate <NSObject>
 
 - (void) newData:(NSArray*)files;
+- (void) openFilePath:(NSString*)path;
 
 @end
 
