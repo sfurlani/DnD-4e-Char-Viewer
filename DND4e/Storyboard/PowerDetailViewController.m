@@ -14,8 +14,6 @@
 
 @implementation PowerDetailViewController
 
-@synthesize power, webPower;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -47,15 +45,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.webPower setShadowHidden:YES];
+    [self.webDetail setShadowHidden:YES];
 }
 
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.titleLabel.text = power.name;
-    [self loadHTML:[power html]];
-}
 
 - (void)viewDidUnload
 {
@@ -74,6 +66,7 @@
 
 - (void) chooseNewWeapon:(UILongPressGestureRecognizer*)hold
 {
+    Power *power = self.item;
     // if not at begining, then the popup gets called a bunch of times
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Choose New Weapon"
                                                        delegate:self
@@ -88,6 +81,7 @@
 
 - (void) weaponDetail
 {
+    Power *power = self.item;
     NSString *internalID = [[power.selected_weapon.has_elements lastObject] internal_id]; // Trying magic item
     NSLog(@"Internal-ID: %@", internalID);
     Loot *loot = [power.character lootForInternalID:internalID];
@@ -104,33 +98,6 @@
     
 }
 
-- (void) openAbility:(NSString*)abil
-{
-    
-    Stat *score = [self.character.stats objectForKey:abil];
-    [self showDetail:score];
-}
-
-- (void) openStatDetail:(NSString*)stat
-{
-    Stat *score = [self.character.stats objectForKey:stat];
-    [self showDetail:score];
-}
-
-- (void) openElementDetail:(NSString*)elem
-{
-    NSNumber *num = NSINT([elem intValue]);
-    RulesElement *element = [self.character elementForCharelem:num];
-    [self showDetail:element];
-}
-
-- (void) openItemDetail:(NSString*)elem
-{
-    NSNumber *num = NSINT([elem intValue]);
-    Loot *loot = [self.character lootForCharelem:num];
-    [self showDetail:loot];
-}
-
 
 #pragma mark - UIWebView Delegate
 
@@ -138,42 +105,25 @@
 {
     NSURL *url = request.URL;
     NSString *scheme = [url scheme];
-    NSString *host = [url host];
     
     NSLog(@"Opening Content with base URL %@", url);
     
-    if ([scheme isEqualToString:@"http"]) {
-        [[UIApplication sharedApplication] openURL:url];
-        return NO;
-    } else if ([scheme isEqualToString:@"change"]) {
+    if ([scheme isEqualToString:@"change"]) {
         [self chooseNewWeapon:nil];
         return NO;
     } else if ([scheme isEqualToString:@"weapon"]) {
         [self weaponDetail];
         return NO;
-    } else if ([scheme isEqualToString:@"element"]) {
-        [self openElementDetail:host];
-        return NO;
-    } else if ([scheme isEqualToString:@"stat"]) {
-        [self openStatDetail:[host stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-        return NO;
-    } else if ([scheme isEqualToString:@"item"]) {
-        [self openItemDetail:host];
-        return NO;
-    } else if ([scheme isEqualToString:@"abil"]) {
-        [self openAbility:host];
-        return NO;
     }
     
-    
-    return YES;
+    return [super webView:webView shouldStartLoadWithRequest:request navigationType:navigationType] ;
 }
 
 #pragma mark - UIActionSHeet Delegate
 
 - (void) actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    
+    Power *power = self.item;
     NSString *name = [actionSheet buttonTitleAtIndex:buttonIndex];
     if (![name isEqualToString:@"Cancel"]) {        
         NSInteger index = [power.has_weapons indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
@@ -182,15 +132,9 @@
         }];
         if (index == NSNotFound) return;
         Weapon *weapon = [power.has_weapons objectAtIndex:index];
-        self.power.selected_weapon = weapon;
+        power.selected_weapon = weapon;
         [self loadHTML:[power html]];
     }
-}
-
-- (void) loadHTML:(NSString*)string
-{
-    NSString *html = NSFORMAT(@"<html><body style=\"font-family:Copperplate;background-color:transparent\">%@</body></html>",string);
-    [self.webPower loadHTMLString:html baseURL:[AppData applicationDocumentsDirectory]];
 }
 
 

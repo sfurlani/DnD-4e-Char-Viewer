@@ -6,15 +6,10 @@
 //  Copyright (c) 2012 Accella, LLC. All rights reserved.
 //
 
-#import "PageViewController.h"
+#import "PageDetailViewController.h"
 
 @class Power;
 
-@interface PowerDetailViewController : PageViewController <UIWebViewDelegate, UIActionSheetDelegate>
-
-@property (strong, nonatomic) IBOutlet UIWebView *webPower;
-@property (strong, nonatomic) Power *power;
-
-- (void) loadHTML:(NSString*)string;
+@interface PowerDetailViewController : PageDetailViewController <UIWebViewDelegate, UIActionSheetDelegate>
 
 @end
