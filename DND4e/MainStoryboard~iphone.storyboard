@@ -900,7 +900,7 @@
                                                     <rect key="frame" x="285" y="6" width="32" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="melee.png" id="b1o-8d-XlC">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" image="melee.png" id="b1o-8d-XlC">
                                                     <rect key="frame" x="253" y="6" width="32" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -947,7 +947,7 @@
                                                     <rect key="frame" x="285" y="6" width="32" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="melee.png" id="Lft-CN-vbw">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" image="melee.png" id="Lft-CN-vbw">
                                                     <rect key="frame" x="253" y="6" width="32" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1467,7 +1467,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Vtr-bh-pmz"/>
         <segue reference="wXW-db-MI1"/>
+        <segue reference="r2d-i0-Eum"/>
         <segue reference="igl-Rh-wWV"/>
-        <segue reference="HJ0-qU-UeU"/>
     </inferredMetricsTieBreakers>
 </document>
