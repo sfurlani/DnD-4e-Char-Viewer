@@ -11,6 +11,8 @@
 #import "Data.h"
 #import "Utility.h"
 
+NSString *const keyPowerSort = @"keyPowerSort";
+
 @implementation PowerListViewController
 
 @synthesize powers;
@@ -51,6 +53,17 @@
     
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSString *key = [AppDefaults valueForKey:keyPowerSort];
+    if (!key) {
+        key = @"usage";
+        [AppDefaults setObject:key forKey:keyPowerSort];
+    }
+    [self performSortWithKey:key];
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -64,6 +77,20 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [super prepareForSegue:segue sender:sender];
+    
+    if ([segue.identifier isEqualToString:@"powerDetail"]) {
+        NSIndexPath *indexPath = [self.powerTable indexPathForCell:sender];
+        Power *power = [self.powers objectAtIndex:[indexPath row]];
+        
+        [segue.destinationViewController setPower:power];
+        
+    }
+    
+}
+
 #pragma mark - IBActions
 
 - (void) sort:(id)sender
@@ -72,8 +99,8 @@
                                                        delegate:self
                                               cancelButtonTitle:@"Cancel"
                                          destructiveButtonTitle:nil
-                                              otherButtonTitles:@"Name",@"Usage",@"Action",@"Attack"];
-    [sheet showFromRect:sender.frame inView:self.view animated:YES]; // for iPad
+                                              otherButtonTitles:@"Name",@"Usage",@"Action",@"Attack", nil];
+    [sheet showFromRect:[sender frame] inView:self.view animated:YES]; // for iPad
 }
 
 
@@ -93,10 +120,13 @@
         return 0;
 }
 
-static NSString * const kCellIdentifier = @"powerCell";
+
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = [indexPath row];
+    NSString * kCellIdentifier = @"powerCell";
+    if (row%2==0) kCellIdentifier = @"powerCellGray";
+    
     PowerCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     NSAssert(cell!=nil, @"Could not find cell with identifier \"%@\"",kCellIdentifier);
     Power *power = [self.powers objectAtIndex:row];
@@ -121,11 +151,19 @@ static NSString * const kCellIdentifier = @"powerCell";
         key = @"actionType";
     }
     if (!key) return;
-    [self.powers sortUsingComparator:(NSComparisonResult ^(id obj1, id obj2)) {
-        return [[obj1 valueForKey:key] compare:[obj2 valueForKey:key]];
+    
+    [self performSortWithKey:key];
+    
+}
+
+- (void) performSortWithKey:(NSString*)key
+{
+    [AppDefaults setObject:key forKey:keyPowerSort];
+    [self.powers sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [[obj1 valueForKey:key] caseInsensitiveCompare:[obj2 valueForKey:key]];
     }];
-    
-    
+    [self.powerTable reloadRowsAtIndexPaths:[self.powerTable indexPathsForVisibleRows]
+                           withRowAnimation:UITableViewRowAnimationFade];
 }
 
 @end

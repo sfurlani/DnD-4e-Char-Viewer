@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DNDHTML.h"
 
-@interface DetailViewController : UIViewController <UIWebViewDelegate>
+@interface DetailViewController : UIViewController <UIWebViewDelegate, UIActionSheetDelegate>
 
 @property (strong, nonatomic) id<DNDHTML> item;
 @property (strong, nonatomic) IBOutlet UIButton *back;

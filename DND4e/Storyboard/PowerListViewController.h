@@ -13,4 +13,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *sort;
 @property (strong, nonatomic) IBOutlet UITableView *powerTable;
 
+- (IBAction) sort:(id)sender;
+- (void) performSortWithKey:(NSString*)key;
+
 @end

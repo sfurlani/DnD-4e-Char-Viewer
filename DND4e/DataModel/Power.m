@@ -90,12 +90,14 @@
     
     // HEADER
     if (self.flavor)
-        [html appendFormat:@"<p><i>%@</i><p>",self.flavor];
+        [html appendFormat:@"<div style=\"background-color:rgba(44,44,44,0.12)\"><p><i>%@</i><p></div>",self.flavor];
     
     [html appendFormat:@"<p>%@ * %@</p>", self.usage, self.actionType];
     
-    __block NSString *withHeader = @"<p><b>%@</b> %@</p>";
-    __block NSString *withColon = @"<p><b>%@:</b> %@</p>";
+    [html appendString:@"<p>"];
+    __block NSString *withHeader = @"<b>%@</b> %@<br>";
+    __block NSString *withColon = @"<b>%@:</b> %@<br>";
+    __block NSString *withColonGray = @"<div style=\"background-color:rgba(44,44,44,0.12)\"><b>%@:</b> %@</div>";
     if (self.keywords)
         [html appendFormat:withHeader,@"Keywords:",self.keywords];
     
@@ -111,15 +113,19 @@
         }
     }
     
+    [html appendString:@"</p><p>"];
+    
     // SPECIFICS
     [self.specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *key = [obj valueForKey:@"name"];
         NSString *value = [obj valueForKey:kXMLReaderTextNodeKey];
+        NSString *colon = (idx%2 == 1 ? withColon : withColonGray);
         if ([self shouldDisplaySpecific:key])
-            [html appendFormat:withColon, key, replace(value)];
+            [html appendFormat:colon, key, replace(value)];
         
     }];
     
+    [html appendString:@"</p><p>"];
     
     // WEAPON
     if (self.selected_weapon) {
@@ -135,8 +141,8 @@
         if (!self.selected_weapon.defense)
             text = NSFORMAT(@"%@ damage", self.selected_weapon.damage);
         
-        [html appendFormat:@"<p><a href=\"weapon://\"><b>%@</b></a> %@</p>",wpn_name,text];
-        [html appendString:@"<a href=\"change://\"> - Change Weapon - </a>"];
+        [html appendFormat:@"<a href=\"weapon://\"><b>%@</b></a> %@<br>",wpn_name,text];
+        [html appendString:@"<a href=\"change://\"> - Change Weapon - </a><br><br>"];
         
         // CONDITIONALS 
         if (self.selected_weapon.conditions)
@@ -150,12 +156,14 @@
         // DAMAGE COMPONENTS
         [html appendFormat:withHeader,@"Breakdown of Damage: <br>",replace(self.selected_weapon.damageComponents)];
         
+        // COMPENDIUM ENTRIES
+        [html appendString:@"</p><p>"];
         [self.selected_weapon.has_elements enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             RulesElement *element = obj;
             NSString *title = element.name;
             NSString *url = element.url_string;
             
-            [html appendFormat:@"<p><a href=\"%@\"> Compendium Entry: %@ </a></p>",url, title];
+            [html appendFormat:@"<a href=\"%@\"> Compendium Entry: %@ </a></p>",url, title];
             
         }];
         

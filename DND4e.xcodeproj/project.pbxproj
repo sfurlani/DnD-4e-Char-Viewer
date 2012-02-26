@@ -48,6 +48,7 @@
 		DC97122414F985DD0039443C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97122314F985DC0039443C /* DetailViewController.m */; };
 		DC97122A14F99D830039443C /* PowerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97122914F99D830039443C /* PowerCell.m */; };
 		DC97122D14F99DAD0039443C /* PowerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97122C14F99DAA0039443C /* PowerListViewController.m */; };
+		DC97123014F9A72A0039443C /* PowerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97122F14F9A7290039443C /* PowerDetailViewController.m */; };
 		DC9AB7AD14F6702000B3B0F3 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AC14F6701F00B3B0F3 /* help.html */; };
 		DC9AB7B014F6722A00B3B0F3 /* dropbox.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AE14F6722900B3B0F3 /* dropbox.png */; };
 		DC9AB7B114F6722A00B3B0F3 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9AB7AF14F6722900B3B0F3 /* mail.png */; };
@@ -156,6 +157,8 @@
 		DC97122914F99D830039443C /* PowerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PowerCell.m; path = Storyboard/PowerCell.m; sourceTree = "<group>"; };
 		DC97122B14F99DA90039443C /* PowerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PowerListViewController.h; path = Storyboard/PowerListViewController.h; sourceTree = "<group>"; };
 		DC97122C14F99DAA0039443C /* PowerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PowerListViewController.m; path = Storyboard/PowerListViewController.m; sourceTree = "<group>"; };
+		DC97122E14F9A7290039443C /* PowerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PowerDetailViewController.h; path = Storyboard/PowerDetailViewController.h; sourceTree = "<group>"; };
+		DC97122F14F9A7290039443C /* PowerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PowerDetailViewController.m; path = Storyboard/PowerDetailViewController.m; sourceTree = "<group>"; };
 		DC9AB7AC14F6701F00B3B0F3 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		DC9AB7AE14F6722900B3B0F3 /* dropbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropbox.png; sourceTree = "<group>"; };
 		DC9AB7AF14F6722900B3B0F3 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
@@ -366,6 +369,8 @@
 				DC97122314F985DC0039443C /* DetailViewController.m */,
 				DC97122B14F99DA90039443C /* PowerListViewController.h */,
 				DC97122C14F99DAA0039443C /* PowerListViewController.m */,
+				DC97122E14F9A7290039443C /* PowerDetailViewController.h */,
+				DC97122F14F9A7290039443C /* PowerDetailViewController.m */,
 			);
 			name = "Storyboard ViewControllers";
 			sourceTree = "<group>";
@@ -626,6 +631,7 @@
 				DC97122414F985DD0039443C /* DetailViewController.m in Sources */,
 				DC97122A14F99D830039443C /* PowerCell.m in Sources */,
 				DC97122D14F99DAD0039443C /* PowerListViewController.m in Sources */,
+				DC97123014F9A72A0039443C /* PowerDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,7 +717,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -735,7 +742,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "CE781C25-FFF3-4BA4-8CDD-E75AB231589C";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				RUN_CLANG_STATIC_ANALYZER = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

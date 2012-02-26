@@ -50,6 +50,7 @@
     UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(home:)];
     swipe.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.titleLabel addGestureRecognizer:swipe];
+    self.titleLabel.userInteractionEnabled = YES;
     [self.back setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
     
 }

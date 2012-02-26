@@ -754,6 +754,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sort:" destination="HkX-Xr-JXv" eventType="touchUpInside" id="sce-2B-Qcg"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="N9n-K6-r40">
                                 <rect key="frame" x="0.0" y="64" width="320" height="396"/>
@@ -768,7 +771,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Power Name Power Name Power Name" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="PHD-QX-1ru">
-                                                    <rect key="frame" x="0.0" y="0.0" width="213" height="43"/>
+                                                    <rect key="frame" x="0.0" y="2" width="213" height="41"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -794,7 +797,57 @@
                                             <outlet property="attack" destination="b1o-8d-XlC" id="pqq-Om-ZhI"/>
                                             <outlet property="titleLabel" destination="PHD-QX-1ru" id="oa1-po-ehc"/>
                                             <outlet property="usage" destination="bCk-Kh-71J" id="aQo-1b-XL6"/>
-                                            <segue destination="I3x-7B-QPz" kind="push" identifier="detailPower" id="r2d-i0-Eum"/>
+                                            <segue destination="I3x-7B-QPz" kind="push" identifier="powerDetail" id="r2d-i0-Eum"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="powerCellGray" id="WRF-uD-RiK" customClass="PowerCell">
+                                        <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="onx-wy-xgv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="W0u-QI-6fQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Power Name Power Name Power Name" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="pb9-lq-tBd">
+                                                    <rect key="frame" x="0.0" y="2" width="213" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="arrow.png" id="YUe-7c-wRv">
+                                                    <rect key="frame" x="285" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="melee.png" id="Lft-CN-vbw">
+                                                    <rect key="frame" x="253" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="weapon.png" id="pJp-1Z-RJx">
+                                                    <rect key="frame" x="221" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="arrow" destination="YUe-7c-wRv" id="W5a-eV-dWj"/>
+                                            <outlet property="attack" destination="Lft-CN-vbw" id="n0d-8v-iKq"/>
+                                            <outlet property="backgroundView" destination="onx-wy-xgv" id="gpr-2l-Xxn"/>
+                                            <outlet property="selectedBackgroundView" destination="W0u-QI-6fQ" id="Vxb-9x-Tq3"/>
+                                            <outlet property="titleLabel" destination="pb9-lq-tBd" id="CxY-tO-ZgR"/>
+                                            <outlet property="usage" destination="pJp-1Z-RJx" id="ke3-7w-e7d"/>
+                                            <segue destination="I3x-7B-QPz" kind="push" identifier="powerDetail" id="HJ0-qU-UeU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -821,7 +874,7 @@
         <scene sceneID="pdm-gH-4Pn">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sZ-KT-dXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="I3x-7B-QPz" sceneMemberID="viewController">
+                <viewController id="I3x-7B-QPz" customClass="PowerDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f3v-Up-OLZ">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -848,17 +901,29 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="back:" destination="I3x-7B-QPz" eventType="touchUpInside" id="9gB-tb-c2K"/>
+                                </connections>
                             </button>
                             <webView opaque="NO" contentMode="scaleToFill" id="Dy6-s3-ARH">
                                 <rect key="frame" x="0.0" y="49" width="320" height="411"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="I3x-7B-QPz" id="7NF-Sx-ocx"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="2mw-tR-Rwr"/>
+                    <connections>
+                        <outlet property="back" destination="iXe-HJ-zPB" id="LW4-dU-4qg"/>
+                        <outlet property="bg" destination="7DP-Ga-eqg" id="Jcv-lm-gXu"/>
+                        <outlet property="titleLabel" destination="N8c-g8-7ca" id="ANC-s9-BGZ"/>
+                        <outlet property="webPower" destination="Dy6-s3-ARH" id="hPg-CA-0Yw"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2073" y="621"/>
@@ -931,9 +996,16 @@
                 <relationship kind="outlet" name="usage" candidateClass="UIImageView"/>
             </relationships>
         </class>
+        <class className="PowerDetailViewController" superclassName="PageViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PowerDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webPower" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
         <class className="PowerListViewController" superclassName="PageViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PowerListViewController.h"/>
             <relationships>
+                <relationship kind="action" name="sort:"/>
                 <relationship kind="outlet" name="powerTable" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="sort" candidateClass="UIButton"/>
             </relationships>
@@ -968,4 +1040,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="HJ0-qU-UeU"/>
+    </inferredMetricsTieBreakers>
 </document>
