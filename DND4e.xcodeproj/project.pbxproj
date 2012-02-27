@@ -11,6 +11,8 @@
 		DC5754F714FB279F00410FA2 /* ModalStaticSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5754F214FB279E00410FA2 /* ModalStaticSegue.m */; };
 		DC5754F814FB279F00410FA2 /* SlideLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5754F414FB279F00410FA2 /* SlideLeftSegue.m */; };
 		DC5754F914FB279F00410FA2 /* SlideRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5754F614FB279F00410FA2 /* SlideRightSegue.m */; };
+		DC5754FD14FB30D500410FA2 /* sorting.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5754FB14FB30D500410FA2 /* sorting.png */; };
+		DC5754FE14FB30D500410FA2 /* sorting@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5754FC14FB30D500410FA2 /* sorting@2x~iphone.png */; };
 		DC693BEF14EED86B00E68BF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BEE14EED86B00E68BF8 /* UIKit.framework */; };
 		DC693BF114EED86B00E68BF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF014EED86B00E68BF8 /* Foundation.framework */; };
 		DC693BF314EED86B00E68BF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF214EED86B00E68BF8 /* CoreGraphics.framework */; };
@@ -41,8 +43,6 @@
 		DC97120714F955B50039443C /* weapon@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9711F914F955B50039443C /* weapon@2x~iphone.png */; };
 		DC97120B14F9585A0039443C /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97120914F9585A0039443C /* back.png */; };
 		DC97120C14F9585A0039443C /* back@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97120A14F9585A0039443C /* back@2x~iphone.png */; };
-		DC97120E14F961090039443C /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97120D14F961090039443C /* 06-magnify.png */; };
-		DC97121014F961180039443C /* 06-magnify@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC97120F14F961180039443C /* 06-magnify@2x~iphone.png */; };
 		DC97121514F9654B0039443C /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97121414F9654B0039443C /* FileViewController.m */; };
 		DC97121814F9655E0039443C /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97121714F9655E0039443C /* PageViewController.m */; };
 		DC97121B14F96B240039443C /* FileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97121A14F96B240039443C /* FileCell.m */; };
@@ -121,6 +121,8 @@
 		DC5754F414FB279F00410FA2 /* SlideLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideLeftSegue.m; sourceTree = "<group>"; };
 		DC5754F514FB279F00410FA2 /* SlideRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideRightSegue.h; sourceTree = "<group>"; };
 		DC5754F614FB279F00410FA2 /* SlideRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideRightSegue.m; sourceTree = "<group>"; };
+		DC5754FB14FB30D500410FA2 /* sorting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sorting.png; sourceTree = "<group>"; };
+		DC5754FC14FB30D500410FA2 /* sorting@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sorting@2x~iphone.png"; sourceTree = "<group>"; };
 		DC693BEA14EED86B00E68BF8 /* DND4e.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DND4e.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC693BEE14EED86B00E68BF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DC693BF014EED86B00E68BF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -158,8 +160,6 @@
 		DC9711F914F955B50039443C /* weapon@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weapon@2x~iphone.png"; sourceTree = "<group>"; };
 		DC97120914F9585A0039443C /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		DC97120A14F9585A0039443C /* back@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x~iphone.png"; sourceTree = "<group>"; };
-		DC97120D14F961090039443C /* 06-magnify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify.png"; sourceTree = "<group>"; };
-		DC97120F14F961180039443C /* 06-magnify@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify@2x~iphone.png"; sourceTree = "<group>"; };
 		DC97121314F9654B0039443C /* FileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileViewController.h; path = Storyboard/FileViewController.h; sourceTree = "<group>"; };
 		DC97121414F9654B0039443C /* FileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileViewController.m; path = Storyboard/FileViewController.m; sourceTree = "<group>"; };
 		DC97121614F9655E0039443C /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PageViewController.h; path = Storyboard/PageViewController.h; sourceTree = "<group>"; };
@@ -372,8 +372,8 @@
 		DC9711EB14F955B50039443C /* newimages */ = {
 			isa = PBXGroup;
 			children = (
-				DC97120F14F961180039443C /* 06-magnify@2x~iphone.png */,
-				DC97120D14F961090039443C /* 06-magnify.png */,
+				DC5754FB14FB30D500410FA2 /* sorting.png */,
+				DC5754FC14FB30D500410FA2 /* sorting@2x~iphone.png */,
 				DC97120914F9585A0039443C /* back.png */,
 				DC97120A14F9585A0039443C /* back@2x~iphone.png */,
 				DC9711EC14F955B50039443C /* arrow.png */,
@@ -648,8 +648,6 @@
 				DC97120714F955B50039443C /* weapon@2x~iphone.png in Resources */,
 				DC97120B14F9585A0039443C /* back.png in Resources */,
 				DC97120C14F9585A0039443C /* back@2x~iphone.png in Resources */,
-				DC97120E14F961090039443C /* 06-magnify.png in Resources */,
-				DC97121014F961180039443C /* 06-magnify@2x~iphone.png in Resources */,
 				DC97123B14F9D9B30039443C /* Default.png in Resources */,
 				DC97123D14F9D9B80039443C /* Default@2x.png in Resources */,
 				DC97123F14F9DB9E0039443C /* Icon@2x.png in Resources */,
@@ -657,6 +655,8 @@
 				DC97124514F9DBD40039443C /* Doc~ipad.png in Resources */,
 				DC97124614F9DBD40039443C /* Doc.png in Resources */,
 				DC97124714F9DBD40039443C /* Doc@2x.png in Resources */,
+				DC5754FD14FB30D500410FA2 /* sorting.png in Resources */,
+				DC5754FE14FB30D500410FA2 /* sorting@2x~iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

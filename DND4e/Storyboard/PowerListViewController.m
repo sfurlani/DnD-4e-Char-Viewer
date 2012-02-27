@@ -51,6 +51,7 @@ NSString *const keyPowerSort = @"keyPowerSort";
     [super viewDidLoad];
     
     self.items = [self.character.powers mutableCopy];
+    [self.sort setImage:[UIImage imageNamed:@"sorting"] forState:UIControlStateNormal];
     
 }
 
