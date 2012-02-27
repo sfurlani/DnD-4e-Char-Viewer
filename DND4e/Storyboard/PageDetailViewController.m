@@ -125,7 +125,10 @@
     NSInteger index = [items indexOfObject:self.item];
     if (index == NSNotFound) return;
     index++;
-    if (index <= 0 || index >= [self.listVC.items count]) return;
+    // If at Bounds, exit
+    if (index <= 0 || index >= [self.listVC.items count]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
     id<DNDHTML> new = [items objectAtIndex:index];
     if (!new) return;
     
@@ -150,7 +153,10 @@
     NSInteger index = [items indexOfObject:self.item];
     if (index == NSNotFound) return;
     index--;
-    if (index <= 0 || index >= [self.listVC.items count]) return;
+    // If at Bounds, exit
+    if (index <= 0 || index >= [self.listVC.items count]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
     id<DNDHTML> new = [items objectAtIndex:index];
     if (!new) return;
     
