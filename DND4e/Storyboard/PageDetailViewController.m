@@ -12,7 +12,8 @@
 #import "Data.h"
 #import "Utility.h"
 #import "UIWebView_Misc.h"
-
+#import "SlideLeftSegue.h"
+#import "SlideRightSegue.h"
 
 @implementation PageDetailViewController
 
@@ -119,6 +120,22 @@
 {
     // Next
     if (!self.listVC) return;
+    NSInteger index = [self.listVC.items indexOfObject:self.item];
+    if (index == NSNotFound) return;
+    index++;
+    if (index <= 0 || index >= [self.listVC.items count]) return;
+    id<DNDHTML> new = [self.listVC.items objectAtIndex:index];
+    if (!new) return;
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard~iphone" bundle:nil];
+    PageDetailViewController *pdvc = [storyboard instantiateViewControllerWithIdentifier:@"pageDetailVC"];
+    pdvc.item = new;
+    pdvc.listVC = self.listVC;
+    
+    UIStoryboardSegue *segue = [[SlideRightSegue alloc] initWithIdentifier:nil
+                                                                   source:self
+                                                              destination:pdvc];
+    [segue perform];
 }
 
 - (void) swipeRight:(UIGestureRecognizer *)gesture
@@ -136,6 +153,12 @@
     PageDetailViewController *pdvc = [storyboard instantiateViewControllerWithIdentifier:@"pageDetailVC"];
     pdvc.item = new;
     pdvc.listVC = self.listVC;
+    
+    UIStoryboardSegue *segue = [[SlideLeftSegue alloc] initWithIdentifier:nil
+                                                                   source:self
+                                                              destination:pdvc];
+    [segue perform];
+    
 
 }
 
