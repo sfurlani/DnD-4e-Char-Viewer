@@ -16,6 +16,7 @@
 
 @synthesize items, element;
 @synthesize character;
+@synthesize numCount, equipCount, showPowerCard;
 
 - (id) init
 {
@@ -50,6 +51,10 @@
     }
     
     self.element = [[RulesElement alloc] initWithDictionary:info];
+    //<loot count="1" equip-count="0" ShowPowerCard="1" >
+    self.showPowerCard = [[info valueForKey:@"ShowPowerCard"] boolValue];
+    self.numCount = [[info valueForKey:@"count"] numberValue];
+    self.equipCount = [[info valueForKey:@"equip-count"] numberValue];
 }
 
 - (NSString*)html
@@ -106,6 +111,34 @@
         return @"";
 }
 
+- (NSString*) magicName
+{
+    __block NSString *name = nil;
+    [items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        Item *item = obj;
+        if ([item.type isEqualToString:@"Magic Item"]) {
+            name = item.name;
+            *stop = YES; 
+        }
+    }];
+    return name;
+}
+
+- (BOOL) isMagic
+{
+    return ([self magicItem] != nil);
+}
+
+- (Item*) magicItem
+{
+    __block Item *magic = nil;
+    [items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        Item *item = obj;
+        if ([item.type isEqualToString:@"Magic Item"]) {magic = item; *stop = YES; }
+    }];
+    return magic;
+}
+
 @end
 
 @implementation Item
@@ -113,6 +146,7 @@
 @synthesize name, flavor, fullText;
 @synthesize element;
 @synthesize specifics;
+@synthesize type;
 
 - (id) init
 {
@@ -136,7 +170,7 @@
 {
     self.name = [info valueForKey:@"name"];
     self.element = [[RulesElement alloc] initWithDictionary:info];
-    
+    self.type = [info valueForKey:@"type"];
     id specs = [info valueForKey:@"specific"];
     [specs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *key = [obj valueForKey:@"name"];
@@ -159,16 +193,19 @@
     
     // HEADER
     if (self.flavor)
-        [html appendFormat:@"<p><i>%@</i><p>",self.flavor];
+        [html appendFormat:@"<div style=\"background-color:rgba(44,44,44,.12)\"><i>%@</i></div>",self.flavor];
     
-    __block NSString *withColon = @"<b>%@:</b> %@<br>";
+    __block int count = 0;
+    __block NSString *row = @"<dt><b>%@:</b> %@</dt>";
+    __block NSString *rowG = @"<dt style=\"background-color:rgba(44,44,44,.12)\"><b>%@:</b> %@</dt>";
+#define rowColor ((count++)%2 == 0 ? row : rowG)
     
     // SPECIFICS
     [self.specifics enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *key = [obj valueForKey:@"name"];
         NSString *value = [obj valueForKey:kXMLReaderTextNodeKey];
         if ([self shouldDisplaySpecific:key])
-            [html appendFormat:withColon, key, replace(value)];
+            [html appendFormat:rowColor, key, replace(value)];
         
     }];
     

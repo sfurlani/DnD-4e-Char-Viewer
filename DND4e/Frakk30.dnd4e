@@ -854,7 +854,8 @@
          </RulesElement>
          <RulesElement name="Acrobatics" type="Skill" internal-id="ID_FMP_SKILL_1" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=1" charelem="81" legality="rules-legal" >
             <specific name="Key Ability" > Dexterity </specific>
-         Creatures typically use the Acrobatics skill to maintain their balance while walking on narrow or unstable surfaces, to slip free of a grab or restraints, and to take less damage from a fall.	Moving across a surface that is slippery doesn&apos;t usually require an Acrobatics check; that surface is instead treated as difficult terrain. If a surface is extremely slippery, the DM might require an Acrobatics check to cross it.
+         Creatures typically use the Acrobatics skill to maintain their balance while walking on narrow or unstable surfaces, to slip free of a grab or restraints, and to take less damage from a fall.
+	Moving across a surface that is slippery doesn&apos;t usually require an Acrobatics check; that surface is instead treated as difficult terrain. If a surface is extremely slippery, the DM might require an Acrobatics check to cross it.
          </RulesElement>
          <RulesElement name="Arcana" type="Skill" internal-id="ID_FMP_SKILL_2" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=2" charelem="82" legality="rules-legal" >
             <specific name="Key Ability" > Intelligence </specific>
@@ -870,11 +871,13 @@
          </RulesElement>
          <RulesElement name="Dungeoneering" type="Skill" internal-id="ID_FMP_SKILL_7" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=7" charelem="85" legality="rules-legal" >
             <specific name="Key Ability" > Wisdom </specific>
-         The Dungeoneering skill represents knowledge and skills related to dungeon exploration, including finding one&apos;s way through underground complexes, navigating winding caverns, recognizing subterranean hazards, and foraging for food in the Underdark.	Training in this skill represents formalized study or extensive experience. Those that have training in the skill can also identify creatures of the Far Realm.
+         The Dungeoneering skill represents knowledge and skills related to dungeon exploration, including finding one&apos;s way through underground complexes, navigating winding caverns, recognizing subterranean hazards, and foraging for food in the Underdark.
+	Training in this skill represents formalized study or extensive experience. Those that have training in the skill can also identify creatures of the Far Realm.
          </RulesElement>
          <RulesElement name="Endurance" type="Skill" internal-id="ID_FMP_SKILL_8" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=8" charelem="86" legality="rules-legal" >
             <specific name="Key Ability" > Constitution </specific>
-         The Endurance skill is used to stave off ill effects and to push beyond normal physical limits. A creature that has training in Endurance can hold its breath for long periods of time, forestall the debilitating effects of hunger and thirst, and swim or tread water for extended periods. Some hazards—including extreme temperatures, violent weather, and diseases—require creatures to make Endurance checks to resist or delay debilitating effects.	Characters rarely use Endurance actively; the DM directs players to use it in response to certain hazards. Using the skill in that way requires no action, unless otherwise noted. See “Environmental Dangers” and “Disease” for some of the situations that require Endurance checks.
+         The Endurance skill is used to stave off ill effects and to push beyond normal physical limits. A creature that has training in Endurance can hold its breath for long periods of time, forestall the debilitating effects of hunger and thirst, and swim or tread water for extended periods. Some hazards—including extreme temperatures, violent weather, and diseases—require creatures to make Endurance checks to resist or delay debilitating effects.
+	Characters rarely use Endurance actively; the DM directs players to use it in response to certain hazards. Using the skill in that way requires no action, unless otherwise noted. See “Environmental Dangers” and “Disease” for some of the situations that require Endurance checks.
          </RulesElement>
          <RulesElement name="Heal" type="Skill" internal-id="ID_FMP_SKILL_9" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=9" charelem="87" legality="rules-legal" >
             <specific name="Key Ability" > Wisdom </specific>
@@ -882,11 +885,15 @@
          </RulesElement>
          <RulesElement name="History" type="Skill" internal-id="ID_FMP_SKILL_11" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=11" charelem="88" legality="rules-legal" >
             <specific name="Key Ability" > Intelligence </specific>
-         The History skill encompasses knowledge related to the history of a region and beyond, including the chronological record of significant events and an explanation of their causes. This knowledge includes information pertaining to royalty and other leaders, wars, legends, important personalities, laws, customs, traditions, and memorable events.	Training in this skill represents academic study, either formalized or as a hobby. Those that have training in the skill are likely to know esoteric historical information.	Make a History check to remember a relevant piece of historical lore or to recognize a historical clue (see “Knowledge Checks”).
+         The History skill encompasses knowledge related to the history of a region and beyond, including the chronological record of significant events and an explanation of their causes. This knowledge includes information pertaining to royalty and other leaders, wars, legends, important personalities, laws, customs, traditions, and memorable events.
+	Training in this skill represents academic study, either formalized or as a hobby. Those that have training in the skill are likely to know esoteric historical information.
+	Make a History check to remember a relevant piece of historical lore or to recognize a historical clue (see “Knowledge Checks”).
          </RulesElement>
          <RulesElement name="Insight" type="Skill" internal-id="ID_FMP_SKILL_13" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=13" charelem="89" legality="rules-legal" >
             <specific name="Key Ability" > Wisdom </specific>
-         The Insight skill is used to discern intent and decipher body language during social interactions. Characters use the skill to comprehend motives, to read between the lines, to get a sense of moods and attitudes, and to determine how truthful someone is being. (Monsters rarely use Insight.)	Insight is used to oppose Bluff checks and as the social counterpart to the Perception skill. The skill can also be used to gain clues, to figure out how well a social situation is going, and to determine if someone is under the influence of an outside force.	When a creature uses Insight, it is making a best guess about another creature&apos;s motives and truthfulness. Insight is not an exact science or a supernatural power; it represents the ability to get a sense of how a person is behaving.
+         The Insight skill is used to discern intent and decipher body language during social interactions. Characters use the skill to comprehend motives, to read between the lines, to get a sense of moods and attitudes, and to determine how truthful someone is being. (Monsters rarely use Insight.)
+	Insight is used to oppose Bluff checks and as the social counterpart to the Perception skill. The skill can also be used to gain clues, to figure out how well a social situation is going, and to determine if someone is under the influence of an outside force.
+	When a creature uses Insight, it is making a best guess about another creature&apos;s motives and truthfulness. Insight is not an exact science or a supernatural power; it represents the ability to get a sense of how a person is behaving.
          </RulesElement>
          <RulesElement name="Intimidate" type="Skill" internal-id="ID_FMP_SKILL_14" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=14" charelem="90" legality="rules-legal" >
             <specific name="Key Ability" > Charisma </specific>
@@ -894,15 +901,18 @@
          </RulesElement>
          <RulesElement name="Nature" type="Skill" internal-id="ID_FMP_SKILL_16" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=16" charelem="91" legality="rules-legal" >
             <specific name="Key Ability" > Wisdom </specific>
-         The Nature skill encompasses knowledge and skills related to nature, including finding ways through wilderness, recognizing natural hazards, dealing with and identifying natural creatures, and living off the land. 	Training in this skill represents formalized study or extensive experience. Those that have training in the skill are likely to know esoteric information in the field of study.
+         The Nature skill encompasses knowledge and skills related to nature, including finding ways through wilderness, recognizing natural hazards, dealing with and identifying natural creatures, and living off the land. 
+	Training in this skill represents formalized study or extensive experience. Those that have training in the skill are likely to know esoteric information in the field of study.
          </RulesElement>
          <RulesElement name="Perception" type="Skill" internal-id="ID_FMP_SKILL_17" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=17" charelem="92" legality="rules-legal" >
             <specific name="Key Ability" > Wisdom </specific>
-         The Perception skill encompasses perceiving things, most often by sight or sound. Make a Perception check to notice a clue, detect a secret door, find a trap, follow tracks, listen for sounds behind a closed door, or locate a hidden object.	In most situations, the DM uses passive Perception to determine if a creature notices things. A creature that has fallen asleep naturally (as opposed to being knocked unconscious by a power or other effect) is unconscious, but not totally deprived of awareness; it can use its passive Perception to hear things, but with a -5 penalty.
+         The Perception skill encompasses perceiving things, most often by sight or sound. Make a Perception check to notice a clue, detect a secret door, find a trap, follow tracks, listen for sounds behind a closed door, or locate a hidden object.
+	In most situations, the DM uses passive Perception to determine if a creature notices things. A creature that has fallen asleep naturally (as opposed to being knocked unconscious by a power or other effect) is unconscious, but not totally deprived of awareness; it can use its passive Perception to hear things, but with a -5 penalty.
          </RulesElement>
          <RulesElement name="Religion" type="Skill" internal-id="ID_FMP_SKILL_18" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=18" charelem="93" legality="rules-legal" >
             <specific name="Key Ability" > Intelligence </specific>
-         The Religion skill encompasses knowledge about gods, sacred writings, religious ceremonies, holy symbols, and theology. This knowledge extends to information about the undead and about the Astral Sea, including the creatures of that plane.	Training in this skill represents academic study, either formalized or as a hobby. Those that have training in the skill are likely to know esoteric information in the field of study.
+         The Religion skill encompasses knowledge about gods, sacred writings, religious ceremonies, holy symbols, and theology. This knowledge extends to information about the undead and about the Astral Sea, including the creatures of that plane.
+	Training in this skill represents academic study, either formalized or as a hobby. Those that have training in the skill are likely to know esoteric information in the field of study.
          </RulesElement>
          <RulesElement name="Stealth" type="Skill" internal-id="ID_FMP_SKILL_20" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=20" charelem="94" legality="rules-legal" >
             <specific name="Key Ability" > Dexterity </specific>
@@ -910,11 +920,13 @@
          </RulesElement>
          <RulesElement name="Streetwise" type="Skill" internal-id="ID_FMP_SKILL_21" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=21" charelem="95" legality="rules-legal" >
             <specific name="Key Ability" > Charisma </specific>
-         The Streetwise skill encompasses knowledge of the ins and outs of life in a settlement (a village, a town, or a city), whether on its main streets or in its back alleys. This knowledge is gleaned from talking to people and observing them as they go about their lives, rather than from studying tomes or maps. A character who has training in this skill is especially adept at getting information out of people living in settlements.	When in a settlement, make a Streetwise check to find out what&apos;s going on, who the movers and shakers are, where to get the best deals, and where the dangers are.
+         The Streetwise skill encompasses knowledge of the ins and outs of life in a settlement (a village, a town, or a city), whether on its main streets or in its back alleys. This knowledge is gleaned from talking to people and observing them as they go about their lives, rather than from studying tomes or maps. A character who has training in this skill is especially adept at getting information out of people living in settlements.
+	When in a settlement, make a Streetwise check to find out what&apos;s going on, who the movers and shakers are, where to get the best deals, and where the dangers are.
          </RulesElement>
          <RulesElement name="Thievery" type="Skill" internal-id="ID_FMP_SKILL_23" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=23" charelem="96" legality="rules-legal" >
             <specific name="Key Ability" > Dexterity </specific>
-         The Thievery skill encompasses various abilities that require nerves of steel and a steady hand: disabling traps, opening locks, picking pockets, and sleight of hand.	The DM might decide that some uses of this skill are so specialized that a creature is required to have training in Thievery to have a chance of succeeding.
+         The Thievery skill encompasses various abilities that require nerves of steel and a steady hand: disabling traps, opening locks, picking pockets, and sleight of hand.
+	The DM might decide that some uses of this skill are so specialized that a creature is required to have training in Thievery to have a chance of succeeding.
          </RulesElement>
          <RulesElement name="Athletics" type="Skill" internal-id="ID_FMP_SKILL_27" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=27" charelem="97" legality="rules-legal" >
             <specific name="Key Ability" > Strength </specific>
@@ -985,8 +997,11 @@
             <specific name="Size" > Medium </specific>
             <specific name="Speed" > 6 squares </specific>
             <specific name="Characteristics" > Brash, ferocious, hedonistic, impulsive, short-tempered, tough, uninhibited </specific>
-            <specific name="Physical Qualities" > Half-orcs favor their human lineage in appearance, but are distinguished by skin that tends to various shades of gray, broad jaws, and prominent lower canine teeth—though these are still a far cry from the jutting tusks of orcs. On average, they are taller and stronger than humans as well. Their hair is usually black, though it grays quickly with age. Most half-orcs who live among humans favor human styles of clothing and hairstyle, but a few adopt orc traditions, tying small bones or beads into long braids or bunches of hair.	Half-orcs don&apos;t live quite as long as humans do. They mature quickly, reaching adulthood at about sixteen years, and rarely live past the age of sixty. </specific>
-            <specific name="Playing" > Half-orcs are the offspring of orcs and humans—a hybrid race combining the strength, speed, and aggression that underlie orc culture with the ambition, resourcefulness, and boldness of the human heart. Half-orcs usually live on the fringes of society, finding ways to succeed as virtual outcasts among their own kin. Resilient and persistent, a half-orc is unwilling to accept defeat as long as he or she still draws breath.	Half-orcs were first seen on the frontier, where isolated human settlements marked the line between civilization and the wilderness. When the ancient empires of the world collapsed, these frontier territories were the first to fall into ruin. Marauding tribes of orcs, previously held at bay by imperial armies, quickly encroached on settled human lands. Though isolated skirmishes between the races were the norm for long years, orcs and humans were eventually forced to ally against the monstrous threats of the ancient frontier. Moreover, primal power provided a common cultural grounding between the tribes of both races, which began to forge a common culture and blood ties over time.	The half-orcs who arose as the result of this commingling combined the best traits of both races. Many people see half-orcs as brash and violent, ascribing such behavior to the darkness of their orc heritage. Even the most barbaric half-orcs, however, can draw on the motivation and ingenuity of their human ancestry. </specific>
+            <specific name="Physical Qualities" > Half-orcs favor their human lineage in appearance, but are distinguished by skin that tends to various shades of gray, broad jaws, and prominent lower canine teeth—though these are still a far cry from the jutting tusks of orcs. On average, they are taller and stronger than humans as well. Their hair is usually black, though it grays quickly with age. Most half-orcs who live among humans favor human styles of clothing and hairstyle, but a few adopt orc traditions, tying small bones or beads into long braids or bunches of hair.
+	Half-orcs don&apos;t live quite as long as humans do. They mature quickly, reaching adulthood at about sixteen years, and rarely live past the age of sixty. </specific>
+            <specific name="Playing" > Half-orcs are the offspring of orcs and humans—a hybrid race combining the strength, speed, and aggression that underlie orc culture with the ambition, resourcefulness, and boldness of the human heart. Half-orcs usually live on the fringes of society, finding ways to succeed as virtual outcasts among their own kin. Resilient and persistent, a half-orc is unwilling to accept defeat as long as he or she still draws breath.
+	Half-orcs were first seen on the frontier, where isolated human settlements marked the line between civilization and the wilderness. When the ancient empires of the world collapsed, these frontier territories were the first to fall into ruin. Marauding tribes of orcs, previously held at bay by imperial armies, quickly encroached on settled human lands. Though isolated skirmishes between the races were the norm for long years, orcs and humans were eventually forced to ally against the monstrous threats of the ancient frontier. Moreover, primal power provided a common cultural grounding between the tribes of both races, which began to forge a common culture and blood ties over time.
+	The half-orcs who arose as the result of this commingling combined the best traits of both races. Many people see half-orcs as brash and violent, ascribing such behavior to the darkness of their orc heritage. Even the most barbaric half-orcs, however, can draw on the motivation and ingenuity of their human ancestry. </specific>
             <specific name="Vision" > Low-light </specific>
             <specific name="Average Height" > 5&apos;9&quot;-6&apos;4&quot; </specific>
             <specific name="Average Weight" > 155-225 lb. </specific>
@@ -1091,7 +1106,10 @@
             <specific name="_SUGGESTED_FEATS" > ID_FMP_FEAT_3145,ID_FMP_FEAT_3128,ID_FMP_FEAT_127,ID_FMP_FEAT_3119,ID_FMP_FEAT_3147,ID_FMP_FEAT_109,ID_FMP_FEAT_171,ID_FMP_FEAT_3121,ID_FMP_FEAT_3138,ID_FMP_FEAT_131,ID_FMP_FEAT_3140,ID_FMP_FEAT_3152,ID_FMP_FEAT_3153,ID_FMP_FEAT_3155,ID_FMP_FEAT_3139,ID_FMP_FEAT_114,ID_FMP_FEAT_3156,ID_FMP_FEAT_3154,ID_FMP_FEAT_3135 </specific>
             <specific name="_SUGGESTED_FEATURES" > ID_FMP_CLASS_FEATURE_2775 </specific>
             <specific name="_Tags" > Essentials </specific>
-         When tales are told of the most legendary warriors, slayers are the heroes those stories speak of. Slayers are elite shock troops, standing at the forefront of battle with a combination of strong armor, advanced tactical cunning, and a mastery of withering two-handed weapon attacks.	On the borderlands of civilization, the common folk are beset on all sides by a multitude of foes. Goblin invaders can outnumber a town&apos;s defenders five to one, and powerful giants and trolls can easily shrug off a spear thrust or a crossbow bolt. The slayer is trained to correct this imbalance. By pairing the heaviest melee weapons with fearless combat tactics, a slayer can score deadly blows against larger enemies or hew through mobs of lesser foes.	Slayers come from all backgrounds and societies. Some are warriors with only the most basic training, relying on raw fury and instinct to overwhelm their enemies. Others might be former soldiers whose homes have been destroyed like so many others on the borderlands, and who have sworn to use their martial skills for vengeance.	The slayer combines the best traits of a defender and a striker, with superior defenses backed by devastating weapon attacks. This class grants heavy armor proficiency and plenty of hit points, making a slayer the ideal warrior to stand at the front line of battle.
+         When tales are told of the most legendary warriors, slayers are the heroes those stories speak of. Slayers are elite shock troops, standing at the forefront of battle with a combination of strong armor, advanced tactical cunning, and a mastery of withering two-handed weapon attacks.
+	On the borderlands of civilization, the common folk are beset on all sides by a multitude of foes. Goblin invaders can outnumber a town&apos;s defenders five to one, and powerful giants and trolls can easily shrug off a spear thrust or a crossbow bolt. The slayer is trained to correct this imbalance. By pairing the heaviest melee weapons with fearless combat tactics, a slayer can score deadly blows against larger enemies or hew through mobs of lesser foes.
+	Slayers come from all backgrounds and societies. Some are warriors with only the most basic training, relying on raw fury and instinct to overwhelm their enemies. Others might be former soldiers whose homes have been destroyed like so many others on the borderlands, and who have sworn to use their martial skills for vengeance.
+	The slayer combines the best traits of a defender and a striker, with superior defenses backed by devastating weapon attacks. This class grants heavy armor proficiency and plenty of hit points, making a slayer the ideal warrior to stand at the front line of battle.
          </RulesElement>
          <RulesElement name="Slayer" type="Grants" internal-id="ID_INTERNAL_GRANTS_SLAYER" charelem="119" legality="rules-legal" >
             <specific name="_SupportsID" > ID_FMP_CLASS_716 </specific>
@@ -1285,7 +1303,9 @@
             <specific name="Attack Type" > Special </specific>
             <specific name="Trigger" > You hit an enemy with a melee basic attack using a weapon. </specific>
             <specific name="Target" > The enemy you hit </specific>
-            <specific name="Effect" > The target takes 1[W] extra damage from the triggering attack.Level 17: 2[W] extra damage.Level 27: 3[W] extra damage. </specific>
+            <specific name="Effect" > The target takes 1[W] extra damage from the triggering attack.
+Level 17: 2[W] extra damage.
+Level 27: 3[W] extra damage. </specific>
             <specific name="_Associated Feats" />
             <specific name="Class" > ID_FMP_CLASS_3,ID_FMP_CLASS_5 </specific>
             <specific name="Level" />
@@ -1334,7 +1354,9 @@
             <specific name="Keywords" > Martial, Stance </specific>
             <specific name="Action Type" > Minor Action </specific>
             <specific name="Attack Type" > Personal </specific>
-            <specific name="Effect" > You assume the battle wrath stance. Until the stance ends, you gain a +2 power bonus to the damage rolls of basic attacks using a weapon.Level 11: +3 power bonus.Level 21: +4 power bonus. </specific>
+            <specific name="Effect" > You assume the battle wrath stance. Until the stance ends, you gain a +2 power bonus to the damage rolls of basic attacks using a weapon.
+Level 11: +3 power bonus.
+Level 21: +4 power bonus. </specific>
             <specific name="_Associated Feats" />
             <specific name="Class" > ID_FMP_CLASS_3 </specific>
             <specific name="Level" />
@@ -1371,22 +1393,40 @@
             <specific name="Associated Power Info" />
             <specific name="Associated Powers" />
             <specific name="_Tags" > Essentials </specific>
-         You gain a +1 feat bonus to weapon attack rolls that you make with a heavy blade. This bonus increases to +2 at 11th level and +3 at 21st level.	In addition, while wielding a heavy blade, you gain a +2 bonus to all defenses against opportunity attacks.
+         You gain a +1 feat bonus to weapon attack rolls that you make with a heavy blade. This bonus increases to +2 at 11th level and +3 at 21st level.
+	In addition, while wielding a heavy blade, you gain a +2 bonus to all defenses against opportunity attacks.
          </RulesElement>
          <RulesElement name="Kord" type="Deity" internal-id="ID_FMP_DEITY_6" charelem="203" legality="rules-legal" >
             <specific name="Alignment" > Unaligned </specific>
             <specific name="Domains" > ID_FMP_DOMAIN_23, ID_FMP_DOMAIN_24, ID_FMP_DOMAIN_32 </specific>
             <specific name="_Tags" > Essentials </specific>
-         Kord is the storm god and the lord of battle. He revels in strength, battlefield prowess, and thunder. Fighters and athletes revere him. He is a mercurial god, unbridled and wild, who summons storms over land and sea; those who hope for better weather appease him with prayers and spirited toasts. He gives few commands:* Be strong, but do not use your strength for wanton destruction.* Be brave and scorn cowardice in any form.* Prove your might in battle to win glory and renown.
+         Kord is the storm god and the lord of battle. He revels in strength, battlefield prowess, and thunder. Fighters and athletes revere him. He is a mercurial god, unbridled and wild, who summons storms over land and sea; those who hope for better weather appease him with prayers and spirited toasts. He gives few commands:
+* Be strong, but do not use your strength for wanton destruction.
+* Be brave and scorn cowardice in any form.
+* Prove your might in battle to win glory and renown.
          </RulesElement>
          <RulesElement name="Storm" type="Domain" internal-id="ID_FMP_DOMAIN_23" charelem="204" legality="rules-legal" >
-         Slashing rain, roaring winds, brooding clouds, punishing hail—these are moods of Kord. People hear his laughter in thunder and fear the lightning of his fierce smile. Sailors seeking calm winds and farmers who hope for gentle rain beg Kord to vent his fury elsewhere. They engage in contests of strength and raise toasts in Kord&apos;s name to let him know they have neither forgotten his power nor taken his clemency for granted.Like Kord, another god of storms is likely a deity of raging passions. A good god of storms might be thought of as scouring the world of evil, while a malignant deity of the domain would inflict storms simply out of cruelty.
+         Slashing rain, roaring winds, brooding clouds, punishing hail—these are moods of Kord. People hear his laughter in thunder and fear the lightning of his fierce smile. Sailors seeking calm winds and farmers who hope for gentle rain beg Kord to vent his fury elsewhere. They engage in contests of strength and raise toasts in Kord&apos;s name to let him know they have neither forgotten his power nor taken his clemency for granted.
+
+Like Kord, another god of storms is likely a deity of raging passions. A good god of storms might be thought of as scouring the world of evil, while a malignant deity of the domain would inflict storms simply out of cruelty.
          </RulesElement>
          <RulesElement name="Strength" type="Domain" internal-id="ID_FMP_DOMAIN_24" charelem="205" legality="rules-legal" >
-         Popular among barbaric peoples, the gods of strength are patrons to warriors and hunters. Violent and short-tempered, these deities act rather than reflect.Blood-spattered Gruumsh glories in the slaughter of weaker foes, disdaining strategy and skill. He believes that the world belongs to those who can crush skulls in their fists or break bones with a bite. Strength is the license to do as you please, and it pleases Gruumsh when his followers use their might to destroy.Kord acts as patron of strength to all who seek to avoid the wanton destruction urged by Gruumsh. Athletes, soldiers, laborers, and others who prize the power of the body pray to Kord, and so do those of weakness who are willing to act against the strong.A strength god need not be so impulsive, and such a deity could be aligned with good. Perhaps your campaign has room for a god of strength and knowledge, patron of athletes and an asceticism seeking physical perfection. A strength god could instead be aligned with justice and promote the use of might for what is right.
+         Popular among barbaric peoples, the gods of strength are patrons to warriors and hunters. Violent and short-tempered, these deities act rather than reflect.
+
+Blood-spattered Gruumsh glories in the slaughter of weaker foes, disdaining strategy and skill. He believes that the world belongs to those who can crush skulls in their fists or break bones with a bite. Strength is the license to do as you please, and it pleases Gruumsh when his followers use their might to destroy.
+
+Kord acts as patron of strength to all who seek to avoid the wanton destruction urged by Gruumsh. Athletes, soldiers, laborers, and others who prize the power of the body pray to Kord, and so do those of weakness who are willing to act against the strong.
+
+A strength god need not be so impulsive, and such a deity could be aligned with good. Perhaps your campaign has room for a god of strength and knowledge, patron of athletes and an asceticism seeking physical perfection. A strength god could instead be aligned with justice and promote the use of might for what is right.
          </RulesElement>
          <RulesElement name="War" type="Domain" internal-id="ID_FMP_DOMAIN_32" charelem="206" legality="rules-legal" >
-         War is a powerful force in the world, the ultimate test of martial fitness. A war god can be an honorable champion who delights in demonstrations of courage, a cruel conqueror who revels in bloody triumph, or a harsh judge who measures mortals by how they meet their hour of doom.Bane commands the domain of war for its aspects of conquest and strict military structures. Ordered battle plans and improvised strategies please Bane, as do masses of troops and tiny tactical units. Bane embraces every aspect of war and sees it as an end in its own right, an outlook shared by many of those devoted to him.Kord sees war as the testing ground for strength. He values it as a storm of blood—a passion that rages in the heart of true warriors. Kord has little patience for strategizing and deception, and those who carry his standard into battle try simply to pit strength against strength, or they look to another power—such as Ioun, Bahamut, or even Bane—for the tactics they need to win.If you are a devotee of a god of war, you regard battle as the principal test of your worth and devotion. And sometimes a fist in the face says more than a thousand honeyed words.
+         War is a powerful force in the world, the ultimate test of martial fitness. A war god can be an honorable champion who delights in demonstrations of courage, a cruel conqueror who revels in bloody triumph, or a harsh judge who measures mortals by how they meet their hour of doom.
+
+Bane commands the domain of war for its aspects of conquest and strict military structures. Ordered battle plans and improvised strategies please Bane, as do masses of troops and tiny tactical units. Bane embraces every aspect of war and sees it as an end in its own right, an outlook shared by many of those devoted to him.
+
+Kord sees war as the testing ground for strength. He values it as a storm of blood—a passion that rages in the heart of true warriors. Kord has little patience for strategizing and deception, and those who carry his standard into battle try simply to pit strength against strength, or they look to another power—such as Ioun, Bahamut, or even Bane—for the tactics they need to win.
+
+If you are a devotee of a god of war, you regard battle as the principal test of your worth and devotion. And sometimes a fist in the face says more than a thousand honeyed words.
          </RulesElement>
          <RulesElement name="2" type="Level" internal-id="ID_INTERNAL_LEVEL_2" charelem="24" legality="rules-legal" >
             <specific name="XP Needed" > 1250 </specific>
@@ -1401,7 +1441,8 @@
          If you reduce an enemy to 0 hit points with an attack using a heavy blade, you can shift as a minor action until the end of your current turn.
          </RulesElement>
          <RulesElement name="Level 2 Slayer Utility Power" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_3015" charelem="208" legality="rules-legal" >
-            <specific name="Flavor" > Although your focus is the battlefield, you learn to make use of your skill training in combat through utility exploits. Each of these powers requires you to have training in a particular class skill before you can select and use the power.	When evaluating these powers, consider not just a power&apos;s benefit, but the backstory you created when choosing your trained skills. For example, you might have chosen Streetwise to reflect a life working in the city as a bodyguard or a thug. If that were the case, you could consider taking crowd fighting to show how your past experience influenced your combat tactics. </specific>
+            <specific name="Flavor" > Although your focus is the battlefield, you learn to make use of your skill training in combat through utility exploits. Each of these powers requires you to have training in a particular class skill before you can select and use the power.
+	When evaluating these powers, consider not just a power&apos;s benefit, but the backstory you created when choosing your trained skills. For example, you might have chosen Streetwise to reflect a life working in the city as a bodyguard or a thug. If that were the case, you could consider taking crowd fighting to show how your past experience influenced your combat tactics. </specific>
             <specific name="Short Description" > Choose one utility power </specific>
             <specific name="Level" > 2 </specific>
             <specific name="_Tags" > Essentials </specific>
@@ -1694,7 +1735,9 @@
             <specific name="Keywords" > Martial, Stance </specific>
             <specific name="Action Type" > Minor Action </specific>
             <specific name="Attack Type" > Personal </specific>
-            <specific name="Effect" > You assume the unfettered fury stance. Until the stance ends, you take a -2 penalty to attack rolls with weapon powers and gain a +4 power bonus to the damage rolls of basic attacks using a weapon.Level 11: +6 power bonus.Level 21: +8 power bonus. </specific>
+            <specific name="Effect" > You assume the unfettered fury stance. Until the stance ends, you take a -2 penalty to attack rolls with weapon powers and gain a +4 power bonus to the damage rolls of basic attacks using a weapon.
+Level 11: +6 power bonus.
+Level 21: +8 power bonus. </specific>
             <specific name="_Associated Feats" />
             <specific name="Class" > ID_FMP_CLASS_3 </specific>
             <specific name="Level" />
@@ -1937,12 +1980,17 @@
          </RulesElement>
          <RulesElement name="Eternal Defender" type="Epic Destiny" internal-id="ID_FMP_EPIC_DESTINY_202" url="http://www.wizards.com/dndinsider/compendium/epicdestiny.aspx?id=202" charelem="240" legality="rules-legal" >
             <specific name="Flavor" > You stand in the path of those who would rend the defenseless world. That world is safe behind your ever-vigilant shield. </specific>
-            <specific name="Immortality" > Immortality?Bravery and immovability define you as a champion to your friends and the people you have saved over the course of your chronicle. To many, you are the mountain holding back the onrush of a monstrous tide.	Everlasting Bulwark: You have laid low your final and greatest adversary. During the fight you, as always, formed the steady center around which your allies could operate, taking the brunt of the punishment without bending or complaining. Ever more will you be the supreme standard for those on the front line of any battle.	The world always needs someone of your strength and stature at the ready to come to its defense. Those wishing to take up sword or hammer to defend others refer to you as if you were a saint. Although your name might be spoken as a universally recognized synonym for the ultimate guardian, you&apos;re not ready to just lay down your shield and axe.	Perhaps, then, you take a place in divine dominions, next to or in service to a godly stalwart such as Moradin. Building a post somewhere in the cosmos, you might take it upon yourself to stand vigil over a primordial threat or against the machinations of evil deities. If something stirs or threatens, you herald the coming danger and stand the first to face it. Perhaps instead some power helps you eternally watch over a chosen people, infusing your watchful spirit into the land. Or you might make a pact to pass away but instill your defender&apos;s heart into your folk, awakening a new profusion of heroes. </specific>
+            <specific name="Immortality" > Immortality?
+Bravery and immovability define you as a champion to your friends and the people you have saved over the course of your chronicle. To many, you are the mountain holding back the onrush of a monstrous tide.
+	Everlasting Bulwark: You have laid low your final and greatest adversary. During the fight you, as always, formed the steady center around which your allies could operate, taking the brunt of the punishment without bending or complaining. Ever more will you be the supreme standard for those on the front line of any battle.
+	The world always needs someone of your strength and stature at the ready to come to its defense. Those wishing to take up sword or hammer to defend others refer to you as if you were a saint. Although your name might be spoken as a universally recognized synonym for the ultimate guardian, you&apos;re not ready to just lay down your shield and axe.
+	Perhaps, then, you take a place in divine dominions, next to or in service to a godly stalwart such as Moradin. Building a post somewhere in the cosmos, you might take it upon yourself to stand vigil over a primordial threat or against the machinations of evil deities. If something stirs or threatens, you herald the coming danger and stand the first to face it. Perhaps instead some power helps you eternally watch over a chosen people, infusing your watchful spirit into the land. Or you might make a pact to pass away but instill your defender&apos;s heart into your folk, awakening a new profusion of heroes. </specific>
             <specific name="Power Name" > Power </specific>
             <specific name="Class Features" > ID_FMP_CLASS_FEATURE_1006, ID_FMP_CLASS_FEATURE_1007, ID_FMP_CLASS_FEATURE_1008 </specific>
             <specific name="Powers" > ID_FMP_POWER_4775 </specific>
             <specific name="_DisplayPowers" > ID_FMP_POWER_4775 </specific>
-         You have taken the defender ideal to heart. This devotion might have started at childhood, when you stood up for those weaker than you. Perhaps the ideal of the mighty protecting the weak was culturally instilled in you, as it is in all good-hearted dwarves. Whatever the case, rather than using your strength and power solely for personal gain, you willingly placed yourself in harm&apos;s way to make sure that others had a chance to survive and thrive.	At the core of your personal morals and beliefs is the certainty that it is your job to protect your allies. When among them, you stand in the forefront in times of danger, no matter how dire the foe. Your skill and courage ever prove an anchor for your companions during the tumult of battle.
+         You have taken the defender ideal to heart. This devotion might have started at childhood, when you stood up for those weaker than you. Perhaps the ideal of the mighty protecting the weak was culturally instilled in you, as it is in all good-hearted dwarves. Whatever the case, rather than using your strength and power solely for personal gain, you willingly placed yourself in harm&apos;s way to make sure that others had a chance to survive and thrive.
+	At the core of your personal morals and beliefs is the certainty that it is your job to protect your allies. When among them, you stand in the forefront in times of danger, no matter how dire the foe. Your skill and courage ever prove an anchor for your companions during the tumult of battle.
          </RulesElement>
          <RulesElement name="Unending Strength" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_1006" charelem="8" legality="rules-legal" >
             <specific name="Short Description" > +2 Str; double load values; daily, +10 on Str check or Strengthbased skill check </specific>
@@ -2100,7 +2148,8 @@
             <specific name="Level" > 29 </specific>
             <specific name="_Tags" > Essentials </specific>
             <specific name="_CLASSNAME" > Knight,Slayer </specific>
-         At the start of your turn, you can make a saving throw against one effect that a save can end. If the saving throw succeeds, the effect ends, preventing it from affecting you on your current turn.	If the saving throw fails, you still make a saving throw against the effect at the end of your turn.
+         At the start of your turn, you can make a saving throw against one effect that a save can end. If the saving throw succeeds, the effect ends, preventing it from affecting you on your current turn.
+	If the saving throw fails, you still make a saving throw against the effect at the end of your turn.
          </RulesElement>
          <RulesElement name="30" type="Level" internal-id="ID_INTERNAL_LEVEL_30" charelem="50" legality="rules-legal" >
             <specific name="XP Needed" > 0 </specific>
@@ -2112,7 +2161,13 @@
             <specific name="Type" />
             <specific name="Associated Power Info" />
             <specific name="Associated Powers" />
-         When making a melee attack, you can take a –2 penalty to the attack roll. If the attack hits, you gain a +2 bonus to the damage roll (or a +3 bonus to the damage roll with a two-handed weapon).	This extra damage increases by level, as shown on the table below, but the attack penalty remains the same.&lt;table&gt;Level	Extra Damage (Two-Handed Weapon)1st–10th	+2 (+3)11th–20th	+4 (+6)21th–30th	+6 (+9)&lt;/table&gt;
+         When making a melee attack, you can take a –2 penalty to the attack roll. If the attack hits, you gain a +2 bonus to the damage roll (or a +3 bonus to the damage roll with a two-handed weapon).
+	This extra damage increases by level, as shown on the table below, but the attack penalty remains the same.
+
+&lt;table&gt;Level	Extra Damage (Two-Handed Weapon)
+1st–10th	+2 (+3)
+11th–20th	+4 (+6)
+21th–30th	+6 (+9)&lt;/table&gt;
          </RulesElement>
          <RulesElement name="Great Power" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_1008" charelem="253" legality="rules-legal" >
             <specific name="Short Description" > Daily; treat melee attack that hits as natural 20 or one that misses as a hit </specific>
@@ -2128,7 +2183,21 @@
       <LootTally>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Fullblade" type="Weapon" internal-id="ID_FMP_WEAPON_63" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=63&amp;ftype=3" charelem="254" legality="rules-legal" >
-               <specific name="Full Text" > FullbladeSuperior two-handed melee weaponCost: 30 gpDamage: 1d12Proficient: +3Range: -Weight: 10 lb.This enormous, two-handed sword is favored by fighters and paladins.Properties: High Crit (A high crit weapon deals more damage when you score a critical hit with it. A critical hit deals maximum weapon damage and an extra 1[W] at 1st–10th levels, an extra 2[W] at 11th–20th levels, and an extra 3[W] at 21st–30th levels. This extra damage is in addition to any critical damage the weapon supplies if it is a magic weapon.).Group: Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
+               <specific name="Full Text" > Fullblade
+Superior two-handed melee weapon
+Cost: 30 gp
+Damage: 1d12
+Proficient: +3
+Range: -
+Weight: 10 lb.
+
+This enormous, two-handed sword is favored by fighters and paladins.
+
+Properties: 
+High Crit (A high crit weapon deals more damage when you score a critical hit with it. A critical hit deals maximum weapon damage and an extra 1[W] at 1st–10th levels, an extra 2[W] at 11th–20th levels, and an extra 3[W] at 21st–30th levels. This extra damage is in addition to any critical damage the weapon supplies if it is a magic weapon.).
+
+Group: 
+Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
                <specific name="Weight" > 10 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" />
@@ -2166,7 +2235,13 @@
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Scale Armor" type="Armor" internal-id="ID_FMP_ARMOR_5" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=5&amp;ftype=2" charelem="256" legality="rules-legal" >
-               <specific name="Full Text" > Scale ArmorDescription: Overlapping pieces of highly durable material, such as steel or even dragon scales, make up scale armor. Despite its heaviness, scale is surprisingly easy to wear; its straps and buckles make it adjustable and able to fit snugly on the body, allowing for flexibility and agility.AC Bonus: +7Speed: -1Weight: 45 lb.Cost: 45 gp.Type: Scale </specific>
+               <specific name="Full Text" > Scale Armor
+Description: Overlapping pieces of highly durable material, such as steel or even dragon scales, make up scale armor. Despite its heaviness, scale is surprisingly easy to wear; its straps and buckles make it adjustable and able to fit snugly on the body, allowing for flexibility and agility.
+AC Bonus: +7
+Speed: -1
+Weight: 45 lb.
+Cost: 45 gp.
+Type: Scale </specific>
                <specific name="Weight" > 45 </specific>
                <specific name="Armor Bonus" > 7 </specific>
                <specific name="Minimum Enhancement Bonus" />
@@ -2182,7 +2257,11 @@
          </loot>
          <loot count="1" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Adventurer&apos;s Kit" type="Gear" internal-id="ID_FMP_GEAR_1" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=1&amp;ftype=4" charelem="257" legality="rules-legal" >
-               <specific name="Full Text" > Adventurer&apos;s KitCategory: GearPrice: 15 gp Weight: 33 lbDescription: This kit includes a backpack, a bedroll, flint and steel, a belt pouch, two sunrods, ten days&apos; worth of trail rations, 50 feet of hempen rope, and a waterskin. </specific>
+               <specific name="Full Text" > Adventurer&apos;s Kit
+Category: Gear
+Price: 15 gp 
+Weight: 33 lb
+Description: This kit includes a backpack, a bedroll, flint and steel, a belt pouch, two sunrods, ten days&apos; worth of trail rations, 50 feet of hempen rope, and a waterskin. </specific>
                <specific name="Weight" > 33 </specific>
                <specific name="Gold" > 15 </specific>
                <specific name="Silver" />
@@ -2196,7 +2275,19 @@
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Longbow" type="Weapon" internal-id="ID_FMP_WEAPON_40" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=40&amp;ftype=3" charelem="258" legality="rules-legal" >
-               <specific name="Full Text" > LongbowMilitary two-handed ranged weaponCost: 30 gpDamage: 1d10Proficient: +2Range: 20/40Weight: 3 lb.Properties: Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).Group: Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
+               <specific name="Full Text" > Longbow
+Military two-handed ranged weapon
+Cost: 30 gp
+Damage: 1d10
+Proficient: +2
+Range: 20/40
+Weight: 3 lb.
+
+Properties: 
+Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).
+
+Group: 
+Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
                <specific name="Weight" > 3 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" > 20/40 </specific>
@@ -2212,7 +2303,14 @@
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Greatsword" type="Weapon" internal-id="ID_FMP_WEAPON_27" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=27&amp;ftype=3" charelem="259" legality="rules-legal" >
-               <specific name="Full Text" > GreatswordMilitary two-handed melee weaponCost: 30 gpDamage: 1d10Proficient: +3Weight: 8 lb.Group: Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
+               <specific name="Full Text" > Greatsword
+Military two-handed melee weapon
+Cost: 30 gp
+Damage: 1d10
+Proficient: +3
+Weight: 8 lb.
+Group: 
+Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
                <specific name="Weight" > 8 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" />
@@ -2249,7 +2347,21 @@
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Fullblade" type="Weapon" internal-id="ID_FMP_WEAPON_63" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=63&amp;ftype=3" charelem="261" legality="rules-legal" >
-               <specific name="Full Text" > FullbladeSuperior two-handed melee weaponCost: 30 gpDamage: 1d12Proficient: +3Range: -Weight: 10 lb.This enormous, two-handed sword is favored by fighters and paladins.Properties: High Crit (A high crit weapon deals more damage when you score a critical hit with it. A critical hit deals maximum weapon damage and an extra 1[W] at 1st–10th levels, an extra 2[W] at 11th–20th levels, and an extra 3[W] at 21st–30th levels. This extra damage is in addition to any critical damage the weapon supplies if it is a magic weapon.).Group: Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
+               <specific name="Full Text" > Fullblade
+Superior two-handed melee weapon
+Cost: 30 gp
+Damage: 1d12
+Proficient: +3
+Range: -
+Weight: 10 lb.
+
+This enormous, two-handed sword is favored by fighters and paladins.
+
+Properties: 
+High Crit (A high crit weapon deals more damage when you score a critical hit with it. A critical hit deals maximum weapon damage and an extra 1[W] at 1st–10th levels, an extra 2[W] at 11th–20th levels, and an extra 3[W] at 21st–30th levels. This extra damage is in addition to any critical damage the weapon supplies if it is a magic weapon.).
+
+Group: 
+Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
                <specific name="Weight" > 10 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" />
@@ -2287,7 +2399,13 @@
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Scale Armor" type="Armor" internal-id="ID_FMP_ARMOR_5" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=5&amp;ftype=2" charelem="263" legality="rules-legal" >
-               <specific name="Full Text" > Scale ArmorDescription: Overlapping pieces of highly durable material, such as steel or even dragon scales, make up scale armor. Despite its heaviness, scale is surprisingly easy to wear; its straps and buckles make it adjustable and able to fit snugly on the body, allowing for flexibility and agility.AC Bonus: +7Speed: -1Weight: 45 lb.Cost: 45 gp.Type: Scale </specific>
+               <specific name="Full Text" > Scale Armor
+Description: Overlapping pieces of highly durable material, such as steel or even dragon scales, make up scale armor. Despite its heaviness, scale is surprisingly easy to wear; its straps and buckles make it adjustable and able to fit snugly on the body, allowing for flexibility and agility.
+AC Bonus: +7
+Speed: -1
+Weight: 45 lb.
+Cost: 45 gp.
+Type: Scale </specific>
                <specific name="Weight" > 45 </specific>
                <specific name="Armor Bonus" > 7 </specific>
                <specific name="Minimum Enhancement Bonus" />
@@ -2347,7 +2465,21 @@
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Fullblade (Large)" type="Weapon" internal-id="ID_INTERNAL_WEAPON_LARGE_FULLBLADE" charelem="266" legality="rules-legal" >
                <specific name="_SupportsID" > ID_FMP_WEAPON_63 </specific>
-               <specific name="Full Text" > Large FullbladeSuperior two-handed melee weaponCost: 30 gpDamage: 2d6Proficient: +3Range: -Weight: 20 lb.This enormous, two-handed sword is favored by fighters and paladins.Properties: High Crit (A high crit weapon deals more damage when you score a critical hit with it. A critical hit deals maximum weapon damage and an extra 1[W] at 1st–10th levels, an extra 2[W] at 11th–20th levels, and an extra 3[W] at 21st–30th levels. This extra damage is in addition to any critical damage the weapon supplies if it is a magic weapon.).Group: Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
+               <specific name="Full Text" > Large Fullblade
+Superior two-handed melee weapon
+Cost: 30 gp
+Damage: 2d6
+Proficient: +3
+Range: -
+Weight: 20 lb.
+
+This enormous, two-handed sword is favored by fighters and paladins.
+
+Properties: 
+High Crit (A high crit weapon deals more damage when you score a critical hit with it. A critical hit deals maximum weapon damage and an extra 1[W] at 1st–10th levels, an extra 2[W] at 11th–20th levels, and an extra 3[W] at 21st–30th levels. This extra damage is in addition to any critical damage the weapon supplies if it is a magic weapon.).
+
+Group: 
+Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
                <specific name="Weight" > 20 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" />
@@ -2387,7 +2519,21 @@
          <loot count="1" equip-count="1" ShowPowerCard="1" >
             <RulesElement name="Fullblade (Large)" type="Weapon" internal-id="ID_INTERNAL_WEAPON_LARGE_FULLBLADE" charelem="268" legality="rules-legal" >
                <specific name="_SupportsID" > ID_FMP_WEAPON_63 </specific>
-               <specific name="Full Text" > Large FullbladeSuperior two-handed melee weaponCost: 30 gpDamage: 2d6Proficient: +3Range: -Weight: 20 lb.This enormous, two-handed sword is favored by fighters and paladins.Properties: High Crit (A high crit weapon deals more damage when you score a critical hit with it. A critical hit deals maximum weapon damage and an extra 1[W] at 1st–10th levels, an extra 2[W] at 11th–20th levels, and an extra 3[W] at 21st–30th levels. This extra damage is in addition to any critical damage the weapon supplies if it is a magic weapon.).Group: Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
+               <specific name="Full Text" > Large Fullblade
+Superior two-handed melee weapon
+Cost: 30 gp
+Damage: 2d6
+Proficient: +3
+Range: -
+Weight: 20 lb.
+
+This enormous, two-handed sword is favored by fighters and paladins.
+
+Properties: 
+High Crit (A high crit weapon deals more damage when you score a critical hit with it. A critical hit deals maximum weapon damage and an extra 1[W] at 1st–10th levels, an extra 2[W] at 11th–20th levels, and an extra 3[W] at 21st–30th levels. This extra damage is in addition to any critical damage the weapon supplies if it is a magic weapon.).
+
+Group: 
+Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
                <specific name="Weight" > 20 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" />
@@ -2426,7 +2572,15 @@
          </loot>
          <loot count="1" equip-count="1" ShowPowerCard="1" >
             <RulesElement name="Dragonscale Armor" type="Armor" internal-id="ID_FMP_ARMOR_95" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=95&amp;ftype=2" charelem="20" legality="rules-legal" >
-               <specific name="Full Text" > Dragonscale ArmorDescription: Heavier Athasian masterwork armor is made from horn, scales, and carapaces, such as those found on mekillots or shed by thri-kreen. Advanced masterwork scale armor is created from the tough, thick hides of terrifying rampagers and drakes. The greatest armor of this type is formed from scales shed by the Dragon as it rampages through a region.AC Bonus: +12Minimum Enhancement Value: +6Speed: -1Weight: 45 lb.Cost: SpecialSpecial: +2 FortitudeType: Scale </specific>
+               <specific name="Full Text" > Dragonscale Armor
+Description: Heavier Athasian masterwork armor is made from horn, scales, and carapaces, such as those found on mekillots or shed by thri-kreen. Advanced masterwork scale armor is created from the tough, thick hides of terrifying rampagers and drakes. The greatest armor of this type is formed from scales shed by the Dragon as it rampages through a region.
+AC Bonus: +12
+Minimum Enhancement Value: +6
+Speed: -1
+Weight: 45 lb.
+Cost: Special
+Special: +2 Fortitude
+Type: Scale </specific>
                <specific name="Weight" > 45 </specific>
                <specific name="Armor Bonus" > 12 </specific>
                <specific name="Minimum Enhancement Bonus" > 6 </specific>
@@ -2611,7 +2765,8 @@
                <specific name="Prerequisite" />
                <specific name="Critical" />
                <specific name="Special" />
-               <specific name="Power" > Power (At-Will * Healing, Necrotic): Free Action. Trigger: You reduce an enemy within 20 squares of you to 0 hit points. Effect: Make an attack: Area burst 2 centered on that enemy; targets enemies; +29 vs. Fortitude; on a hit, the attack deals 1d10 necrotic damage, and you regain 2 hit points. This attack doesn&apos;t provoke opportunity attacks.If you&apos;ve reached at least one milestone today, the attack deals 2d8 necrotic damage, and you regain 4 hit points. </specific>
+               <specific name="Power" > Power (At-Will * Healing, Necrotic): Free Action. Trigger: You reduce an enemy within 20 squares of you to 0 hit points. Effect: Make an attack: Area burst 2 centered on that enemy; targets enemies; +29 vs. Fortitude; on a hit, the attack deals 1d10 necrotic damage, and you regain 2 hit points. This attack doesn&apos;t provoke opportunity attacks.
+If you&apos;ve reached at least one milestone today, the attack deals 2d8 necrotic damage, and you regain 4 hit points. </specific>
                <specific name="_Rarity" > Uncommon </specific>
                <specific name="_Monster" />
                <specific name="Granted Powers" />
@@ -2688,7 +2843,19 @@
          <loot count="1" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Longbow (Large)" type="Weapon" internal-id="ID_INTERNAL_WEAPON_LARGE_LONGBOW" charelem="277" legality="rules-legal" >
                <specific name="_SupportsID" > ID_FMP_WEAPON_40 </specific>
-               <specific name="Full Text" > Large LongbowMilitary two-handed ranged weaponCost: 30 gpDamage: 1d12Proficient: +2Range: 20/40Weight: 6 lb.Properties: Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).Group: Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
+               <specific name="Full Text" > Large Longbow
+Military two-handed ranged weapon
+Cost: 30 gp
+Damage: 1d12
+Proficient: +2
+Range: 20/40
+Weight: 6 lb.
+
+Properties: 
+Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).
+
+Group: 
+Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
                <specific name="Weight" > 6 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" > 20/40 </specific>
@@ -2861,7 +3028,9 @@
             <specific name="Attack Type" > Special </specific>
             <specific name="Trigger" > You hit an enemy with a melee basic attack using a weapon. </specific>
             <specific name="Target" > The enemy you hit </specific>
-            <specific name="Effect" > The target takes 1[W] extra damage from the triggering attack.Level 17: 2[W] extra damage.Level 27: 3[W] extra damage. </specific>
+            <specific name="Effect" > The target takes 1[W] extra damage from the triggering attack.
+Level 17: 2[W] extra damage.
+Level 27: 3[W] extra damage. </specific>
             <specific name="_Associated Feats" />
             <specific name="Class" > ID_FMP_CLASS_3,ID_FMP_CLASS_5 </specific>
             <specific name="Level" />
@@ -2897,7 +3066,9 @@
             <specific name="Keywords" > Martial, Stance </specific>
             <specific name="Action Type" > Minor Action </specific>
             <specific name="Attack Type" > Personal </specific>
-            <specific name="Effect" > You assume the battle wrath stance. Until the stance ends, you gain a +2 power bonus to the damage rolls of basic attacks using a weapon.Level 11: +3 power bonus.Level 21: +4 power bonus. </specific>
+            <specific name="Effect" > You assume the battle wrath stance. Until the stance ends, you gain a +2 power bonus to the damage rolls of basic attacks using a weapon.
+Level 11: +3 power bonus.
+Level 21: +4 power bonus. </specific>
             <specific name="_Associated Feats" />
             <specific name="Class" > ID_FMP_CLASS_3 </specific>
             <specific name="Level" />
@@ -3031,7 +3202,9 @@
             <specific name="Keywords" > Martial, Stance </specific>
             <specific name="Action Type" > Minor Action </specific>
             <specific name="Attack Type" > Personal </specific>
-            <specific name="Effect" > You assume the unfettered fury stance. Until the stance ends, you take a -2 penalty to attack rolls with weapon powers and gain a +4 power bonus to the damage rolls of basic attacks using a weapon.Level 11: +6 power bonus.Level 21: +8 power bonus. </specific>
+            <specific name="Effect" > You assume the unfettered fury stance. Until the stance ends, you take a -2 penalty to attack rolls with weapon powers and gain a +4 power bonus to the damage rolls of basic attacks using a weapon.
+Level 11: +6 power bonus.
+Level 21: +8 power bonus. </specific>
             <specific name="_Associated Feats" />
             <specific name="Class" > ID_FMP_CLASS_3 </specific>
             <specific name="Level" />

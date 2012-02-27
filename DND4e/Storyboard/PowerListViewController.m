@@ -120,6 +120,10 @@ NSString *const keyPowerSort = @"keyPowerSort";
         return 0;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -129,8 +133,8 @@ NSString *const keyPowerSort = @"keyPowerSort";
     
     PowerCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     NSAssert(cell!=nil, @"Could not find cell with identifier \"%@\"",kCellIdentifier);
-    Power *power = [self.powers objectAtIndex:row];
-    [cell setPower:power];
+    id data = [self.powers objectAtIndex:row];
+    [cell setData:data];
     return cell;
 }
 
@@ -160,6 +164,15 @@ NSString *const keyPowerSort = @"keyPowerSort";
 {
     [AppDefaults setObject:key forKey:keyPowerSort];
     [self.powers sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        if ([obj1 isKindOfClass:[Loot class]] &&
+            [obj2 isKindOfClass:[Loot class]] ){
+            // TODO: fix item sort.
+            return [[obj1 magicName] caseInsensitiveCompare:[obj2 magicName]];
+        } else if ([obj1 isKindOfClass:[Loot class]]) {
+            return NSOrderedDescending;
+        } else if ([obj2 isKindOfClass:[Loot class]]) {
+            return NSOrderedAscending;
+        }
         return [[obj1 valueForKey:key] caseInsensitiveCompare:[obj2 valueForKey:key]];
     }];
     [self.powerTable reloadRowsAtIndexPaths:[self.powerTable indexPathsForVisibleRows]

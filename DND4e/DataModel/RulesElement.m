@@ -21,6 +21,7 @@
 @synthesize specifics;
 @synthesize desc;
 @synthesize character;
+@synthesize category;
 
 - (id) init
 {
@@ -48,6 +49,7 @@
     self.legal = NSBOOL([[info valueForKey:@"legality"] isEqualToString:@"rules-legal"]);
     self.internal_id = [info valueForKey:@"internal-id"];
     self.type = [info valueForKey:@"type"];
+    self.category = [info valueForKey:@"Category"];
     id specInfo = [info valueForKey:@"specific"];
     if (specInfo)
     if ([specInfo isKindOfClass:[NSArray class]]) {
@@ -72,7 +74,7 @@
     __block NSString *row = @"<dt><b>%@:</b> %@</dt>";
     __block NSString *rowG = @"<dt style=\"background-color:rgba(44,44,44,.12)\"><b>%@:</b> %@</dt>";
 #define rowColor ((count++)%2 == 0 ? row : rowG)
-    [html appendFormat:row,@"Type",self.type];
+    [html appendFormat:rowColor,@"Type",self.type];
     //[html appendFormat:row,@"Element",self.charelem];
     if(![self.legal boolValue]) [html appendFormat:rowColor,@"House Ruled",@"yes"];
     if ([self.specifics count] > 0) {
@@ -80,7 +82,7 @@
             NSString *key = [obj valueForKey:@"name"];
             NSString *value = [obj valueForKey:kXMLReaderTextNodeKey];
             if ([self shouldDisplaySpecific:key]) {
-                [html appendFormat:row,key,replace(value)];
+                [html appendFormat:rowColor,key,replace(value)];
             } else if ([key rangeOfString:@"Power"].length > 0) {
                 // TODO: add Power
                 NSLog(@"Power: %@ - %@", key, value);
@@ -94,12 +96,12 @@
                 }];
 
             } else if ([key isEqualToString:@"Flavor"]) {
-                [html appendFormat:@"<dt style=\"background-color:rgba(44,44,44,.12)\"><b>%@:</b><i> %@</i></dt>",key,value];
+                [html appendFormat:@"<i>%@</i>",NSFORMAT(rowColor,key,value)];
             }
         }];
     }
     if (self.desc)
-        [html appendFormat:rowG,@"Description",self.desc];
+        [html appendFormat:rowColor,@"Description",self.desc];
     
     [html appendString:@"</dl>"];
     

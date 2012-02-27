@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSNumber * legal;
 @property (nonatomic, strong) NSString * url_string;
 @property (nonatomic, strong) NSString * desc;
+@property (nonatomic, strong) NSString * category;
 @property (nonatomic, strong) NSMutableArray *specifics;
 @property (nonatomic, strong) Character * character;
 

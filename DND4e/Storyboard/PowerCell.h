@@ -17,6 +17,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *attack;
 @property (strong, nonatomic) IBOutlet UIImageView *arrow;
 
-- (void) setPower:(Power*)power;
+- (void) setData:(id)data;
 
 @end

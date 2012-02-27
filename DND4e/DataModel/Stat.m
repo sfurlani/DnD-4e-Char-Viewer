@@ -188,6 +188,7 @@
                 
                 // A Sub stat that has no Stat Link (values contained herin)
                 NSString *conditional = [obj valueForKey:@"conditional"];
+                NSString *requires = [obj valueForKey:@"requires"];
                 NSNumber *subElem = NSINT([[obj valueForKey:@"charelem"] intValue]);
                 NSString *subType = [obj valueForKey:@"type"];
                 //NSString *subName = [obj valueForKey:@"name"];
@@ -211,6 +212,9 @@
                 }
                 if (conditional) {
                     [html appendFormat:@"<div style=\"padding-left: 2em; \"><i>%@</i></div>",conditional]; 
+                }
+                if (requires) {
+                    [html appendFormat:@"<div style=\"padding-left: 2em; \"><i>%@</i></div>",requires]; 
                 }
                 
             }

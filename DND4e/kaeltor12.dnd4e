@@ -738,7 +738,8 @@
          </RulesElement>
          <RulesElement name="Acrobatics" type="Skill" internal-id="ID_FMP_SKILL_1" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=1" charelem="48" legality="rules-legal" >
             <specific name="Key Ability" > Dexterity </specific>
-         Creatures typically use the Acrobatics skill to maintain their balance while walking on narrow or unstable surfaces, to slip free of a grab or restraints, and to take less damage from a fall.	Moving across a surface that is slippery doesn&apos;t usually require an Acrobatics check; that surface is instead treated as difficult terrain. If a surface is extremely slippery, the DM might require an Acrobatics check to cross it.
+         Creatures typically use the Acrobatics skill to maintain their balance while walking on narrow or unstable surfaces, to slip free of a grab or restraints, and to take less damage from a fall.
+	Moving across a surface that is slippery doesn&apos;t usually require an Acrobatics check; that surface is instead treated as difficult terrain. If a surface is extremely slippery, the DM might require an Acrobatics check to cross it.
          </RulesElement>
          <RulesElement name="Arcana" type="Skill" internal-id="ID_FMP_SKILL_2" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=2" charelem="49" legality="rules-legal" >
             <specific name="Key Ability" > Intelligence </specific>
@@ -754,11 +755,13 @@
          </RulesElement>
          <RulesElement name="Dungeoneering" type="Skill" internal-id="ID_FMP_SKILL_7" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=7" charelem="52" legality="rules-legal" >
             <specific name="Key Ability" > Wisdom </specific>
-         The Dungeoneering skill represents knowledge and skills related to dungeon exploration, including finding one&apos;s way through underground complexes, navigating winding caverns, recognizing subterranean hazards, and foraging for food in the Underdark.	Training in this skill represents formalized study or extensive experience. Those that have training in the skill can also identify creatures of the Far Realm.
+         The Dungeoneering skill represents knowledge and skills related to dungeon exploration, including finding one&apos;s way through underground complexes, navigating winding caverns, recognizing subterranean hazards, and foraging for food in the Underdark.
+	Training in this skill represents formalized study or extensive experience. Those that have training in the skill can also identify creatures of the Far Realm.
          </RulesElement>
          <RulesElement name="Endurance" type="Skill" internal-id="ID_FMP_SKILL_8" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=8" charelem="53" legality="rules-legal" >
             <specific name="Key Ability" > Constitution </specific>
-         The Endurance skill is used to stave off ill effects and to push beyond normal physical limits. A creature that has training in Endurance can hold its breath for long periods of time, forestall the debilitating effects of hunger and thirst, and swim or tread water for extended periods. Some hazards—including extreme temperatures, violent weather, and diseases—require creatures to make Endurance checks to resist or delay debilitating effects.	Characters rarely use Endurance actively; the DM directs players to use it in response to certain hazards. Using the skill in that way requires no action, unless otherwise noted. See “Environmental Dangers” and “Disease” for some of the situations that require Endurance checks.
+         The Endurance skill is used to stave off ill effects and to push beyond normal physical limits. A creature that has training in Endurance can hold its breath for long periods of time, forestall the debilitating effects of hunger and thirst, and swim or tread water for extended periods. Some hazards—including extreme temperatures, violent weather, and diseases—require creatures to make Endurance checks to resist or delay debilitating effects.
+	Characters rarely use Endurance actively; the DM directs players to use it in response to certain hazards. Using the skill in that way requires no action, unless otherwise noted. See “Environmental Dangers” and “Disease” for some of the situations that require Endurance checks.
          </RulesElement>
          <RulesElement name="Heal" type="Skill" internal-id="ID_FMP_SKILL_9" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=9" charelem="54" legality="rules-legal" >
             <specific name="Key Ability" > Wisdom </specific>
@@ -766,11 +769,15 @@
          </RulesElement>
          <RulesElement name="History" type="Skill" internal-id="ID_FMP_SKILL_11" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=11" charelem="55" legality="rules-legal" >
             <specific name="Key Ability" > Intelligence </specific>
-         The History skill encompasses knowledge related to the history of a region and beyond, including the chronological record of significant events and an explanation of their causes. This knowledge includes information pertaining to royalty and other leaders, wars, legends, important personalities, laws, customs, traditions, and memorable events.	Training in this skill represents academic study, either formalized or as a hobby. Those that have training in the skill are likely to know esoteric historical information.	Make a History check to remember a relevant piece of historical lore or to recognize a historical clue (see “Knowledge Checks”).
+         The History skill encompasses knowledge related to the history of a region and beyond, including the chronological record of significant events and an explanation of their causes. This knowledge includes information pertaining to royalty and other leaders, wars, legends, important personalities, laws, customs, traditions, and memorable events.
+	Training in this skill represents academic study, either formalized or as a hobby. Those that have training in the skill are likely to know esoteric historical information.
+	Make a History check to remember a relevant piece of historical lore or to recognize a historical clue (see “Knowledge Checks”).
          </RulesElement>
          <RulesElement name="Insight" type="Skill" internal-id="ID_FMP_SKILL_13" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=13" charelem="56" legality="rules-legal" >
             <specific name="Key Ability" > Wisdom </specific>
-         The Insight skill is used to discern intent and decipher body language during social interactions. Characters use the skill to comprehend motives, to read between the lines, to get a sense of moods and attitudes, and to determine how truthful someone is being. (Monsters rarely use Insight.)	Insight is used to oppose Bluff checks and as the social counterpart to the Perception skill. The skill can also be used to gain clues, to figure out how well a social situation is going, and to determine if someone is under the influence of an outside force.	When a creature uses Insight, it is making a best guess about another creature&apos;s motives and truthfulness. Insight is not an exact science or a supernatural power; it represents the ability to get a sense of how a person is behaving.
+         The Insight skill is used to discern intent and decipher body language during social interactions. Characters use the skill to comprehend motives, to read between the lines, to get a sense of moods and attitudes, and to determine how truthful someone is being. (Monsters rarely use Insight.)
+	Insight is used to oppose Bluff checks and as the social counterpart to the Perception skill. The skill can also be used to gain clues, to figure out how well a social situation is going, and to determine if someone is under the influence of an outside force.
+	When a creature uses Insight, it is making a best guess about another creature&apos;s motives and truthfulness. Insight is not an exact science or a supernatural power; it represents the ability to get a sense of how a person is behaving.
          </RulesElement>
          <RulesElement name="Intimidate" type="Skill" internal-id="ID_FMP_SKILL_14" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=14" charelem="57" legality="rules-legal" >
             <specific name="Key Ability" > Charisma </specific>
@@ -778,15 +785,18 @@
          </RulesElement>
          <RulesElement name="Nature" type="Skill" internal-id="ID_FMP_SKILL_16" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=16" charelem="58" legality="rules-legal" >
             <specific name="Key Ability" > Wisdom </specific>
-         The Nature skill encompasses knowledge and skills related to nature, including finding ways through wilderness, recognizing natural hazards, dealing with and identifying natural creatures, and living off the land. 	Training in this skill represents formalized study or extensive experience. Those that have training in the skill are likely to know esoteric information in the field of study.
+         The Nature skill encompasses knowledge and skills related to nature, including finding ways through wilderness, recognizing natural hazards, dealing with and identifying natural creatures, and living off the land. 
+	Training in this skill represents formalized study or extensive experience. Those that have training in the skill are likely to know esoteric information in the field of study.
          </RulesElement>
          <RulesElement name="Perception" type="Skill" internal-id="ID_FMP_SKILL_17" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=17" charelem="59" legality="rules-legal" >
             <specific name="Key Ability" > Wisdom </specific>
-         The Perception skill encompasses perceiving things, most often by sight or sound. Make a Perception check to notice a clue, detect a secret door, find a trap, follow tracks, listen for sounds behind a closed door, or locate a hidden object.	In most situations, the DM uses passive Perception to determine if a creature notices things. A creature that has fallen asleep naturally (as opposed to being knocked unconscious by a power or other effect) is unconscious, but not totally deprived of awareness; it can use its passive Perception to hear things, but with a -5 penalty.
+         The Perception skill encompasses perceiving things, most often by sight or sound. Make a Perception check to notice a clue, detect a secret door, find a trap, follow tracks, listen for sounds behind a closed door, or locate a hidden object.
+	In most situations, the DM uses passive Perception to determine if a creature notices things. A creature that has fallen asleep naturally (as opposed to being knocked unconscious by a power or other effect) is unconscious, but not totally deprived of awareness; it can use its passive Perception to hear things, but with a -5 penalty.
          </RulesElement>
          <RulesElement name="Religion" type="Skill" internal-id="ID_FMP_SKILL_18" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=18" charelem="60" legality="rules-legal" >
             <specific name="Key Ability" > Intelligence </specific>
-         The Religion skill encompasses knowledge about gods, sacred writings, religious ceremonies, holy symbols, and theology. This knowledge extends to information about the undead and about the Astral Sea, including the creatures of that plane.	Training in this skill represents academic study, either formalized or as a hobby. Those that have training in the skill are likely to know esoteric information in the field of study.
+         The Religion skill encompasses knowledge about gods, sacred writings, religious ceremonies, holy symbols, and theology. This knowledge extends to information about the undead and about the Astral Sea, including the creatures of that plane.
+	Training in this skill represents academic study, either formalized or as a hobby. Those that have training in the skill are likely to know esoteric information in the field of study.
          </RulesElement>
          <RulesElement name="Stealth" type="Skill" internal-id="ID_FMP_SKILL_20" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=20" charelem="61" legality="rules-legal" >
             <specific name="Key Ability" > Dexterity </specific>
@@ -794,11 +804,13 @@
          </RulesElement>
          <RulesElement name="Streetwise" type="Skill" internal-id="ID_FMP_SKILL_21" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=21" charelem="62" legality="rules-legal" >
             <specific name="Key Ability" > Charisma </specific>
-         The Streetwise skill encompasses knowledge of the ins and outs of life in a settlement (a village, a town, or a city), whether on its main streets or in its back alleys. This knowledge is gleaned from talking to people and observing them as they go about their lives, rather than from studying tomes or maps. A character who has training in this skill is especially adept at getting information out of people living in settlements.	When in a settlement, make a Streetwise check to find out what&apos;s going on, who the movers and shakers are, where to get the best deals, and where the dangers are.
+         The Streetwise skill encompasses knowledge of the ins and outs of life in a settlement (a village, a town, or a city), whether on its main streets or in its back alleys. This knowledge is gleaned from talking to people and observing them as they go about their lives, rather than from studying tomes or maps. A character who has training in this skill is especially adept at getting information out of people living in settlements.
+	When in a settlement, make a Streetwise check to find out what&apos;s going on, who the movers and shakers are, where to get the best deals, and where the dangers are.
          </RulesElement>
          <RulesElement name="Thievery" type="Skill" internal-id="ID_FMP_SKILL_23" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=23" charelem="63" legality="rules-legal" >
             <specific name="Key Ability" > Dexterity </specific>
-         The Thievery skill encompasses various abilities that require nerves of steel and a steady hand: disabling traps, opening locks, picking pockets, and sleight of hand.	The DM might decide that some uses of this skill are so specialized that a creature is required to have training in Thievery to have a chance of succeeding.
+         The Thievery skill encompasses various abilities that require nerves of steel and a steady hand: disabling traps, opening locks, picking pockets, and sleight of hand.
+	The DM might decide that some uses of this skill are so specialized that a creature is required to have training in Thievery to have a chance of succeeding.
          </RulesElement>
          <RulesElement name="Athletics" type="Skill" internal-id="ID_FMP_SKILL_27" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=27" charelem="64" legality="rules-legal" >
             <specific name="Key Ability" > Strength </specific>
@@ -835,7 +847,9 @@
          <RulesElement name="male" type="Gender" internal-id="ID_INTERNAL_GENDER_MALE" charelem="69" legality="rules-legal" >
          </RulesElement>
          <RulesElement name="Good" type="Alignment" internal-id="ID_FMP_ALIGNMENT_3" charelem="70" legality="rules-legal" >
-         Good creatures believe it is right to aid and protect those in need. Such creatures are not required to sacrifice themselves to help others, but might be asked to place others&apos; needs above their own, even if doing so means putting themselves in harm&apos;s way. In many ways, that&apos;s the essence of being a heroic adventurer: The people of the town can&apos;t defend themselves from the marauding goblins, so the good adventurer descends into the dungeon—at significant personal risk—to put an end to the goblin raids.	Members of this alignment follow rules and respect authority but are keenly aware that power tends to corrupt those who wield it, too often leading them to exploit their power for selfish or evil ends. When that happens, good creatures feel no obligation to follow the law blindly. It&apos;s better for authority to rest with the members of a community than in the hands of a power-hungry individual or group. When law becomes exploitation, it crosses into evil territory, and good creatures feel compelled to fight it.	Good and evil represent fundamentally different viewpoints, cosmically opposed and unable to coexist in peace. In contrast, good and lawful good creatures get along fine, even if a good creature thinks a lawful good companion might be a little too focused on following the law, rather than just doing the right thing.
+         Good creatures believe it is right to aid and protect those in need. Such creatures are not required to sacrifice themselves to help others, but might be asked to place others&apos; needs above their own, even if doing so means putting themselves in harm&apos;s way. In many ways, that&apos;s the essence of being a heroic adventurer: The people of the town can&apos;t defend themselves from the marauding goblins, so the good adventurer descends into the dungeon—at significant personal risk—to put an end to the goblin raids.
+	Members of this alignment follow rules and respect authority but are keenly aware that power tends to corrupt those who wield it, too often leading them to exploit their power for selfish or evil ends. When that happens, good creatures feel no obligation to follow the law blindly. It&apos;s better for authority to rest with the members of a community than in the hands of a power-hungry individual or group. When law becomes exploitation, it crosses into evil territory, and good creatures feel compelled to fight it.
+	Good and evil represent fundamentally different viewpoints, cosmically opposed and unable to coexist in peace. In contrast, good and lawful good creatures get along fine, even if a good creature thinks a lawful good companion might be a little too focused on following the law, rather than just doing the right thing.
          </RulesElement>
          <RulesElement name="Expansion1" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_EXPANSION1" charelem="71" legality="rules-legal" >
          </RulesElement>
@@ -863,10 +877,13 @@
             <specific name="_DisplayPowers" > ID_FMP_POWER_14163,ID_FMP_POWER_14164,ID_FMP_POWER_14165,ID_FMP_POWER_14166 </specific>
             <specific name="_PARSED_CHILD_FEATURES" > ID_FMP_CLASS_FEATURE_3900,ID_FMP_CLASS_FEATURE_3901,ID_FMP_CLASS_FEATURE_3902 </specific>
             <specific name="_Tags" > Beyond the Crystal Cave </specific>
-         Seekers of new lands and lost places, explorers are masters of the trackless wilderness. Formal exploration is not very common in the world; a few wealthy kingdoms and mercantile cities charter expeditions to distant lands or reward travelers who return home with descriptions of far-off places. Most explorers, however, are individuals whose interests or duties lead them to venture into places where other people rarely go. They can be hunters, scouts, pathfinders, merchants, or emissaries to distant realms. Pursuing their private interests or carrying out important missions entrusted to them leads these travelers into the wild places of the world.	Many explorers begin their adventures as professional treasure-seekers. Searching out legends about lost hoards, hidden artifacts, or unplundered tombs, they put their talents to use in locating the rich score that no one else has found. Other explorers are engaged in searches, quests, or missions that lead them to places no one has visited before. For example, an order of knights or wizards might charge its members with traveling the world to battle a specific threat. A few explorers are true wanderers—travelers who feel compelled to see for themselves what lies beyond the next ridge or to seek out legendary challenges. Fortune or fame is of little concern to these wanderers; they live to satisfy their personal curiosity or to measure themselves against the dangers they overcome.	Regardless of individual motivation, explorers must master a daunting set of skills if they hope to be successful. They must be tough and enduring, capable of traveling great distances over difficult terrain, and must have the ability to survive the worst extremes of weather. They must be expert beast hunters and foragers with a talent for living off the land no matter where they are, since they&apos;re not likely to find friendly inns or trading posts once they leave civilization behind. A knack for direction is indispensable; roads are nonexistent in the wilds, and missing an important landmark or choosing the wrong turn off a poorly marked trail might be a fatal mistake. Finally, explorers had better be ready to defend themselves from the attacks of vicious raiders and hungry monsters.
+         Seekers of new lands and lost places, explorers are masters of the trackless wilderness. Formal exploration is not very common in the world; a few wealthy kingdoms and mercantile cities charter expeditions to distant lands or reward travelers who return home with descriptions of far-off places. Most explorers, however, are individuals whose interests or duties lead them to venture into places where other people rarely go. They can be hunters, scouts, pathfinders, merchants, or emissaries to distant realms. Pursuing their private interests or carrying out important missions entrusted to them leads these travelers into the wild places of the world.
+	Many explorers begin their adventures as professional treasure-seekers. Searching out legends about lost hoards, hidden artifacts, or unplundered tombs, they put their talents to use in locating the rich score that no one else has found. Other explorers are engaged in searches, quests, or missions that lead them to places no one has visited before. For example, an order of knights or wizards might charge its members with traveling the world to battle a specific threat. A few explorers are true wanderers—travelers who feel compelled to see for themselves what lies beyond the next ridge or to seek out legendary challenges. Fortune or fame is of little concern to these wanderers; they live to satisfy their personal curiosity or to measure themselves against the dangers they overcome.
+	Regardless of individual motivation, explorers must master a daunting set of skills if they hope to be successful. They must be tough and enduring, capable of traveling great distances over difficult terrain, and must have the ability to survive the worst extremes of weather. They must be expert beast hunters and foragers with a talent for living off the land no matter where they are, since they&apos;re not likely to find friendly inns or trading posts once they leave civilization behind. A knack for direction is indispensable; roads are nonexistent in the wilds, and missing an important landmark or choosing the wrong turn off a poorly marked trail might be a fatal mistake. Finally, explorers had better be ready to defend themselves from the attacks of vicious raiders and hungry monsters.
          </RulesElement>
          <RulesElement name="Explorer Starting Feature" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_3900" charelem="79" legality="rules-legal" >
-            <specific name="Flavor" > Scrambling over broken ground, balancing on fallen logs, determining which direction to take to get to your goal, and setting your feet in the firmest patch of a bog or a streambed are second nature to you. You have an uncanny knack for knowing which direction you face. You can tell which branch of a trail is likely to lead in the direction you want to go, and you can gain your bearings by studying the landscape around you.	As you venture through various environments, and as the tenderfoots around you flail for balance or slog through the muck, you&apos;re already on the other side of the obstacle. Broken ground and heavy undergrowth can impede others who aren&apos;t familiar with the wilderness, but by using surefooted stride, you know how to cross the worst terrain without difficulty and turn it to your advantage in a fight. Almost any sort of ground can offer some cover if you know what you&apos;re doing, or if you can distract an enemy that needs to pay attention to where it is standing. </specific>
+            <specific name="Flavor" > Scrambling over broken ground, balancing on fallen logs, determining which direction to take to get to your goal, and setting your feet in the firmest patch of a bog or a streambed are second nature to you. You have an uncanny knack for knowing which direction you face. You can tell which branch of a trail is likely to lead in the direction you want to go, and you can gain your bearings by studying the landscape around you.
+	As you venture through various environments, and as the tenderfoots around you flail for balance or slog through the muck, you&apos;re already on the other side of the obstacle. Broken ground and heavy undergrowth can impede others who aren&apos;t familiar with the wilderness, but by using surefooted stride, you know how to cross the worst terrain without difficulty and turn it to your advantage in a fight. Almost any sort of ground can offer some cover if you know what you&apos;re doing, or if you can distract an enemy that needs to pay attention to where it is standing. </specific>
             <specific name="Short Description" > Find north automatically, +5 to skill checks to avoid becoming lost, find specific location, or spot landmark; gain Surefooted Stride power </specific>
             <specific name="Level" > 1 </specific>
             <specific name="_Tags" > Beyond the Crystal Cave </specific>
@@ -874,7 +891,8 @@
             <specific name="Type" > Utility </specific>
             <specific name="Class" />
             <specific name="_DisplayPowers" > ID_FMP_POWER_14163 </specific>
-         You can tell which way is north, and you gain a +5 bonus to any skill check to avoid becoming lost, find your way to a specific location, or spot a distant landmark.	In addition, you gain the surefooted stride power.
+         You can tell which way is north, and you gain a +5 bonus to any skill check to avoid becoming lost, find your way to a specific location, or spot a distant landmark.
+	In addition, you gain the surefooted stride power.
          </RulesElement>
          <RulesElement name="Surefooted Stride" type="Power" internal-id="ID_FMP_POWER_14163" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=14163" charelem="80" legality="rules-legal" >
             <specific name="Flavor" > Your expert woodcraft allows you to move easily through difficult terrain and use it to your advantage in battle. </specific>
@@ -900,8 +918,13 @@
             <specific name="Size" > Medium </specific>
             <specific name="Speed" > 7 squares </specific>
             <specific name="Characteristics" > Agile, friendly, intuitive, joyful, perceptive, quick, quiet, wild </specific>
-            <specific name="Physical Qualities" > Elves are slender, athletic folk about as tall as humans. They have the same range of complexions as humans, tending more toward tan or brown hues. A typical elf &apos;s hair color is dark brown, autumn orange, mossy green, or deep gold. Elven ears are long and pointed, while an elf &apos;s eyes are vibrant blue, violet, or green. Elves favor a wild and loose look to their hair.	Elves mature at about the same rate as humans, but they show few effects of age past adulthood. The first sign of an elf &apos;s advancing age is typically a change in hair color—sometimes graying but usually darkening or taking on more autumnal hues. Most elves live to be well over two hundred years old and remain vigorous almost to the end. </specific>
-            <specific name="Playing" > When creating an elf adventurer, here are a few points to consider.	Protect all that is good and beautiful. The natural progression of the universe seems intent on destroying the fleeting grace of beauty, love, and peace. Thus, you must fight to ensure that these things survive. An elf might remain unmoved by the plight of a human city facing an orc invasion, even as an idyllic village of farmers in the horde&apos;s path spurs him to action. Elves appreciate beauty because their history has forced them to watch it gradually fade from the world. From the first days of the bitter fey war, through the rise and fall of a succession of worldly empires, the elves know all too well that anything worth enjoying or loving is worth fighting for.	Life is measured in years, not days. You are acutely aware of the unfurling of years and the grand tapestry of history. Elves plan for the long term, and you are no different. “Enjoy the day; prepare for the year,” is a common elf saying that expresses this attitude. You might spend your days in song and drink easily enough, but all the while in the back of your mind, you watch a web of events unfold around you. You understand that an action now leads to a reaction—a change in the world—that might not become evident for years. When you adventure, you keep one eye on the future and your role in the grand scheme of events.	The strongest sword is guided with wisdom, not might. The best battles are those that are short, decisive, and as bloodless as possible. The elves are too few in number to wage wars of attrition, and they view risky tactics and frontal assaults as foolish at best. As an elf, you employ the most direct methods to defeat your enemy. Why waste time battling goblin patrols when the entire tribe will scatter with the death of its conquest-minded king? Keep the long-term view in mind, and settle all problems with quick, decisive resolution.	Tales and songs. The elves preserve their history through songs and tales told in the oral tradition. As a young elf, you would have heard and memorized these stories of great elf heroes, their legendary deeds, and the struggles of your people. You might draw on the nature, events, or themes of such stories for inspiration, or to express your elven point of view to your allies. </specific>
+            <specific name="Physical Qualities" > Elves are slender, athletic folk about as tall as humans. They have the same range of complexions as humans, tending more toward tan or brown hues. A typical elf &apos;s hair color is dark brown, autumn orange, mossy green, or deep gold. Elven ears are long and pointed, while an elf &apos;s eyes are vibrant blue, violet, or green. Elves favor a wild and loose look to their hair.
+	Elves mature at about the same rate as humans, but they show few effects of age past adulthood. The first sign of an elf &apos;s advancing age is typically a change in hair color—sometimes graying but usually darkening or taking on more autumnal hues. Most elves live to be well over two hundred years old and remain vigorous almost to the end. </specific>
+            <specific name="Playing" > When creating an elf adventurer, here are a few points to consider.
+	Protect all that is good and beautiful. The natural progression of the universe seems intent on destroying the fleeting grace of beauty, love, and peace. Thus, you must fight to ensure that these things survive. An elf might remain unmoved by the plight of a human city facing an orc invasion, even as an idyllic village of farmers in the horde&apos;s path spurs him to action. Elves appreciate beauty because their history has forced them to watch it gradually fade from the world. From the first days of the bitter fey war, through the rise and fall of a succession of worldly empires, the elves know all too well that anything worth enjoying or loving is worth fighting for.
+	Life is measured in years, not days. You are acutely aware of the unfurling of years and the grand tapestry of history. Elves plan for the long term, and you are no different. “Enjoy the day; prepare for the year,” is a common elf saying that expresses this attitude. You might spend your days in song and drink easily enough, but all the while in the back of your mind, you watch a web of events unfold around you. You understand that an action now leads to a reaction—a change in the world—that might not become evident for years. When you adventure, you keep one eye on the future and your role in the grand scheme of events.
+	The strongest sword is guided with wisdom, not might. The best battles are those that are short, decisive, and as bloodless as possible. The elves are too few in number to wage wars of attrition, and they view risky tactics and frontal assaults as foolish at best. As an elf, you employ the most direct methods to defeat your enemy. Why waste time battling goblin patrols when the entire tribe will scatter with the death of its conquest-minded king? Keep the long-term view in mind, and settle all problems with quick, decisive resolution.
+	Tales and songs. The elves preserve their history through songs and tales told in the oral tradition. As a young elf, you would have heard and memorized these stories of great elf heroes, their legendary deeds, and the struggles of your people. You might draw on the nature, events, or themes of such stories for inspiration, or to express your elven point of view to your allies. </specific>
             <specific name="Vision" > Low-light </specific>
             <specific name="Average Height" > 5&apos; 4&quot;-6&apos;0&quot; </specific>
             <specific name="Average Weight" > 130-170 lb. </specific>
@@ -1020,7 +1043,9 @@
             <specific name="_RoleElement" > ID_FMP_ROLE_3 </specific>
             <specific name="_PowerSourceElement" > ID_FMP_POWER_SOURCE_1 </specific>
             <specific name="Short Description" > A master of bow and blade, you excel at hit-and-run tactics and avoiding danger. </specific>
-         Rangers are watchful warriors who roam past the horizon to safeguard a region, a principle, or a way of life. Masters of bow and blade, rangers excel at hit-and-run assaults and can quickly and silently eliminate foes. Rangers lay superb ambushes and excel at avoiding danger.	As a ranger, you possess almost supernaturally keen senses and a deep appreciation for untamed wilderness. With your knowledge of the natural world, you are able to track enemies through nearly any landscape, using the smallest clue to set your course, even sometimes the calls and songs of beasts and birds. Your severe demeanor promises a deadly conclusion to any enemy you hunt.	When you catch sight of your quarry, will the transgressor perish by swift bow shots from a distance, or by the twofold blades that glint and glitter in each of your battle-scarred hands?
+         Rangers are watchful warriors who roam past the horizon to safeguard a region, a principle, or a way of life. Masters of bow and blade, rangers excel at hit-and-run assaults and can quickly and silently eliminate foes. Rangers lay superb ambushes and excel at avoiding danger.
+	As a ranger, you possess almost supernaturally keen senses and a deep appreciation for untamed wilderness. With your knowledge of the natural world, you are able to track enemies through nearly any landscape, using the smallest clue to set your course, even sometimes the calls and songs of beasts and birds. Your severe demeanor promises a deadly conclusion to any enemy you hunt.
+	When you catch sight of your quarry, will the transgressor perish by swift bow shots from a distance, or by the twofold blades that glint and glitter in each of your battle-scarred hands?
          </RulesElement>
          <RulesElement name="Ranger" type="Grants" internal-id="ID_INTERNAL_GRANTS_RANGER" charelem="96" legality="rules-legal" >
             <specific name="_SupportsID" > ID_FMP_CLASS_5 </specific>
@@ -1188,7 +1213,8 @@
          <RulesElement name="Quick Draw" type="Feat" internal-id="ID_FMP_FEAT_157" url="http://www.wizards.com/dndinsider/compendium/feat.aspx?id=157" charelem="25" legality="rules-legal" >
             <specific name="Tier" > Heroic </specific>
             <specific name="Short Description" > Draw a weapon with attack action, +2 to initiative </specific>
-         You can draw a weapon (or an object, such as a potion, stored in a belt pouch, a bandolier, or a similar container) as part of the same action used to attack with the weapon or use the object.	You also gain a +2 feat bonus to initiative checks.
+         You can draw a weapon (or an object, such as a potion, stored in a belt pouch, a bandolier, or a similar container) as part of the same action used to attack with the weapon or use the object.
+	You also gain a +2 feat bonus to initiative checks.
          </RulesElement>
          <RulesElement name="Hunter&apos;s Quarry" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_602" charelem="41" legality="rules-legal" >
             <specific name="Short Description" > Minor action, designate nearest enemy you see as quarry; deal extra damage to quarry once per round. </specific>
@@ -1205,7 +1231,17 @@
             <specific name="Keywords" />
             <specific name="Action Type" > Minor Action </specific>
             <specific name="Attack Type" />
-            <specific name="Effect" > You can designate the nearest enemy to you that you can see as your quarry.Once per round, when you hit your quarry with an attack, the attack deals extra damage based on your level. If you can make multiple attacks in a round, you decide which attack to apply the extra damage to after all the attacks are rolled. If you have dealt Hunter&apos;s Quarry damage since the start of your turn, you cannot deal it again until the start of your next turn.The hunter&apos;s quarry effect remains active until the end of the encounter, until the quarry is defeated, or until you designate a different target as your quarry.You can designate one enemy as your quarry at a time.&lt;table&gt;Level	Hunter&apos;s Quarry Extra Damage1st–10th	+1d611th–20th	+2d621st–30th	+3d6&lt;/table&gt; </specific>
+            <specific name="Effect" > You can designate the nearest enemy to you that you can see as your quarry.
+Once per round, when you hit your quarry with an attack, the attack deals extra damage based on your level. If you can make multiple attacks in a round, you decide which attack to apply the extra damage to after all the attacks are rolled. If you have dealt Hunter&apos;s Quarry damage since the start of your turn, you cannot deal it again until the start of your next turn.
+
+The hunter&apos;s quarry effect remains active until the end of the encounter, until the quarry is defeated, or until you designate a different target as your quarry.
+
+You can designate one enemy as your quarry at a time.
+
+&lt;table&gt;Level	Hunter&apos;s Quarry Extra Damage
+1st–10th	+1d6
+11th–20th	+2d6
+21st–30th	+3d6&lt;/table&gt; </specific>
             <specific name="_ParentFeature" > ID_FMP_CLASS_FEATURE_602,ID_FMP_CLASS_FEATURE_1530 </specific>
          </RulesElement>
          <RulesElement name="Prime Shot" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_603" charelem="42" legality="rules-legal" >
@@ -1226,7 +1262,8 @@
             <specific name="Requirement" > You must be wielding two melee weapons or a ranged weapon. </specific>
             <specific name="Targets" > One or two creatures </specific>
             <specific name="Attack" > Strength vs. AC (melee; main weapon and off-hand weapon) or Dexterity vs. AC (ranged), two attacks </specific>
-            <specific name="Hit" > 1[W] damage per attack.Increase damage to 2[W] at 21st level. </specific>
+            <specific name="Hit" > 1[W] damage per attack.
+Increase damage to 2[W] at 21st level. </specific>
             <specific name="Class" > ID_FMP_CLASS_5 </specific>
             <specific name="Level" > 1 </specific>
             <specific name="Power Type" > Attack </specific>
@@ -1322,7 +1359,9 @@
          <RulesElement name="Light Step" type="Feat" internal-id="ID_FMP_FEAT_60" url="http://www.wizards.com/dndinsider/compendium/feat.aspx?id=60" charelem="27" legality="rules-legal" >
             <specific name="Tier" > Heroic </specific>
             <specific name="Short Description" > Add to overland speed of group, +1 to Acrobatics and Stealth </specific>
-         For the purpose of hourly or daily travel rates, add 1 to your overland speed and the speed of all allies in your traveling group.     Add 5 to the DC required to find or follow your tracks. If traveling with allies, you can share this benefit with up to five other characters.     You gain a +1 feat bonus to Acrobatics checks and Stealth checks.
+         For the purpose of hourly or daily travel rates, add 1 to your overland speed and the speed of all allies in your traveling group.
+     Add 5 to the DC required to find or follow your tracks. If traveling with allies, you can share this benefit with up to five other characters.
+     You gain a +1 feat bonus to Acrobatics checks and Stealth checks.
          </RulesElement>
          <RulesElement name="Dexterity" type="Ability Increase (Level 4)" internal-id="ID_INTERNAL_ABILITY_INCREASE_(LEVEL_4)_DEXTERITY" charelem="4" legality="rules-legal" >
          </RulesElement>
@@ -1363,7 +1402,10 @@
             <specific name="Keywords" > Martial </specific>
             <specific name="Action Type" > Standard Action </specific>
             <specific name="Attack Type" > Personal </specific>
-            <specific name="Effect" > You make a ranged basic attack with a weapon. If the attack hits, the target is also subject to one of the following effects of your choice:	* You slide the target up to 2 squares.	* The target falls prone.	* The target is slowed (save ends). </specific>
+            <specific name="Effect" > You make a ranged basic attack with a weapon. If the attack hits, the target is also subject to one of the following effects of your choice:
+	* You slide the target up to 2 squares.
+	* The target falls prone.
+	* The target is slowed (save ends). </specific>
             <specific name="Class" > ID_FMP_CLASS_5 </specific>
             <specific name="Level" />
             <specific name="Power Type" > Attack </specific>
@@ -1496,7 +1538,9 @@
             <specific name="Class Features" > ID_FMP_CLASS_FEATURE_938, ID_FMP_CLASS_FEATURE_939, ID_FMP_CLASS_FEATURE_940 </specific>
             <specific name="Powers" > ID_FMP_POWER_4706,ID_FMP_POWER_4707,ID_FMP_POWER_4708 </specific>
             <specific name="_DisplayPowers" > ID_FMP_POWER_4706,ID_FMP_POWER_4707,ID_FMP_POWER_4708 </specific>
-         Mastery of a chosen armament is a long-standing tradition among many peoples. Legends are full of examples: the fighter who is one with his sword or the assassin who can&apos;t miss with knives. Fables also tell of those who have consummate proficiency with the bow or the crossbow. Some warriors acquire skill with the bow to avoid close combat. Others do so because ability and purpose lead them that way. Archers work for all sorts of causes, military to mercenary, noble to malevolent. One example is the battlefield archer (Player&apos;s Handbook), a tactical shooter that works well in the chaos of small-unit combat.	Unlike other archers, the sharpshooter&apos;s purpose is to become legendary for accuracy and skill, as well as for the number and sorts of foes defeated. Quick shooting, accuracy, and deadliness are the sharpshooter&apos;s trademarks, along with the ability to use a bow or a crossbow in ways that few others can. Some who would become the ultimate sharpshooter look for other archers to challenge in contests of skill or even in duels to the death.	You have honed your bow or crossbow skills with a desire to become the best of the best. You fire faster than most folk would think possible. When enemies try to move in close and shut you down, you shoot on without compromising defense. Those who watch you work could swear your arrows are alive. One day, you&apos;ll be targeting that one enemy whose defeat will make you a legend.
+         Mastery of a chosen armament is a long-standing tradition among many peoples. Legends are full of examples: the fighter who is one with his sword or the assassin who can&apos;t miss with knives. Fables also tell of those who have consummate proficiency with the bow or the crossbow. Some warriors acquire skill with the bow to avoid close combat. Others do so because ability and purpose lead them that way. Archers work for all sorts of causes, military to mercenary, noble to malevolent. One example is the battlefield archer (Player&apos;s Handbook), a tactical shooter that works well in the chaos of small-unit combat.
+	Unlike other archers, the sharpshooter&apos;s purpose is to become legendary for accuracy and skill, as well as for the number and sorts of foes defeated. Quick shooting, accuracy, and deadliness are the sharpshooter&apos;s trademarks, along with the ability to use a bow or a crossbow in ways that few others can. Some who would become the ultimate sharpshooter look for other archers to challenge in contests of skill or even in duels to the death.
+	You have honed your bow or crossbow skills with a desire to become the best of the best. You fire faster than most folk would think possible. When enemies try to move in close and shut you down, you shoot on without compromising defense. Those who watch you work could swear your arrows are alive. One day, you&apos;ll be targeting that one enemy whose defeat will make you a legend.
          </RulesElement>
          <RulesElement name="Stab and Shoot" type="Power" internal-id="ID_FMP_POWER_4706" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=4706" charelem="194" legality="rules-legal" >
             <specific name="Flavor" > You drive your arrow into an adjacent enemy, pull it out, load it, and fire it at another foe. </specific>
@@ -1586,7 +1630,19 @@
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Longbow" type="Weapon" internal-id="ID_FMP_WEAPON_40" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=40&amp;ftype=3" charelem="201" legality="rules-legal" >
-               <specific name="Full Text" > LongbowMilitary two-handed ranged weaponCost: 30 gpDamage: 1d10Proficient: +2Range: 20/40Weight: 3 lb.Properties: Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).Group: Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
+               <specific name="Full Text" > Longbow
+Military two-handed ranged weapon
+Cost: 30 gp
+Damage: 1d10
+Proficient: +2
+Range: 20/40
+Weight: 3 lb.
+
+Properties: 
+Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).
+
+Group: 
+Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
                <specific name="Weight" > 3 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" > 20/40 </specific>
@@ -1616,7 +1672,12 @@
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Leather Armor" type="Armor" internal-id="ID_FMP_ARMOR_2" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=2&amp;ftype=2" charelem="203" legality="rules-legal" >
-               <specific name="Full Text" > Leather ArmorDescription: Leather armor is sturdier than cloth armor. It protects vital areas with multiple layers of boiled-leather plates, while covering the limbs with supple leather that provides a small amount of protection.AC Bonus: +2Weight: 15 lb.Cost: 25 gp.Type: Leather </specific>
+               <specific name="Full Text" > Leather Armor
+Description: Leather armor is sturdier than cloth armor. It protects vital areas with multiple layers of boiled-leather plates, while covering the limbs with supple leather that provides a small amount of protection.
+AC Bonus: +2
+Weight: 15 lb.
+Cost: 25 gp.
+Type: Leather </specific>
                <specific name="Weight" > 15 </specific>
                <specific name="Armor Bonus" > 2 </specific>
                <specific name="Check" > - </specific>
@@ -1682,7 +1743,19 @@ You stand up from prone. </specific>
          </loot>
          <loot count="2" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Longsword" type="Weapon" internal-id="ID_FMP_WEAPON_19" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=19&amp;ftype=3" charelem="206" legality="rules-legal" >
-               <specific name="Full Text" > LongswordMilitary one-handed melee weaponCost: 15 gpDamage: 1d8Proficient: +3Weight: 4 lb.Properties: Versatile (Versatile weapons are one-handed, but you can use them two-handed. If you do, you deal an extra 1 point of damage when you roll damage for the weapon.A Small character such as a halfling must use a versatile weapon two-handed, and doesn&apos;t deal extra damage.).Group: Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
+               <specific name="Full Text" > Longsword
+Military one-handed melee weapon
+Cost: 15 gp
+Damage: 1d8
+Proficient: +3
+Weight: 4 lb.
+
+Properties: 
+Versatile (Versatile weapons are one-handed, but you can use them two-handed. If you do, you deal an extra 1 point of damage when you roll damage for the weapon.
+A Small character such as a halfling must use a versatile weapon two-handed, and doesn&apos;t deal extra damage.).
+
+Group: 
+Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
                <specific name="Weight" > 4 </specific>
                <specific name="Gold" > 15 </specific>
                <specific name="Damage" > 1d8 </specific>
@@ -1696,7 +1769,11 @@ You stand up from prone. </specific>
          </loot>
          <loot count="5" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Arrows" type="Gear" internal-id="ID_FMP_GEAR_11" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=11&amp;ftype=4" charelem="207" legality="rules-legal" >
-               <specific name="Full Text" > Arrows (30)Category: AmmunitionPrice: 1 gp Weight: 3 lbDescription: Arrows come in a quiver that holds thirty arrows. Ammunition is  used up when you fire it from a projectile weapon. </specific>
+               <specific name="Full Text" > Arrows (30)
+Category: Ammunition
+Price: 1 gp 
+Weight: 3 lb
+Description: Arrows come in a quiver that holds thirty arrows. Ammunition is  used up when you fire it from a projectile weapon. </specific>
                <specific name="Weight" > 3 </specific>
                <specific name="Gold" > 1 </specific>
                <specific name="Category" > Ammunition </specific>
@@ -1707,7 +1784,11 @@ You stand up from prone. </specific>
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Arrow" type="Gear" internal-id="ID_FMP_GEAR_58" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=58&amp;ftype=4" charelem="208" legality="rules-legal" >
-               <specific name="Full Text" > ArrowCategory: AmmunitionPrice: 4 cpWeight: .1 lbDescription: Arrows are used up when you fire them from a projectile weapon. </specific>
+               <specific name="Full Text" > Arrow
+Category: Ammunition
+Price: 4 cp
+Weight: .1 lb
+Description: Arrows are used up when you fire them from a projectile weapon. </specific>
                <specific name="Weight" > .1 </specific>
                <specific name="Copper" > 4 </specific>
                <specific name="Category" > Ammunition </specific>
@@ -1718,7 +1799,11 @@ You stand up from prone. </specific>
          </loot>
          <loot count="1" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Adventurer&apos;s Kit" type="Gear" internal-id="ID_FMP_GEAR_1" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=1&amp;ftype=4" charelem="209" legality="rules-legal" >
-               <specific name="Full Text" > Adventurer&apos;s KitCategory: GearPrice: 15 gp Weight: 33 lbDescription: This kit includes a backpack, a bedroll, flint and steel, a belt pouch, two sunrods, ten days&apos; worth of trail rations, 50 feet of hempen rope, and a waterskin. </specific>
+               <specific name="Full Text" > Adventurer&apos;s Kit
+Category: Gear
+Price: 15 gp 
+Weight: 33 lb
+Description: This kit includes a backpack, a bedroll, flint and steel, a belt pouch, two sunrods, ten days&apos; worth of trail rations, 50 feet of hempen rope, and a waterskin. </specific>
                <specific name="Weight" > 33 </specific>
                <specific name="Gold" > 15 </specific>
                <specific name="Category" > Gear </specific>
@@ -1728,7 +1813,11 @@ You stand up from prone. </specific>
          </loot>
          <loot count="1" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Climber&apos;s Kit" type="Gear" internal-id="ID_FMP_GEAR_20" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=20&amp;ftype=4" charelem="210" legality="rules-legal" >
-               <specific name="Full Text" > Climber&apos;s KitCategory: GearPrice: 2 gp Weight: 11 lbDescription: This kit includes all the items grouped beneath its entry: a grappling hook, a small hammer, and ten pitons. When you use a climber&apos;s kit, you gain a +2 bonus to Athletics checks for climbing. </specific>
+               <specific name="Full Text" > Climber&apos;s Kit
+Category: Gear
+Price: 2 gp 
+Weight: 11 lb
+Description: This kit includes all the items grouped beneath its entry: a grappling hook, a small hammer, and ten pitons. When you use a climber&apos;s kit, you gain a +2 bonus to Athletics checks for climbing. </specific>
                <specific name="Weight" > 11 </specific>
                <specific name="Gold" > 2 </specific>
                <specific name="Category" > Gear </specific>
@@ -1738,7 +1827,10 @@ You stand up from prone. </specific>
          </loot>
          <loot count="3" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Hempen Rope (50 ft.)" type="Gear" internal-id="ID_FMP_GEAR_9" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=9&amp;ftype=4" charelem="211" legality="rules-legal" >
-               <specific name="Full Text" > Hempen Rope (50 ft.)Category: GearPrice: 1 gp Weight: 10 lb </specific>
+               <specific name="Full Text" > Hempen Rope (50 ft.)
+Category: Gear
+Price: 1 gp 
+Weight: 10 lb </specific>
                <specific name="Weight" > 10 </specific>
                <specific name="Gold" > 1 </specific>
                <specific name="Category" > Gear </specific>
@@ -1747,7 +1839,11 @@ You stand up from prone. </specific>
          </loot>
          <loot count="1" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Hunter&apos;s Kit" type="Gear" internal-id="ID_FMP_GEAR_103" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=103&amp;ftype=4" charelem="212" legality="rules-legal" >
-               <specific name="Full Text" > Hunter&apos;s KitCategory: GearPrice: 50 gp Weight: 5 lbDescription: This bundle contains bottles of various animal scents, a guide to edible flora, a small knife, snares, and other useful tools. A hunter&apos;s kit grants a +2 bonus to Nature checks made to forage. </specific>
+               <specific name="Full Text" > Hunter&apos;s Kit
+Category: Gear
+Price: 50 gp 
+Weight: 5 lb
+Description: This bundle contains bottles of various animal scents, a guide to edible flora, a small knife, snares, and other useful tools. A hunter&apos;s kit grants a +2 bonus to Nature checks made to forage. </specific>
                <specific name="Weight" > 5 </specific>
                <specific name="Gold" > 50 </specific>
                <specific name="Category" > Gear </specific>
@@ -1757,7 +1853,10 @@ You stand up from prone. </specific>
          </loot>
          <loot count="1" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Waterskin" type="Gear" internal-id="ID_FMP_GEAR_10" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=10&amp;ftype=4" charelem="213" legality="rules-legal" >
-               <specific name="Full Text" > WaterskinCategory: GearPrice: 1 gp Weight: 4 lb </specific>
+               <specific name="Full Text" > Waterskin
+Category: Gear
+Price: 1 gp 
+Weight: 4 lb </specific>
                <specific name="Weight" > 4 </specific>
                <specific name="Gold" > 1 </specific>
                <specific name="Category" > Gear </specific>
@@ -1766,7 +1865,11 @@ You stand up from prone. </specific>
          </loot>
          <loot count="5" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Sunrod" type="Gear" internal-id="ID_FMP_GEAR_7" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=7&amp;ftype=4" charelem="214" legality="rules-legal" >
-               <specific name="Full Text" > Sunrod (2)Category: GearPrice: 4 gp Weight: 2 lbDescription: This minor magic item sheds bright light to a radius of 20 squares for 4 hours before burning out. </specific>
+               <specific name="Full Text" > Sunrod (2)
+Category: Gear
+Price: 4 gp 
+Weight: 2 lb
+Description: This minor magic item sheds bright light to a radius of 20 squares for 4 hours before burning out. </specific>
                <specific name="Weight" > 2 </specific>
                <specific name="Gold" > 4 </specific>
                <specific name="Category" > Gear </specific>
@@ -1776,7 +1879,21 @@ You stand up from prone. </specific>
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Superior crossbow" type="Weapon" internal-id="ID_FMP_WEAPON_73" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=73&amp;ftype=3" charelem="215" legality="rules-legal" >
-               <specific name="Full Text" > Superior crossbowSuperior two-handed ranged weaponCost: 30 gpDamage: 1d10Proficient: +3Range: 20/40Weight: 6 lb.This crossbow appears similar to a traditional crossbow, but it has knobs and dials that allow the weapon to be fine-tuned for greater accuracy.Properties: Load Minor (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the weapon table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).Group: Crossbow (Essentially a small metal bow mounted on a stock and equipped with a mechanical trigger, a crossbow is a point-and-shoot projectile weapon. Crossbows are popular because they require little training to master, yet the heavy pull of the metal bow gives them substantial power.). </specific>
+               <specific name="Full Text" > Superior crossbow
+Superior two-handed ranged weapon
+Cost: 30 gp
+Damage: 1d10
+Proficient: +3
+Range: 20/40
+Weight: 6 lb.
+
+This crossbow appears similar to a traditional crossbow, but it has knobs and dials that allow the weapon to be fine-tuned for greater accuracy.
+
+Properties: 
+Load Minor (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the weapon table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).
+
+Group: 
+Crossbow (Essentially a small metal bow mounted on a stock and equipped with a mechanical trigger, a crossbow is a point-and-shoot projectile weapon. Crossbows are popular because they require little training to master, yet the heavy pull of the metal bow gives them substantial power.). </specific>
                <specific name="Weight" > 6 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" > 20/40 </specific>
@@ -1810,7 +1927,21 @@ You stand up from prone. </specific>
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Greatbow" type="Weapon" internal-id="ID_FMP_WEAPON_72" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=72&amp;ftype=3" charelem="217" legality="rules-legal" >
-               <specific name="Full Text" > GreatbowSuperior two-handed ranged weaponCost: 30 gpDamage: 1d12Proficient: +2Range: 25/50Weight: 5 lb.This massive, recurved bow stands as tall as a human when strung, and it fires arrows with greater power than a traditional longbow.Properties: Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).Group: Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
+               <specific name="Full Text" > Greatbow
+Superior two-handed ranged weapon
+Cost: 30 gp
+Damage: 1d12
+Proficient: +2
+Range: 25/50
+Weight: 5 lb.
+
+This massive, recurved bow stands as tall as a human when strung, and it fires arrows with greater power than a traditional longbow.
+
+Properties: 
+Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).
+
+Group: 
+Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
                <specific name="Weight" > 5 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" > 25/50 </specific>
@@ -1841,7 +1972,21 @@ You stand up from prone. </specific>
          </loot>
          <loot count="1" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Greatbow" type="Weapon" internal-id="ID_FMP_WEAPON_72" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=72&amp;ftype=3" charelem="219" legality="rules-legal" >
-               <specific name="Full Text" > GreatbowSuperior two-handed ranged weaponCost: 30 gpDamage: 1d12Proficient: +2Range: 25/50Weight: 5 lb.This massive, recurved bow stands as tall as a human when strung, and it fires arrows with greater power than a traditional longbow.Properties: Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).Group: Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
+               <specific name="Full Text" > Greatbow
+Superior two-handed ranged weapon
+Cost: 30 gp
+Damage: 1d12
+Proficient: +2
+Range: 25/50
+Weight: 5 lb.
+
+This massive, recurved bow stands as tall as a human when strung, and it fires arrows with greater power than a traditional longbow.
+
+Properties: 
+Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).
+
+Group: 
+Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
                <specific name="Weight" > 5 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" > 25/50 </specific>
@@ -1872,7 +2017,20 @@ You stand up from prone. </specific>
          </loot>
          <loot count="0" equip-count="-1" ShowPowerCard="1" >
             <RulesElement name="Dagger" type="Weapon" internal-id="ID_FMP_WEAPON_3" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=3&amp;ftype=3" charelem="221" legality="rules-legal" >
-               <specific name="Full Text" > DaggerSimple one-handed melee weaponCost: 1 gpDamage: 1d4Proficient: +3Range: 5/10Weight: 1 lb.Properties: Light Thrown (A basic attack with a light thrown weapon uses your Dexterity. Light thrown weapons don&apos;t deal as much damage as heavy thrown weapons, but some powers let you hurl several of them at once or in rapid succession.).Off-Hand (An off-hand weapon is light enough that you can hold it and attack effectively with it while holding a weapon in your main hand. You can&apos;t attack with both weapons in the same turn, unless you have a power that lets you do so, but you can attack with either weapon.).Group: Light blade (Light blades reward accuracy as much as force. Pinpoint attacks, lunges, and agile defenses are the strong points of these weapons.). </specific>
+               <specific name="Full Text" > Dagger
+Simple one-handed melee weapon
+Cost: 1 gp
+Damage: 1d4
+Proficient: +3
+Range: 5/10
+Weight: 1 lb.
+
+Properties: 
+Light Thrown (A basic attack with a light thrown weapon uses your Dexterity. Light thrown weapons don&apos;t deal as much damage as heavy thrown weapons, but some powers let you hurl several of them at once or in rapid succession.).
+Off-Hand (An off-hand weapon is light enough that you can hold it and attack effectively with it while holding a weapon in your main hand. You can&apos;t attack with both weapons in the same turn, unless you have a power that lets you do so, but you can attack with either weapon.).
+
+Group: 
+Light blade (Light blades reward accuracy as much as force. Pinpoint attacks, lunges, and agile defenses are the strong points of these weapons.). </specific>
                <specific name="Weight" > 1 </specific>
                <specific name="Gold" > 1 </specific>
                <specific name="Range" > 5/10 </specific>
@@ -1963,7 +2121,19 @@ Ignore cover on your next attack this turn when using a bow or crossbow. </speci
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Longsword" type="Weapon" internal-id="ID_FMP_WEAPON_19" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=19&amp;ftype=3" charelem="226" legality="rules-legal" >
-               <specific name="Full Text" > LongswordMilitary one-handed melee weaponCost: 15 gpDamage: 1d8Proficient: +3Weight: 4 lb.Properties: Versatile (Versatile weapons are one-handed, but you can use them two-handed. If you do, you deal an extra 1 point of damage when you roll damage for the weapon.A Small character such as a halfling must use a versatile weapon two-handed, and doesn&apos;t deal extra damage.).Group: Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
+               <specific name="Full Text" > Longsword
+Military one-handed melee weapon
+Cost: 15 gp
+Damage: 1d8
+Proficient: +3
+Weight: 4 lb.
+
+Properties: 
+Versatile (Versatile weapons are one-handed, but you can use them two-handed. If you do, you deal an extra 1 point of damage when you roll damage for the weapon.
+A Small character such as a halfling must use a versatile weapon two-handed, and doesn&apos;t deal extra damage.).
+
+Group: 
+Heavy blade (Blades are balanced edged weapons. Heavy blades share some of the precision of light blades and some of the mass of axes. Heavy blades are used primarily for slashing cuts rather than stabs and thrusts.). </specific>
                <specific name="Weight" > 4 </specific>
                <specific name="Gold" > 15 </specific>
                <specific name="Damage" > 1d8 </specific>
@@ -1993,7 +2163,15 @@ Split the weapon into two identical weapons, one in your primary hand and one in
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Earthhide Armor" type="Armor" internal-id="ID_FMP_ARMOR_30" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=30&amp;ftype=2" charelem="228" legality="rules-legal" >
-               <specific name="Full Text" > Earthhide ArmorDescription: Dwarves use earth energy to fortify earthhide, mimicking the strange living-earth skin of creatures such as the galeb duhr and the earth titan.AC Bonus: +3Minimum Enhancement Value: +3Check: -1Weight: 25 lb.Cost: SpecialSpecial: +1 FortitudeType: Hide </specific>
+               <specific name="Full Text" > Earthhide Armor
+Description: Dwarves use earth energy to fortify earthhide, mimicking the strange living-earth skin of creatures such as the galeb duhr and the earth titan.
+AC Bonus: +3
+Minimum Enhancement Value: +3
+Check: -1
+Weight: 25 lb.
+Cost: Special
+Special: +1 Fortitude
+Type: Hide </specific>
                <specific name="Weight" > 25 </specific>
                <specific name="Armor Bonus" > 3 </specific>
                <specific name="Minimum Enhancement Bonus" > 3 </specific>
@@ -2041,7 +2219,13 @@ Split the weapon into two identical weapons, one in your primary hand and one in
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Hide Armor" type="Armor" internal-id="ID_FMP_ARMOR_3" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=3&amp;ftype=2" charelem="231" legality="rules-legal" >
-               <specific name="Full Text" > Hide ArmorDescription: Thicker and heavier than leather, hide armor is composed of skin from any creature that has a tough hide, such as a bear, a griffon, or a dragon. Hide armor can bind and slightly hinder your precision, but it&apos;s light enough that it doesn&apos;t affect your speed.AC Bonus: +3Check: -1Weight: 25 lb.Cost: 30 gp.Type: Hide </specific>
+               <specific name="Full Text" > Hide Armor
+Description: Thicker and heavier than leather, hide armor is composed of skin from any creature that has a tough hide, such as a bear, a griffon, or a dragon. Hide armor can bind and slightly hinder your precision, but it&apos;s light enough that it doesn&apos;t affect your speed.
+AC Bonus: +3
+Check: -1
+Weight: 25 lb.
+Cost: 30 gp.
+Type: Hide </specific>
                <specific name="Weight" > 25 </specific>
                <specific name="Armor Bonus" > 3 </specific>
                <specific name="Check" > -1 </specific>
@@ -2061,7 +2245,19 @@ Split the weapon into two identical weapons, one in your primary hand and one in
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Longbow" type="Weapon" internal-id="ID_FMP_WEAPON_40" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=40&amp;ftype=3" charelem="232" legality="rules-legal" >
-               <specific name="Full Text" > LongbowMilitary two-handed ranged weaponCost: 30 gpDamage: 1d10Proficient: +2Range: 20/40Weight: 3 lb.Properties: Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).Group: Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
+               <specific name="Full Text" > Longbow
+Military two-handed ranged weapon
+Cost: 30 gp
+Damage: 1d10
+Proficient: +2
+Range: 20/40
+Weight: 3 lb.
+
+Properties: 
+Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).
+
+Group: 
+Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
                <specific name="Weight" > 3 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" > 20/40 </specific>
@@ -2076,7 +2272,15 @@ Split the weapon into two identical weapons, one in your primary hand and one in
          </loot>
          <loot count="1" equip-count="1" ShowPowerCard="1" >
             <RulesElement name="Earthhide Armor" type="Armor" internal-id="ID_FMP_ARMOR_30" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=30&amp;ftype=2" charelem="10" legality="rules-legal" >
-               <specific name="Full Text" > Earthhide ArmorDescription: Dwarves use earth energy to fortify earthhide, mimicking the strange living-earth skin of creatures such as the galeb duhr and the earth titan.AC Bonus: +3Minimum Enhancement Value: +3Check: -1Weight: 25 lb.Cost: SpecialSpecial: +1 FortitudeType: Hide </specific>
+               <specific name="Full Text" > Earthhide Armor
+Description: Dwarves use earth energy to fortify earthhide, mimicking the strange living-earth skin of creatures such as the galeb duhr and the earth titan.
+AC Bonus: +3
+Minimum Enhancement Value: +3
+Check: -1
+Weight: 25 lb.
+Cost: Special
+Special: +1 Fortitude
+Type: Hide </specific>
                <specific name="Weight" > 25 </specific>
                <specific name="Armor Bonus" > 3 </specific>
                <specific name="Minimum Enhancement Bonus" > 3 </specific>
@@ -2106,7 +2310,21 @@ Split the weapon into two identical weapons, one in your primary hand and one in
          </loot>
          <loot count="0" equip-count="0" ShowPowerCard="1" >
             <RulesElement name="Greatbow" type="Weapon" internal-id="ID_FMP_WEAPON_72" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=72&amp;ftype=3" charelem="233" legality="rules-legal" >
-               <specific name="Full Text" > GreatbowSuperior two-handed ranged weaponCost: 30 gpDamage: 1d12Proficient: +2Range: 25/50Weight: 5 lb.This massive, recurved bow stands as tall as a human when strung, and it fires arrows with greater power than a traditional longbow.Properties: Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).Group: Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
+               <specific name="Full Text" > Greatbow
+Superior two-handed ranged weapon
+Cost: 30 gp
+Damage: 1d12
+Proficient: +2
+Range: 25/50
+Weight: 5 lb.
+
+This massive, recurved bow stands as tall as a human when strung, and it fires arrows with greater power than a traditional longbow.
+
+Properties: 
+Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).
+
+Group: 
+Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
                <specific name="Weight" > 5 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" > 25/50 </specific>
@@ -2137,7 +2355,21 @@ Split the weapon into two identical weapons, one in your primary hand and one in
          </loot>
          <loot count="1" equip-count="1" ShowPowerCard="1" >
             <RulesElement name="Greatbow" type="Weapon" internal-id="ID_FMP_WEAPON_72" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=72&amp;ftype=3" charelem="235" legality="rules-legal" >
-               <specific name="Full Text" > GreatbowSuperior two-handed ranged weaponCost: 30 gpDamage: 1d12Proficient: +2Range: 25/50Weight: 5 lb.This massive, recurved bow stands as tall as a human when strung, and it fires arrows with greater power than a traditional longbow.Properties: Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).Group: Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
+               <specific name="Full Text" > Greatbow
+Superior two-handed ranged weapon
+Cost: 30 gp
+Damage: 1d12
+Proficient: +2
+Range: 25/50
+Weight: 5 lb.
+
+This massive, recurved bow stands as tall as a human when strung, and it fires arrows with greater power than a traditional longbow.
+
+Properties: 
+Load Free (Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows “load free” on the ranged weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is “load minor,” which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power.).
+
+Group: 
+Bow (A bow is a shaft of strong, supple material with a string stretched between its two ends. It&apos;s a projectile weapon that you use to fire arrows. Bows take training to use effectively, and they can be extremely deadly in expert hands.). </specific>
                <specific name="Weight" > 5 </specific>
                <specific name="Gold" > 30 </specific>
                <specific name="Range" > 25/50 </specific>
@@ -2420,7 +2652,17 @@ Split the weapon into two identical weapons, one in your primary hand and one in
             <specific name="Keywords" />
             <specific name="Action Type" > Minor Action </specific>
             <specific name="Attack Type" />
-            <specific name="Effect" > You can designate the nearest enemy to you that you can see as your quarry.Once per round, when you hit your quarry with an attack, the attack deals extra damage based on your level. If you can make multiple attacks in a round, you decide which attack to apply the extra damage to after all the attacks are rolled. If you have dealt Hunter&apos;s Quarry damage since the start of your turn, you cannot deal it again until the start of your next turn.The hunter&apos;s quarry effect remains active until the end of the encounter, until the quarry is defeated, or until you designate a different target as your quarry.You can designate one enemy as your quarry at a time.&lt;table&gt;Level	Hunter&apos;s Quarry Extra Damage1st–10th	+1d611th–20th	+2d621st–30th	+3d6&lt;/table&gt; </specific>
+            <specific name="Effect" > You can designate the nearest enemy to you that you can see as your quarry.
+Once per round, when you hit your quarry with an attack, the attack deals extra damage based on your level. If you can make multiple attacks in a round, you decide which attack to apply the extra damage to after all the attacks are rolled. If you have dealt Hunter&apos;s Quarry damage since the start of your turn, you cannot deal it again until the start of your next turn.
+
+The hunter&apos;s quarry effect remains active until the end of the encounter, until the quarry is defeated, or until you designate a different target as your quarry.
+
+You can designate one enemy as your quarry at a time.
+
+&lt;table&gt;Level	Hunter&apos;s Quarry Extra Damage
+1st–10th	+1d6
+11th–20th	+2d6
+21st–30th	+3d6&lt;/table&gt; </specific>
             <specific name="_ParentFeature" > ID_FMP_CLASS_FEATURE_602,ID_FMP_CLASS_FEATURE_1530 </specific>
          </Power>
 
@@ -2434,7 +2676,8 @@ Split the weapon into two identical weapons, one in your primary hand and one in
             <specific name="Requirement" > You must be wielding two melee weapons or a ranged weapon. </specific>
             <specific name="Targets" > One or two creatures </specific>
             <specific name="Attack" > Strength vs. AC (melee; main weapon and off-hand weapon) or Dexterity vs. AC (ranged), two attacks </specific>
-            <specific name="Hit" > 1[W] damage per attack.Increase damage to 2[W] at 21st level. </specific>
+            <specific name="Hit" > 1[W] damage per attack.
+Increase damage to 2[W] at 21st level. </specific>
             <specific name="Class" > ID_FMP_CLASS_5 </specific>
             <specific name="Level" > 1 </specific>
             <specific name="Power Type" > Attack </specific>
@@ -2828,7 +3071,10 @@ Split the weapon into two identical weapons, one in your primary hand and one in
             <specific name="Keywords" > Martial </specific>
             <specific name="Action Type" > Standard Action </specific>
             <specific name="Attack Type" > Personal </specific>
-            <specific name="Effect" > You make a ranged basic attack with a weapon. If the attack hits, the target is also subject to one of the following effects of your choice:	* You slide the target up to 2 squares.	* The target falls prone.	* The target is slowed (save ends). </specific>
+            <specific name="Effect" > You make a ranged basic attack with a weapon. If the attack hits, the target is also subject to one of the following effects of your choice:
+	* You slide the target up to 2 squares.
+	* The target falls prone.
+	* The target is slowed (save ends). </specific>
             <specific name="Class" > ID_FMP_CLASS_5 </specific>
             <specific name="Level" />
             <specific name="Power Type" > Attack </specific>

@@ -44,8 +44,14 @@
         self.loot = [NSMutableArray arrayWithCapacity:[lootInfo count]];
         [lootInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             Loot *item = [[Loot alloc] initWithDictionary:obj];
-            [self.loot addObject:item];
-            item.character = self; // weak
+            // Only add if the item count > 0 (Sheet does not delete removed items... soooo odd.)
+            if ([item.numCount intValue] > 0) {
+                [self.loot addObject:item];
+                item.character = self; // weak
+                if ([item isMagic]) {
+                    [self.powers addObject:item];
+                }
+            }
         }];
         
         NSDictionary *detailInfo = [data valueForKeyPath:@"D20Character.CharacterSheet.Details"];
