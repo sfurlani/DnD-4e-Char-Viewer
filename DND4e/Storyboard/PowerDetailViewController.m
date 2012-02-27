@@ -11,6 +11,8 @@
 #import "Data.h"
 #import "Utility.h"
 #import "UIWebView_Misc.h"
+#import "SlideLeftSegue.h"
+#import "SlideRightSegue.h"
 
 @implementation PowerDetailViewController
 
@@ -97,7 +99,6 @@
     }
     
 }
-
 
 #pragma mark - UIWebView Delegate
 

@@ -65,6 +65,7 @@
     [super viewWillAppear:animated];
     self.titleLabel.text = [item name];
     [self loadHTML:[item html]];
+    NSLog(@"Self.First %@", NSStringFromClass([self.first class]));
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -120,19 +121,22 @@
 {
     // Next
     if (!self.listVC) return;
-    NSInteger index = [self.listVC.items indexOfObject:self.item];
+    NSArray *items = [self.listVC items];
+    NSInteger index = [items indexOfObject:self.item];
     if (index == NSNotFound) return;
     index++;
     if (index <= 0 || index >= [self.listVC.items count]) return;
-    id<DNDHTML> new = [self.listVC.items objectAtIndex:index];
+    id<DNDHTML> new = [items objectAtIndex:index];
     if (!new) return;
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard~iphone" bundle:nil];
     PageDetailViewController *pdvc = [storyboard instantiateViewControllerWithIdentifier:@"pageDetailVC"];
     pdvc.item = new;
     pdvc.listVC = self.listVC;
+    pdvc.first = self.first;
+    pdvc.character = self.character;
     
-    UIStoryboardSegue *segue = [[SlideRightSegue alloc] initWithIdentifier:nil
+    UIStoryboardSegue *segue = [[SlideLeftSegue alloc] initWithIdentifier:nil
                                                                    source:self
                                                               destination:pdvc];
     [segue perform];
@@ -142,19 +146,22 @@
 {
     // Previous
     if (!self.listVC) return;
-    NSInteger index = [self.listVC.items indexOfObject:self.item];
+    NSArray *items = [self.listVC items];
+    NSInteger index = [items indexOfObject:self.item];
     if (index == NSNotFound) return;
     index--;
     if (index <= 0 || index >= [self.listVC.items count]) return;
-    id<DNDHTML> new = [self.listVC.items objectAtIndex:index];
+    id<DNDHTML> new = [items objectAtIndex:index];
     if (!new) return;
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard~iphone" bundle:nil];
     PageDetailViewController *pdvc = [storyboard instantiateViewControllerWithIdentifier:@"pageDetailVC"];
     pdvc.item = new;
     pdvc.listVC = self.listVC;
+    pdvc.first = self.first;
+    pdvc.character = self.character;
     
-    UIStoryboardSegue *segue = [[SlideLeftSegue alloc] initWithIdentifier:nil
+    UIStoryboardSegue *segue = [[SlideRightSegue alloc] initWithIdentifier:nil
                                                                    source:self
                                                               destination:pdvc];
     [segue perform];

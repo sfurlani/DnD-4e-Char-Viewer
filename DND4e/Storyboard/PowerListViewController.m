@@ -16,7 +16,7 @@ NSString *const keyPowerSort = @"keyPowerSort";
 
 @implementation PowerListViewController
 
-@synthesize powers;
+@synthesize items;
 @synthesize powerTable, sort;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -50,7 +50,7 @@ NSString *const keyPowerSort = @"keyPowerSort";
 {
     [super viewDidLoad];
     
-    self.powers = [self.character.powers mutableCopy];
+    self.items = [self.character.powers mutableCopy];
     
 }
 
@@ -84,8 +84,9 @@ NSString *const keyPowerSort = @"keyPowerSort";
     
     if ([segue.identifier isEqualToString:@"powerDetail"]) {
         NSIndexPath *indexPath = [self.powerTable indexPathForCell:sender];
-        Power *power = [self.powers objectAtIndex:[indexPath row]];
+        Power *power = [self.items objectAtIndex:[indexPath row]];
         [segue.destinationViewController setItem:power];
+        [segue.destinationViewController setListVC:(id)self];
         
     }
     
@@ -115,7 +116,7 @@ NSString *const keyPowerSort = @"keyPowerSort";
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0)
-        return [self.powers count];
+        return [self.items count];
     else
         return 0;
 }
@@ -133,7 +134,7 @@ NSString *const keyPowerSort = @"keyPowerSort";
     
     PowerCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     NSAssert(cell!=nil, @"Could not find cell with identifier \"%@\"",kCellIdentifier);
-    id data = [self.powers objectAtIndex:row];
+    id data = [self.items objectAtIndex:row];
     [cell setData:data];
     return cell;
 }
@@ -163,7 +164,7 @@ NSString *const keyPowerSort = @"keyPowerSort";
 - (void) performSortWithKey:(NSString*)key
 {
     [AppDefaults setObject:key forKey:keyPowerSort];
-    [self.powers sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+    [self.items sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         if ([obj1 isKindOfClass:[Loot class]] &&
             [obj2 isKindOfClass:[Loot class]] ){
             // TODO: fix item sort.

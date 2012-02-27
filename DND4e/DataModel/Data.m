@@ -114,14 +114,14 @@ SYNTHESIZE_SINGLETON_ARC(Data)
         hud.mode = MBProgressHUDModeIndeterminate;
         hud.labelText = @"Loading";
         [AppDelegate.navigationController.view addSubview:hud];
-        [hud show:YES];
+        //[hud show:YES];
         character = [[Character alloc] initWithFile:path];
 //        [hud showWhileExecuting:@selector(initWithFile:)
 //                       onTarget:character
 //                     withObject:path
 //                       animated:YES];
         [self.characters setObject:character forKey:name];
-        [hud hide:YES afterDelay:0.3];
+        //[hud hide:YES afterDelay:0.3];
     } else {
         NSLog(@"Loading: %@", name);
     }

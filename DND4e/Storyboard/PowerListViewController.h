@@ -9,7 +9,7 @@
 #import "PageViewController.h"
 
 @interface PowerListViewController : PageViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
-@property (strong, nonatomic) NSMutableArray *powers;
+@property (strong, nonatomic) NSMutableArray *items;
 @property (strong, nonatomic) IBOutlet UIButton *sort;
 @property (strong, nonatomic) IBOutlet UITableView *powerTable;
 
