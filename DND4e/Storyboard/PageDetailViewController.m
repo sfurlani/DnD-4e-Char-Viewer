@@ -7,6 +7,7 @@
 //
 
 #import "PageDetailViewController.h"
+#import "ListViewController.h"
 #import "PageViewController.h"
 #import "Data.h"
 #import "Utility.h"
@@ -17,6 +18,7 @@
 
 @synthesize webDetail;
 @synthesize item;
+@synthesize listVC;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,6 +51,12 @@
 {
     [super viewDidLoad];
     [self.webDetail setShadowHidden:YES];
+    UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft:)];
+    left.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.webDetail addGestureRecognizer:left];
+    UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRight:)];
+    right.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.webDetail addGestureRecognizer:right];
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -105,6 +113,31 @@
     [self showDetail:loot];
 }
 
+#pragma mark - IBAction
+
+- (void) swipeLeft:(UIGestureRecognizer *)gesture
+{
+    // Next
+    if (!self.listVC) return;
+}
+
+- (void) swipeRight:(UIGestureRecognizer *)gesture
+{
+    // Previous
+    if (!self.listVC) return;
+    NSInteger index = [self.listVC.items indexOfObject:self.item];
+    if (index == NSNotFound) return;
+    index--;
+    if (index <= 0 || index >= [self.listVC.items count]) return;
+    id<DNDHTML> new = [self.listVC.items objectAtIndex:index];
+    if (!new) return;
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard~iphone" bundle:nil];
+    PageDetailViewController *pdvc = [storyboard instantiateViewControllerWithIdentifier:@"pageDetailVC"];
+    pdvc.item = new;
+    pdvc.listVC = self.listVC;
+
+}
 
 #pragma mark - UIWebView Delegate
 

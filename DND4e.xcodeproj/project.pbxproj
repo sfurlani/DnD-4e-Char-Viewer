@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DC52E7E614F1E838002FEEC9 /* Weapon.m in Sources */ = {isa = PBXBuildFile; fileRef = DC52E7E514F1E838002FEEC9 /* Weapon.m */; };
+		DC5754F714FB279F00410FA2 /* ModalStaticSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5754F214FB279E00410FA2 /* ModalStaticSegue.m */; };
+		DC5754F814FB279F00410FA2 /* SlideLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5754F414FB279F00410FA2 /* SlideLeftSegue.m */; };
+		DC5754F914FB279F00410FA2 /* SlideRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5754F614FB279F00410FA2 /* SlideRightSegue.m */; };
 		DC693BEF14EED86B00E68BF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BEE14EED86B00E68BF8 /* UIKit.framework */; };
 		DC693BF114EED86B00E68BF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF014EED86B00E68BF8 /* Foundation.framework */; };
 		DC693BF314EED86B00E68BF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF214EED86B00E68BF8 /* CoreGraphics.framework */; };
@@ -112,6 +115,12 @@
 /* Begin PBXFileReference section */
 		DC52E7E414F1E838002FEEC9 /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Weapon.h; path = DataModel/Weapon.h; sourceTree = "<group>"; };
 		DC52E7E514F1E838002FEEC9 /* Weapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Weapon.m; path = DataModel/Weapon.m; sourceTree = "<group>"; };
+		DC5754F114FB279E00410FA2 /* ModalStaticSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalStaticSegue.h; sourceTree = "<group>"; };
+		DC5754F214FB279E00410FA2 /* ModalStaticSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalStaticSegue.m; sourceTree = "<group>"; };
+		DC5754F314FB279E00410FA2 /* SlideLeftSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideLeftSegue.h; sourceTree = "<group>"; };
+		DC5754F414FB279F00410FA2 /* SlideLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideLeftSegue.m; sourceTree = "<group>"; };
+		DC5754F514FB279F00410FA2 /* SlideRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideRightSegue.h; sourceTree = "<group>"; };
+		DC5754F614FB279F00410FA2 /* SlideRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideRightSegue.m; sourceTree = "<group>"; };
 		DC693BEA14EED86B00E68BF8 /* DND4e.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DND4e.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC693BEE14EED86B00E68BF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DC693BF014EED86B00E68BF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -266,6 +275,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC5754FA14FB27A400410FA2 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				DC5754F114FB279E00410FA2 /* ModalStaticSegue.h */,
+				DC5754F214FB279E00410FA2 /* ModalStaticSegue.m */,
+				DC5754F314FB279E00410FA2 /* SlideLeftSegue.h */,
+				DC5754F414FB279F00410FA2 /* SlideLeftSegue.m */,
+				DC5754F514FB279F00410FA2 /* SlideRightSegue.h */,
+				DC5754F614FB279F00410FA2 /* SlideRightSegue.m */,
+			);
+			name = Segues;
+			sourceTree = "<group>";
+		};
 		DC693BDF14EED86B00E68BF8 = {
 			isa = PBXGroup;
 			children = (
@@ -308,7 +330,6 @@
 				DC693BFF14EED86C00E68BF8 /* DNDAppDelegate.h */,
 				DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */,
 				DC9711E814F954C60039443C /* MainStoryboard~iphone.storyboard */,
-				DC97120814F9577F0039443C /* CustomCells */,
 				DC97121114F964070039443C /* Storyboard ViewControllers */,
 				DC97121214F9641C0039443C /* Nib ViewControllers */,
 			);
@@ -373,7 +394,7 @@
 			path = newimages;
 			sourceTree = "<group>";
 		};
-		DC97120814F9577F0039443C /* CustomCells */ = {
+		DC97120814F9577F0039443C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				DC97121914F96B240039443C /* FileCell.h */,
@@ -383,12 +404,14 @@
 				DC97123714F9D4BC0039443C /* SkillCells.h */,
 				DC97123814F9D4BC0039443C /* SkillCells.m */,
 			);
-			name = CustomCells;
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		DC97121114F964070039443C /* Storyboard ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC97120814F9577F0039443C /* Cells */,
+				DC5754FA14FB27A400410FA2 /* Segues */,
 				DC97121314F9654B0039443C /* FileViewController.h */,
 				DC97121414F9654B0039443C /* FileViewController.m */,
 				DC97121614F9655E0039443C /* PageViewController.h */,
@@ -678,6 +701,9 @@
 				DC97123314F9BBE50039443C /* PageDetailViewController.m in Sources */,
 				DC97123614F9C1650039443C /* ListViewController.m in Sources */,
 				DC97123914F9D4BD0039443C /* SkillCells.m in Sources */,
+				DC5754F714FB279F00410FA2 /* ModalStaticSegue.m in Sources */,
+				DC5754F814FB279F00410FA2 /* SlideLeftSegue.m in Sources */,
+				DC5754F914FB279F00410FA2 /* SlideRightSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

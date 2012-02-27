@@ -70,7 +70,8 @@
     if ([segue.identifier isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.itemTable indexPathForCell:sender];
         id<DNDHTML> item = [self.items objectAtIndex:[indexPath row]];
-        [segue.destinationViewController setItem:item]; 
+        [segue.destinationViewController setItem:item];
+        [segue.destinationViewController setListVC:self];
     }
 }
 
@@ -108,6 +109,11 @@
         NSAssert(cell!=nil, @"Could not find cell with identifier \"%@\"",kCellIdentifier);
         cell.skillTitle.text = skill.name;
         cell.skillValue.text = PFORMAT(skill.bonus);
+        if (skill.trained) {
+            cell.skillTitle.font = [UIFont fontWithName:@"Copperplate-Bold" size:21.0f];
+        } else {
+            cell.skillTitle.font = [UIFont fontWithName:@"Copperplate-Light" size:21.0f];
+        }
         return cell;
     } else {
     

@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString * name;
 @property (strong, nonatomic) NSArray * components;
 @property (strong, nonatomic) NSNumber * bonus;
+@property (assign, nonatomic) BOOL trained;
 @property (unsafe_unretained, nonatomic) Character* character;
 @property (strong, nonatomic) RulesElement * element;
 

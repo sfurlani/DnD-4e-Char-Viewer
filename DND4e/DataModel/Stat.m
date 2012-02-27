@@ -53,7 +53,11 @@
                             [link isEqualToString:keyDexterity] ||
                             [link isEqualToString:keyIntelligence] ||
                             [link isEqualToString:keyWisdom] ||
-                            [link isEqualToString:keyCharisma] ) link = [link stringByAppendingString:@" modifier"];
+                            [link isEqualToString:keyCharisma] )  {
+                            NSString *abilMod = [obj valueForKey:@"abilmod"];
+                            if (abilMod)
+                                link = [link stringByAppendingString:@" modifier"];
+                        }
 //                        NSLog(@"--- Link: %@", link);
                         [addMut addObject:link];
                     } else {
@@ -187,8 +191,6 @@
             else {
                 
                 // A Sub stat that has no Stat Link (values contained herin)
-                NSString *conditional = [obj valueForKey:@"conditional"];
-                NSString *requires = [obj valueForKey:@"requires"];
                 NSNumber *subElem = NSINT([[obj valueForKey:@"charelem"] intValue]);
                 NSString *subType = [obj valueForKey:@"type"];
                 //NSString *subName = [obj valueForKey:@"name"];
@@ -210,12 +212,13 @@
 //                    NSLog(@"Can't Find Element1: %@", _charelem);
                     
                 }
-                if (conditional) {
-                    [html appendFormat:@"<div style=\"padding-left: 2em; \"><i>%@</i></div>",conditional]; 
-                }
-                if (requires) {
-                    [html appendFormat:@"<div style=\"padding-left: 2em; \"><i>%@</i></div>",requires]; 
-                }
+                NSArray *miscKeys = [NSArray arrayWithObjects:@"conditional",@"requires",@"not-wearing",@"wearing", nil];
+                [miscKeys enumerateObjectsUsingBlock:^(id key, NSUInteger idx, BOOL *stop) {
+                    NSString *val = [obj valueForKey:key];                
+                    if (val) {
+                        [html appendFormat:@"<div style=\"padding-left: 2em; \"><i>%@</i></div>",val]; 
+                    }
+                }];
                 
             }
         }];

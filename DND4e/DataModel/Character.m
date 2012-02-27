@@ -111,19 +111,52 @@
         
         self.features = [[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
 //            NSLog(@"Element Type: %@", [(RulesElement*)obj type]);
-            return ([[(RulesElement*)obj type] rangeOfString:@"Class"].length > 0);
+            return (([[(RulesElement*)obj type] rangeOfString:@"Class"].length > 0) || 
+                    ([[(RulesElement*)obj type] isEqualToString:@"Background"]) ||  // Exact
+                    ([[(RulesElement*)obj type] isEqualToString:@"Background Choice"]) || // Exact
+                    ([[(RulesElement*)obj type] rangeOfString:@"Paragon Path"].length > 0) || 
+                    ([[(RulesElement*)obj type] rangeOfString:@"Epic Destiny"].length > 0) ||
+                    ([[(RulesElement*)obj type] rangeOfString:@"Role"].length > 0) ||
+                    ([[(RulesElement*)obj type] rangeOfString:@"Power Source"].length > 0) ||
+                    ([[(RulesElement*)obj type] rangeOfString:@"Diety"].length > 0) );
         }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
             return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
         }];
-//        NSArray *class = [self elementsForKey:@"type" matchingValue:@"Class" exact:NO];
-//        [self.features addObjectsFromArray:class];
+        //        NSArray *class = [self elementsForKey:@"type" matchingValue:@"Class" exact:NO];
+        //        [self.features addObjectsFromArray:class];
         
         self.traits = [[[self.elements objectsAtIndexes:[self.elements indexesOfObjectsPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
             //            NSLog(@"Element Type: %@", [(RulesElement*)obj type]);
-            return ([[(RulesElement*)obj type] rangeOfString:@"Trait"].length > 0) || ([[(RulesElement*)obj type] rangeOfString:@"Race"].length > 0);
+            return (([[(RulesElement*)obj type] rangeOfString:@"Trait"].length > 0) || 
+                    ([[(RulesElement*)obj type] rangeOfString:@"Race"].length > 0) ||
+                    ([[(RulesElement*)obj type] rangeOfString:@"Gender"].length > 0) || 
+                    ([[(RulesElement*)obj type] rangeOfString:@"Size"].length > 0) ||
+                    ([[(RulesElement*)obj type] rangeOfString:@"Vision"].length > 0) ||
+                    ([[(RulesElement*)obj type] rangeOfString:@"Alignment"].length > 0) ||
+                    ([[(RulesElement*)obj type] rangeOfString:@"Language"].length > 0) );
         }]] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
             return [[obj1 name] caseInsensitiveCompare:[obj2 name]];
         }] mutableCopy];
+        
+        // TODO: Types not accounted for:
+        /*
+         Gender
+         Alignment
+         Background*
+         Race
+         Size
+         Vision
+         Language
+         Internal
+         CountsAsClass
+         Role
+         PowerSource
+         Proficiency (loooong list)
+         Skill Training
+         Paragon Path
+         Diety (Domains - InternalIDs)
+         Epic Destiny
+         */
         
     }
     return self;

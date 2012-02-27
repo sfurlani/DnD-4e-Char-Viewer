@@ -17,6 +17,7 @@
 @synthesize components;
 @synthesize bonus = _bonus;
 @synthesize element;
+@synthesize trained;
 
 - (id) initWithName:(NSString*)name
 {
@@ -38,6 +39,16 @@
         return *stop;
     }]];
     self.bonus = NSINT([stat value]);
+    self.trained = NO;
+    [character.elements enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        RulesElement *el = obj;
+        if ([el.name isEqualToString:self.name] &&
+            [el.type isEqualToString:@"Skill Training"]) {
+            self.trained = YES;
+            *stop = YES;
+        }
+    }];
+                              
 //    NSLog(@"Stat: %@ - %@", stat.name, self.bonus);
 }
 
@@ -46,19 +57,9 @@
 {
     __block NSMutableString *html = [NSMutableString string];
     
-//    [html appendString:@"<p><b>Disclaimer:</b> <i>This won't correctly calculate the bonuses from items, features, or armor check penalties.  I have no idea where they're pulling these numbers from (probably internally in the database) so the values displayed here are not accurate.</p><p>So just use this as a guide or explaination as to the skill bonuses.</i></p>"];
-    
-//    if ([self.bonus intValue] > 0)
-//        [html appendFormat:@"<p><b>Total Bonus:</b> +%@</p>",self.bonus];
-//    else
-//        [html appendFormat:@"<p><b>Total Bonus:</b> %@</p>",self.bonus];
-    
-    [html appendString:[self.element html]];
-    [html appendString:@"<hr width=200/><br>"];
-    
     [html appendFormat:@"<h3>Total %@: %@</h3><b>Breakdown:</b><br>",self.name, PFORMAT(self.bonus)];
     [html appendString:[[self.character.stats objectForKey:self.name] html]];
-    
+    [html appendString:[self.element html]];
     
     return html;
 }

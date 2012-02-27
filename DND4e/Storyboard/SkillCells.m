@@ -54,7 +54,7 @@
     if (animated) {
         [UIView animateWithDuration:1
                          animations:^{
-                             [self.skillTitle setTextColor:color]; 
+                             [self.skillTitle setTextColor:color];
                              [self.skillValue setTextColor:color]; 
                          }];
     } else {
