@@ -42,15 +42,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     if (iPad) {
-        self.main = [[MainViewController alloc] initWithData:dnd4eDocs];
-        self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.main];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPad" bundle:nil];
+        self.window.rootViewController = [storyboard instantiateInitialViewController];
+        
     } else {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:nil];
         self.navigationController = [storyboard instantiateInitialViewController];
         self.main = [[self.navigationController viewControllers] lastObject];
+        self.window.rootViewController = self.navigationController;
     }
     
-    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
     return YES;
