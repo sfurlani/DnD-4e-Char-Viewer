@@ -349,8 +349,7 @@
 				DC57553A14FC500700410FA2 /* iPadViewController.h */,
 				DC57553B14FC500700410FA2 /* iPadViewController.m */,
 				DC57554114FC51C400410FA2 /* iPad.storyboard */,
-				DC9711E814F954C60039443C /* iPhone.storyboard */,
-				DC97121114F964070039443C /* Storyboard ViewControllers */,
+				DC97121114F964070039443C /* iPhone */,
 				DC97121214F9641C0039443C /* Nib ViewControllers */,
 			);
 			path = DND4e;
@@ -433,9 +432,10 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
-		DC97121114F964070039443C /* Storyboard ViewControllers */ = {
+		DC97121114F964070039443C /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				DC9711E814F954C60039443C /* iPhone.storyboard */,
 				DC97120814F9577F0039443C /* Cells */,
 				DC5754FA14FB27A400410FA2 /* Segues */,
 				DC97121314F9654B0039443C /* FileViewController.h */,
@@ -457,7 +457,7 @@
 				DC97122E14F9A7290039443C /* PowerDetailViewController.h */,
 				DC97122F14F9A7290039443C /* PowerDetailViewController.m */,
 			);
-			name = "Storyboard ViewControllers";
+			name = iPhone;
 			sourceTree = "<group>";
 		};
 		DC97121214F9641C0039443C /* Nib ViewControllers */ = {

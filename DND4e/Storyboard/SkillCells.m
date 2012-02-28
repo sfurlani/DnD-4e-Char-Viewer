@@ -7,6 +7,7 @@
 //
 
 #import "SkillCells.h"
+#import "Utility.h"
 
 @implementation SkillCells
 
@@ -66,7 +67,8 @@
 
 - (void) didMoveToWindow
 {
-    self.arrow.image = [UIImage imageNamed:@"arrow"];
+    if (iPhone)
+        self.arrow.image = [UIImage imageNamed:@"arrow"];
 }
 
 @end

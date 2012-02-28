@@ -8,7 +8,7 @@
         <scene sceneID="Pel-ca-a6o">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1EF-Pw-Axn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="wdB-Wp-smu" sceneMemberID="viewController">
+                <viewController id="wdB-Wp-smu" customClass="iPadViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3CU-Zs-6Yc">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -17,18 +17,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eVp-j4-6mC">
-                                <rect key="frame" x="4" y="621" width="88" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
-                                <state key="normal" title="Skills" backgroundImage="selected.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <view contentMode="scaleToFill" id="R5H-Xp-ugK" userLabel="Ability Scores">
                                 <rect key="frame" x="0.0" y="44" width="320" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -37,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="39" width="320" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lDL-Pm-5YE">
+                                            <button opaque="NO" tag="2001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lDL-Pm-5YE">
                                                 <rect key="frame" x="0.0" y="-1" width="162" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -56,7 +44,7 @@
                                         <rect key="frame" x="0.0" y="100" width="320" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hQQ-q9-DVe">
+                                            <button opaque="NO" tag="2003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hQQ-q9-DVe">
                                                 <rect key="frame" x="0.0" y="-1" width="162" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -75,7 +63,7 @@
                                         <rect key="frame" x="0.0" y="162" width="320" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CRh-rW-jNo">
+                                            <button opaque="NO" tag="2005" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CRh-rW-jNo">
                                                 <rect key="frame" x="0.0" y="-1" width="162" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -90,7 +78,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ability" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="G69-Lj-ySj">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ability" lineBreakMode="tailTruncation" minimumFontSize="10" id="G69-Lj-ySj">
                                         <rect key="frame" x="8" y="0.0" width="97" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
@@ -195,7 +183,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="2002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mx7-FV-SeC">
+                                    <button opaque="NO" tag="2002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mx7-FV-SeC">
                                         <rect key="frame" x="0.0" y="68" width="162" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -207,7 +195,7 @@
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" tag="2004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Erf-mc-6ES">
+                                    <button opaque="NO" tag="2004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Erf-mc-6ES">
                                         <rect key="frame" x="0.0" y="130" width="162" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -219,7 +207,7 @@
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" tag="2006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2NW-rO-4XK">
+                                    <button opaque="NO" tag="2006" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2NW-rO-4XK">
                                         <rect key="frame" x="0.0" y="192" width="162" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -242,7 +230,7 @@
                                         <rect key="frame" x="0.0" y="39" width="320" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="owI-nR-szj">
+                                            <button opaque="NO" tag="3001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="owI-nR-szj">
                                                 <rect key="frame" x="8" y="-1" width="162" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -261,7 +249,7 @@
                                         <rect key="frame" x="0.0" y="100" width="320" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5NS-bQ-H6C">
+                                            <button opaque="NO" tag="3003" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5NS-bQ-H6C">
                                                 <rect key="frame" x="8" y="-1" width="162" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -280,7 +268,7 @@
                                         <rect key="frame" x="0.0" y="162" width="320" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HKt-Mh-fSZ">
+                                            <button opaque="NO" tag="3005" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HKt-Mh-fSZ">
                                                 <rect key="frame" x="8" y="-1" width="162" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -303,55 +291,55 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Value" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="d7F-yo-X9c">
-                                        <rect key="frame" x="183" y="0.0" width="97" height="45"/>
+                                        <rect key="frame" x="223" y="0.0" width="97" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="21"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="sye-iH-fO6">
-                                        <rect key="frame" x="210" y="35" width="42" height="31"/>
+                                        <rect key="frame" x="250" y="35" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="MNS-Gd-NLk">
-                                        <rect key="frame" x="210" y="65" width="42" height="31"/>
+                                        <rect key="frame" x="250" y="65" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="vgw-i8-z57">
-                                        <rect key="frame" x="210" y="96" width="42" height="31"/>
+                                        <rect key="frame" x="250" y="96" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="vQP-is-kHb">
-                                        <rect key="frame" x="210" y="127" width="42" height="31"/>
+                                        <rect key="frame" x="250" y="127" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="MqD-wz-cXJ">
-                                        <rect key="frame" x="210" y="158" width="42" height="31"/>
+                                        <rect key="frame" x="250" y="158" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="naW-iJ-9UO">
-                                        <rect key="frame" x="210" y="189" width="42" height="31"/>
+                                        <rect key="frame" x="250" y="189" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="2002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WZo-hK-5OA">
+                                    <button opaque="NO" tag="3002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WZo-hK-5OA">
                                         <rect key="frame" x="8" y="68" width="162" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -363,7 +351,7 @@
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" tag="2004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="M4D-ul-001">
+                                    <button opaque="NO" tag="3004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="M4D-ul-001">
                                         <rect key="frame" x="8" y="130" width="162" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -375,7 +363,7 @@
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" tag="2006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QEW-rR-DNe">
+                                    <button opaque="NO" tag="3006" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QEW-rR-DNe">
                                         <rect key="frame" x="8" y="192" width="162" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -391,7 +379,7 @@
                                         <rect key="frame" x="0.0" y="220" width="320" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BTE-6z-yFe">
+                                            <button opaque="NO" tag="3007" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BTE-6z-yFe">
                                                 <rect key="frame" x="8" y="-1" width="162" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -407,20 +395,20 @@
                                         <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="zQA-wC-POf">
-                                        <rect key="frame" x="210" y="216" width="42" height="31"/>
+                                        <rect key="frame" x="250" y="216" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="WNy-t6-tpW">
-                                        <rect key="frame" x="210" y="247" width="42" height="31"/>
+                                        <rect key="frame" x="250" y="247" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="2006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q29-1m-UA5">
+                                    <button opaque="NO" tag="3008" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q29-1m-UA5">
                                         <rect key="frame" x="8" y="250" width="162" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -436,8 +424,8 @@
                                         <rect key="frame" x="0.0" y="278" width="320" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ytK-9O-gpf">
-                                                <rect key="frame" x="8" y="-1" width="207" height="24"/>
+                                            <button opaque="NO" tag="3009" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ytK-9O-gpf">
+                                                <rect key="frame" x="8" y="-1" width="228" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
                                                 <state key="normal" title="Passive Perception">
@@ -452,20 +440,20 @@
                                         <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="d7q-tY-1lE">
-                                        <rect key="frame" x="210" y="274" width="42" height="31"/>
+                                        <rect key="frame" x="250" y="274" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="hqA-Ch-MrT">
-                                        <rect key="frame" x="210" y="305" width="42" height="31"/>
+                                        <rect key="frame" x="250" y="305" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="2006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xWm-6X-EDa">
+                                    <button opaque="NO" tag="3010" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xWm-6X-EDa">
                                         <rect key="frame" x="8" y="308" width="163" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
@@ -480,64 +468,158 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gbZ-Ig-aHE">
-                                <rect key="frame" x="100" y="621" width="88" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
-                                <state key="normal" title="Feats">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yCo-yO-ijU">
-                                <rect key="frame" x="196" y="621" width="88" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
-                                <state key="normal" title="Class" backgroundImage="selected.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OZC-mT-WKZ">
-                                <rect key="frame" x="292" y="621" width="88" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
-                                <state key="normal" title="Race">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tYz-TB-wDC">
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tYz-TB-wDC" userLabel="List">
                                 <rect key="frame" x="0.0" y="652" width="384" height="352"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" id="Nr9-r0-Yve">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="thingCell" id="Nr9-r0-Yve" customClass="FileCell">
                                         <rect key="frame" x="0.0" y="22" width="384" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="384" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Really long item name" lineBreakMode="tailTruncation" minimumFontSize="10" id="DtM-at-Oei" userLabel="title">
+                                                    <rect key="frame" x="8" y="10" width="356" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" id="QXa-iR-ZZA" userLabel="sel">
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="bKh-eb-i1e" userLabel="bg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="backgroundView" destination="bKh-eb-i1e" id="fZ5-MQ-gH6"/>
+                                            <outlet property="fileTitle" destination="DtM-at-Oei" id="THC-bp-Y0A"/>
+                                            <outlet property="selectedBackgroundView" destination="QXa-iR-ZZA" id="0DQ-sc-nmb"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" id="RBz-ew-TE8">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="thingCellGray" id="xvk-3n-mNZ" customClass="FileCell">
                                         <rect key="frame" x="0.0" y="66" width="384" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="384" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Really long item name" lineBreakMode="tailTruncation" minimumFontSize="10" id="hiA-hu-EHG" userLabel="title">
+                                                    <rect key="frame" x="8" y="10" width="356" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" id="wus-iu-2zj" userLabel="sel">
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="yT5-2H-fCw" userLabel="bg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="backgroundView" destination="yT5-2H-fCw" id="w08-M2-laY"/>
+                                            <outlet property="fileTitle" destination="hiA-hu-EHG" id="aTG-J7-0KQ"/>
+                                            <outlet property="selectedBackgroundView" destination="wus-iu-2zj" id="334-Jp-S41"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="skillCell" rowHeight="34" id="e0K-wq-Z25" customClass="SkillCells">
+                                        <rect key="frame" x="0.0" y="110" width="384" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="33"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="Guh-R4-y9H" userLabel="sel">
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="pQM-yn-f6x" userLabel="bg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Really long item name" lineBreakMode="tailTruncation" minimumFontSize="10" id="AbV-O8-QJc" userLabel="title">
+                                                    <rect key="frame" x="8" y="5" width="310" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+35" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="NLa-zX-WBm" userLabel="bonus">
+                                                    <rect key="frame" x="326" y="5" width="50" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="backgroundView" destination="pQM-yn-f6x" id="BhM-aJ-Bgu"/>
+                                            <outlet property="selectedBackgroundView" destination="Guh-R4-y9H" id="ubg-9p-g4G"/>
+                                            <outlet property="skillTitle" destination="AbV-O8-QJc" id="fug-1g-5x5"/>
+                                            <outlet property="skillValue" destination="NLa-zX-WBm" id="PsD-Ip-S52"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="skillCellGray" rowHeight="34" id="qgq-qW-RzE" customClass="SkillCells">
+                                        <rect key="frame" x="0.0" y="144" width="384" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="33"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="UBp-ZL-3vj" userLabel="sel">
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="Kz1-fX-Fzn" userLabel="bg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Really long item name" lineBreakMode="tailTruncation" minimumFontSize="10" id="Wxx-XW-GTt" userLabel="title">
+                                                    <rect key="frame" x="8" y="5" width="310" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+35" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="UPb-pW-vdb" userLabel="bonus">
+                                                    <rect key="frame" x="326" y="5" width="50" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="backgroundView" destination="Kz1-fX-Fzn" id="XOB-k7-8yH"/>
+                                            <outlet property="selectedBackgroundView" destination="UBp-ZL-3vj" id="oMX-mH-mWK"/>
+                                            <outlet property="skillTitle" destination="Wxx-XW-GTt" id="lue-8k-1aa"/>
+                                            <outlet property="skillValue" destination="UPb-pW-vdb" id="Sg6-mf-uSD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -552,6 +634,9 @@
                                 <state key="highlighted" image="sorting_sel.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sort:" destination="wdB-Wp-smu" eventType="touchUpInside" id="TmX-uB-Zj2"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Character Name Goes Here Lorem Ipsum" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="vHz-xh-CqP">
                                 <rect key="frame" x="93" y="8" width="582" height="37"/>
@@ -560,28 +645,96 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5bL-dU-Rkj">
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5bL-dU-Rkj" userLabel="Power">
                                 <rect key="frame" x="384" y="78" width="384" height="926"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" id="dPl-JS-9nh">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="powerCell" id="dPl-JS-9nh" customClass="PowerCell">
                                         <rect key="frame" x="0.0" y="22" width="384" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="384" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="izP-ov-wst" userLabel="sel">
+                                                    <rect key="frame" x="0.0" y="-1" width="384" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="lkb-WK-IMK" userLabel="bg">
+                                                    <rect key="frame" x="0.0" y="-1" width="384" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Really long item name" lineBreakMode="tailTruncation" minimumFontSize="10" id="UN7-2F-nJv" userLabel="title">
+                                                    <rect key="frame" x="8" y="10" width="288" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="atwill.png" id="5Wz-Zj-dow">
+                                                    <rect key="frame" x="304" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="melee.png" id="NHK-n0-5Tk">
+                                                    <rect key="frame" x="344" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="attack" destination="NHK-n0-5Tk" id="vKl-Eb-yAn"/>
+                                            <outlet property="backgroundView" destination="lkb-WK-IMK" id="QHp-3E-tIH"/>
+                                            <outlet property="selectedBackgroundView" destination="izP-ov-wst" id="afo-MC-kBk"/>
+                                            <outlet property="titleLabel" destination="UN7-2F-nJv" id="wfU-IQ-GMa"/>
+                                            <outlet property="usage" destination="5Wz-Zj-dow" id="SDH-gF-LjA"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" id="EEd-tN-TVV">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="powerCell" id="yBn-g3-hsH" customClass="PowerCell">
                                         <rect key="frame" x="0.0" y="66" width="384" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="384" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="d2c-3E-Nrj" userLabel="sel">
+                                                    <rect key="frame" x="0.0" y="-1" width="384" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="xmR-0W-56D" userLabel="bg">
+                                                    <rect key="frame" x="0.0" y="-1" width="384" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Really long item name" lineBreakMode="tailTruncation" minimumFontSize="10" id="VdG-wE-6My" userLabel="title">
+                                                    <rect key="frame" x="8" y="10" width="288" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="atwill.png" id="n2V-r1-7Hy">
+                                                    <rect key="frame" x="304" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="melee.png" id="phC-kF-syw">
+                                                    <rect key="frame" x="344" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="attack" destination="phC-kF-syw" id="LNx-jW-ZQ1"/>
+                                            <outlet property="backgroundView" destination="xmR-0W-56D" id="RlL-rd-1CC"/>
+                                            <outlet property="selectedBackgroundView" destination="d2c-3E-Nrj" id="uKC-sX-pxC"/>
+                                            <outlet property="titleLabel" destination="VdG-wE-6My" id="fHm-NB-lQQ"/>
+                                            <outlet property="usage" destination="n2V-r1-7Hy" id="bkM-yy-bqg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -620,23 +773,211 @@
                                 <state key="highlighted" image="compass_sel">
                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="menu:" destination="wdB-Wp-smu" eventType="touchUpInside" id="PXi-Uz-9DF"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="TJY-NT-1TS" userLabel="Tabs">
+                                <rect key="frame" x="0.0" y="619.5" width="384" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zfL-P7-CxM">
+                                        <rect key="frame" x="8" y="2.5" width="67" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
+                                        <state key="normal" title="Skills">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R9M-Qf-94C">
+                                        <rect key="frame" x="84" y="2.5" width="67" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
+                                        <state key="normal" title="Feats">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gnL-6l-7yg">
+                                        <rect key="frame" x="159" y="2.5" width="67" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
+                                        <state key="normal" title="Class">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ItG-x1-gf5">
+                                        <rect key="frame" x="309" y="2.5" width="67" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
+                                        <state key="normal" title="Loot">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="skS-x8-Kq8">
+                                        <rect key="frame" x="234" y="2.5" width="67" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
+                                        <state key="normal" title="Race">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="acDetail" destination="owI-nR-szj" id="0kc-GN-2Om"/>
+                        <outlet property="acValue" destination="sye-iH-fO6" id="Jqs-Ff-JoV"/>
+                        <outlet property="chaDetail" destination="2NW-rO-4XK" id="JZg-H9-sRb"/>
+                        <outlet property="chaMod" destination="2T9-fK-G6o" id="fps-rT-SId"/>
+                        <outlet property="chaScore" destination="6Bb-eU-TYq" id="MRa-eX-OQM"/>
+                        <outlet property="characterName" destination="vHz-xh-CqP" id="K8N-uh-ana"/>
+                        <outlet property="conDetail" destination="mx7-FV-SeC" id="8uc-tI-a6f"/>
+                        <outlet property="conMod" destination="xuw-WU-WC8" id="YNC-o0-aay"/>
+                        <outlet property="conScore" destination="bTN-Iy-hFD" id="XUQ-cG-Aiq"/>
+                        <outlet property="dexDetail" destination="hQQ-q9-DVe" id="OjY-wI-vGh"/>
+                        <outlet property="dexMod" destination="Zhd-fK-Ceq" id="ynU-Zo-HKu"/>
+                        <outlet property="dexScore" destination="WrZ-p8-Bvi" id="xBa-2S-oVm"/>
+                        <outlet property="fortDetail" destination="WZo-hK-5OA" id="d8o-Lt-xzC"/>
+                        <outlet property="fortValue" destination="MNS-Gd-NLk" id="ztA-Ri-ySm"/>
+                        <outlet property="hpDetail" destination="BTE-6z-yFe" id="ltj-VU-dww"/>
+                        <outlet property="hpValue" destination="zQA-wC-POf" id="Pvl-GB-dhY"/>
+                        <outlet property="initDetail" destination="HKt-Mh-fSZ" id="MPp-ep-weP"/>
+                        <outlet property="initValue" destination="MqD-wz-cXJ" id="GeD-OA-se4"/>
+                        <outlet property="insiDetail" destination="xWm-6X-EDa" id="9Bg-PF-U4K"/>
+                        <outlet property="insiValue" destination="hqA-Ch-MrT" id="UDk-vN-CMB"/>
+                        <outlet property="intDetail" destination="Erf-mc-6ES" id="1k2-5f-bHW"/>
+                        <outlet property="intMod" destination="pNG-LV-bKk" id="qps-jM-Idq"/>
+                        <outlet property="intScore" destination="WrZ-p8-Bvi" id="fEm-XB-GyH"/>
+                        <outlet property="menu" destination="iYZ-Z6-XkF" id="FOb-SK-qsk"/>
+                        <outlet property="percDetail" destination="ytK-9O-gpf" id="Qqq-ht-RRI"/>
+                        <outlet property="percValue" destination="d7q-tY-1lE" id="2VU-5S-DUn"/>
+                        <outlet property="reflDetail" destination="5NS-bQ-H6C" id="Mds-cb-yhG"/>
+                        <outlet property="reflValue" destination="vgw-i8-z57" id="9oX-nr-cMx"/>
+                        <outlet property="sort" destination="a91-VS-EWg" id="BfY-LS-Dzc"/>
+                        <outlet property="speedDetail" destination="QEW-rR-DNe" id="HVE-pG-ijC"/>
+                        <outlet property="speedValue" destination="naW-iJ-9UO" id="0yl-DG-RRk"/>
+                        <outlet property="strDetail" destination="lDL-Pm-5YE" id="QD1-Qp-LAi"/>
+                        <outlet property="strMod" destination="N4U-Cs-NJ1" id="CyW-gN-uUI"/>
+                        <outlet property="strScore" destination="bTN-Iy-hFD" id="d3c-XT-DeZ"/>
+                        <outlet property="surgeDetail" destination="q29-1m-UA5" id="56a-Uo-ZHo"/>
+                        <outlet property="surgeValue" destination="WNy-t6-tpW" id="E45-eA-bLe"/>
+                        <outlet property="willDetail" destination="M4D-ul-001" id="qRb-3V-PrE"/>
+                        <outlet property="willValue" destination="vQP-is-kHb" id="k50-BZ-hD7"/>
+                        <outlet property="wisDetail" destination="CRh-rW-jNo" id="pUC-3G-Qxg"/>
+                        <outlet property="wisMod" destination="fYg-NI-SbL" id="tu6-k1-Uqy"/>
+                        <outlet property="wisScore" destination="0XZ-3P-100" id="odf-fH-uQC"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="56" y="-161"/>
         </scene>
     </scenes>
     <resources>
+        <image name="atwill.png" width="32" height="32"/>
         <image name="bg2~ipad.png" width="768" height="1024"/>
         <image name="compass.png" width="85" height="84"/>
         <image name="compass_sel" width="16" height="16"/>
-        <image name="selected.png" width="88" height="37"/>
+        <image name="melee.png" width="32" height="32"/>
         <image name="sorting.png" width="32" height="32"/>
-        <image name="sorting_sel.png" width="64" height="64"/>
+        <image name="sorting_sel.png" width="32" height="32"/>
     </resources>
+    <classes>
+        <class className="FileCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FileCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="fileTitle" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="PowerCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PowerCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="attack" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="usage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="SkillCells" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SkillCells.h"/>
+            <relationships>
+                <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="skillTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="skillValue" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="iPadViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="menu:"/>
+                <relationship kind="action" name="sort:"/>
+                <relationship kind="outlet" name="acDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="acValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="chaDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="chaMod" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="chaScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="characterName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="conDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="conMod" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="conScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dexDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="dexMod" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dexScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fortDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="fortValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hpDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="hpValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="initDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="initValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="insiDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="insiValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="intDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="intMod" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="intScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="menu" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="percDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="percValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="reflDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="reflValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sort" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="speedDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="speedValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="strDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="strMod" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="strScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="surgeDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="surgeValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="willDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="willValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wisDetail" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="wisMod" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wisScore" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

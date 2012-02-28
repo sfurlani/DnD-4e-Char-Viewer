@@ -8,7 +8,7 @@
 
 #import "PowerCell.h"
 #import "Data.h"
-
+#import "Utility.h"
 
 @implementation PowerCell
 
@@ -100,7 +100,8 @@
         self.attack.image = nil;
     }
     
-    self.arrow.image = [UIImage imageNamed:@"arrow"];
+    if (iPhone)
+        self.arrow.image = [UIImage imageNamed:@"arrow"];
     
 }
 
