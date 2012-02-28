@@ -86,7 +86,7 @@
 
 - (void) showDetail:(id<DNDHTML>)item
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard~iphone" bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:nil];
     DetailViewController *dvc = [storyboard instantiateViewControllerWithIdentifier:@"detailVC"];
     dvc.item = item;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:dvc];

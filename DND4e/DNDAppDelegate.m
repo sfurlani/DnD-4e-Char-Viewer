@@ -45,7 +45,7 @@
         self.main = [[MainViewController alloc] initWithData:dnd4eDocs];
         self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.main];
     } else {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard~iphone" bundle:nil];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:nil];
         self.navigationController = [storyboard instantiateInitialViewController];
         self.main = [[self.navigationController viewControllers] lastObject];
     }

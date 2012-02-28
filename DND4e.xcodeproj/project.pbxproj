@@ -16,7 +16,7 @@
 		DC57553914FC4DDD00410FA2 /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = DC57553814FC4DDD00410FA2 /* compass.png */; };
 		DC57553D14FC500700410FA2 /* iPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC57553B14FC500700410FA2 /* iPadViewController.m */; };
 		DC57554014FC50B400410FA2 /* bg2~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = DC57553F14FC50B400410FA2 /* bg2~ipad.png */; };
-		DC57554214FC51C400410FA2 /* MainStoryboard~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC57554114FC51C400410FA2 /* MainStoryboard~ipad.storyboard */; };
+		DC57554214FC51C400410FA2 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC57554114FC51C400410FA2 /* iPad.storyboard */; };
 		DC57554414FC565300410FA2 /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = DC57554314FC565300410FA2 /* selected.png */; };
 		DC693BEF14EED86B00E68BF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BEE14EED86B00E68BF8 /* UIKit.framework */; };
 		DC693BF114EED86B00E68BF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF014EED86B00E68BF8 /* Foundation.framework */; };
@@ -31,7 +31,7 @@
 		DC693C2514EEDCB500E68BF8 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C2414EEDCB500E68BF8 /* XMLReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DC693C3814F0069200E68BF8 /* DictionaryExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */; };
 		DC693C3914F0069200E68BF8 /* DictionaryExplorerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */; };
-		DC9711E914F954C60039443C /* MainStoryboard~iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9711E814F954C60039443C /* MainStoryboard~iphone.storyboard */; };
+		DC9711E914F954C60039443C /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9711E814F954C60039443C /* iPhone.storyboard */; };
 		DC9711FA14F955B50039443C /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9711EC14F955B50039443C /* arrow.png */; };
 		DC9711FB14F955B50039443C /* arrow@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9711ED14F955B50039443C /* arrow@2x~iphone.png */; };
 		DC9711FC14F955B50039443C /* atwill.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9711EE14F955B50039443C /* atwill.png */; };
@@ -132,7 +132,7 @@
 		DC57553A14FC500700410FA2 /* iPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadViewController.h; sourceTree = "<group>"; };
 		DC57553B14FC500700410FA2 /* iPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadViewController.m; sourceTree = "<group>"; };
 		DC57553F14FC50B400410FA2 /* bg2~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg2~ipad.png"; sourceTree = "<group>"; };
-		DC57554114FC51C400410FA2 /* MainStoryboard~ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "MainStoryboard~ipad.storyboard"; sourceTree = "<group>"; };
+		DC57554114FC51C400410FA2 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		DC57554314FC565300410FA2 /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected.png; sourceTree = "<group>"; };
 		DC693BEA14EED86B00E68BF8 /* DND4e.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DND4e.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC693BEE14EED86B00E68BF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -154,7 +154,7 @@
 		DC693C3514F0069200E68BF8 /* DictionaryExplorerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryExplorerViewController.h; sourceTree = "<group>"; };
 		DC693C3614F0069200E68BF8 /* DictionaryExplorerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryExplorerViewController.m; sourceTree = "<group>"; };
 		DC693C3714F0069200E68BF8 /* DictionaryExplorerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DictionaryExplorerViewController.xib; sourceTree = "<group>"; };
-		DC9711E814F954C60039443C /* MainStoryboard~iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "MainStoryboard~iphone.storyboard"; sourceTree = "<group>"; };
+		DC9711E814F954C60039443C /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		DC9711EC14F955B50039443C /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		DC9711ED14F955B50039443C /* arrow@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x~iphone.png"; sourceTree = "<group>"; };
 		DC9711EE14F955B50039443C /* atwill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atwill.png; sourceTree = "<group>"; };
@@ -342,7 +342,8 @@
 				DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */,
 				DC57553A14FC500700410FA2 /* iPadViewController.h */,
 				DC57553B14FC500700410FA2 /* iPadViewController.m */,
-				DC57554114FC51C400410FA2 /* MainStoryboard~ipad.storyboard */,
+				DC57554114FC51C400410FA2 /* iPad.storyboard */,
+				DC9711E814F954C60039443C /* iPhone.storyboard */,
 				DC97121114F964070039443C /* Storyboard ViewControllers */,
 				DC97121214F9641C0039443C /* Nib ViewControllers */,
 			);
@@ -426,7 +427,6 @@
 		DC97121114F964070039443C /* Storyboard ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				DC9711E814F954C60039443C /* MainStoryboard~iphone.storyboard */,
 				DC97120814F9577F0039443C /* Cells */,
 				DC5754FA14FB27A400410FA2 /* Segues */,
 				DC97121314F9654B0039443C /* FileViewController.h */,
@@ -648,7 +648,7 @@
 				DC9AB7F814F6C37200B3B0F3 /* meleeranged@2x~iphone.png in Resources */,
 				DC9AB7F914F6C37200B3B0F3 /* ranged.png in Resources */,
 				DC9AB7FA14F6C37200B3B0F3 /* ranged@2x~iphone.png in Resources */,
-				DC9711E914F954C60039443C /* MainStoryboard~iphone.storyboard in Resources */,
+				DC9711E914F954C60039443C /* iPhone.storyboard in Resources */,
 				DC9711FA14F955B50039443C /* arrow.png in Resources */,
 				DC9711FB14F955B50039443C /* arrow@2x~iphone.png in Resources */,
 				DC9711FC14F955B50039443C /* atwill.png in Resources */,
@@ -676,7 +676,7 @@
 				DC5754FE14FB30D500410FA2 /* sorting@2x~iphone.png in Resources */,
 				DC57553914FC4DDD00410FA2 /* compass.png in Resources */,
 				DC57554014FC50B400410FA2 /* bg2~ipad.png in Resources */,
-				DC57554214FC51C400410FA2 /* MainStoryboard~ipad.storyboard in Resources */,
+				DC57554214FC51C400410FA2 /* iPad.storyboard in Resources */,
 				DC57554414FC565300410FA2 /* selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

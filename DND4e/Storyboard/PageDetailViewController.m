@@ -132,7 +132,7 @@
     id<DNDHTML> new = [items objectAtIndex:index];
     if (!new) return;
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard~iphone" bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:nil];
     PageDetailViewController *pdvc = [storyboard instantiateViewControllerWithIdentifier:@"pageDetailVC"];
     pdvc.item = new;
     pdvc.listVC = self.listVC;
@@ -160,7 +160,7 @@
     id<DNDHTML> new = [items objectAtIndex:index];
     if (!new) return;
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard~iphone" bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:nil];
     PageDetailViewController *pdvc = [storyboard instantiateViewControllerWithIdentifier:@"pageDetailVC"];
     pdvc.item = new;
     pdvc.listVC = self.listVC;
