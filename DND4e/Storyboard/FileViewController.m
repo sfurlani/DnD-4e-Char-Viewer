@@ -12,11 +12,13 @@
 #import "MBProgressHUD.h"
 #import "FileCell.h"
 #import "Utility.h"
+#import "iPadViewController.h"
 
 @implementation FileViewController
 
 @synthesize info, bg, titleLabel, fileTable;
 @synthesize files = _files;
+@synthesize delegate; // iPad-Only
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,7 +52,8 @@
     [super viewDidLoad];
     self.bg.image = [UIImage imageNamed:@"bg"];
     self.files = [[AppData files] mutableCopy];
-    [AppData setDelegate:self];
+    if (iPhone)
+        [AppData setDelegate:self];
     
     // !!!: This should never be over-written at any point.
     self.navigationController.navigationBarHidden = YES;
@@ -133,6 +136,12 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (iPad) {
+        NSInteger row = [indexPath row];
+        NSString *path = [self.files objectAtIndex:row];
+        [self.delegate openFilePath:path];
+        [[(id)self.delegate currentPopover] dismissPopoverAnimated:YES];
+    }
 }
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

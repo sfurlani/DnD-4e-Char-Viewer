@@ -9,9 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "Data.h"
 
+enum {
+    ltSkill = 5000,
+    ltFeat,
+    ltClass,
+    ltRace,
+    ltLoot
+}; 
+typedef NSInteger ListType;
+
 @class Character;
 
-@interface iPadViewController : UIViewController <UIPopoverControllerDelegate, UITableViewDataSource, UITableViewDelegate, DataFileDelegate>
+@interface iPadViewController : UIViewController <UIPopoverControllerDelegate, UITableViewDataSource, UITableViewDelegate, DataFileDelegate, UIActionSheetDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *strDetail;
 @property (strong, nonatomic) IBOutlet UIButton *conDetail;
@@ -68,7 +77,26 @@
 @property (strong, nonatomic) IBOutlet UITableView * powerTable;
 @property (strong, nonatomic) IBOutlet UITableView * itemTable;
 
+@property (assign, nonatomic) ListType list;
+
 - (IBAction)sort:(id)sender;
 - (IBAction)menu:(id)sender;
+- (IBAction)info:(id)sender;
+- (IBAction)selList:(id)sender;
+- (IBAction)openDetail:(id)sender;
+
+- (void) performSortWithKey:(NSString*)key;
+
+- (void) refresh;
+
+#pragma mark - UIPopoverControllerDelegate & Popover Modal Control
+@property (strong, nonatomic) UIPopoverController *currentPopover;
+@property (assign, nonatomic) SEL popoverAction;
+@property (strong, nonatomic) id popoverTarget;
+@property (strong, nonatomic) id popoverSender;
+- (void) prepareForPopoverSegue:(UIStoryboardSegue *)segue sender:(id)sender;
+- (void) dismissPopoverViewController:(id)sender;
+
+- (void) openDetail:(id)sender;
 
 @end

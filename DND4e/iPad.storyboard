@@ -13,8 +13,8 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg2~ipad.png" id="kFY-ph-ieq">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottomLeft" image="bg_p~ipad.png" id="kFY-ph-ieq">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="R5H-Xp-ugK" userLabel="Ability Scores">
@@ -36,6 +36,9 @@
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="lKM-wV-h1H"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -55,6 +58,9 @@
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="MkM-yG-alo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -74,6 +80,9 @@
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="p79-QP-z6o"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -141,42 +150,42 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="N4U-Cs-NJ1">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="N4U-Cs-NJ1">
                                         <rect key="frame" x="250" y="35" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="xuw-WU-WC8">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="xuw-WU-WC8">
                                         <rect key="frame" x="250" y="65" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Zhd-fK-Ceq">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Zhd-fK-Ceq">
                                         <rect key="frame" x="250" y="96" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="pNG-LV-bKk">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="pNG-LV-bKk">
                                         <rect key="frame" x="250" y="127" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="fYg-NI-SbL">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="fYg-NI-SbL">
                                         <rect key="frame" x="250" y="158" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="2T9-fK-G6o">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="2T9-fK-G6o">
                                         <rect key="frame" x="250" y="189" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
@@ -194,6 +203,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="g2g-IQ-EAn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Erf-mc-6ES">
                                         <rect key="frame" x="0.0" y="130" width="162" height="24"/>
@@ -206,6 +218,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="KPa-31-8jt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2006" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2NW-rO-4XK">
                                         <rect key="frame" x="0.0" y="192" width="162" height="24"/>
@@ -218,6 +233,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="Mdg-So-HOV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -241,6 +259,9 @@
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="ohJ-Og-Vzi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -260,6 +281,9 @@
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="FNL-1e-7VD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -279,6 +303,9 @@
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="2Fy-v8-5Lt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -325,14 +352,14 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="MqD-wz-cXJ">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="MqD-wz-cXJ">
                                         <rect key="frame" x="250" y="158" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="naW-iJ-9UO">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="6" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="naW-iJ-9UO">
                                         <rect key="frame" x="250" y="189" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
@@ -350,6 +377,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="aAm-9N-sQy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="M4D-ul-001">
                                         <rect key="frame" x="8" y="130" width="162" height="24"/>
@@ -362,6 +392,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="6DD-wa-Kf4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3006" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QEW-rR-DNe">
                                         <rect key="frame" x="8" y="192" width="162" height="24"/>
@@ -374,6 +407,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="VkO-cx-N9W"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" id="bSF-Kl-cdo" userLabel="Shade">
                                         <rect key="frame" x="0.0" y="220" width="320" height="23"/>
@@ -390,18 +426,21 @@
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="Ony-ut-oLP"/>
+                                                </connections>
                                             </button>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="20" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="zQA-wC-POf">
+                                                <rect key="frame" x="236" y="-4" width="69" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="zQA-wC-POf">
-                                        <rect key="frame" x="250" y="216" width="42" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="WNy-t6-tpW">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="WNy-t6-tpW">
                                         <rect key="frame" x="250" y="247" width="42" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
@@ -419,6 +458,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="gLz-jR-9ru"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" id="8P4-4x-MPT" userLabel="Shade">
                                         <rect key="frame" x="0.0" y="278" width="320" height="23"/>
@@ -435,6 +477,9 @@
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="o35-5C-0WB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -464,6 +509,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openDetail:" destination="wdB-Wp-smu" eventType="touchUpInside" id="BZL-1E-chc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -473,7 +521,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="thingCell" id="Nr9-r0-Yve" customClass="FileCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="itemCell" id="Nr9-r0-Yve" customClass="FileCell">
                                         <rect key="frame" x="0.0" y="22" width="384" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -506,7 +554,7 @@
                                             <outlet property="selectedBackgroundView" destination="QXa-iR-ZZA" id="0DQ-sc-nmb"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="thingCellGray" id="xvk-3n-mNZ" customClass="FileCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="itemCellGray" id="xvk-3n-mNZ" customClass="FileCell">
                                         <rect key="frame" x="0.0" y="66" width="384" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -622,9 +670,13 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wdB-Wp-smu" id="KNk-X0-Kn5"/>
+                                    <outlet property="delegate" destination="wdB-Wp-smu" id="7Rf-he-Zbf"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="a91-VS-EWg">
-                                <rect key="frame" x="700" y="8" width="48" height="37"/>
+                                <rect key="frame" x="683" y="8" width="48" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="sorting.png">
@@ -638,8 +690,8 @@
                                     <action selector="sort:" destination="wdB-Wp-smu" eventType="touchUpInside" id="TmX-uB-Zj2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Character Name Goes Here Lorem Ipsum" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="vHz-xh-CqP">
-                                <rect key="frame" x="93" y="8" width="582" height="37"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;-- Tap to load character...                       " textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="vHz-xh-CqP">
+                                <rect key="frame" x="93" y="8" width="582" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Cochin-BoldItalic" family="Cochin" pointSize="34"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -650,7 +702,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="powerCell" id="dPl-JS-9nh" customClass="PowerCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="powerCellGray" id="dPl-JS-9nh" customClass="PowerCell">
                                         <rect key="frame" x="0.0" y="22" width="384" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -737,6 +789,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wdB-Wp-smu" id="U2K-zo-VeZ"/>
+                                    <outlet property="delegate" destination="wdB-Wp-smu" id="wYx-4F-tPQ"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Usage Type" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="G0U-pv-ajH">
                                 <rect key="frame" x="635" y="53" width="133" height="31"/>
@@ -762,38 +818,43 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iYZ-Z6-XkF">
+                            <button opaque="NO" contentMode="TopLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iYZ-Z6-XkF">
                                 <rect key="frame" x="0.0" y="0.0" width="85" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="compass.png">
+                                <state key="normal" backgroundImage="compass.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="highlighted" image="compass_sel">
+                                <state key="highlighted" backgroundImage="compass_sel">
                                     <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="menu:" destination="wdB-Wp-smu" eventType="touchUpInside" id="PXi-Uz-9DF"/>
+                                    <segue destination="0wf-BO-X7o" kind="popover" identifier="openFiles" popoverAnchorView="iYZ-Z6-XkF" id="9jV-Td-5gx">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="TJY-NT-1TS" userLabel="Tabs">
                                 <rect key="frame" x="0.0" y="619.5" width="384" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zfL-P7-CxM">
+                                    <button opaque="NO" tag="5000" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zfL-P7-CxM">
                                         <rect key="frame" x="8" y="2.5" width="67" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
-                                        <state key="normal" title="Skills">
+                                        <state key="normal" title="Skills" backgroundImage="selected.png">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selList:" destination="wdB-Wp-smu" eventType="touchUpInside" id="ZTe-4o-HyK"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R9M-Qf-94C">
+                                    <button opaque="NO" tag="5001" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R9M-Qf-94C">
                                         <rect key="frame" x="84" y="2.5" width="67" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
@@ -804,8 +865,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selList:" destination="wdB-Wp-smu" eventType="touchUpInside" id="mAf-1v-4hJ"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gnL-6l-7yg">
+                                    <button opaque="NO" tag="5002" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gnL-6l-7yg">
                                         <rect key="frame" x="159" y="2.5" width="67" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
@@ -816,8 +880,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selList:" destination="wdB-Wp-smu" eventType="touchUpInside" id="sSI-dd-mJI"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ItG-x1-gf5">
+                                    <button opaque="NO" tag="5004" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ItG-x1-gf5">
                                         <rect key="frame" x="309" y="2.5" width="67" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
@@ -828,8 +895,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selList:" destination="wdB-Wp-smu" eventType="touchUpInside" id="HGR-NR-oth"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="skS-x8-Kq8">
+                                    <button opaque="NO" tag="5003" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="skS-x8-Kq8">
                                         <rect key="frame" x="234" y="2.5" width="67" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
@@ -840,13 +910,32 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selList:" destination="wdB-Wp-smu" eventType="touchUpInside" id="Qzj-vg-9um"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="cox-MZ-Chs">
+                                <rect key="frame" x="739" y="18" width="18" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zUm-Mi-uWp" kind="modal" identifier="showHelp" modalTransitionStyle="partialCurl" id="46n-BA-3tg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="k57-E4-gRw"/>
                     <connections>
                         <outlet property="acDetail" destination="owI-nR-szj" id="0kc-GN-2Om"/>
                         <outlet property="acValue" destination="sye-iH-fO6" id="Jqs-Ff-JoV"/>
@@ -870,10 +959,12 @@
                         <outlet property="insiValue" destination="hqA-Ch-MrT" id="UDk-vN-CMB"/>
                         <outlet property="intDetail" destination="Erf-mc-6ES" id="1k2-5f-bHW"/>
                         <outlet property="intMod" destination="pNG-LV-bKk" id="qps-jM-Idq"/>
-                        <outlet property="intScore" destination="WrZ-p8-Bvi" id="fEm-XB-GyH"/>
+                        <outlet property="intScore" destination="7vZ-rM-7Xz" id="ebP-Tj-aic"/>
+                        <outlet property="itemTable" destination="tYz-TB-wDC" id="idp-OA-lQb"/>
                         <outlet property="menu" destination="iYZ-Z6-XkF" id="FOb-SK-qsk"/>
                         <outlet property="percDetail" destination="ytK-9O-gpf" id="Qqq-ht-RRI"/>
                         <outlet property="percValue" destination="d7q-tY-1lE" id="2VU-5S-DUn"/>
+                        <outlet property="powerTable" destination="5bL-dU-Rkj" id="QBV-fh-QQv"/>
                         <outlet property="reflDetail" destination="5NS-bQ-H6C" id="Mds-cb-yhG"/>
                         <outlet property="reflValue" destination="vgw-i8-z57" id="9oX-nr-cMx"/>
                         <outlet property="sort" destination="a91-VS-EWg" id="BfY-LS-Dzc"/>
@@ -881,7 +972,7 @@
                         <outlet property="speedValue" destination="naW-iJ-9UO" id="0yl-DG-RRk"/>
                         <outlet property="strDetail" destination="lDL-Pm-5YE" id="QD1-Qp-LAi"/>
                         <outlet property="strMod" destination="N4U-Cs-NJ1" id="CyW-gN-uUI"/>
-                        <outlet property="strScore" destination="bTN-Iy-hFD" id="d3c-XT-DeZ"/>
+                        <outlet property="strScore" destination="ZEX-LD-ZZP" id="RyA-1n-JRD"/>
                         <outlet property="surgeDetail" destination="q29-1m-UA5" id="56a-Uo-ZHo"/>
                         <outlet property="surgeValue" destination="WNy-t6-tpW" id="E45-eA-bLe"/>
                         <outlet property="willDetail" destination="M4D-ul-001" id="qRb-3V-PrE"/>
@@ -889,18 +980,330 @@
                         <outlet property="wisDetail" destination="CRh-rW-jNo" id="pUC-3G-Qxg"/>
                         <outlet property="wisMod" destination="fYg-NI-SbL" id="tu6-k1-Uqy"/>
                         <outlet property="wisScore" destination="0XZ-3P-100" id="odf-fH-uQC"/>
+                        <segue destination="QOI-EI-D3y" kind="modal" identifier="showDetail" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="l2l-ao-sOc"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="56" y="-161"/>
         </scene>
+        <scene sceneID="FyW-Cv-Qds">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKH-hj-l3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="helpVC" id="zUm-Mi-uWp" customClass="HelpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RXu-6n-Twb">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="by Stephen Furlani" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="t3u-Di-gRg">
+                                <rect key="frame" x="205" y="959" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Strong Fortress Games" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="s0x-qw-No7">
+                                <rect key="frame" x="448" y="959" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="App Version" lineBreakMode="tailTruncation" minimumFontSize="10" id="jEe-eP-P8e">
+                                <rect key="frame" x="48" y="964" width="126" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="File Version" lineBreakMode="tailTruncation" minimumFontSize="10" id="In8-Ru-Z8i">
+                                <rect key="frame" x="48" y="983" width="126" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1.0.0" lineBreakMode="tailTruncation" minimumFontSize="10" id="Ztq-Uv-YrW">
+                                <rect key="frame" x="182" y="964" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0.75a" lineBreakMode="tailTruncation" minimumFontSize="10" id="wRS-bx-Yd9">
+                                <rect key="frame" x="182" y="983" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" id="y3J-Yp-cie">
+                                <rect key="frame" x="0.0" y="404" width="768" height="547"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dWi-xU-z7h">
+                                <rect key="frame" x="720" y="965" width="43" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="arrow.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sfg:" destination="zUm-Mi-uWp" eventType="touchUpInside" id="vQC-UQ-6zs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xue-Zy-zSx">
+                                <rect key="frame" x="0.0" y="967" width="43" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="back.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="zUm-Mi-uWp" eventType="touchUpInside" id="gh6-NQ-BAl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="appVersion" destination="Ztq-Uv-YrW" id="SBt-zQ-Ai4"/>
+                        <outlet property="fileVersion" destination="wRS-bx-Yd9" id="Y8r-Je-h9Z"/>
+                        <outlet property="webHelp" destination="y3J-Yp-cie" id="YJW-zb-6To"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1360" y="-161"/>
+        </scene>
+        <scene sceneID="VwY-2j-oCh">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZ5-xd-PHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="filesVC" title="Main" id="0wf-BO-X7o" customClass="FileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jxH-dJ-AU0">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg~iphone.png" id="kju-Lb-GRj">
+                                <rect key="frame" x="0.0" y="-20" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DnD 4e Char Viewer" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="G7o-JP-m1i">
+                                <rect key="frame" x="20" y="0.0" width="280" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="File Names" lineBreakMode="tailTruncation" minimumFontSize="10" id="IxP-9t-dfV">
+                                <rect key="frame" x="8" y="43" width="292" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="s6h-bR-VwQ" userLabel="Line">
+                                <rect key="frame" x="0.0" y="77" width="320" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ykO-h4-DXX">
+                                <rect key="frame" x="0.0" y="78" width="320" height="382"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fileCell" id="f8r-fc-Ish" customClass="FileCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="zzE-XK-TiA" userLabel="bg">
+                                                    <rect key="frame" x="0.0" y="2" width="320" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="aLh-Ow-TnL" userLabel="sel">
+                                                    <rect key="frame" x="0.0" y="2" width="320" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Character File Names" lineBreakMode="tailTruncation" minimumFontSize="10" id="xeJ-LR-tSL">
+                                                    <rect key="frame" x="8" y="12" width="292" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="backgroundView" destination="zzE-XK-TiA" id="mOQ-lR-Iwl"/>
+                                            <outlet property="fileTitle" destination="xeJ-LR-tSL" id="Crv-ys-AWz"/>
+                                            <outlet property="selectedBackgroundView" destination="aLh-Ow-TnL" id="3DX-3Y-bp8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fileCellGray" id="Y1F-18-GLA" customClass="FileCell">
+                                        <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="Lbe-uV-0NL" userLabel="sel">
+                                                    <rect key="frame" x="0.0" y="3" width="320" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="Hb3-jX-lyE" userLabel="bg">
+                                                    <rect key="frame" x="0.0" y="2" width="320" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Character File Names" lineBreakMode="tailTruncation" minimumFontSize="10" id="XzA-hU-sJ7">
+                                                    <rect key="frame" x="8" y="12" width="292" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="backgroundView" destination="Hb3-jX-lyE" id="AOn-u6-yaa"/>
+                                            <outlet property="fileTitle" destination="XzA-hU-sJ7" id="Ate-N6-C2y"/>
+                                            <outlet property="selectedBackgroundView" destination="Lbe-uV-0NL" id="A8X-Ys-no3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0wf-BO-X7o" id="kbw-7r-q4g"/>
+                                    <outlet property="delegate" destination="0wf-BO-X7o" id="XfW-Rf-puv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fUF-Sb-8oJ"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="bg" destination="kju-Lb-GRj" id="Mkk-Jy-T97"/>
+                        <outlet property="fileTable" destination="ykO-h4-DXX" id="ciG-NH-BZk"/>
+                        <outlet property="titleLabel" destination="G7o-JP-m1i" id="AMd-gR-uC2"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1584" y="988"/>
+        </scene>
+        <scene sceneID="hXc-PS-ppd">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MUx-KM-v6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="detailVC" definesPresentationContext="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="formSheet" id="IAn-Wa-8mG" customClass="PowerDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bei-qQ-Tj6">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottomLeft" image="bg~ipad.png" id="08R-6G-Iie">
+                                <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="7nt-qg-SFK" userLabel="Line">
+                                <rect key="frame" x="0.0" y="48" width="540" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                            </view>
+                            <webView opaque="NO" contentMode="scaleToFill" id="fgz-Oh-zec">
+                                <rect key="frame" x="0.0" y="49" width="540" height="571"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="IAn-Wa-8mG" id="Va8-XK-rzu"/>
+                                </connections>
+                            </webView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Detail Name" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="vAs-u1-A4p">
+                                <rect key="frame" x="49" y="0.0" width="443" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cochin-Italic" family="Cochin" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TmC-Vz-vqF">
+                                <rect key="frame" x="20" y="4" width="500" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="back.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="IAn-Wa-8mG" eventType="touchUpInside" id="cUd-EJ-b1w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pbl-fl-7Ha"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="back" destination="TmC-Vz-vqF" id="6cq-Bz-I97"/>
+                        <outlet property="bg" destination="08R-6G-Iie" id="LFA-pn-jIR"/>
+                        <outlet property="titleLabel" destination="vAs-u1-A4p" id="IO9-tN-7z0"/>
+                        <outlet property="webDetail" destination="fgz-Oh-zec" id="XMG-GP-K3k"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2058" y="1598"/>
+        </scene>
+        <scene sceneID="HWx-On-Z3M">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DVz-5o-RVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="detailNavVC" definesPresentationContext="YES" modalTransitionStyle="crossDissolve" modalPresentationStyle="formSheet" navigationBarHidden="YES" id="QOI-EI-D3y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="6cb-DE-M4W">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IAn-Wa-8mG" kind="relationship" relationship="rootViewController" id="8dv-jy-1Ax"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1360" y="1598"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrow.png" width="32" height="32"/>
         <image name="atwill.png" width="32" height="32"/>
-        <image name="bg2~ipad.png" width="768" height="1024"/>
+        <image name="back.png" width="32" height="32"/>
+        <image name="bg_p~ipad.png" width="768" height="1004"/>
+        <image name="bg~ipad.png" width="768" height="1021"/>
+        <image name="bg~iphone.png" width="320" height="480"/>
         <image name="compass.png" width="85" height="84"/>
         <image name="compass_sel" width="16" height="16"/>
         <image name="melee.png" width="32" height="32"/>
+        <image name="selected.png" width="88" height="37"/>
         <image name="sorting.png" width="32" height="32"/>
         <image name="sorting_sel.png" width="32" height="32"/>
     </resources>
@@ -912,6 +1315,43 @@
                 <relationship kind="outlet" name="fileTitle" candidateClass="UILabel"/>
             </relationships>
         </class>
+        <class className="FileViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FileViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="fileTable" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="info" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="HelpViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HelpViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="back:"/>
+                <relationship kind="action" name="sfg:"/>
+                <relationship kind="outlet" name="appVersion" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fileVersion" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="webHelp" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="PageDetailViewController" superclassName="PageViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PageDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="swipeLeft:" candidateClass="UIGestureRecognizer"/>
+                <relationship kind="action" name="swipeRight:" candidateClass="UIGestureRecognizer"/>
+                <relationship kind="outlet" name="webDetail" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="PageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PageViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="back:"/>
+                <relationship kind="action" name="home:"/>
+                <relationship kind="outlet" name="back" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="bg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="PowerCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PowerCell.h"/>
             <relationships>
@@ -920,6 +1360,9 @@
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="usage" candidateClass="UIImageView"/>
             </relationships>
+        </class>
+        <class className="PowerDetailViewController" superclassName="PageDetailViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PowerDetailViewController.h"/>
         </class>
         <class className="SkillCells" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SkillCells.h"/>
@@ -932,7 +1375,10 @@
         <class className="iPadViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadViewController.h"/>
             <relationships>
+                <relationship kind="action" name="info:"/>
                 <relationship kind="action" name="menu:"/>
+                <relationship kind="action" name="openDetail:"/>
+                <relationship kind="action" name="selList:"/>
                 <relationship kind="action" name="sort:"/>
                 <relationship kind="outlet" name="acDetail" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="acValue" candidateClass="UILabel"/>
@@ -957,9 +1403,11 @@
                 <relationship kind="outlet" name="intDetail" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="intMod" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="intScore" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="itemTable" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="menu" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="percDetail" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="percValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="powerTable" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="reflDetail" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="reflValue" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="sort" candidateClass="UIButton"/>

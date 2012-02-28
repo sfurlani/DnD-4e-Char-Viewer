@@ -54,6 +54,12 @@
     
     [self.window makeKeyAndVisible];
     
+    if (![url isFileURL] || !url) {
+        NSString *path = [AppDefaults objectForKey:keyLastCharacter];
+        if (path)
+            [AppData.delegate openFilePath:path];
+    }
+    
     return YES;
 }
 

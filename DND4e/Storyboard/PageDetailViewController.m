@@ -208,7 +208,7 @@
 
 - (void) loadHTML:(NSString*)string
 {
-    NSString *html = NSFORMAT(@"<html><body style=\"font-family:Copperplate;background-color:transparent;color:rgba(0,0,0,.8);margin:0;padding:0\"><br><br><br>%@</body></html>",string);
+    NSString *html = NSFORMAT(@"<html><body style=\"font-family:Copperplate;background-color:transparent;color:rgba(0,0,0,.8);margin:0;padding:0;font-size:%f\">%@</body></html>",(iPad ? 21.0f : 15.0f),string);
     [self.webDetail loadHTMLString:html baseURL:[AppData applicationDocumentsDirectory]];
 }
 

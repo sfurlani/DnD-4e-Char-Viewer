@@ -18,4 +18,7 @@
 
 @property (strong, nonatomic) NSMutableArray *files;
 
+// iPad Only
+@property (weak, nonatomic) id<DataFileDelegate> delegate;
+
 @end

@@ -32,16 +32,16 @@
     if (selected) {
         color = [UIColor colorWithWhite:1.0 alpha:0.8];
     }
-    if (animated) {
-        [UIView animateWithDuration:1
-                         animations:^{
-                             [self.skillTitle setTextColor:color]; 
-                             [self.skillValue setTextColor:color]; 
-                         }];
-    } else {
+//    if (animated) {
+//        [UIView animateWithDuration:1
+//                         animations:^{
+//                             [self.skillTitle setTextColor:color]; 
+//                             [self.skillValue setTextColor:color]; 
+//                         }];
+//    } else {
         [self.skillTitle setTextColor:color]; 
         [self.skillValue setTextColor:color];
-    }
+//    }
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
@@ -52,16 +52,16 @@
     if (highlighted) {
         color = [UIColor colorWithWhite:1.0 alpha:0.8];
     }
-    if (animated) {
-        [UIView animateWithDuration:1
-                         animations:^{
-                             [self.skillTitle setTextColor:color];
-                             [self.skillValue setTextColor:color]; 
-                         }];
-    } else {
+//    if (animated) {
+//        [UIView animateWithDuration:1
+//                         animations:^{
+//                             [self.skillTitle setTextColor:color];
+//                             [self.skillValue setTextColor:color]; 
+//                         }];
+//    } else {
         [self.skillTitle setTextColor:color]; 
         [self.skillValue setTextColor:color];
-    }
+//    }
 }
 
 

@@ -60,6 +60,7 @@
     NSURL *help = [[NSBundle mainBundle] URLForResource:@"help" withExtension:@"html"];
     NSURLRequest *request = [NSURLRequest requestWithURL:help];
     [self.webHelp loadRequest:request];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
 }
 
 #pragma mark - IBActions

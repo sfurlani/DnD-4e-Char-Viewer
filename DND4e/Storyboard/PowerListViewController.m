@@ -165,6 +165,7 @@ NSString *const keyPowerSort = @"keyPowerSort";
 - (void) performSortWithKey:(NSString*)key
 {
     [AppDefaults setObject:key forKey:keyPowerSort];
+    [AppDefaults synchronize];
     [self.items sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         if ([obj1 isKindOfClass:[Loot class]] &&
             [obj2 isKindOfClass:[Loot class]] ){

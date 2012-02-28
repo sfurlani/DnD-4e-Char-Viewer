@@ -8,7 +8,9 @@
 
 #import "PageViewController.h"
 #import "DetailViewController.h"
+#import "PowerDetailViewController.h"
 #import "Data.h"
+#import "Utility.h"
 
 @implementation PageViewController
 
@@ -86,29 +88,57 @@
 
 - (void) showDetail:(id<DNDHTML>)item
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:nil];
-    DetailViewController *dvc = [storyboard instantiateViewControllerWithIdentifier:@"detailVC"];
-    dvc.item = item;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:dvc];
-    nav.modalTransitionStyle = UIModalTransitionStylePartialCurl;
-    nav.navigationBarHidden = YES;
-    [self.navigationController presentViewController:nav animated:YES completion:nil];
+    UIStoryboard *storyboard = nil;
+    if (iPhone) {
+        storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:nil];
+    }
+    if (iPad) {
+        storyboard = [UIStoryboard storyboardWithName:@"iPad" bundle:nil];
+    }
+    if (!storyboard) return;
+    
+    
+    if (iPhone) {
+        DetailViewController *dvc = [storyboard instantiateViewControllerWithIdentifier:@"detailVC"];
+        dvc.item = item;
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:dvc];
+        nav.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+        nav.navigationBarHidden = YES;
+        [self.navigationController presentViewController:nav animated:YES completion:nil];
+    } else if (iPad) {
+        PowerDetailViewController *dvc = [storyboard instantiateViewControllerWithIdentifier:@"detailVC"];
+        dvc.item = item;
+        NSLog(@"dvc: %@", dvc);
+        [self.navigationController pushViewController:dvc animated:YES];
+    }
 }
 
 #pragma mark - IBActions
 
 - (void) back:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    if (iPhone)
+        [self.navigationController popViewControllerAnimated:YES];
+    if (iPad) {
+        if ([[self.navigationController viewControllers] count] > 1) {
+            [self.navigationController popViewControllerAnimated:YES];
+        } else {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    }
+        
 }
 
 - (void) home:(id)sender
 {
+    if (iPhone)
     if (!(self.first != nil) || [self isEqual:self.first]) {
         [self.navigationController popToRootViewControllerAnimated:YES];
     } else {
         [self.navigationController popToViewController:self.first animated:YES];
     }
+    if (iPad)
+        [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import "PageViewController.h"
 
+extern NSString *const keyPowerSort;
+
 @interface PowerListViewController : PageViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
 @property (strong, nonatomic) NSMutableArray *items;
 @property (strong, nonatomic) IBOutlet UIButton *sort;

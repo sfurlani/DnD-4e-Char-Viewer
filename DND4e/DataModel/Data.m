@@ -16,6 +16,7 @@
 #import "MBProgressHUD.h"
 
 NSString * const keyAfterFirstOpen = @"KeyFirstOpen_jhadsfhjklfdsajhkldfsahjklfdsaljhkadfslhjk";
+NSString * const keyLastCharacter = @"keyLastCharacter";
 
 @implementation Data
 
@@ -106,14 +107,16 @@ SYNTHESIZE_SINGLETON_ARC(Data)
 - (Character*)loadCharacterWithFile:(NSString*)path
 {
     NSString *name = [self nameFromPath:path];
+    [AppDefaults setObject:path forKey:keyLastCharacter];
+    [AppDefaults synchronize];
     Character *character = [self.characters objectForKey:name];
     if (!character) {
         NSLog(@"Creating: %@", name);
         
-        MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:AppDelegate.navigationController.view];
-        hud.mode = MBProgressHUDModeIndeterminate;
-        hud.labelText = @"Loading";
-        [AppDelegate.navigationController.view addSubview:hud];
+        //MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:AppDelegate.navigationController.view];
+        //hud.mode = MBProgressHUDModeIndeterminate;
+        //hud.labelText = @"Loading";
+        //[AppDelegate.navigationController.view addSubview:hud];
         //[hud show:YES];
         character = [[Character alloc] initWithFile:path];
 //        [hud showWhileExecuting:@selector(initWithFile:)

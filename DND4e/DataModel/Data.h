@@ -18,6 +18,8 @@
 
 #define AppData ([Data sharedData])
 
+extern NSString * const keyLastCharacter;
+
 @protocol DataFileDelegate;
 
 @interface Data : NSObject
