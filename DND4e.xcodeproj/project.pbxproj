@@ -13,6 +13,11 @@
 		DC5754F914FB279F00410FA2 /* SlideRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5754F614FB279F00410FA2 /* SlideRightSegue.m */; };
 		DC5754FD14FB30D500410FA2 /* sorting.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5754FB14FB30D500410FA2 /* sorting.png */; };
 		DC5754FE14FB30D500410FA2 /* sorting@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5754FC14FB30D500410FA2 /* sorting@2x~iphone.png */; };
+		DC57553914FC4DDD00410FA2 /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = DC57553814FC4DDD00410FA2 /* compass.png */; };
+		DC57553D14FC500700410FA2 /* iPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC57553B14FC500700410FA2 /* iPadViewController.m */; };
+		DC57554014FC50B400410FA2 /* bg2~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = DC57553F14FC50B400410FA2 /* bg2~ipad.png */; };
+		DC57554214FC51C400410FA2 /* MainStoryboard~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC57554114FC51C400410FA2 /* MainStoryboard~ipad.storyboard */; };
+		DC57554414FC565300410FA2 /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = DC57554314FC565300410FA2 /* selected.png */; };
 		DC693BEF14EED86B00E68BF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BEE14EED86B00E68BF8 /* UIKit.framework */; };
 		DC693BF114EED86B00E68BF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF014EED86B00E68BF8 /* Foundation.framework */; };
 		DC693BF314EED86B00E68BF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC693BF214EED86B00E68BF8 /* CoreGraphics.framework */; };
@@ -123,6 +128,12 @@
 		DC5754F614FB279F00410FA2 /* SlideRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideRightSegue.m; sourceTree = "<group>"; };
 		DC5754FB14FB30D500410FA2 /* sorting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sorting.png; sourceTree = "<group>"; };
 		DC5754FC14FB30D500410FA2 /* sorting@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sorting@2x~iphone.png"; sourceTree = "<group>"; };
+		DC57553814FC4DDD00410FA2 /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass.png; sourceTree = "<group>"; };
+		DC57553A14FC500700410FA2 /* iPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadViewController.h; sourceTree = "<group>"; };
+		DC57553B14FC500700410FA2 /* iPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadViewController.m; sourceTree = "<group>"; };
+		DC57553F14FC50B400410FA2 /* bg2~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg2~ipad.png"; sourceTree = "<group>"; };
+		DC57554114FC51C400410FA2 /* MainStoryboard~ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "MainStoryboard~ipad.storyboard"; sourceTree = "<group>"; };
+		DC57554314FC565300410FA2 /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected.png; sourceTree = "<group>"; };
 		DC693BEA14EED86B00E68BF8 /* DND4e.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DND4e.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC693BEE14EED86B00E68BF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DC693BF014EED86B00E68BF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -329,7 +340,9 @@
 				DCA8021C14F0A8CC00620379 /* Data Model */,
 				DC693BFF14EED86C00E68BF8 /* DNDAppDelegate.h */,
 				DC693C0014EED86C00E68BF8 /* DNDAppDelegate.m */,
-				DC9711E814F954C60039443C /* MainStoryboard~iphone.storyboard */,
+				DC57553A14FC500700410FA2 /* iPadViewController.h */,
+				DC57553B14FC500700410FA2 /* iPadViewController.m */,
+				DC57554114FC51C400410FA2 /* MainStoryboard~ipad.storyboard */,
 				DC97121114F964070039443C /* Storyboard ViewControllers */,
 				DC97121214F9641C0039443C /* Nib ViewControllers */,
 			);
@@ -372,6 +385,8 @@
 		DC9711EB14F955B50039443C /* newimages */ = {
 			isa = PBXGroup;
 			children = (
+				DC57554314FC565300410FA2 /* selected.png */,
+				DC57553814FC4DDD00410FA2 /* compass.png */,
 				DC5754FB14FB30D500410FA2 /* sorting.png */,
 				DC5754FC14FB30D500410FA2 /* sorting@2x~iphone.png */,
 				DC97120914F9585A0039443C /* back.png */,
@@ -381,6 +396,7 @@
 				DC9711EE14F955B50039443C /* atwill.png */,
 				DC9711EF14F955B50039443C /* atwill@2x~iphone.png */,
 				DC9711F014F955B50039443C /* bg@2x~iphone.png */,
+				DC57553F14FC50B400410FA2 /* bg2~ipad.png */,
 				DC9711F114F955B50039443C /* bg~ipad.png */,
 				DC9711F214F955B50039443C /* bg~iphone.png */,
 				DC9711F314F955B50039443C /* calebkimbrough.jpg */,
@@ -410,6 +426,7 @@
 		DC97121114F964070039443C /* Storyboard ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC9711E814F954C60039443C /* MainStoryboard~iphone.storyboard */,
 				DC97120814F9577F0039443C /* Cells */,
 				DC5754FA14FB27A400410FA2 /* Segues */,
 				DC97121314F9654B0039443C /* FileViewController.h */,
@@ -657,6 +674,10 @@
 				DC97124714F9DBD40039443C /* Doc@2x.png in Resources */,
 				DC5754FD14FB30D500410FA2 /* sorting.png in Resources */,
 				DC5754FE14FB30D500410FA2 /* sorting@2x~iphone.png in Resources */,
+				DC57553914FC4DDD00410FA2 /* compass.png in Resources */,
+				DC57554014FC50B400410FA2 /* bg2~ipad.png in Resources */,
+				DC57554214FC51C400410FA2 /* MainStoryboard~ipad.storyboard in Resources */,
+				DC57554414FC565300410FA2 /* selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +725,7 @@
 				DC5754F714FB279F00410FA2 /* ModalStaticSegue.m in Sources */,
 				DC5754F814FB279F00410FA2 /* SlideLeftSegue.m in Sources */,
 				DC5754F914FB279F00410FA2 /* SlideRightSegue.m in Sources */,
+				DC57553D14FC500700410FA2 /* iPadViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

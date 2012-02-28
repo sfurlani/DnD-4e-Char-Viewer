@@ -62,7 +62,21 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSString *html = NSFORMAT(@"<html><body style=\"font-family:Copperplate;background-color:transparent;color:rgba(0,0,0,.8)\"><br><br><br>%@</body></html>",[self.item html]);
+    
+    /*
+     <head> <!-- Body tag for Netscape 1 compatibility? lol 
+     http://stackoverflow.com/questions/2442727/strange-padding-margin-when-using-uiwebview
+     Border on outer for debugging
+     -->
+     <style type="text/css"> 
+     body { margin: 0; padding: 0; background-color:transparent } 
+     #outer {border:0px solid #FFFFFF; width:%d px; background-color:transparent}
+     #inner {display:table-cell; vertical-align:%@; height:%d px; padding:0px; color:white; background-color:transparent; font-family:helvetica;font-size:%d}
+     </style>
+     </head>
+     
+     */
+    NSString *html = NSFORMAT(@"<html><body style=\"font-family:Copperplate;background-color:transparent;color:rgba(0,0,0,.8);margin:0;padding:0\"><br><br><br>%@</body></html>",[self.item html]);
     [self.webDetail loadHTMLString:html baseURL:[AppData applicationDocumentsDirectory]];
     self.titleLabel.text = [self.item name];
 }
