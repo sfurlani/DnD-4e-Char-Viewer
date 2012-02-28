@@ -52,8 +52,9 @@
         self.window.rootViewController = self.navigationController;
     }
     
+    [self.window setBackgroundColor:[UIColor blackColor]];    
     [self.window makeKeyAndVisible];
-    
+
     if (![url isFileURL] || !url) {
         NSString *path = [AppDefaults objectForKey:keyLastCharacter];
         if (path)

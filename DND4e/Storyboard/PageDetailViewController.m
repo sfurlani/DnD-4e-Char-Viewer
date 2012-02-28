@@ -183,7 +183,7 @@
     NSString *scheme = [url scheme];
     NSString *host = [url host];
     
-    NSLog(@"Opening Content with base URL %@", url);
+    //NSLog(@"Opening Content with base URL %@", url);
     
     if ([scheme isEqualToString:@"http"]) {
         [[UIApplication sharedApplication] openURL:url];

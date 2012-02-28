@@ -41,7 +41,7 @@
 @synthesize characterName, menu, sort;
 @synthesize character;
 @synthesize list;
-@synthesize items, itemTable, powers, powerTable;
+@synthesize items, itemTable, powers, powerTable, itemHeader, powerHeader;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -79,10 +79,68 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setOrientation:self.interfaceOrientation duration:0];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
 	return YES;
+}
+
+- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    [self setOrientation:toInterfaceOrientation duration:duration];
+    
+}
+
+- (void) setOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    /*
+     Landscape
+     itemHeader = (320,48,352,39)
+     itemTable = (320,87,352,661)
+     powerHeader = (672,48,352,34)
+     powerTable = (672,78,352,670)
+     
+     Portrait
+     itemHeader = (0,620,384,39)
+     itemTable = (0,652,384,352)
+     powerHeader, (384,48,384,32)
+     powerTable = (384,78,384,926)
+     
+     */
+    void (^anim)(void) = nil;
+    
+    if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_p"]];
+        anim = ^(void) {
+            itemHeader.frame = CGRectMake(0,620,384,39);
+            itemTable.frame = CGRectMake(0,652,384,352);
+            powerHeader.frame = CGRectMake(384,48,384,32);
+            powerTable.frame = CGRectMake(384,78,384,926);
+        };
+    } else {
+        anim = ^(void) {
+            self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_l"]];
+            itemHeader.frame = CGRectMake(320,46,352,39);
+            itemTable.frame = CGRectMake(320,79,352,670);
+            powerHeader.frame = CGRectMake(672,48,352,34);
+            powerTable.frame = CGRectMake(672,78,352,670);
+        };
+    }
+    if (!anim) return;
+    if (duration > 0) {
+        [UIView animateWithDuration:duration
+                         animations:anim];
+    } else {
+        anim();
+    }
+    
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -116,7 +174,7 @@
         else if ([sender tag] == 3005) key = @"Initiative";
         else if ([sender tag] == 3006) key = @"Speed";
         else if ([sender tag] == 3007) key = @"Hit Points";
-        else if ([sender tag] == 3008) key = @"Surges";
+        else if ([sender tag] == 3008) key = @"Healing Surges";
         else if ([sender tag] == 3009) key = @"Passive Perception";
         else if ([sender tag] == 3010) key = @"Passive Insight";
         PowerDetailViewController *pdvc = [[segue.destinationViewController viewControllers] lastObject];
@@ -158,8 +216,9 @@
     ListType old = self.list;
     ListType type = [sender tag];
     if (old == type) return; // don't waste it if they're tapping the same thing again.
-    [[[sender superview] subviews] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [obj setBackgroundImage:nil forState:UIControlStateNormal];
+    [[self.itemHeader subviews] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([obj isKindOfClass:[UIButton class]])
+            [obj setBackgroundImage:nil forState:UIControlStateNormal];
     }];
     [sender setBackgroundImage:[UIImage imageNamed:@"selected"] forState:UIControlStateNormal];
      self.list = type;
@@ -256,7 +315,7 @@
     if ([tableView isEqual:self.powerTable]) {
         return 44.0f;
     } else if (self.list == ltSkill) {
-        return 32.0f;
+        return 38.0f;
     } else {
         return 44.0f;
     }
@@ -368,8 +427,8 @@ UINavigationController *nav = [storyboard instantiateViewControllerWithIdentifie
         }
         return [[obj1 valueForKey:key] caseInsensitiveCompare:[obj2 valueForKey:key]];
     }];
-    [self.powerTable reloadRowsAtIndexPaths:[self.powerTable indexPathsForVisibleRows]
-                           withRowAnimation:UITableViewRowAnimationFade];
+    [self.powerTable reloadSections:[NSIndexSet indexSetWithIndex:0]
+                   withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - UIPopover Delegate

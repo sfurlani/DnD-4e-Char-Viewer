@@ -140,7 +140,7 @@
         NSInteger row = [indexPath row];
         NSString *path = [self.files objectAtIndex:row];
         [self.delegate openFilePath:path];
-        [[(id)self.delegate currentPopover] dismissPopoverAnimated:YES];
+        [(id)self.delegate dismissPopoverViewController:[(id)self.delegate menu]];
     }
 }
 

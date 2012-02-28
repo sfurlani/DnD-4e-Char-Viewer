@@ -8,6 +8,7 @@
 
 #import "HelpViewController.h"
 #import "UIWebView_Misc.h"
+#import "Utility.h"
 
 @implementation HelpViewController
 
@@ -50,6 +51,8 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
+    if (iPad)
+        return YES;
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 

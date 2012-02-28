@@ -76,6 +76,8 @@ typedef NSInteger ListType;
 
 @property (strong, nonatomic) IBOutlet UITableView * powerTable;
 @property (strong, nonatomic) IBOutlet UITableView * itemTable;
+@property (strong, nonatomic) IBOutlet UIView * itemHeader;
+@property (strong, nonatomic) IBOutlet UIView * powerHeader;
 
 @property (assign, nonatomic) ListType list;
 
@@ -88,6 +90,8 @@ typedef NSInteger ListType;
 - (void) performSortWithKey:(NSString*)key;
 
 - (void) refresh;
+
+- (void) setOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
 
 #pragma mark - UIPopoverControllerDelegate & Popover Modal Control
 @property (strong, nonatomic) UIPopoverController *currentPopover;
