@@ -179,6 +179,7 @@
         else if ([sender tag] == 3010) key = @"Passive Insight";
         PowerDetailViewController *pdvc = [[segue.destinationViewController viewControllers] lastObject];
         id<DNDHTML> item = [self.character.stats objectForKey:key];
+        pdvc.character = self.character;
         [pdvc setItem:item];
     }
     
@@ -337,6 +338,7 @@ UINavigationController *nav = [storyboard instantiateViewControllerWithIdentifie
         PowerDetailViewController *pdvc = [[nav viewControllers] lastObject];
         if (pdvc) {
             pdvc.item = thing;
+            pdvc.character = self.character;
             [self presentViewController:nav animated:YES completion:nil];
         }
     }

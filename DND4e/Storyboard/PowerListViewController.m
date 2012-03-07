@@ -52,7 +52,7 @@ NSString *const keyPowerSort = @"keyPowerSort";
     
     self.items = [self.character.powers mutableCopy];
     [self.sort setImage:[UIImage imageNamed:@"sorting"] forState:UIControlStateNormal];
-    
+    [self.sort setImage:[UIImage imageNamed:@"sorting_sel"] forState:UIControlStateHighlighted];
 }
 
 - (void) viewWillAppear:(BOOL)animated

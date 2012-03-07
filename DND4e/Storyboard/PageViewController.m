@@ -108,6 +108,7 @@
     } else if (iPad) {
         PowerDetailViewController *dvc = [storyboard instantiateViewControllerWithIdentifier:@"detailVC"];
         dvc.item = item;
+        dvc.character = self.character;
         NSLog(@"dvc: %@", dvc);
         [self.navigationController pushViewController:dvc animated:YES];
     }

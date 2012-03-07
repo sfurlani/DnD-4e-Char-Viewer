@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *usage;
 @property (strong, nonatomic) IBOutlet UIImageView *attack;
 @property (strong, nonatomic) IBOutlet UIImageView *arrow;
+@property (strong, nonatomic) IBOutlet UILabel *action;
 
 - (void) setData:(id)data;
 

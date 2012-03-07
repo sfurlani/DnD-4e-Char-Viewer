@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="wdB-Wp-smu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="wdB-Wp-smu">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
@@ -718,10 +718,17 @@
                                                     <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Really long item name" lineBreakMode="tailTruncation" minimumFontSize="10" id="UN7-2F-nJv" userLabel="title">
-                                                    <rect key="frame" x="8" y="10" width="288" height="23"/>
+                                                    <rect key="frame" x="8" y="10" width="274" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="S" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="VRl-hy-wDy">
+                                                    <rect key="frame" x="280" y="11" width="19" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="atwill.png" id="5Wz-Zj-dow">
@@ -736,6 +743,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
+                                            <outlet property="action" destination="VRl-hy-wDy" id="aMS-YA-ZiB"/>
                                             <outlet property="attack" destination="NHK-n0-5Tk" id="vKl-Eb-yAn"/>
                                             <outlet property="backgroundView" destination="lkb-WK-IMK" id="QHp-3E-tIH"/>
                                             <outlet property="selectedBackgroundView" destination="izP-ov-wst" id="afo-MC-kBk"/>
@@ -761,10 +769,17 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Really long item name" lineBreakMode="tailTruncation" minimumFontSize="10" id="VdG-wE-6My" userLabel="title">
-                                                    <rect key="frame" x="8" y="10" width="288" height="23"/>
+                                                    <rect key="frame" x="8" y="10" width="274" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="S" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Dv8-ey-0hQ">
+                                                    <rect key="frame" x="280" y="11" width="19" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="atwill.png" id="n2V-r1-7Hy">
@@ -779,6 +794,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
+                                            <outlet property="action" destination="Dv8-ey-0hQ" id="aly-he-72g"/>
                                             <outlet property="attack" destination="phC-kF-syw" id="LNx-jW-ZQ1"/>
                                             <outlet property="backgroundView" destination="xmR-0W-56D" id="RlL-rd-1CC"/>
                                             <outlet property="selectedBackgroundView" destination="d2c-3E-Nrj" id="uKC-sX-pxC"/>
@@ -1361,6 +1377,7 @@
         <class className="PowerCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PowerCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="action" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="attack" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>

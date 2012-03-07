@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="nAV-C6-Gzi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="nAV-C6-Gzi">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
@@ -903,11 +903,18 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Power Name Power Name Power Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="PHD-QX-1ru">
-                                                    <rect key="frame" x="0.0" y="2" width="213" height="41"/>
+                                                    <rect key="frame" x="0.0" y="2" width="204" height="41"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="S" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="F8d-3o-GL6">
+                                                    <rect key="frame" x="203" y="11" width="19" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="arrow.png" id="dZT-Tq-zq9">
                                                     <rect key="frame" x="285" y="6" width="32" height="32"/>
@@ -925,6 +932,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
+                                            <outlet property="action" destination="F8d-3o-GL6" id="fbT-kS-P7G"/>
                                             <outlet property="arrow" destination="dZT-Tq-zq9" id="r4y-am-dKy"/>
                                             <outlet property="attack" destination="b1o-8d-XlC" id="pqq-Om-ZhI"/>
                                             <outlet property="backgroundView" destination="JVA-Ms-Ueb" id="Vxx-4Q-j2g"/>
@@ -952,11 +960,18 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Power Name " lineBreakMode="tailTruncation" minimumFontSize="10" id="pb9-lq-tBd">
-                                                    <rect key="frame" x="0.0" y="2" width="213" height="41"/>
+                                                    <rect key="frame" x="0.0" y="2" width="204" height="41"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="21"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="S" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="fCc-Th-IXM">
+                                                    <rect key="frame" x="202" y="11" width="19" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="arrow.png" id="YUe-7c-wRv">
                                                     <rect key="frame" x="285" y="6" width="32" height="32"/>
@@ -975,6 +990,7 @@
                                         </view>
                                         <color key="backgroundColor" white="0.25" alpha="0.12" colorSpace="calibratedWhite"/>
                                         <connections>
+                                            <outlet property="action" destination="fCc-Th-IXM" id="fLX-DW-1c3"/>
                                             <outlet property="arrow" destination="YUe-7c-wRv" id="W5a-eV-dWj"/>
                                             <outlet property="attack" destination="Lft-CN-vbw" id="n0d-8v-iKq"/>
                                             <outlet property="backgroundView" destination="onx-wy-xgv" id="gpr-2l-Xxn"/>
@@ -1450,6 +1466,7 @@
         <class className="PowerCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PowerCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="action" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="attack" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>

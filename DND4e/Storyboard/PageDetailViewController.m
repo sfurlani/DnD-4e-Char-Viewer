@@ -65,7 +65,7 @@
     [super viewWillAppear:animated];
     self.titleLabel.text = [item name];
     [self loadHTML:[item html]];
-    NSLog(@"Self.First %@", NSStringFromClass([self.first class]));
+    NSLog(@"HTML: %@", [item html]);
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -105,6 +105,7 @@
 {
     NSNumber *num = NSINT([elem intValue]);
     RulesElement *element = [self.character elementForCharelem:num];
+    NSLog(@"Element: (%@) %@", elem, element);
     [self showDetail:element];
 }
 
